@@ -3,8 +3,9 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 20
 			tag = SEV
+			NOT = { country_exists = STG}
 		}
 	}
 	default = no
@@ -24,7 +25,6 @@ focus_tree = {
 			completion_reward = {
 					add_political_power = 35
 					add_stability = 0.1
-					add_ideas = SEV_ebanuy_rot_etogo_parlamenta
 					add_ideas = communism_banned
 					country_event = {
 							id = sever.4
@@ -259,7 +259,7 @@ focus_tree = {
 			bypass = {
 					has_government = fascism
 				}
-			#complete_tooltip = { SEV_baron_tip }
+			custom_effect_tooltip =  SEV_baron_tip 
 
 	}
 	focus = {
@@ -562,7 +562,7 @@ focus_tree = {
 		x = 2
 		y = 5
 			available = {
-					has_idea = SEV_ebanuy_rot_etogo_parlamenta
+					has_idea = coalition_tension #TODO idea needs to be set
 					has_country_flag = 2nd_elections
 				}
 			completion_reward = {
@@ -642,7 +642,16 @@ focus_tree = {
 			available = {
 					has_country_flag = needs_rebuild
 				}
-
+			completion_reward = {
+				EQS = {
+					country_event = {
+						id = sever.x #placeholder for SEV puppet/annex choice
+						days = 0
+					}
+				}
+				custom_effect_tooltip = tt_gameover
+			}
+			
 	}
 	focus = {
 		id = SEV_restore_the_glory
