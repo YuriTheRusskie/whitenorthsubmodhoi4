@@ -1,0 +1,37 @@
+SEV_decommunization = {
+
+    SEV_rename = {
+    
+        icon = anti_communist
+
+        available = {
+            NOT = { country_exists = STG }
+            153 = { is_owned_and_controlled_by = ROOT }
+        }
+        
+        visible = {
+            NOT = { country_exists = STG }
+            153 = { is_owned_and_controlled_by = ROOT }
+        }
+        
+        allowed = {
+            tag = SEV
+        }
+
+        cost = 0
+        fire_only_once = yes
+
+        ai_will_do = {
+            factor = 200
+        }
+
+        complete_effect = {
+            153 = { set_state_name = "Moscolt" }
+			set_province_name = { id = 488 name = "Moscolt" }
+			253 = { set_state_name = "Stoponin" }
+			165 = { set_state_name = "Legkoputnaya Village" }
+			161 = { set_state_name = "Wheat Farmlands" }
+			
+        }
+    }
+}

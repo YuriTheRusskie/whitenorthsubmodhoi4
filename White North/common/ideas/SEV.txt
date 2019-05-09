@@ -1,0 +1,129 @@
+ideas = {
+
+	country = {
+		SEV_fuck_commies = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = soa_flag
+			
+			targeted_modifier = {
+				tag = STG
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			
+			
+		}
+		
+		SEV_ebanuy_rot_etogo_parlamenta = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			#picture = soa_flag
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+			
+			
+		}
+		
+		SEV_rebuild_nation = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		
+		SEV_heavy_industry = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		
+		SEV_light_industry = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+
+			picture = ger_rebuild_the_nation
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		funded_science = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+		
+	}
+	
+}

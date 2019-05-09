@@ -1,0 +1,181 @@
+division_template = {
+	name = "Kopytnaya Diviziya"
+	division_names_group = STG_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Tankovaya Brigada"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "White Militia"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 2 }
+	}
+
+	support = {
+	}
+	priority = 0
+}
+
+division_template = {
+	name = "Ponybrazhensky Polk"
+	division_names_group = STG_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+units = {
+
+#Severokholm
+
+	division = {
+		name = "Severokholmskie Volontyory"
+		location = 9332
+		division_template = "White Militia"
+		start_experience_factor = 0.2 }
+		
+	division = {
+		name = "Severokholmskie Volontyory"
+		location = 9332
+		division_template = "White Militia"
+		start_experience_factor = 0.2 }
+		
+#St.Petershoof
+
+    division = {
+		name = "Peterhoofskie Volontyory"
+		location = 311
+		division_template = "White Militia"
+		start_experience_factor = 0.2 }
+		
+	division = {
+		name = "Peterhoofskaya Tankovaya Brigada"
+		location = 311
+		division_template = "Tankovaya Brigada"
+		start_experience_factor = 0.2 }
+		
+	division = {
+		name = "Peterhoofskie Ponybrazhentsy"
+		location = 311
+		division_template = "Ponybrazhensky Polk"
+		start_experience_factor = 0.4 }
+
+#Stavropon
+
+	division = {
+		name = "Starvoponskie Volontyory"
+		location = 3217
+		division_template = "White Militia"
+		start_experience_factor = 0.2 }	
+
+	division = {
+		name = "Starvoponskie Volontyory"
+		location = 3217
+		division_template = "White Militia"
+		start_experience_factor = 0.2 }	
+		
+#Border with STG
+
+    division = {
+		name = "Belaya Gvardia"
+		location = 3342
+		division_template = "Kopytnaya Diviziya"
+		start_experience_factor = 0.2 }
+		
+    division = {
+		name = "Belaya Gvardia"
+		location = 4861
+		division_template = "Kopytnaya Diviziya"
+		start_experience_factor = 0.2 }
+		
+	division = {
+		name = "Belaya Gvardia"
+		location = 6489
+		division_template = "Kopytnaya Diviziya"
+		start_experience_factor = 0.2 }
+	    
+	division = {
+		name = "Belaya Gvardia"
+		location = 7394
+		division_template = "Kopytnaya Diviziya"
+		start_experience_factor = 0.2 }
+	
+    division = {
+		name = "Belaya Gvardia"
+		location = 11237
+		division_template = "Kopytnaya Diviziya"
+		start_experience_factor = 0.2 }
+
+	division = {
+		name = "Belaya Gvardia"
+		location = 6300
+		division_template = "Kopytnaya Diviziya"
+		start_experience_factor = 0.2 }
+
+	division = {
+		name = "Runaway Prisoners"
+		location = 9310
+		division_template = "White Militia"
+		start_experience_factor = 0.2 }
+
+	division = {
+		name = "Rogue Peasants"
+		location = 3112
+		division_template = "White Militia"
+		start_experience_factor = 0.2 }
+}
+
+air_wings = {
+	166 = {
+		fighter_equipment_0 = {
+			owner = "SEV"
+			amount = 500
+		}
+		tac_bomber_equipment_0 = {
+			owner = "SEV"
+			amount = 200
+		}
+	}
+}		
+		
+		
+		

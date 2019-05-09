@@ -1,0 +1,15 @@
+SEV_decommunization = {
+
+    icon = anti_communist
+    available = {
+		tag = SEV
+        NOT = { country_exists = STG } 
+    }
+	allowed = { 
+        tag = SEV 
+    }
+    visible = {
+		tag = SEV
+        NOT = { country_exists = STG }
+    }
+}

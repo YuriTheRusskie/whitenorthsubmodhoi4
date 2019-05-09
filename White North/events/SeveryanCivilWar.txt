@@ -1,0 +1,154 @@
+﻿add_namespace = severcw
+
+##############################################
+## Stalliongradian-Severyan Civil War events
+##############################################
+
+country_event = { # STG Starlight village anschluss
+	id = severcw.1
+	title = severcw.1.t
+	desc = severcw.1.d
+	#picture =
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = STG 
+		STG = { 
+			has_war_with = SEV 
+		}
+	}
+	
+	option = { 
+		name = severcw.1.a
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = STG_STL_annex
+		hidden_effect = { 
+			annex_country = {
+				target = STL
+				transfer_troops = yes
+			}
+		}
+	}
+	
+	option = { 
+		name = severcw.1.b
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = STG_STL_no_annex 
+	}
+}
+	
+	
+
+country_event = { # EQS Ponies, Guns and a general
+	id = severcw.2
+	title = severcw.2.t
+	desc = severcw.2.d
+	#picture =
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = severcw.2.a
+		
+		ai_chance = { factor = 25 }
+
+		add_manpower = 3000
+		
+		custom_effect_tooltip = received_equipment_2000
+		
+		custom_effect_tooltip = bat_general
+		
+		custom_effect_tooltip = SEV_EQSvol
+	
+		hidden_effect = {
+			load_oob = EQS_SEV_VOL
+			create_corps_commander = {
+					name = "Oli Equites"
+					portrait_path = "gfx/leaders/EQS/Oligarch.tga"
+					traits = { }
+					skill = 2
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 2
+					id = 206
+				}
+		}
+		
+		EQS = {
+			set_country_flag = EQS_BIG_SEV_HELP #Maybe have an opinion modifier instead?
+		}
+	}
+		
+		option = {
+			name = severcw.2.b
+			
+			ai_chance = { factor = 65 }
+
+			add_manpower = 3000
+					
+			custom_effect_tooltip = received_equipment_2000
+			
+			custom_effect_tooltip = SEV_EQSvol
+	
+			hidden_effect = {
+				load_oob = EQS_SEV_VOL
+			EQS = { country_event = { id = equestria.995 days = 1 } }	
+			}		
+			EQS = {
+				set_country_flag = EQS_SEV_NO_BAT #add opinion modifier? - knife
+			}
+		}
+	}
+
+country_event = { # EQS Ponies and guns
+	id = severcw.3
+	title = severcw.3.t
+	desc = severcw.3.d
+	#picture =
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = severcw.3.a
+
+		add_manpower = 3000
+		custom_effect_tooltip = received_equipment_2000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+			producer = EQS
+		}		
+		custom_effect_tooltip = SEV_EQSvol		
+		EQS = {
+			set_country_flag = EQS_SEV_HELP
+		}
+	}
+}
+
+country_event = { # EQS Only Guns
+	id = severcw.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event severcw.3"}
+	title = severcw.4.t
+	desc = severcw.4.d
+	#picture = 
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = severcw.4.a
+		custom_effect_tooltip = received_equipment_2000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+			producer = EQS
+		}
+	}
+}

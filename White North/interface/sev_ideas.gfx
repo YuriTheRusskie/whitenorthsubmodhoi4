@@ -1,0 +1,17 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_soa"
+		texturefile = "gfx/interface/ideas/idea_soa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_soa_flag"
+		texturefile = "gfx/interface/ideas/idea_soa_flag.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_severyan_flag"
+		texturefile = "gfx/interface/ideas/idea_severyan_flag.dds"
+	}
+}
