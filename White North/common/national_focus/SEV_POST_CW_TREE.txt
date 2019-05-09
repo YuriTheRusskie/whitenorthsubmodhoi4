@@ -3,14 +3,12 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 20
+			add = 10
 			tag = SEV
 			NOT = { country_exists = STG}
 		}
 	}
 	default = no
-	
-		continuous_focus_position = { x = 200 y = 12000 }
 	focus = {
 		id = SEV_secure_the_state
 		icon = GFX_goal_anschluss
@@ -25,6 +23,7 @@ focus_tree = {
 			completion_reward = {
 					add_political_power = 35
 					add_stability = 0.1
+					add_ideas = SEV_ebanuy_rot_etogo_parlamenta
 					add_ideas = communism_banned
 					country_event = {
 							id = sever.4
@@ -84,7 +83,7 @@ focus_tree = {
 			bypass = {
 					has_country_flag = SEV_dem_col
 				}
-			custom_effect_tooltip = SEV_demmon
+			custom_effect_tooltip = SEV_dem_coltip
 
 	}
 	focus = {
@@ -146,6 +145,11 @@ focus_tree = {
 		}
 		x = 8
 		y = 4
+			completion_reward = {
+			country_event = {
+					id = sever.13
+					days = 1
+				}
 
 	}
 	focus = {
@@ -160,9 +164,6 @@ focus_tree = {
 		}
 		x = 6
 		y = 5
-			available = {
-					has_country_flag = needs_rebuild
-				}
 
 	}
 	focus = {
@@ -177,9 +178,6 @@ focus_tree = {
 		}
 		x = 10
 		y = 5
-			available = {
-					has_country_flag = needs_rebuild
-				}
 
 	}
 	focus = {
@@ -259,7 +257,7 @@ focus_tree = {
 			bypass = {
 					has_government = fascism
 				}
-			custom_effect_tooltip =  SEV_baron_tip 
+			custom_effect_tooltip = SEV_baron_tip
 
 	}
 	focus = {
@@ -340,9 +338,6 @@ focus_tree = {
 		}
 		x = 15
 		y = 6
-			available = {
-					has_country_flag = needs_rebuild
-				}
 
 	}
 	focus = {
@@ -392,6 +387,21 @@ focus_tree = {
 		y = 1
 			completion_reward = {
 					add_ideas = SEV_heavy_industry
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
 				}
 
 	}
@@ -409,6 +419,7 @@ focus_tree = {
 		y = 1
 			completion_reward = {
 					add_ideas = SEV_light_industry
+					add_stability = 0.5
 				}
 
 	}
@@ -425,9 +436,6 @@ focus_tree = {
 			completion_reward = {
 					remove_ideas = incomplete_industrialization
 					add_stability = 0.05
-					hidden_effect = {
-							set_country_flag = needs_rebuild
-						}
 				}
 
 	}
@@ -443,6 +451,23 @@ focus_tree = {
 		}
 		x = 25
 		y = 3
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
 
 	}
 	focus = {
@@ -457,6 +482,9 @@ focus_tree = {
 		}
 		x = 29
 		y = 3
+			completion_reward = {
+					add_ideas = funded_science
+				}
 
 	}
 	focus = {
@@ -469,6 +497,10 @@ focus_tree = {
 		}
 		x = 27
 		y = 4
+			completion_reward = {
+					add_political_power = 100
+					add_stability = 0.03
+				}
 
 	}
 	focus = {
@@ -492,7 +524,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SEV_prioritize_military
 		}
-		x = 24
+		x = 21
 		y = 6
 
 	}
@@ -506,7 +538,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SEV_upgrade_sev_uni
 		}
-		x = 22
+		x = 19
 		y = 7
 
 	}
@@ -520,7 +552,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SEV_better_industry
 		}
-		x = 26
+		x = 23
 		y = 7
 
 	}
@@ -534,7 +566,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SEV_develop_economy
 		}
-		x = 30
+		x = 33
 		y = 6
 
 	}
@@ -548,7 +580,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SEV_military_research_uni
 		}
-		x = 28
+		x = 31
 		y = 7
 
 	}
@@ -557,12 +589,12 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		cost = 4,00
 		prerequisite = {
-			focus = SEV_democracy_wins
+			focus = SEV_coalition_collapse
 		}
 		x = 2
 		y = 5
 			available = {
-					has_idea = coalition_tension #TODO idea needs to be set
+					has_idea = coalition_tension
 					has_country_flag = 2nd_elections
 				}
 			completion_reward = {
@@ -639,19 +671,15 @@ focus_tree = {
 		}
 		x = 0
 		y = 7
-			available = {
-					has_country_flag = needs_rebuild
-				}
 			completion_reward = {
-				EQS = {
-					country_event = {
-						id = sever.x #placeholder for SEV puppet/annex choice
-						days = 0
-					}
+					EQS = {
+							country_event = {
+									id = sever.xdays
+								}
+						}
+					custom_effect_tooltip = tt_gameover
 				}
-				custom_effect_tooltip = tt_gameover
-			}
-			
+
 	}
 	focus = {
 		id = SEV_restore_the_glory
@@ -672,11 +700,11 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 0,00
 		prerequisite = {
-			focus = SEV_soft_conservatism
 			focus = SEV_traditions_are_important
+			focus = SEV_soft_conservatism
 		}
 		mutually_exclusive = {
-			focus = SEV_police_state
+			focus = SEV_state_is_a_third_parent
 		}
 		x = 3
 		y = 8
@@ -694,9 +722,6 @@ focus_tree = {
 		}
 		x = 3
 		y = 7
-			available = {
-					has_country_flag = needs_rebuild
-				}
 
 	}
 	focus = {
@@ -711,9 +736,6 @@ focus_tree = {
 		}
 		x = 5
 		y = 7
-			available = {
-					has_country_flag = needs_rebuild
-				}
 
 	}
 	focus = {
@@ -740,7 +762,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SEV_officer_academy
 		}
-		x = 32
+		x = 35
 		y = 7
 
 	}
@@ -767,7 +789,7 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SEV_police_state
+		id = SEV_state_is_a_third_parent
 		icon = GFX_goal_generic_military_sphere
 		cost = 0,00
 		prerequisite = {
@@ -786,10 +808,21 @@ focus_tree = {
 		icon = GFX_goal_demand_sudetenland
 		cost = 0,00
 		prerequisite = {
-			focus = SEV_police_state
+			focus = SEV_state_is_a_third_parent
 		}
 		x = 5
 		y = 9
+
+	}
+	focus = {
+		id = SEV_coalition_collapse
+		icon = GFX_goal_generic_attack_allies
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_democracy_wins
+		}
+		x = 2
+		y = 4
 
 	}
 }
