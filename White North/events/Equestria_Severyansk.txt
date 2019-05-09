@@ -52,7 +52,7 @@ country_event = {  #Celestia listens to Luna
 	}
 }			
 
-country_event = {  #Celestia does a big thonk
+country_event = {  #Celestia listens to Luna
     id = equestriasev.997
 	title = equestriasev.997.t 
 	desc = equestriasev.997.d	
@@ -72,6 +72,16 @@ country_event = {  #Celestia does a big thonk
 			country_event = { 
 				id = equestriasev.998
 				days = 30
+			}
+			STG = {
+				country_event = {
+				id = equestriasev.800
+				days = 10
+				}
+				country_event = {
+				id = stalliongrad.999
+				days = 30
+				}
 			}
 			WIT = { 
 				country_event = { 
@@ -94,8 +104,27 @@ country_event = {  #Celestia does a big thonk
     }
 
 ###### If coup will take place ######
+country_event = { #notifies STG about an Equestrian-funded rebellion, also pushes their troops out of the area by demilitarizing it.
+	id = equestriasev.800
+	title = equestriasev.800.t
+	desc = equestriasev.800.d
+	is_triggered_only = yes
+	
+	option = { #An Equestrian funded-Rebellion? What?!
+		name = equestriasev.800.a
+		add_opinion_modifier = {
+			target = EQS
+			modifier = hostility
+		}
+		168 = { set_demilitarized_zone = yes}
+		166 = { set_demilitarized_zone = yes}
+		233 = { set_demilitarized_zone = yes}
+		332 = { set_demilitarized_zone = yes}
+		
+	}
+}
 
-country_event = {  #An event that tells you about revolt and offers to switch to SEV
+country_event = {  #An event that tells EQS about revolt and offers to switch to SEV
     id = equestriasev.998
 	title = equestriasev.998.t 
 	desc = equestriasev.998.d
@@ -104,33 +133,46 @@ country_event = {  #An event that tells you about revolt and offers to switch to
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = STG
+				}
+				add_core_of = SEV
+			}
+			SEV = {
+				transfer_state = 166
+				transfer_state = 168
+				transfer_state = 233
+				transfer_state = 332
+				set_capital = 166
+			}
+		}
+	}
+	
 	option = { #Revolution starts, player takes control
 	           name = equestriasev.998.a
 			   set_global_flag = stg_civil_war
 			   ai_chance = { 
 					factor = 0
 					}
-			   hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = STG
-							}
-						add_core_of = SEV
-					}
-					SEV = {
-						transfer_state = 166
-						transfer_state = 168
-						transfer_state = 233
-						transfer_state = 332
-						set_capital = 166
-					}
-				}
+
 						
 
 				SEV = { change_tag_from = ROOT }
-				country_event = { id = equestriasev.999 days = 1 }
+				#country_event = { id = equestriasev.999 days = 0 }
+				hidden_effect = {
+					SEV = { country_event = { 
+						id = sever.0 
+						days = 0 
+						} 
+					} 
+				}
+				EQS = { country_event = 
+					{ id = equestriasev.990 days = 1 }	
+				}			
 			}
-		}
 		
 		option = { #Revolution starts, player does not take control
 				name = equestriasev.998.b
@@ -138,26 +180,18 @@ country_event = {  #An event that tells you about revolt and offers to switch to
 				ai_chance = { 
 					factor = 100
 					}		
+				#country_event = { id = equestriasev.999 days = 0 }					
 				hidden_effect = {
-					every_state = {
-						limit = {
-							is_core_of = STG
-							}
-						add_core_of = SEV
-					}
-					SEV = {
-						transfer_state = 166
-						transfer_state = 168
-						transfer_state = 233
-						transfer_state = 332
-						set_capital = 166
-					}
+					SEV = { country_event = { 
+						id = sever.0 
+						days = 0 
+						} 
+					} 
 				}
-				country_event = { id = equestriasev.999 days = 1 }
+				EQS = { country_event = { id = equestriasev.990 days = 1 } }
 			}
 		}
-	}
-##### SEV rebellion #####	
+##### SEV rebellion ~~Event not needed.~~ #####	
 country_event = { 
     id = equestriasev.999
 	title = equestriasev.999.t 
@@ -168,7 +202,6 @@ country_event = {
 	
 	option = { 
 	name = equestriasev.999
-	SEV = { country_event = { id = sever.0 days = 1 } }
 	}
  }
  
@@ -210,7 +243,7 @@ option = { #General, guns and divs
 		name = equestriasev.990.b
 		
 		ai_chance = {
-			factor = 50
+			factor = 13
 		}
 
 		add_manpower = -3000
@@ -236,7 +269,7 @@ option = { #General, guns and divs
 		name = equestriasev.990.c
 
 		ai_chance = { 
-			factor = 10
+			factor = 11
 		}
 
 		send_equipment = {
@@ -260,7 +293,7 @@ option = { #General, guns and divs
 		name = equestriasev.990.d
 
 		ai_chance = {
-			factor = 2
+			factor = 1
 		}
 
 		add_stability = -0.06 #because fuck you, you fucking staged it and now you refuse to help? gay.

@@ -10,22 +10,44 @@ country_event = { #Units and STG leader death
 	desc = sever.0.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	hidden = yes
+	
+	immediate = {
+		SEV = {
+			declare_war_on = { 
+				target = STG 
+				type = annex_everything
+			}
+			inherit_technology = STG
+			hidden_effect = { 
+				add_named_threat = {
+					threat = 2
+					name = SEV_revolt
+				}
+			}				
+		}
+	}
 	
 	option = {
 		name = sever.0.a
-			load_oob = "SEV_CW"
-			load_oob = "SEV_CW_fleet"
-			set_country_flag = stg_cw
+		load_oob = "SEV_CW"
+		load_oob = "SEV_CW_fleet"
+		set_country_flag = stg_cw
+		STG = { 
 			country_event = { 
-					id = sever.1
-					days = 2
+				id = stalliongrad.999 
+				days = 0 
+			} 
+		}
+		SEV = {
+			country_event = {
+				id = sever.1
+				days = 2
 			}
-			STG = { country_event = { id = stalliongrad.999 days = 1 } }
-		}		
+		}
+	}
 }
 
-country_event = { #Declare war on STG
+country_event = { #Severyanan Declaration of independence, fluff piece
     id = sever.1
 	title = sever.1.t
 	desc = sever.1.d
@@ -34,19 +56,36 @@ country_event = { #Declare war on STG
 	
 	option = {
 	    name = sever.1.a
-		SEV = {
-			declare_war_on = { 
-			target = STG 
-			type = annex_everything
-			}
-			hidden_effect = { 
-				add_named_threat = {
-								threat = 10
-								name = SEV_revolt
-							}
-				EQS = { country_event = { id = equestriasev.990 days = 1 } }
-			}				
+		add_stability = 0.01
+		add_political_power = 10
 		}
+	}
+
+country_event = { #SEV force annex STG to make things easier for an AI
+	id = sever.2
+	title = sever.2.t 
+	desc = sever.2.d
+	fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+		original_tag = SEV
+		is_ai = yes
+		153 = { #Stalliongrad Capital
+			is_controlled_by = SEV
+		}
+	}
+		
+	mean_time_to_happen = { days = 1 }	
+		
+	option = {
+		name = sever.2.a
+        SEV = {
+			annex_country = {
+				target = STG
+				transfer_troops = no
+			}
+		}		
 	}
 }
 
@@ -59,28 +98,29 @@ country_event = { #SEV force annex STG if it's a puppet
 	
 	trigger = {
 			tag = SEV
-			is_ai = yes
 			STG = {
 				is_puppet_of = SEV
 			}
 		}
 	
 	mean_time_to_happen = { days = 1 }
-	
-	
-    immediate = {
+		
+	option = {
+		name = sever.999.a
         SEV = {
 			annex_country = {
 				target = STG
 				transfer_troops = yes
 			}
-		}	
-    }
-	
-	option = {
-		name = sever.999.a
 		}
+	}
 }
+
+		
+
+		
+		
+
 
 country_event = { #Civil war is over, Severyansk won
 	id = sever.3
@@ -89,14 +129,20 @@ country_event = { #Civil war is over, Severyansk won
 	
 	fire_only_once = yes 
 	
-	trigger = { 
-		153 = { is_controlled_by = SEV }
-		has_war = no
+	trigger = {
+		original_tag = SEV
+		SEV = {
+			NOT = {
+				has_war_with = STG
+			}
+		}
 	}
 	
 	option = { 
 		name = sever.3.a
 		add_political_power = 70
+		add_ideas = SEV_ebanuy_rot_etogo_parlamenta	
+		remove_ideas =  SEV_fuck_commies 
 		hidden_effect = {
 		set_cosmetic_tag = SEV_POST_CW
 		set_party_name = { 
@@ -110,20 +156,21 @@ country_event = { #Civil war is over, Severyansk won
 				picture = "soa.tga"
 				expire = "1965.1.1"
 				ideology = despotism
-				traits = { provisional
+				traits = { 
+					provisional
 				}
 			}
 			delete_unit_template_and_units = {
 				division_template = "Equestrian Volunteers"
 			}
-			load_focus_tree = SEV_POST_CW_TREE
-			remove_ideas = SEV_fuck_commies
+			SEV = {load_focus_tree = SEV_POST_CW_TREE}
+
 		}
 	}
 	
 }
 
-country_event = { #сука дед с батей опять сцепились
+country_event = { #Banning Communism
 	id = sever.4
 	title = sever.4.t 
 	desc = sever.4.d
@@ -135,7 +182,7 @@ country_event = { #сука дед с батей опять сцепились
 	}
 }
 
-country_event = { #decision between coup or elections
+country_event = { #Decision between coup or elections
 	id = sever.5
 	title = sever.5.t 
 	desc = sever.5.d
@@ -195,7 +242,6 @@ country_event = { #fascists take control
 	
 	option = { 
 		name = sever.7.a
-		remove_ideas = ebanuy_rot_etogo_parlamenta
 		set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
@@ -209,6 +255,7 @@ country_event = { #fascists take control
                 long_name = SEV_Baron_party_long
                 name = SEV_Baron_party
         }
+		remove_ideas = SEV_ebanuy_rot_etogo_parlamenta 		
 		hidden_effect = {
 			set_country_flag = SEV_fashisty
 			set_cosmetic_tag = SEV_barony
@@ -234,7 +281,7 @@ country_event = { #equestrian democrats and cons win 1st elections
                 ideology = democratic
                 popularity = 0.1
         }
-		add_ideas = coalition_tension
+		add_ideas = {coalition_tension}
 		#create_country_leader
 	}
 }
@@ -285,7 +332,7 @@ country_event = { #democratic coalition dies
 
 	option = { 
 		name = sever.10.a
-		set_country_flag = 2nd_elections
+		set_country_flag = secondelections
 	}
 }
 
@@ -311,7 +358,7 @@ country_event = { #SEV annexation by EQS
 
 	option = { 
 		name = sever.12.a
-		ai_will_do = {
+		ai_chance = {
 			factor = 50
 		}
 		EQS = {
@@ -323,7 +370,7 @@ country_event = { #SEV annexation by EQS
 	}
 	option = {
 		name = sever.12.b
-		ai_will_do = {
+		ai_chance = {
 			factor = 50
 			modifier = {
 				factor = 0
@@ -345,6 +392,18 @@ country_event = { #
 
 	option = { 
 		name = sever.13.a
+	}
+}
+
+country_event = { #
+	id = sever.14
+	title = sever.14.t 
+	desc = sever.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sever.14.a
 	}
 }
 
