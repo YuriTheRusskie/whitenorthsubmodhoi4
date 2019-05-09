@@ -64,7 +64,7 @@ focus_tree = {
 			completion_reward = {
 					add_equipment_to_stockpile = {
 							type = infantry_equipment
-							amount = 750
+							amount = 1000
 							producer = STG
 						}
 				}
@@ -94,7 +94,7 @@ focus_tree = {
 			completion_reward = {
 					add_equipment_to_stockpile = {
 							type = gw_tank_equipment
-							amount = 500
+							amount = 550
 							producer = STG
 						}
 				}
@@ -181,12 +181,12 @@ focus_tree = {
 			completion_reward = {
 					add_building_construction = {
 							type = arms_factory
-							level = 2
+							level = 1
 							instant_build = yes
 						}
 					add_building_construction = {
 							type = industrial_complex
-							level = 3
+							level = 1
 							instant_build = yes
 						}
 				}
@@ -216,7 +216,7 @@ focus_tree = {
 			completion_reward = {
 					add_stability = 0.2
 					every_owned_state = {
-							add_manpower = 7500
+							add_manpower = 6000
 						}
 				}
 
