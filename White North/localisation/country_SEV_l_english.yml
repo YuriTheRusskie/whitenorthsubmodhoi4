@@ -104,11 +104,16 @@ sever.12.t:0
 sever.12.d:0
 sever.12.a:0
 
-sever.13.t:0
-sever.13.d:0
-sever.13.a:0
+sever.13.t:0 "An Imperial feast"
+sever.13.d:0 "dummy loc for now, basically tsar has called for a feast to celebrate victory in the civil war and monarchist restoration and invited various generals and stuff like that. when you will be describing guests of this event, you must give at least three detailed descriptions to these people: Black Baron (his overall look (he wears papakha, an overcoat, red cross on his neck and that's it, you can just look up wrangel for that or look at the portrait) and cold, but polite persona), an Equestrian general (Oli), and i'll come up with a third character. you can localise a bit of this but not fully. in short - this loc is wip"
+sever.13.a:0 "Tsar finds himself to be lucky to avoid drinking that delicious looking drink, because later on guards have found out that it was posioned!"
+sever.13.b:0 "Our Tsar is dead! Regent must take his place now."
 
 #Civil war stuff
+stalliongrad.999.t:0 "The Secretary General is dead!"
+stalliongrad.999.d:0 "White Guard mad lad took him, also killing himself in process, oof."
+stalliongrad.999.a:0 "Fuck"
+
 severcw.1.t:0 "Annexation of Our Town" #Annexation of Our Town
 severcw.1.d:0 "Our Town, the home of the Equalist experiment. We could use a little coercion to force them to join us... After all, their few resources could turn the tides, for every detail in war can matter."
 severcw.1.a:0 "Press them for Annexation."
@@ -123,8 +128,8 @@ severcw.3.t:0 "Equestrian aid"
 severcw.3.d:0 "Equestria sent and divisions"
 severcw.3.a:0 "Good!"
 
-severcw.4.t:0 "Equestrian guns"
-severcw.4.d:0 "Equestria gave us some guns."
+severcw.4.t:0 "Equestrian aid"
+severcw.4.d:0 "Equestria sent us some weapons."
 severcw.4.a:0 "A little less than we expected."
 
 #Decisions
@@ -135,12 +140,14 @@ SEV_rename_desc:0 "We will decommunize names in our country, as suggested by the
 
 #Tooltips
 
-SEV_dem_col:0 "A democratic coalition has formed."
-severyan_infighting:0 "In 10 days, a democratic coalition will form."
-severyan_infighting2:0 "In 10 days, a coup shall restore order."
+
+SEV_baron_tip:0 "The §WArmy§! and §bBlack Baron§! will seize the power!"
+SEV_dem_coltip:0 "§BMonarcho-Democratic§! coalition prevents the possible disaster."
+severyan_infighting:0 "§MDemocrats§! and §gMonarchists§! agree to compromise in form of elections."
+severyan_infighting2:0 "The §WArmy§! and §bBlack Baron§! shall restore order."
 
 #### IDEAS ####
-SEV_fuck_commies:0 "Liberation of Motherland"
+SEV_fuck_commies:0 "Liberation of Motherland" #may have to redo the name and desc, i dont like it 
 SEV_fuck_commies_desc:0 "We must cleanse the Red Plague!"
 
 SEV_ebanuy_rot_etogo_parlamenta:0 "Divided Government"
@@ -187,7 +194,7 @@ SEV_secure_the_state:0 "Secure Severyansk"
 SEV_secure_the_state_desc:0 "With the Stalliongrad Experiment over, the Red Plague must be purged from our lands. Never again, shall we fall to these poisonous ideals!"
 
 SEV_political_infighting:0 "The Duma"
-SEV_political_infighting_desc:0 "The Duma was previously an institution in Severyana, before the revolution destroyed most of what was established. In this new order however, things are not exactly as pleasant as they can be..."
+SEV_political_infighting_desc:0 "The Duma was previously an institution in Severyansk, before the revolution destroyed most of what was established. In this new order however, things are not exactly as pleasant as they can be..."
 
 
 ### Industrial Tree ###
