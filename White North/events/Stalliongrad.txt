@@ -3880,6 +3880,9 @@ country_event = {
 	option = { #The Gensec is dead!
 	    name = stalliongrad.999.a
 	    kill_country_leader = yes
+		ai_chance = {
+			factor = 100
+		}
 		create_country_leader = {
 				name = "Supreme Soviet"
 				desc = "SUPREME_SOVIET_DESC"
@@ -3890,20 +3893,54 @@ country_event = {
 				}
 			}
 		hidden_effect = { 
-		destroy_ships = {
-			type = destroyer
-			count = 6
+			destroy_ships = {
+				type = destroyer
+				count = 6
+			}
+			destroy_ships = {
+				type = light_cruiser
+				count = 4
+			}
+			destroy_ships = {
+				type = battleship
+				count = 2
+			}
 		}
-		destroy_ships = {
-			type = light_cruiser
-			count = 4
-		}
-		destroy_ships = {
-			type = battleship
-			count = 2
-		}
-	}
 		
+	}
+	option = { #Switch to the rebellion!
+	    name = stalliongrad.999.b
+	    kill_country_leader = yes
+		ai_chance = {
+			factor = 0
+		}
+		create_country_leader = {
+				name = "Supreme Soviet"
+				desc = "SUPREME_SOVIET_DESC"
+				picture = "Soviet.tga"
+				expire = "1965.1.1"
+				ideology = leninism
+				traits = { 
+					provisional
+				}
+			}
+			custom_effect_tooltip = changetoSEV_tt
+		
+		hidden_effect = {
+		SEV = { change_tag_from = ROOT }
+			destroy_ships = {
+				type = destroyer
+				count = 6
+			}
+			destroy_ships = {
+				type = light_cruiser
+				count = 4
+			}
+			destroy_ships = {
+				type = battleship
+				count = 2
+			}
+		}	
 	}
 }
 	
