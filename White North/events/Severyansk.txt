@@ -305,7 +305,7 @@ country_event = { #Tsarist restoration
 		}
 		add_popularity = {
                 ideology = neutrality
-                popularity = 0.1
+                popularity = 0.05
         }
         set_party_name = {
                 ideology = neutrality
@@ -383,7 +383,7 @@ country_event = { #SEV annexation by EQS
 	}
 }
 
-country_event = { #
+country_event = { #Regetns would be done once "Tsar has survived" subpath will be complete
 	id = sever.13
 	title = sever.13.t 
 	desc = sever.13.d
@@ -391,7 +391,41 @@ country_event = { #
 	is_triggered_only = yes
 
 	option = { 
-		name = sever.13.a
+		name = sever.13.a #idk what effects to put in if Tsar survives, maybe buffs, maybe the opposite, we'll decide on that later
+		ai_chance = {
+			factor = 10
+	}
+	option = { 
+		name = sever.13.b #Tsar is dead, regent Katherine takes his place
+		kill_country_leader = yes
+		ai_chance = {
+			factor = 10
+		}
+		create_country_leader = {
+				name = "Katherine Fertz"
+				desc = ""
+				picture = "RKatherine.tga"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+				}
+			}
+	}
+	option = { 
+		name = sever.13.c #Tsar is dead, regent Von Manschell takes his place
+		kill_country_leader = yes
+		ai_chance = {
+			factor = 85
+		}
+		create_country_leader = {
+				name = "August von Manschell"
+				desc = ""
+				picture = ""
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+				}
+			}
 	}
 }
 
@@ -404,6 +438,10 @@ country_event = { #
 
 	option = { 
 		name = sever.14.a
+	}
+	option = { 
+		name = sever.14.b
+		
 	}
 }
 
