@@ -83,8 +83,6 @@ focus_tree = {
 			bypass = {
 					has_country_flag = SEV_dem_col
 				}
-			custom_effect_tooltip = SEV_dem_coltip
-
 	}
 	focus = {
 		id = SEV_democracy_wins
@@ -151,6 +149,7 @@ focus_tree = {
 					days = 1
 				}
 
+			}
 	}
 	focus = {
 		id = SEV_democratic_tsar
@@ -257,7 +256,6 @@ focus_tree = {
 			bypass = {
 					has_government = fascism
 				}
-			custom_effect_tooltip = SEV_baron_tip
 
 	}
 	focus = {
