@@ -251,7 +251,7 @@ country_event = { #fascists take control
 			popularity = 0.2
 		}
 		set_party_name = {
-                ideology = neutrality
+                ideology = fascism
                 long_name = SEV_Baron_party_long
                 name = SEV_Baron_party
         }
@@ -394,6 +394,7 @@ country_event = { #Regetns would be done once "Tsar has survived" subpath will b
 		name = sever.13.a #idk what effects to put in if Tsar survives, maybe buffs, maybe the opposite, we'll decide on that later
 		ai_chance = {
 			factor = 10
+		}
 	}
 	option = { 
 		name = sever.13.b #Tsar is dead, regent Katherine takes his place
