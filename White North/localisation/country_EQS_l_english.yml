@@ -1309,3 +1309,28 @@ equestria.178.a:0 "What a dissapointment!"
 
 ponies_front:0 "All Ponies Front"
 rarity_captured:0 "Rarity has been captured by Nightmare Moon"
+#### STG Submod ####
+equestriasev.990.t:0 "Send guns, volunteers or both to SEV?"
+equestriasev.990.d:0 "Or don't send anything at all?"
+equestriasev.990.a:0 "A general, guns and volunteers."
+equestriasev.990.b:0 "Volunteers and guns should be enough."
+equestriasev.990.c:0 "Only guns."
+equestriasev.990.d:0 "Don't send anything."
+
+equestriasev.995.t:0 "Severyansk doesn't want our general"
+equestriasev.995.d:0 "Oli is going to become general here then"
+equestriasev.995.a:0 "okeii"
+
+equestriasev.996.t:0 "Luna's concern"
+equestriasev.996.d:0 "The throne room doors open as Princess Luna approaches her sister, followed by two equestriasevn generals, after summoning Celestia for an urgent meeting. “What is the matter, dear sister, why have you called upon this meeting?” Celesia worriedly asks. Luna stops in front of Celestia’s throne and looks upon her. “My dear sister, I have been troubled for several moons about the subject of our neighbor, Stalliongrad.” Celestia’s concern turns to apprehensiveness. “Now Luna…” “I know-” Luna interjects “I understand that they were granted their independence, but I fear for equestriasev. Stalliongrad left us and has had nothing but resentment for equestriasev ever since they separated, and this resentment is what I fear.” Luna draws her sisters attention. “Go on?...” Celestia reluctantly orders. “Recently, our neighbor’s rapid industrialization and military capacity have increased at astonishing rates and the threat of this has been brought to my attention by our generals. With the Changeling threat to our west, I believe we should take a course of action to protect our ponies…”"
+equestriasev.996.a:0 "Continue, sister"
+
+equestriasev.997.t:0 "Coup suggestion"
+equestriasev.997.d:0 "“Well, what have you found, sister?” Asks Celestia. “We have received reports about a paramilitary group known as the Severyansk Liberation Army, a small military organization comprised of a handful of division, and the old equestriasevn generals who fought against stalliongrad after the communist takeover, but decided to leave when their homes were taken. I believe if we contact them and offer our assistance to help retake their homes without equestriasev getting directly involved, they just might accept!” Luna relies. “So, should make contact with them?...”"
+equestriasev.997.a:0 "This sounds great, our resources are at their disposal!"
+equestriasev.997.b:0 " On second thought, I do not believe we have the resources to help them.."
+
+equestriasev.998.t:0 "Revolution in Stalliongrad began!"
+equestriasev.998.d:0 "Should player switch to SEV?"
+equestriasev.998.a:0 "Yes"
+equestriasev.998.b:0 "No"

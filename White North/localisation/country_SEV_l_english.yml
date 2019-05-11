@@ -23,6 +23,10 @@ SEV_TSARIST_neutrality:0 "Tsardom of Severyansk"
 SEV_TSARIST_neutrality_DEF:0 "Tsardom of Severyansk"
 SEV_TSARIST_neutrality_ADJ:0 "Severyan"
 
+SEV_TSARIST_democratic:0 "Tsardom of Severyansk"
+SEV_TSARIST_democratic_DEF:0 "Tsardom of Severyansk"
+SEV_TSARIST_democratic_ADJ:0 "Severyan"
+
 SEV_barony_fascism:0 "Barony of Severyansk"
 SEV_barony_fascism_DEF:0 "Barony of Severyansk"
 SEV_barony_fascism_ADJ:0 "Severyan"
@@ -64,7 +68,7 @@ sever.2.d:0 "If you see this text, for event sever.2..."
 sever.2.a:0 "Please report as it as a bug."
 
 sever.3.t:0 "The end of the Severyan Civil War" #End of Civil War
-sever.3.d:0 "Tonight, the Kremlin of Moscolt, the capital of the Severyan Tsardom, formally lowered the red flag of the Stalliongrad revolution. The guards brought in a new - no, old, flag. They carried the Black-White-Blue standard of old to the flagpole, and lowered the flag of the revolution one more time. \n \nThe end of the Revolution came much sooner than expected, at the hands of counter-revolutionaries. Once more, the Severyan banner flies high! "
+sever.3.d:0 "Tonight, the Kremlin of Moscolt, the capital of the Severyansk, formally lowered the red flag of the Stalliongrad revolution. The guards brought in a new - no, old, flag. They carried the Black-White-Blue standard of old to the flagpole, and lowered the flag of the revolution one more time. \n \nThe end of the Revolution came much sooner than expected, at the hands of counter-revolutionaries. Once more, the Severyan banner flies high! "
 sever.3.a:0 "Ura!"
 
 sever.4.t:0 "Banning Communism"
@@ -76,69 +80,52 @@ sever.5.d:0 "After the common threat of communism passed, the Duma reformed. Onc
 sever.5.a:0 "Have faith in the Duma."
 sever.5.b:0 "Let the army deal with these bickering fools."
 
-sever.6.t:0 "Formation of a democratic coalition"
-sever.6.d:0
-sever.6.a:0
+sever.6.t:0 "Monarcho-Democratic coalition"
+sever.6.d:0 ""
+sever.6.a:0 ""
 
 sever.7.t:0 "The Black Baron's Coup"
-sever.7.d:0
-sever.7.a:0
+sever.7.d:0 ""
+sever.7.a:0 ""
 
-sever.8.t:0 "Liberal-Conservative Coalition
-sever.8.d:0
-sever.8.a:0
+sever.8.t:0 "Liberal-Conservative Coalition"
+sever.8.d:0 ""
+sever.8.a:0 ""
 
-sever.9.t:0
-sever.9.d:0
-sever.9.a:0
+sever.9.t:0 ""
+sever.9.d:0 ""
+sever.9.a:0 ""
 
-sever.10.t:0
-sever.10.d:0
-sever.10.a:0
+sever.10.t:0 ""
+sever.10.d:0 ""
+sever.10.a:0 ""
 
-sever.11.t:0
-sever.11.d:0
-sever.11.a:0
+sever.11.t:0 ""
+sever.11.d:0 ""
+sever.11.a:0 ""
 
-sever.12.t:0
-sever.12.d:0
-sever.12.a:0
+sever.12.t:0 ""
+sever.12.d:0 ""
+sever.12.a:0 ""
 
 sever.13.t:0 "An Imperial feast"
 sever.13.d:0 "dummy loc for now, basically tsar has called for a feast to celebrate victory in the civil war and monarchist restoration and invited various generals and stuff like that. when you will be describing guests of this event, you must give at least three detailed descriptions to these people: Black Baron (his overall look (he wears papakha, an overcoat, red cross on his neck and that's it, you can just look up wrangel for that or look at the portrait) and cold, but polite persona), an Equestrian general (Oli), and i'll come up with a third character. you can localise a bit of this but not fully. in short - this loc is wip"
 sever.13.a:0 "Tsar finds himself to be lucky to avoid drinking that delicious looking drink, because later on guards have found out that it was posioned!"
 sever.13.b:0 "Our Tsar is dead! Regent must take his place now."
 
+sever.14.t:0 ""
+sever.14.d:0 ""
+sever.14.a:0 ""
+
+sever.15.t:0 ""
+sever.15.d:0 ""
+sever.15.a:0 ""
+
+sever.16.t:0 ""
+sever.16.d:0 ""
+sever.16.a:0 ""
+
 #Civil war stuff
-equestriasev.990.t:0 "Send guns, volunteers or both to SEV?"
-equestriasev.990.d:0 "Or don't send anything at all?"
-equestriasev.990.a:0 "A general, guns and volunteers."
-equestriasev.990.b:0 "Volunteers and guns should be enough."
-equestriasev.990.c:0 "Only guns."
-equestriasev.990.d:0 "Don't send anything."
-
-equestriasev.995.t:0 "Severyansk doesn't want our general"
-equestriasev.995.d:0 "Oli is going to become general here then"
-equestriasev.995.a:0 "okeii"
-
-equestriasev.996.t:0 "Luna's concern"
-equestriasev.996.d:0 "The throne room doors open as Princess Luna approaches her sister, followed by two equestriasevn generals, after summoning Celestia for an urgent meeting. “What is the matter, dear sister, why have you called upon this meeting?” Celesia worriedly asks. Luna stops in front of Celestia’s throne and looks upon her. “My dear sister, I have been troubled for several moons about the subject of our neighbor, Stalliongrad.” Celestia’s concern turns to apprehensiveness. “Now Luna…” “I know-” Luna interjects “I understand that they were granted their independence, but I fear for equestriasev. Stalliongrad left us and has had nothing but resentment for equestriasev ever since they separated, and this resentment is what I fear.” Luna draws her sisters attention. “Go on?...” Celestia reluctantly orders. “Recently, our neighbor’s rapid industrialization and military capacity have increased at astonishing rates and the threat of this has been brought to my attention by our generals. With the Changeling threat to our west, I believe we should take a course of action to protect our ponies…”"
-equestriasev.996.a:0 "Continue, sister"
-
-equestriasev.997.t:0 "Coup suggestion"
-equestriasev.997.d:0 "“Well, what have you found, sister?” Asks Celestia. “We have received reports about a paramilitary group known as the Severyansk Liberation Army, a small military organization comprised of a handful of division, and the old equestriasevn generals who fought against stalliongrad after the communist takeover, but decided to leave when their homes were taken. I believe if we contact them and offer our assistance to help retake their homes without equestriasev getting directly involved, they just might accept!” Luna relies. “So, should make contact with them?...”"
-equestriasev.997.a:0 "This sounds great, our resources are at their disposal!"
-equestriasev.997.b:0 " On second thought, I do not believe we have the resources to help them.."
-
-equestriasev.998.t:0 "Revolution in Stalliongrad began!"
-equestriasev.998.d:0 "Should player switch to SEV?"
-equestriasev.998.a:0 "Yes"
-equestriasev.998.b:0 "No"
-
-stalliongrad.999.t:0 "The Secretary General is dead!"
-stalliongrad.999.d:0 "White Guard mad lad took him, also killing himself in process, oof."
-stalliongrad.999.a:0 "Fuck"
-
 severcw.1.t:0 "Annexation of Our Town" #Annexation of Our Town
 severcw.1.d:0 "Our Town, the home of the Equalist experiment. We could use a little coercion to force them to join us... After all, their few resources could turn the tides, for every detail in war can matter."
 severcw.1.a:0 "Press them for Annexation."
@@ -165,11 +152,8 @@ SEV_rename_desc:0 "We will decommunize names in our country, as suggested by the
 
 #Tooltips
 
-
-SEV_baron_tip:0 "The §WArmy§! and §bBlack Baron§! will seize the power!"
-SEV_dem_coltip:0 "§BMonarcho-Democratic§! coalition prevents the possible disaster."
-severyan_infighting:0 "§MDemocrats§! and §gMonarchists§! agree to compromise in form of elections."
-severyan_infighting2:0 "The §WArmy§! and §bBlack Baron§! shall restore order."
+severyan_infighting:0 "§MDemocrats§! and §BMonarchists§! agree to compromise in form of elections."
+severyan_infighting2:0 "The §WArmy§! and §gBlack Baron§! shall restore order."
 
 #### IDEAS ####
 SEV_fuck_commies:0 "Liberation of Motherland" #may have to redo the name and desc, i dont like it 
