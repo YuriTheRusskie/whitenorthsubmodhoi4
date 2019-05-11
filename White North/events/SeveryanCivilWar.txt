@@ -57,6 +57,10 @@ country_event = { # EQS Ponies, Guns and a general
 
 		add_manpower = 3000
 		
+		add_political_power = -100
+		
+		add_stability = -0.15
+		
 		custom_effect_tooltip = received_equipment_2000
 		
 		custom_effect_tooltip = bat_general
@@ -79,7 +83,7 @@ country_event = { # EQS Ponies, Guns and a general
 		}
 		
 		EQS = {
-			set_country_flag = EQS_BIG_SEV_HELP #Maybe have an opinion modifier instead?
+			set_country_flag = EQS_BIG_SEV_HELP #Maybe have an opinion modifier instead?  #lol why not, code it in please
 		}
 	}
 		
@@ -99,7 +103,7 @@ country_event = { # EQS Ponies, Guns and a general
 			EQS = { country_event = { id = equestria.995 days = 1 } }	
 			}		
 			EQS = {
-				set_country_flag = EQS_SEV_NO_BAT #add opinion modifier? - knife
+				set_country_flag = EQS_SEV_NO_BAT #add opinion modifier? - knife #yeh, like 'they gave us stuff lol' - yuri
 			}
 		}
 	}
