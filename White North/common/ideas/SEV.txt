@@ -43,6 +43,33 @@ ideas = {
 				stability_factor = -0.1
 				war_support_factor = -0.1
 				consumer_goods_factor = 0.1
+				fascism_drift = 0.05
+				democratic_drift = 0.05
+				neutrality_drift = 0.01
+			}
+			
+			
+		}
+		
+		coalition_tension = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			#picture = soa_flag
+			
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.05
 			}
 			
 			
@@ -122,6 +149,106 @@ ideas = {
 			modifier = {
 				research_speed_factor = 0.10
 			}
+		}
+		SEV_PFS_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+
+			picture = ger_rebuild_the_nation
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_industrial_complex_factor = 0.03
+			}
+		}
+		SEV_gurantee_liberty {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = 
+			
+			modifier = {
+				fascism_drift = -0.05
+				democratic_drift = 0.5
+				neutrality_drift = 0.01
+				neutrality_acceptance = 50
+				democratic_acceptance = 85
+				fascist_acceptance = -35
+				political_power_cost = 0.10
+			}
+		}
+		unorganized_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				army_org_factor = -0.1
+				training_time_factor = 0.1
+				conscription_factor = -0.05
+			}
+		}
+		unorganized_navy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_navy_bonus
+			
+			research_bonus = {
+				naval_doctrine = -0.75
+			}
+		}
+		SEV_white_guard_staff1 = {
+    	picture = ast_volunteer_defence_corps
+		modifier = {
+				army_attack_factor = 0.01
+				army_morale_factor = 0.05
+				planning_speed = 0.1		
+			}
+	    }
+		SEV_zhandameria = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				enemy_partisan_effect = -0.15
+				stability_factor = 0.010
+			}
+
+			removal_cost = -1
+			
+			picture = generic_spy_coup
 		}
 		
 	}
