@@ -184,10 +184,10 @@ SEV_gurantee_liberty:0 "Gurantee of Liberty"
 SEV_gurantee_liberty_desc:0 ""
 
 unorganized_army:0 "Unorganized Army"
-unorganized_army_desc:0 ""
+unorganized_army_desc:0 "The volunteer army served us well during the civil war, but the fact of the matter is that it mostly consists of peasants and civilians which makes our military disorganized and unprofessional. We must make reforms in order to resolve this issue."
 
 unorganized_navy:0 "Unorganized Navy"
-unorganized_navy_desc:0 ""
+unorganized_navy_desc:0 "The Severyan Navy after the civil war, just like the army, consists of primarily of civilians and peasants. A reform is needed to make it a professional navy that is capable of defending our coast."
 
 SEV_white_guard_staff1:0 "Severyan General Staff"
 SEV_white_guard_staff1_desc:0 ""
@@ -197,14 +197,14 @@ SEV_white_guard_staff1_desc:0 ""
 
 #Civil war focus tree
 
-SEV_CW_start:0 ""
-SEV_CW_start_desc:0 ""
+SEV_CW_start:0 "Severyan Civil War"
+SEV_CW_start_desc:0 "The civil war has begun! This is the only chance to liberate our homeland! March foward, White Army! Save Severyansk!"
 
-SEV_CW_raid1:0 ""
-SEV_CW_raid1_desc:0 ""
+SEV_CW_raid1:0 "Shadow Raid"
+SEV_CW_raid1_desc:0 "During the preparations of the supposed coup (which has failed), we've established a spy network in Stalliongrad. We can use it to capture some weapons from enemy supply stock. §RStalliongrad will guard its supplies more tightly next time!§!"
 
-SEV_CW_raid2:0 ""
-SEV_CW_raid2_desc:0 "" 
+SEV_CW_raid2:0 "Operatsia:Rasplata"
+SEV_CW_raid2_desc:0 "Our military staff suggests another raid operation under code name:\"Forfeit\". Our agents will try to capture enemy tanks from Stalliongradian army. §RThis raid is extremely risky, expect high casualties.§!" 
 
 SEV_CW_we:0 ""
 SEV_CW_we_desc:0 ""
