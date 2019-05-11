@@ -8,6 +8,7 @@ focus_tree = {
 			NOT = { country_exists = STG}
 		}
 	}
+	continuous_focus_position = { x = 200 y = 12000 }
 	default = no
 	focus = {
 		id = SEV_secure_the_state
@@ -83,6 +84,8 @@ focus_tree = {
 			bypass = {
 					has_country_flag = SEV_dem_col
 				}
+			custom_effect_tooltip = SEV_dem_coltip
+
 	}
 	focus = {
 		id = SEV_democracy_wins
@@ -114,7 +117,7 @@ focus_tree = {
 	focus = {
 		id = SEV_za_tsarya
 		icon = GFX_goal_generic_neutrality_focus
-		cost = 5,00
+		cost = 6,00
 		prerequisite = {
 			focus = SEV_elections
 		}
@@ -137,24 +140,24 @@ focus_tree = {
 	focus = {
 		id = SEV_tsarsky_pir
 		icon = GFX_goal_generic_national_unity
-		cost = 0,00
+		cost = 5,00
 		prerequisite = {
 			focus = SEV_za_tsarya
 		}
 		x = 8
 		y = 4
 			completion_reward = {
-			country_event = {
-					id = sever.13
-					days = 1
+					country_event = {
+							id = sever.13
+							days = 1
+						}
 				}
 
-			}
 	}
 	focus = {
 		id = SEV_democratic_tsar
 		icon = GFX_goal_support_democracy
-		cost = 0,00
+		cost = 3,00
 		prerequisite = {
 			focus = SEV_tsarsky_pir
 		}
@@ -168,7 +171,7 @@ focus_tree = {
 	focus = {
 		id = SEV_absolutist
 		icon = GFX_goal_demand_sudetenland
-		cost = 0,00
+		cost = 6,00
 		prerequisite = {
 			focus = SEV_tsarsky_pir
 		}
@@ -184,10 +187,9 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 0,00
 		prerequisite = {
-			focus = SEV_democratic_tsar
 			focus = SEV_absolutist
 		}
-		x = 8
+		x = 10
 		y = 6
 
 	}
@@ -198,7 +200,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SEV_for
 		}
-		x = 7
+		x = 9
 		y = 7
 
 	}
@@ -209,7 +211,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SEV_for
 		}
-		x = 9
+		x = 11
 		y = 7
 
 	}
@@ -223,7 +225,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SEV_tsar
 		}
-		x = 8
+		x = 10
 		y = 8
 
 	}
@@ -234,7 +236,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SEV_and_country
 		}
-		x = 8
+		x = 10
 		y = 9
 
 	}
@@ -256,6 +258,7 @@ focus_tree = {
 			bypass = {
 					has_government = fascism
 				}
+			custom_effect_tooltip = SEV_baron_tip
 
 	}
 	focus = {
@@ -265,18 +268,36 @@ focus_tree = {
 		prerequisite = {
 			focus = SEV_baron
 		}
+		mutually_exclusive = {
+			focus = SEV_turn_death_squads_into_police
+		}
 		x = 14
 		y = 3
 
 	}
 	focus = {
-		id = SEV_hail_the_baron
-		icon = GFX_goal_generic_political_pressure
+		id = SEV_turn_death_squads_into_police
+		icon = GFX_goal_rhineland
 		cost = 0,00
 		prerequisite = {
+			focus = SEV_baron
+		}
+		mutually_exclusive = {
 			focus = SEV_hunt_down_opposition
 		}
-		x = 14
+		x = 16
+		y = 3
+
+	}
+	focus = {
+		id = SEV_send_them_to_camps
+		icon = GFX_goal_generic_secret_weapon
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_turn_death_squads_into_police
+			focus = SEV_hunt_down_opposition
+		}
+		x = 15
 		y = 4
 
 	}
@@ -285,52 +306,16 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		cost = 0,00
 		prerequisite = {
-			focus = SEV_hail_the_baron
+			focus = SEV_send_them_to_camps
 		}
-		x = 14
+		x = 15
 		y = 5
 
 	}
 	focus = {
-		id = SEV_death_squads
-		icon = GFX_goal_generic_secret_weapon
+		id = SEV_militarised_education
+		icon = GFX_goal_generic_allies_build_infantry
 		cost = 0,00
-		prerequisite = {
-			focus = SEV_baron
-		}
-		x = 16
-		y = 3
-
-	}
-	focus = {
-		id = SEV_summer_camps
-		icon = GFX_goal_generic_CAS
-		cost = 0,00
-		prerequisite = {
-			focus = SEV_death_squads
-		}
-		x = 16
-		y = 4
-
-	}
-	focus = {
-		id = SEV_turn_death_squads_into_police
-		icon = GFX_goal_rhineland
-		cost = 0,00
-		prerequisite = {
-			focus = SEV_summer_camps
-		}
-		x = 16
-		y = 5
-
-	}
-	focus = {
-		id = SEV_crusade_against_commies
-		icon = GFX_goal_generic_war_with_comintern
-		cost = 0,00
-		prerequisite = {
-			focus = SEV_turn_death_squads_into_police
-		}
 		prerequisite = {
 			focus = SEV_state_propaganda
 		}
@@ -339,36 +324,36 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SEV_militarised_education
-		icon = GFX_goal_generic_allies_build_infantry
+		id = SEV_star_wolf_youth
+		icon = GFX_goal_generic_wolf_pack
 		cost = 0,00
 		prerequisite = {
-			focus = SEV_crusade_against_commies
+			focus = SEV_militarised_education
 		}
-		x = 14
+		x = 15
 		y = 7
 
 	}
 	focus = {
-		id = SEV_our_cause
-		icon = GFX_goal_generic_demand_territory
+		id = newfocus_46
+		icon = GFX_goal_unknown
 		cost = 0,00
 		prerequisite = {
-			focus = SEV_crusade_against_commies
+			focus = SEV_star_wolf_youth
 		}
-		x = 16
-		y = 7
-
-	}
-	focus = {
-		id = SEV_make_ponies_believe
-		icon = GFX_goal_generic_propaganda
-		cost = 0,00
-		prerequisite = {
-			focus = SEV_our_cause
-		}
-		x = 16
+		x = 15
 		y = 8
+
+	}
+	focus = {
+		id = newfocus_47
+		icon = GFX_goal_unknown
+		cost = 0,00
+		prerequisite = {
+			focus = newfocus_46
+		}
+		x = 15
+		y = 9
 
 	}
 	focus = {
@@ -606,7 +591,7 @@ focus_tree = {
 	focus = {
 		id = SEV_equestrian_rats
 		icon = GFX_goal_support_democracy
-		cost = 0,00
+		cost = 6,00
 		prerequisite = {
 			focus = SEV_another_elections
 		}
@@ -632,7 +617,7 @@ focus_tree = {
 	focus = {
 		id = SEV_conservatives
 		icon = GFX_goal_generic_defence
-		cost = 0,00
+		cost = 6,00
 		prerequisite = {
 			focus = SEV_another_elections
 			focus = SEV_democratic_tsar
@@ -663,12 +648,12 @@ focus_tree = {
 	focus = {
 		id = SEV_integration
 		icon = GFX_goal_generic_dangerous_deal
-		cost = 0,00
+		cost = 10,00
 		prerequisite = {
 			focus = SEV_equestrian_rats
 		}
 		x = 0
-		y = 7
+		y = 8
 			completion_reward = {
 					EQS = {
 							country_event = {
@@ -680,32 +665,18 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SEV_restore_the_glory
-		icon = GFX_goal_generic_territory_or_war
-		cost = 0,00
-		prerequisite = {
-			focus = SEV_star_wolf_youth
-		}
-		prerequisite = {
-			focus = SEV_make_ponies_believe
-		}
-		x = 15
-		y = 9
-
-	}
-	focus = {
 		id = SEV_PFS
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 0,00
 		prerequisite = {
-			focus = SEV_traditions_are_important
 			focus = SEV_soft_conservatism
-		}
-		mutually_exclusive = {
-			focus = SEV_state_is_a_third_parent
 		}
 		x = 3
 		y = 8
+			completion_reward = {
+					add_ideas = SEV_PFS_idea
+					add_war_support = -0.03
+				}
 
 	}
 	focus = {
@@ -720,6 +691,13 @@ focus_tree = {
 		}
 		x = 3
 		y = 7
+			completion_reward = {
+					add_political_power = 100
+					add_stability = -0.1
+					set_rule = {
+							can_only_justify_war_on_threat_country = yes
+						}
+				}
 
 	}
 	focus = {
@@ -734,6 +712,15 @@ focus_tree = {
 		}
 		x = 5
 		y = 7
+			completion_reward = {
+					add_political_power = -50
+					add_stability = 0.5
+					set_rule = {
+							can_only_justify_war_on_threat_country = no
+							can_join_factions_not_allowed_diplomacy = yes
+							can_guarantee_other_ideologies = yes
+						}
+				}
 
 	}
 	focus = {
@@ -741,10 +728,11 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		cost = 0,00
 		prerequisite = {
-			focus = SEV_restore_the_glory
+			focus = SEV_god_save_the_tsar
 			focus = SEV_gurantee_of_safety
 			focus = SEV_gurantee_of_liberty
-			focus = SEV_god_save_the_tsar
+			focus = SEV_integration
+			focus = newfocus_47
 		}
 		x = 9
 		y = 10
@@ -765,17 +753,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SEV_star_wolf_youth
-		icon = GFX_goal_generic_wolf_pack
-		cost = 0,00
-		prerequisite = {
-			focus = SEV_militarised_education
-		}
-		x = 14
-		y = 8
-
-	}
-	focus = {
 		id = SEV_gurantee_of_liberty
 		icon = GFX_goal_generic_major_alliance
 		cost = 0,00
@@ -784,21 +761,25 @@ focus_tree = {
 		}
 		x = 3
 		y = 9
+			completion_reward = {
+					add_ideas = SEV_gurantee_liberty
+					add_war_support = -0.05
+					add_stability = 0.03
+				}
 
 	}
 	focus = {
-		id = SEV_state_is_a_third_parent
+		id = SEV_zhandameria
 		icon = GFX_goal_generic_military_sphere
 		cost = 0,00
 		prerequisite = {
 			focus = SEV_traditions_are_important
-			focus = SEV_soft_conservatism
-		}
-		mutually_exclusive = {
-			focus = SEV_PFS
 		}
 		x = 5
 		y = 8
+			completion_reward = {
+					add_ideas = SEV_zhandameria
+				}
 
 	}
 	focus = {
@@ -806,7 +787,7 @@ focus_tree = {
 		icon = GFX_goal_demand_sudetenland
 		cost = 0,00
 		prerequisite = {
-			focus = SEV_state_is_a_third_parent
+			focus = SEV_zhandameria
 		}
 		x = 5
 		y = 9
