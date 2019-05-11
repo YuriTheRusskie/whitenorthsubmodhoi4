@@ -165,6 +165,33 @@ SEV_ebanuy_rot_etogo_parlamenta_desc:0 "Despite the recent victory against the R
 SEV_coalition_tension:0 "Democratic competition"
 SEV_coalition_tension_desc:0 "Our government isn't as divided as it was. Now it's only pro-Equesrian Harmonists versus Conservatives."
 
+SEV_rebuild_nation:0 "Reconstruction of Severyansk"
+SEV_rebuild_nation_desc:0 ""
+
+SEV_heavy_industry:0 ""
+SEV_heavy_industry_desc:0 ""
+
+SEV_light_industry:0 ""
+SEV_light_industry_desc:0 ""
+
+funded_science:0 ""
+funded_science_desc:0 ""
+
+SEV_PFS_idea:0 "Welfare Fund of Severyansk"
+SEV_PFS_idea_desc:0 ""
+
+SEV_gurantee_liberty:0 "Gurantee of Liberty"
+SEV_gurantee_liberty_desc:0 ""
+
+unorganized_army:0 "Unorganized Army"
+unorganized_army_desc:0 ""
+
+unorganized_navy:0 "Unorganized Navy"
+unorganized_navy_desc:0 ""
+
+SEV_white_guard_staff1:0 "Severyan General Staff"
+SEV_white_guard_staff1_desc:0 ""
+
 
 #### FOCUSES ####
 
@@ -191,11 +218,8 @@ SEV_CW_attract_workers_desc:0 ""
 SEV_CW_strike:0 ""
 SEV_CW_strike_desc:0 "" 
 
-SEV_CW_as_one:0 ""
-SEV_CW_as_one_desc:0 ""
-
-SEV_CW_victory:0 "To Victory!"
-SEV_CW_victory_desc:0 "Against the Red Tide, we shall stand, against the Red Plague, we shall remain!" 
+SEV_CW_as_one:0 "To Victory!"
+SEV_CW_as_one_desc:0 "Against the Red Tide, we shall stand, against the Red Plague, we shall remain!"
 
 #Post Civil War tree
 
