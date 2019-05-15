@@ -110,20 +110,24 @@ sever.12.a:0 ""
 
 sever.13.t:0 "An Imperial feast"
 sever.13.d:0 "dummy loc for now, basically tsar has called for a feast to celebrate victory in the civil war and monarchist restoration and invited various generals and stuff like that. when you will be describing guests of this event, you must give at least three detailed descriptions to these people: Black Baron (his overall look (he wears papakha, an overcoat, red cross on his neck and that's it, you can just look up wrangel for that or look at the portrait) and cold, but polite persona), an Equestrian general (Oli), and i'll come up with a third character. you can localise a bit of this but not fully. in short - this loc is wip"
-sever.13.a:0 "Tsar finds himself to be lucky to avoid drinking that delicious looking drink, because later on guards have found out that it was posioned!"
-sever.13.b:0 "Our Tsar is dead! Regent must take his place now."
+sever.13.a:0 "Do not drink"
+sever.13.b:0 "Drink it"
 
-sever.14.t:0 ""
+sever.14.t:0 "Assasination attempt on Tsar has failed"
 sever.14.d:0 ""
 sever.14.a:0 ""
 
-sever.15.t:0 ""
+sever.15.t:0 "Democratic Tsar"
 sever.15.d:0 ""
 sever.15.a:0 ""
 
-sever.16.t:0 ""
+sever.16.t:0 "Absolutist"
 sever.16.d:0 ""
 sever.16.a:0 ""
+
+sever.17.t:0 "Tsar is dead!"
+sever.17.d:0 ""
+sever.17.a:0 ""
 
 #Civil war stuff
 severcw.1.t:0 "Annexation of Our Town" #Annexation of Our Town
@@ -182,6 +186,9 @@ SEV_PFS_idea_desc:0 ""
 
 SEV_gurantee_liberty:0 "Gurantee of Liberty"
 SEV_gurantee_liberty_desc:0 ""
+
+gurantee_safety:0 "Gurantee of Safety"
+gurantee_safety_desc:0 ""
 
 unorganized_army:0 "Unorganized Army"
 unorganized_army_desc:0 "The volunteer army served us well during the civil war, but the fact of the matter is that it mostly consists of peasants and civilians which makes our military disorganized and unprofessional. We must make reforms in order to resolve this issue."
