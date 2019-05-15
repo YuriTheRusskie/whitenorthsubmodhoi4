@@ -24,6 +24,30 @@ ideas = {
 			
 		}
 		
+		SEV_motherland_is_free = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = severyan_flag
+			
+			targeted_modifier = {
+				drift_defence_factor = 0.3
+				communist_acceptance = -100
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+			
+			
+		}
+		
 		SEV_ebanuy_rot_etogo_parlamenta = {
 			
 			allowed = {
@@ -168,6 +192,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.03
 			}
 		}
+		
 		SEV_gurantee_liberty {
 			allowed = {
 				always = no
@@ -182,15 +207,31 @@ ideas = {
 			picture = 
 			
 			modifier = {
-				fascism_drift = -0.05
-				democratic_drift = 0.5
-				neutrality_drift = 0.01
-				neutrality_acceptance = 50
-				democratic_acceptance = 85
-				fascist_acceptance = -35
-				political_power_cost = 0.10
+				fascism_drift = -0.03
+				fascist_acceptance = -50
+				political_power_gain = 0.1
 			}
 		}
+		
+		gurantee_safety = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+				foreign_subversive_activites = -0.25
+				enemy_partisan_effect = -0.1
+			}
+		}
+		
 		unorganized_army = {
 			allowed = {
 				always = no
@@ -209,6 +250,7 @@ ideas = {
 				conscription_factor = -0.05
 			}
 		}
+		
 		unorganized_navy = {
 			allowed = {
 				always = no
@@ -225,14 +267,15 @@ ideas = {
 				naval_doctrine = -0.75
 			}
 		}
+		
 		SEV_white_guard_staff1 = {
     	picture = ast_volunteer_defence_corps
 		modifier = {
 				army_attack_factor = 0.01
-				army_morale_factor = 0.05
-				planning_speed = 0.1		
+				army_morale_factor = 0.05		
 			}
 	    }
+		
 		SEV_zhandameria = {
 			allowed = {
 				always = no
@@ -242,7 +285,7 @@ ideas = {
 			}
 
 			modifier = {
-				enemy_partisan_effect = -0.15
+				enemy_partisan_effect = -0.1
 				stability_factor = 0.010
 			}
 
@@ -250,7 +293,24 @@ ideas = {
 			
 			picture = generic_spy_coup
 		}
-		
+		SEV_eliminated_opposition = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				fascism_acceptance = 100
+				democratic_acceptance = -50
+				neutrality_acceptance = -25
+			}
+
+			removal_cost = -1
+			
+			picture = generic_spy_coup
+		}
 	}
 	
 }
