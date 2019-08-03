@@ -1,0 +1,795 @@
+focus_tree = {
+	id = SEV_POST_CW_TREE
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = SEV
+			NOT = { has_war_with = STG}
+		}
+	}
+	default = no
+	
+		continuous_focus_position = { x = 200 y = 12000 }
+	focus = {
+		id = SEV_secure_the_state
+		icon = GFX_goal_anschluss
+		cost = 6,00
+		x = 10
+		y = 0
+			available = {
+					NOT = {
+							country_exists = STG
+						}
+				}
+			completion_reward = {
+					add_political_power = 35
+					add_stability = 0.1
+					add_ideas = communism_banned
+					country_event = {
+							id = sever.4
+							days = 1
+						}
+				}
+
+	}
+	focus = {
+		id = SEV_rebuild_the_nation
+		icon = GFX_goal_generic_construction
+		cost = 10,00
+		x = 27
+		y = 0
+			completion_reward = {
+					add_timed_idea = {
+							idea = SEV_rebuild_nation
+							days = 365
+						}
+				}
+
+	}
+	focus = {
+		id = SEV_political_infighting
+		icon = GFX_goal_generic_attack_allies
+		cost = 5,00
+		prerequisite = {
+			focus = SEV_secure_the_state
+		}
+		x = 10
+		y = 1
+			completion_reward = {
+					SEV = {
+							country_event = {
+									id = sever.5
+									days = 5
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SEV_elections
+		icon = GFX_goal_tripartite_pact
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_political_infighting
+		}
+		mutually_exclusive = {
+			focus = SEV_baron
+		}
+		x = 5
+		y = 2
+			available = {
+					has_country_flag = SEV_dem_col
+				}
+			bypass = {
+					has_country_flag = SEV_dem_col
+				}
+			custom_effect_tooltip = SEV_demmon
+
+	}
+	focus = {
+		id = SEV_democracy_wins
+		icon = GFX_goal_support_democracy
+		cost = 5,00
+		prerequisite = {
+			focus = SEV_elections
+		}
+		mutually_exclusive = {
+			focus = SEV_za_tsarya
+		}
+		x = 2
+		y = 3
+			available = {
+					has_country_flag = SEV_dem_col
+				}
+			completion_reward = {
+					country_event = {
+							id = sever.8
+							days = 1
+						}
+					country_event = {
+							id = sever.10
+							days = 7
+						}
+				}
+
+	}
+	focus = {
+		id = SEV_za_tsarya
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5,00
+		prerequisite = {
+			focus = SEV_elections
+		}
+		mutually_exclusive = {
+			focus = SEV_democracy_wins
+		}
+		x = 8
+		y = 3
+			available = {
+					has_country_flag = SEV_dem_col
+				}
+			completion_reward = {
+					country_event = {
+							id = sever.9
+							days = 1
+						}
+				}
+
+	}
+	focus = {
+		id = SEV_tsarsky_pir
+		icon = GFX_goal_generic_national_unity
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_za_tsarya
+		}
+		x = 8
+		y = 4
+
+	}
+	focus = {
+		id = SEV_democratic_tsar
+		icon = GFX_goal_support_democracy
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_tsarsky_pir
+		}
+		mutually_exclusive = {
+			focus = SEV_absolutist
+		}
+		x = 6
+		y = 5
+			available = {
+					has_country_flag = needs_rebuild
+				}
+
+	}
+	focus = {
+		id = SEV_absolutist
+		icon = GFX_goal_demand_sudetenland
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_tsarsky_pir
+		}
+		mutually_exclusive = {
+			focus = SEV_democratic_tsar
+		}
+		x = 10
+		y = 5
+			available = {
+					has_country_flag = needs_rebuild
+				}
+
+	}
+	focus = {
+		id = SEV_for
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_democratic_tsar
+			focus = SEV_absolutist
+		}
+		x = 8
+		y = 6
+
+	}
+	focus = {
+		id = SEV_faith
+		icon = GFX_goal_unknown
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_for
+		}
+		x = 7
+		y = 7
+
+	}
+	focus = {
+		id = SEV_tsar
+		icon = GFX_goal_unknown
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_for
+		}
+		x = 9
+		y = 7
+
+	}
+	focus = {
+		id = SEV_and_country
+		icon = GFX_goal_unknown
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_faith
+		}
+		prerequisite = {
+			focus = SEV_tsar
+		}
+		x = 8
+		y = 8
+
+	}
+	focus = {
+		id = SEV_god_save_the_tsar
+		icon = GFX_goal_unknown
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_and_country
+		}
+		x = 8
+		y = 9
+
+	}
+	focus = {
+		id = SEV_baron
+		icon = GFX_goal_support_fascism
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_political_infighting
+		}
+		mutually_exclusive = {
+			focus = SEV_elections
+		}
+		x = 15
+		y = 2
+			available = {
+					has_government = fascism
+				}
+			bypass = {
+					has_government = fascism
+				}
+			custom_effect_tooltip =  SEV_baron_tip 
+
+	}
+	focus = {
+		id = SEV_hunt_down_opposition
+		icon = GFX_goal_generic_alliance
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_baron
+		}
+		x = 14
+		y = 3
+
+	}
+	focus = {
+		id = SEV_hail_the_baron
+		icon = GFX_goal_generic_political_pressure
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_hunt_down_opposition
+		}
+		x = 14
+		y = 4
+
+	}
+	focus = {
+		id = SEV_state_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_hail_the_baron
+		}
+		x = 14
+		y = 5
+
+	}
+	focus = {
+		id = SEV_death_squads
+		icon = GFX_goal_generic_secret_weapon
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_baron
+		}
+		x = 16
+		y = 3
+
+	}
+	focus = {
+		id = SEV_summer_camps
+		icon = GFX_goal_generic_CAS
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_death_squads
+		}
+		x = 16
+		y = 4
+
+	}
+	focus = {
+		id = SEV_turn_death_squads_into_police
+		icon = GFX_goal_rhineland
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_summer_camps
+		}
+		x = 16
+		y = 5
+
+	}
+	focus = {
+		id = SEV_crusade_against_commies
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_turn_death_squads_into_police
+		}
+		prerequisite = {
+			focus = SEV_state_propaganda
+		}
+		x = 15
+		y = 6
+			available = {
+					has_country_flag = needs_rebuild
+				}
+
+	}
+	focus = {
+		id = SEV_militarised_education
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_crusade_against_commies
+		}
+		x = 14
+		y = 7
+
+	}
+	focus = {
+		id = SEV_our_cause
+		icon = GFX_goal_generic_demand_territory
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_crusade_against_commies
+		}
+		x = 16
+		y = 7
+
+	}
+	focus = {
+		id = SEV_make_ponies_believe
+		icon = GFX_goal_generic_propaganda
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_our_cause
+		}
+		x = 16
+		y = 8
+
+	}
+	focus = {
+		id = SEV_heavy_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = SEV_rebuild_the_nation
+		}
+		mutually_exclusive = {
+			focus = SEV_light_industry
+		}
+		x = 25
+		y = 1
+			completion_reward = {
+					add_ideas = SEV_heavy_industry
+				}
+
+	}
+	focus = {
+		id = SEV_light_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = SEV_rebuild_the_nation
+		}
+		mutually_exclusive = {
+			focus = SEV_heavy_industry
+		}
+		x = 29
+		y = 1
+			completion_reward = {
+					add_ideas = SEV_light_industry
+				}
+
+	}
+	focus = {
+		id = SEV_first_phase_done
+		icon = GFX_goal_generic_construction2
+		cost = 10,00
+		prerequisite = {
+			focus = SEV_light_industry
+			focus = SEV_heavy_industry
+		}
+		x = 27
+		y = 2
+			completion_reward = {
+					remove_ideas = incomplete_industrialization
+					add_stability = 0.05
+					hidden_effect = {
+							set_country_flag = needs_rebuild
+						}
+				}
+
+	}
+	focus = {
+		id = SEV_economy_focus
+		icon = GFX_goal_generic_construct_civilian
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_first_phase_done
+		}
+		mutually_exclusive = {
+			focus = SEV_fund_research
+		}
+		x = 25
+		y = 3
+
+	}
+	focus = {
+		id = SEV_fund_research
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_first_phase_done
+		}
+		mutually_exclusive = {
+			focus = SEV_economy_focus
+		}
+		x = 29
+		y = 3
+
+	}
+	focus = {
+		id = SEV_final_steps
+		icon = GFX_goal_generic_production
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_fund_research
+			focus = SEV_economy_focus
+		}
+		x = 27
+		y = 4
+
+	}
+	focus = {
+		id = SEV_severyan_university
+		icon = GFX_focus_research
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_final_steps
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = SEV_develop_economy
+		icon = GFX_goal_generic_consumer_goods
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_severyan_university
+		}
+		mutually_exclusive = {
+			focus = SEV_prioritize_military
+		}
+		x = 24
+		y = 6
+
+	}
+	focus = {
+		id = SEV_better_industry
+		icon = GFX_goal_generic_production2
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_develop_economy
+		}
+		mutually_exclusive = {
+			focus = SEV_upgrade_sev_uni
+		}
+		x = 22
+		y = 7
+
+	}
+	focus = {
+		id = SEV_upgrade_sev_uni
+		icon = GFX_focus_research
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_develop_economy
+		}
+		mutually_exclusive = {
+			focus = SEV_better_industry
+		}
+		x = 26
+		y = 7
+
+	}
+	focus = {
+		id = SEV_prioritize_military
+		icon = GFX_goal_rhineland
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_severyan_university
+		}
+		mutually_exclusive = {
+			focus = SEV_develop_economy
+		}
+		x = 30
+		y = 6
+
+	}
+	focus = {
+		id = SEV_officer_academy
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_prioritize_military
+		}
+		mutually_exclusive = {
+			focus = SEV_military_research_uni
+		}
+		x = 28
+		y = 7
+
+	}
+	focus = {
+		id = SEV_another_elections
+		icon = GFX_goal_generic_improve_relations
+		cost = 4,00
+		prerequisite = {
+			focus = SEV_democracy_wins
+		}
+		x = 2
+		y = 5
+			available = {
+					has_idea = coalition_tension #TODO idea needs to be set
+					has_country_flag = 2nd_elections
+				}
+			completion_reward = {
+					country_event = {
+							id = sever.11
+							days = 2
+						}
+				}
+
+	}
+	focus = {
+		id = SEV_equestrian_rats
+		icon = GFX_goal_support_democracy
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_another_elections
+		}
+		mutually_exclusive = {
+			focus = SEV_conservatives
+		}
+		x = 0
+		y = 6
+			completion_reward = {
+					remove_ideas = coalition_tension
+					add_popularity = {
+							ideology = democratic
+							popularity = 0.1
+						}
+					set_party_name = {
+							ideology = democratic
+							long_name = SEV_EQS_democrats_long
+							name = SEV_EQS_democrats
+						}
+				}
+
+	}
+	focus = {
+		id = SEV_conservatives
+		icon = GFX_goal_generic_defence
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_another_elections
+			focus = SEV_democratic_tsar
+		}
+		mutually_exclusive = {
+			focus = SEV_equestrian_rats
+		}
+		x = 4
+		y = 6
+			completion_reward = {
+					remove_ideas = coalition_tension
+					add_popularity = {
+							ideology = democratic
+							popularity = 0.1
+						}
+					add_popularity = {
+							ideology = neutrality
+							popularity = 0.05
+						}
+					set_party_name = {
+							ideology = democratic
+							long_name = SEV_republicans_long
+							name = SEV_republicans
+						}
+				}
+
+	}
+	focus = {
+		id = SEV_integration
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_equestrian_rats
+		}
+		x = 0
+		y = 7
+			available = {
+					has_country_flag = needs_rebuild
+				}
+			completion_reward = {
+				EQS = {
+					country_event = {
+						id = sever.x #placeholder for SEV puppet/annex choice
+						days = 0
+					}
+				}
+				custom_effect_tooltip = tt_gameover
+			}
+			
+	}
+	focus = {
+		id = SEV_restore_the_glory
+		icon = GFX_goal_generic_territory_or_war
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_star_wolf_youth
+		}
+		prerequisite = {
+			focus = SEV_make_ponies_believe
+		}
+		x = 15
+		y = 9
+
+	}
+	focus = {
+		id = SEV_PFS
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_soft_conservatism
+			focus = SEV_traditions_are_important
+		}
+		mutually_exclusive = {
+			focus = SEV_police_state
+		}
+		x = 3
+		y = 8
+
+	}
+	focus = {
+		id = SEV_soft_conservatism
+		icon = GFX_goal_support_democracy
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_conservatives
+		}
+		mutually_exclusive = {
+			focus = SEV_traditions_are_important
+		}
+		x = 3
+		y = 7
+			available = {
+					has_country_flag = needs_rebuild
+				}
+
+	}
+	focus = {
+		id = SEV_traditions_are_important
+		icon = GFX_goal_generic_political_pressure
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_conservatives
+		}
+		mutually_exclusive = {
+			focus = SEV_soft_conservatism
+		}
+		x = 5
+		y = 7
+			available = {
+					has_country_flag = needs_rebuild
+				}
+
+	}
+	focus = {
+		id = SEV_external_politics
+		icon = GFX_goal_generic_position_armies
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_restore_the_glory
+			focus = SEV_gurantee_of_safety
+			focus = SEV_gurantee_of_liberty
+			focus = SEV_god_save_the_tsar
+		}
+		x = 9
+		y = 10
+
+	}
+	focus = {
+		id = SEV_military_research_uni
+		icon = GFX_goal_poland_goal
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_prioritize_military
+		}
+		mutually_exclusive = {
+			focus = SEV_officer_academy
+		}
+		x = 32
+		y = 7
+
+	}
+	focus = {
+		id = SEV_star_wolf_youth
+		icon = GFX_goal_generic_wolf_pack
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_militarised_education
+		}
+		x = 14
+		y = 8
+
+	}
+	focus = {
+		id = SEV_gurantee_of_liberty
+		icon = GFX_goal_generic_major_alliance
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_PFS
+		}
+		x = 3
+		y = 9
+
+	}
+	focus = {
+		id = SEV_police_state
+		icon = GFX_goal_generic_military_sphere
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_traditions_are_important
+			focus = SEV_soft_conservatism
+		}
+		mutually_exclusive = {
+			focus = SEV_PFS
+		}
+		x = 5
+		y = 8
+
+	}
+	focus = {
+		id = SEV_gurantee_of_safety
+		icon = GFX_goal_demand_sudetenland
+		cost = 0,00
+		prerequisite = {
+			focus = SEV_police_state
+		}
+		x = 5
+		y = 9
+
+	}
+}

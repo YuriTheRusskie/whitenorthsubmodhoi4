@@ -1,0 +1,229 @@
+﻿l_english:
+#### COUNTRY NAMES ####
+SEV_neutrality:0 "Severyan Liberation Army"
+SEV_fascism:0 "Severyan State"
+SEV_communism:0 "Stalliongrad"
+SEV_democratic:0 "Republic of Severyansk"
+SEV_neutrality_DEF:0 "The White Guard"
+SEV_fascism_DEF:0 "Severyan State"
+SEV_communism_DEF:0 "Stalliongrad"
+SEV_democratic_DEF:0 "Republic of Severyansk"
+SEV_fascism_ADJ:0 "Severyan"
+SEV_democratic_ADJ:0 "Severyan"
+SEV_neutrality_ADJ:0 "Severyan"
+SEV_communism_ADJ:0 "Stalliongradian"
+
+#Post Civil War country names
+
+SEV_POST_CW_neutrality:0 "Severyansk"
+SEV_POST_CW_neutrality_DEF:0 "Severyansk"
+SEV_POST_CW_neutrality_ADJ:0 "Severyan"
+
+SEV_TSARIST_neutrality:0 "Tsardom of Severyansk"
+SEV_TSARIST_neutrality_DEF:0 "Tsardom of Severyansk"
+SEV_TSARIST_neutrality_ADJ:0 "Severyan"
+
+SEV_barony_fascism:0 "Barony of Severyansk"
+SEV_barony_fascism_DEF:0 "Barony of Severyansk"
+SEV_barony_fascism_ADJ:0 "Severyan"
+
+#Post Civil War party names
+
+SEV_POST_CIVIL_WAR:0 "PGoS"
+SEV_POST_CIVIL_WAR_long:0 "Provisional Government of Severyansk"
+
+SEV_monarchist_party:0 "House Romaneov"
+SEV_monarchist_party_long:0 "House Romaneov"
+
+SEV_Baron_party:0 "Baron's Party"
+SEV_Baron_party_long:0 "BP"
+
+SEV_EQS_democrats_long:0 "Democrats"
+SEV_EQS_democrats:0 "Democrats"
+
+SEV_republicans_long:0 "Conservative-Republican Party of Severyansk"
+SEV_republicans:0 "CSRS"
+
+#PARTY Names
+SEV_neutrality_party:0 "LFC"
+SEV_neutrality_party_long:0 "Liberation Forces Council"
+SEV_communism_party:0 "SCP"
+SEV_communism_party_long:0 "Stalliongradian Communist Party"
+SEV_democratic_party:0 "EDSR"
+SEV_democratic_party_long:0 "Equestrian Democrats and Severyan Republicans"
+SEV_fascism_party:0 "TM"
+SEV_fascism_party_long:0 "Templar Movement"
+
+#### EVENTS ####
+sever.1.t:0 "Rise Up!"
+sever.1.d:0 "The air in Petershoof was clear, a breeze softly blowing over the city that early morning, as the sound of the calming waves from the Petershoof Shipyards was heard throughout the quiet city morning. Lil Sasha, a young stallion, was in his room, waking up like the rest of the city, listening to the calming atmosphere of the city. But something was off \n \n\"Is that...is that the sound of marching?..\" - Lil Sasha said to himself, getting out of bed, and making for his window. He leans out and peers down the street to see what looks to be an army walking up the street toward the city center. Sasha quickly realized that these were not Stalliongrad soldiers. Marching up the street were soldiers in dark blue uniforms with patches reading the letters C.O.A.. \n \nFear turned to curiosity as the soldiers, who by now have already started walking by his house, didn't seem hostile, and were accompanied by residents of Petershoof who were walking alongside them. Intrigued by the situation, Sasha ran out to join the march. \n \nBefore long, the march came to a halt as they arrived to the city center of Petershoof, collumns of soldiers standing in formation and crowds of citizens in front and facing a statue Steel Stallion, that was surrounded by tanks covered in the same markings as the patches on the soldiers and open top trucks loaded with rifles and ammo soldiers standing in the back. Sasha was absolutely mesmerized. Soon the crowd grew silent as a white stallion with black clothing and a red cross around his neck stood on the base of the statue, awaiting the crowds full attention… \n \n \"Ponies of Petershoof!\" - Black Baron yells for the crowds complete and full attention. \n \n\"Thirteen years ago, your leaders forced you to fight in their war for freedom against Equestria with false promises of a better future. How were you repaid for this war? You are still stuck with famine years later, facing the same issues from your last government... from OUR last government! I will not force you into the coming conflict, but fight with me, and your foals and fillies will know nothing but full bellies, Unemployment will be eliminated, and Everypony shall have a roof over their heads! With their leader dead, they are in disarray. The time to fight is now! Save your families, save your homes, SAVE SEVERYANSK!\"  \n \nThousands of hooves raise in the air as the cheers of hopeful ponies echo as far as severokholm. One of the tanks, being connected to the statue with rope, pulls it down as the cheers get louder. Lil Sasha begins to think about his sister and how she was lost to the famine. Fueled by rage, he groups with hundreds of other ponies as they line up behind the trucks, the soldiers in the backs handed rifles, ammo, and furazhkas off the truck bed to each pony who is enlisting in the militia. This is the beginning of a possibly long and bloody conflict..."
+sever.1.a:0 "The civil war has begun!"
+
+sever.2.t:0 "AI SEV Annexation of STG"
+sever.2.d:0 "If you see this text, for event sever.2..."
+sever.2.a:0 "Please report as it as a bug."
+
+sever.3.t:0 "The end of the Severyan Civil War" #End of Civil War
+sever.3.d:0 "Tonight, the Kremlin of Moscolt, the capital of the Severyan Tsardom, formally lowered the red flag of the Stalliongrad revolution. The guards brought in a new - no, old, flag. They carried the Black-White-Blue standard of old to the flagpole, and lowered the flag of the revolution one more time. \n \nThe end of the Revolution came much sooner than expected, at the hands of counter-revolutionaries. Once more, the Severyan banner flies high! "
+sever.3.a:0 "Ura!"
+
+sever.4.t:0 "Banning Communism"
+sever.4.d:0 "The past revolution has shown that those preaching communism will ultimately resort to revolution to achieve their goals.If we are to begin stabilizing our Severyansk and its government, we must purge this poisonous ideology."
+sever.4.a:0 "Never again shall we starve!"
+
+sever.5.t:0 "Political Bickering"
+sever.5.d:0 "After the common threat of communism passed, the Duma reformed. Once, it was populated with nobles from across Severyansk, but many died fighting or were slaughtered in the bloodbath and aftermath of the revolution. Now, the duma is filled to the brim with not just the remaining nobles, but army officers that liberated Severyana from the Reds, from peasants that fought in the liberation war, to even opportunistic factory workers that switched sides and backstabbed the revolution for Severyana’s freedom. There are whispers amongst some of the army to back a coup, plotted by none other than the Black Baron himself. There are those who are more moderate, and wish to preserve the Duma as an institution of the new Severyan state, bringing back the age-old Tsardom alongside the Duma. There those calling to abolish the Tsardom, and simply proclaim a republic, and there are those that even call for annexation into Equestria! \n \n The meeting of classes, once separated in the olden days, and briefly abolished in name in the Stalliongradian experiment now bicker in the Duma, getting nothing done! \n \n In this bitter factionalism, something must arise... "
+sever.5.a:0 "Have faith in the Duma."
+sever.5.b:0 "Let the army deal with these bickering fools."
+
+sever.6.t:0 "Formation of a Democratic Coalition"
+sever.6.d:0 ""
+sever.6.a:0 ""
+
+sever.7.t:0 "The Black Baron's Coup"
+sever.7.d:0 ""
+sever.7.a:0 ""
+
+sever.8.t:0 "Liberal-Conservative Coalition"
+sever.8.d:0 ""
+sever.8.a:0 ""
+
+sever.9.t:0 ""
+sever.9.d:0 ""
+sever.9.a:0 ""
+
+sever.10.t:0 ""
+sever.10.d:0 ""
+sever.10.a:0 ""
+
+sever.11.t:0 ""
+sever.11.d:0 ""
+sever.11.a:0 ""
+
+sever.12.t:0 ""
+sever.12.d:0 ""
+sever.12.a:0 ""
+
+sever.13.t:0 ""
+sever.13.d:0 ""
+sever.13.a:0 ""
+
+#Equestrian Severyana events
+
+equestriasev.990.t:0 "Send guns, volunteers or both to SEV?"
+equestriasev.990.d:0 "Or don't send anything at all?"
+equestriasev.990.a:0 "A general, guns and volunteers."
+equestriasev.990.b:0 "Volunteers and guns should be enough."
+equestriasev.990.c:0 "Only guns."
+equestriasev.990.d:0 "Don't send anything."
+
+equestriasev.995.t:0 "Severyansk doesn't want our general"
+equestriasev.995.d:0 "Oli is going to become general here then"
+equestriasev.995.a:0 "okeii"
+
+equestriasev.996.t:0 "Luna's concern"
+equestriasev.996.d:0 "The throne room doors open as Princess Luna approaches her sister, followed by two Equestrian generals, after summoning Celestia for an urgent meeting. \n “What is the matter, dear sister, why have you called upon this meeting?” Celesia worriedly asks. Luna stops in front of Celestia’s throne and looks upon her. “My dear sister, I have been troubled for several moons about the subject of our neighbor, Stalliongrad.” Celestia’s concern turns to apprehensiveness. “Now Luna…” “I know-” Luna interjects “I understand that they were granted their independence, but I fear for Equestria. Stalliongrad left us and has had nothing but resentment for Equestria ever since they separated, and this resentment is what I fear.” Luna draws her sisters attention. “Go on?...” Celestia reluctantly orders. “Recently, our neighbor’s rapid industrialization and military capacity have increased at astonishing rates and the threat of this has been brought to my attention by our generals. With the Changeling threat to our west, I believe we should take a course of action to protect our ponies…”"
+equestriasev.996.a:0 "Continue, sister"
+
+equestriasev.997.t:0 "Coup suggestion"
+equestriasev.997.d:0 "“Well, what have you found, sister?” Asks Celestia. “We have received reports about a paramilitary group known as the Severyansk Liberation Army, a small military organization comprised of a handful of division, and the old equestrian generals who fought against stalliongrad after the communist takeover, but decided to leave when their homes were taken. I believe if we contact them and offer our assistance to help retake their homes without Equestria getting directly involved, they just might accept!” Luna relies. “So, should make contact with them?...”"
+equestriasev.997.a:0 "This sounds great, our resources are at their disposal!"
+equestriasev.997.b:0 " On second thought, I do not believe we have the resources to help them.."
+
+equestriasev.998.t:0 "Revolution in Stalliongrad began!"
+equestriasev.998.d:0 "Should player switch to SEV?"
+equestriasev.998.a:0 "Yes"
+equestriasev.998.b:0 "No"
+
+#Civil war stuff
+severcw.1.t:0 "Annexation of Our Town" #Annexation of Our Town
+severcw.1.d:0 "Our Town, the home of the Equalist experiment. We could use a little coercion to force them to join us... After all, their few resources could turn the tides, for every detail in war can matter."
+severcw.1.a:0 "Press them for Annexation."
+severcw.1.b:0 "We don't need them."
+
+severcw.2.t:0 "Equestrian aid and general"
+severcw.2.d:0 "Equestria sent volunteers, rifles and a general"
+severcw.2.a:0 "Excellent. We need all the help we can get."
+severcw.2.b:0 "We'll take the material. Not the thestral."
+
+severcw.3.t:0 "Equestrian aid"
+severcw.3.d:0 "Equestria sent and divisions"
+severcw.3.a:0 "Good!"
+
+severcw.4.t:0 "Equestrian guns"
+severcw.4.d:0 "Equestria gave us some guns."
+severcw.4.a:0 "A little less than we expected."
+
+#Decisions
+SEV_decommunization:0 "Decommunization Project"
+
+SEV_rename:0 "Decommunization of the national names"
+SEV_rename_desc:0 "We will decommunize names in our country, as suggested by the Liberation Forces Council during the civil war."
+
+#Tooltips
+
+SEV_dem_col:0 "A democratic coalition has formed."
+severyan_infighting:0 "In 10 days, a democratic coalition will form."
+severyan_infighting2:0 "In 10 days, a coup shall restore order."
+
+#### IDEAS ####
+SEV_fuck_commies:0 "Liberation of Motherland"
+SEV_fuck_commies_desc:0 "We must cleanse the Red Plague!"
+
+SEV_ebanuy_rot_etogo_parlamenta:0 "Divided Government"
+SEV_ebanuy_rot_etogo_parlamenta_desc:0 "Despite the recent victory against the Red Plague, our government began politicial infighting."
+
+SEV_coalition_tension:0 "Democratic competition"
+SEV_coalition_tension_desc:0 "Our government isn't as divided as it was. Now it's only pro-Equesrian Harmonists versus Conservatives."
+
+
+#### FOCUSES ####
+
+#Civil war focus tree
+
+SEV_CW_start:0 "For Severyana!"
+SEV_CW_start_desc:0 ""
+
+SEV_CW_raid1:0 "Raiding Strategy"
+SEV_CW_raid1_desc:0 ""
+
+SEV_CW_raid2:0 "Steal their tanks"
+SEV_CW_raid2_desc:0 "" 
+
+SEV_CW_we:0 "The Home Front"
+SEV_CW_we_desc:0 ""
+
+SEV_CW_attract_peasants:0 "Rally Underground Loyalists"
+SEV_CW_attract_peasants_desc:0 "For too long, Severyanans have been under the yoke of the communards. We must rally those against the current Red Regime under our banner!"
+
+SEV_CW_attract_workers:0 "Attract workers"
+SEV_CW_attract_workers_desc:0 "We have seen the folly of remaining Agarian, and recognize that industry will far outproduce anything artisan. It is time we make ammends to our working class." 
+
+SEV_CW_strike:0 "Activate Cells"
+SEV_CW_strike_desc:0 "Anti-communist cells, long hidden, are ready to rise up against their Red opressors. We shall give the Reds a taste of their own medicine..." 
+
+SEV_CW_as_one:0 "To Victory!"
+SEV_CW_as_one_desc:0 "Against the Red Tide, we shall stand, against the Red Plague, we shall remain!"
+
+SEV_CW_victory:0 "To Victory!"
+SEV_CW_victory_desc:0 "Against the Red Tide, we shall stand, against the Red Plague, we shall remain!" 
+
+#Post Civil War tree
+
+SEV_secure_the_state:0 "Secure Severyansk"
+SEV_secure_the_state_desc:0 "With the Stalliongrad Experiment over, the Red Plague must be purged from our lands. Never again, shall we fall to these poisonous ideals!"
+
+SEV_political_infighting:0 "The Duma"
+SEV_political_infighting_desc:0 "The Duma was previously an institution in Severyana, before the revolution destroyed most of what was established. In this new order however, things are not exactly as pleasant as they can be..."
+
+
+### Industrial Tree ###
+
+### Political Tree ###
+
+### Foreign Tree ###
+
+#LEADER Desc
+
+#GENERAL Desc
+
