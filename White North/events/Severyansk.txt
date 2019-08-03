@@ -142,7 +142,10 @@ country_event = { #Civil war is over, Severyansk won
 		name = sever.3.a
 		add_political_power = 70
 		add_ideas = SEV_ebanuy_rot_etogo_parlamenta	
-		remove_ideas =  SEV_fuck_commies 
+		swap_ideas = {
+			remove_idea = SEV_fuck_commies
+			add_idea = SEV_motherland_is_free
+		} 
 		hidden_effect = {
 		set_cosmetic_tag = SEV_POST_CW
 		set_party_name = { 

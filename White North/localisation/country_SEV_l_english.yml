@@ -236,6 +236,74 @@ SEV_secure_the_state_desc:0 "With the Stalliongrad Experiment over, the Red Plag
 SEV_political_infighting:0 "The Duma"
 SEV_political_infighting_desc:0 "The Duma was previously an institution in Severyansk, before the revolution destroyed most of what was established. In this new order however, things are not exactly as pleasant as they can be..."
 
+SEV_elections:0 ""
+SEV_elections_desc:0 ""
+
+SEV_baron:0 ""
+SEV_baron_desc:0 ""
+
+SEV_democracy_wins:0 ""
+SEV_democracy_wins_desc:0 ""
+
+SEV_coalition_collapse:0 ""
+SEV_coalition_collapse_desc:0 ""
+
+SEV_another_elections:0 ""
+SEV_another_elections_desc:0 ""
+
+SEV_equestrian_rats:0 ""
+SEV_equestrian_rats_desc:0 ""
+
+SEV_integration:0 ""
+SEV_integration_desc:0 ""
+
+SEV_conservatives:0 ""
+SEV_conservatives_desc:0 ""
+
+SEV_soft_conservatism:0 ""
+SEV_soft_conservatism_desc:0 ""
+
+SEV_PFS:0 ""
+SEV_PFS_desc:0 ""
+
+SEV_gurantee_of_liberty:0 ""
+SEV_gurantee_of_liberty_desc:0 ""
+
+SEV_traditions_are_important:0 ""
+SEV_traditions_are_important_desc:0 ""
+
+SEV_zhandameria:0 ""
+SEV_zhandameria_desc:0 ""
+
+SEV_gurantee_of_safety:0 ""
+SEV_gurantee_of_safety_desc:0 ""
+
+SEV_za_tsarya:0 ""
+SEV_za_tsarya_desc:0 ""
+
+SEV_tsarsky_pir:0 ""
+SEV_tsarsky_pir_desc:0 ""
+
+SEV_democratic_tsar:0 ""
+SEV_democratic_tsar_desc:0 ""
+
+SEV_absolutist:0 ""
+SEV_absolutist_desc:0 ""
+
+SEV_manifesto_of_unshakable_autocracy:0 ""
+SEV_manifesto_of_unshakable_autocracy_desc:0 ""
+
+SEV_tsarist_officers:0 ""
+SEV_tsarist_officers_desc:0 ""
+
+SEV_korporatsia_felixa:0 ""
+SEV_korporatsia_felixa_desc:0 ""
+
+SEV_encourage_patriotism:0 ""
+SEV_encourage_patriotism_desc:0 ""
+
+SEV_tsar_faith_country:0 ""
+SEV_tsar_faith_country_desc:0 ""
 
 ### Industrial Tree ###
 
