@@ -262,7 +262,17 @@ country_event = { #fascists take control
 		if = {
 			limit = { has_unit_leader = 27081878 }
 			remove_unit_leader = 27081878
-		}	
+		}
+		add_ideas = {
+			baron_radical_changes1
+			baron_corruption
+			baron_workers_of_the_world
+			baron_fractured_industry
+			baron_scorched_earth
+			baron_industry_chaos
+			baron_dumb_staff
+			baron_serving_no_go1
+		}		
 		hidden_effect = {
 			set_country_flag = SEV_fashisty
 			set_cosmetic_tag = SEV_barony
@@ -280,6 +290,7 @@ country_event = { #equestrian democrats and cons win 1st elections
 
 	option = { 
 		name = sever.8.a
+		set_country_flag = secondelections
 		set_politics = {
             ruling_party = democratic
             elections_allowed = no
@@ -289,7 +300,6 @@ country_event = { #equestrian democrats and cons win 1st elections
                 popularity = 0.1
         }
 		add_ideas = coalition_tension
-		#create_country_leader
 	}
 }
 
@@ -339,7 +349,11 @@ country_event = { #democratic coalition dies
 
 	option = { 
 		name = sever.10.a
-		set_country_flag = secondelections
+			country_event = { 
+				id = sever.11 
+				days = 7
+			}
+		}
 	}
 }
 
@@ -352,7 +366,48 @@ country_event = { #2nd elections
 	
 	option = {
 		name = sever.11.a
-		set_country_flag = vote_bitch
+		set_country_flag = democratswonsecondelec
+		remove_ideas = coalition_tension
+        add_popularity = {
+                ideology = democratic
+                popularity = 0.1
+        }
+        set_party_name = {
+                ideology = democratic
+                long_name = SEV_EQS_democrats_long
+                name = SEV_EQS_democrats
+        }
+        create_country_leader = {
+                name = "Equestrian Democrat"
+                desc = ""
+                picture = "equestrian_democrat_placeholder.tga"
+                expire = "1965.1.1"
+                ideology = liberalism
+                traits = {}
+        }
+	}
+
+	option = {
+		name = sever.11.b
+		set_country_flag = republicanswonsecondelec
+		remove_ideas = coalition_tension
+        add_popularity = {
+                ideology = democratic
+                popularity = 0.1
+        }
+        set_party_name = {
+                ideology = democratic
+                long_name = SEV_republicans_long
+                name = SEV_republicans
+        }
+        create_country_leader = {
+                name = "Severyan Republican"
+                desc = ""
+                picture = "severyan_republican_placeholder.tga"
+                expire = "1965.1.1"
+                ideology = conservatism
+                traits = {}
+        }
 	}
 }
 
@@ -390,56 +445,6 @@ country_event = { #SEV annexation by EQS
 	}
 }
 
-country_event = { #Regent would be done once "Tsar has survived" subpath will be complete
-	id = sever.13
-	title = sever.13.t 
-	desc = sever.13.d
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { #idk what effects to put in if Tsar survives, maybe buffs, maybe the opposite, we'll decide on that later
-		name = sever.13.a
-		ai_chance = {
-			factor = 30
-		}
-		country_event = { 
-			id = sever.14
-			days = 1
-		}
-		hidden_effect = {
-			set_country_flag = tsar_alive
-		}
-	}
-	option = { #Tsar dies
-		name = sever.13.b
-		kill_country_leader = yes
-		ai_chance = {
-			factor = 85
-		}
-		country_event = {
-			id = sever.17
-			days = 1
-		}
-		hidden_effect = {
-			set_country_flag = tsar_dead
-		}
-	}
-}
-
-country_event = { #Tsar is alive
-	id = sever.14
-	title = sever.14.t 
-	desc = sever.14.d
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { #Notifies player about what happened if Tsar survives assasination attempt
-		name = sever.14.a
-		add_stability = -0.03
-		add_political_power = -50
-	}
-}
-
 country_event = { # Democratic Tsar
 	id = sever.15
 	title = sever.15.t 
@@ -465,6 +470,7 @@ country_event = { # Democratic Tsar
                 ruling_party = democratic
                 elections_allowed = no
             }
+			set_country_flag = democratictsar
 		}
 	}
 }
@@ -485,54 +491,6 @@ country_event = { #Absolutist
 	}
 }
 
-country_event = { #Regents 
-	id = sever.17
-	title = sever.17.t 
-	desc = sever.17.d
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { #Tsar is dead, regent Von Manschell takes his place
-		name = sever.17.a
-		kill_country_leader = yes
-		ai_chance = {
-			factor = 85
-		}
-		create_country_leader = {
-				name = "August von Manschell"
-				desc = ""
-				picture = ""
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = { trait_guard_general }
-		}
-		#if = {
-			limit = { has_unit_leader = #manschell's id }
-			remove_unit_leader = #manschell's id
-		}
-	}
-	
-	option = { #Tsar is dead, regent Fertz takes his place
-		name = sever.17.a
-		kill_country_leader = yes
-		ai_chance = {
-			factor = 85
-		}
-		create_country_leader = {
-				name = "Katherine Fertz"
-				desc = ""
-				picture = "RKatherine.tga"
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {
-				}
-		}
-		if = {
-			limit = { has_unit_leader = 121200 }
-			remove_unit_leader = 121200
-		}
-	}
-}
 
 
 		
