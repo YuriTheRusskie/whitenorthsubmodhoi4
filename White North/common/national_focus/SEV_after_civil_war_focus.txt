@@ -1,0 +1,15 @@
+focus_tree = {
+	id = SEV_after_civil_war_focus
+
+	country = {
+		factor = 0
+	}
+	continuous_focus_position = { x = 2 y = 5000 }
+	
+    shared_focus = SEV_secure_the_state #political
+	shared_focus = SEV_rebuild_the_nation #economy
+	shared_focus = SEV_lessons_of_civil_war #military, land
+	shared_focus = SEV_create_air_force #military, air
+	shared_focus = SEV_naval_armament #military, navy
+	shared_focus = SEV_external_policy #external policy
+}
