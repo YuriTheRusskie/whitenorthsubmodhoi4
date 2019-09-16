@@ -44,28 +44,16 @@ set_technology = {
 	}
 
 set_convoys = 15
+set_popularities = {
+	democratic = 45
+	fascism = 25
+	communism = 5
+	neutrality = 25
+}
 set_politics = {
 
-	parties = {
-		democratic = {
-			popularity = 35
-		}
-
-		fascism = {
-			popularity = 12
-		}
-
-		communism = {
-			popularity = 3
-		}
-
-		neutrality = {
-			popularity = 50
-		}
-	}
-
 	ruling_party = neutrality
-	last_election = "1003.5.3"
+	last_election = "1000.10.10"
 	election_frequency = 36
 	elections_allowed = no
 }
@@ -132,7 +120,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Katherine Fertz"
-	picture = "soa_katherine.tga"
+	picture = "RKatherine.tga"
 	traits = { trait_guard_general }
 	id = 121200
 	skill = 1
@@ -144,7 +132,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Black Baron" #change it later once you have a proper name for him
+	name = "Black Baron"
 	picture = "blackbaron.tga"
 	traits = { }
 	id = 27081878
