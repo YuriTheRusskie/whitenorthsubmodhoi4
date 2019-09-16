@@ -1,0 +1,102 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_goal_baron_crush_opposition"
+		texturefile = "gfx/interface/goals/focus_baron_crush_opposition.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_sev_grf_war"
+		texturefile = "gfx/interface/goals/goal_sev_grf_war.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_sev_png_war"
+		texturefile = "gfx/interface/goals/goal_sev_png_war.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_sev_plb_war"
+		texturefile = "gfx/interface/goals/goal_sev_plb_war.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_sev_yak_war"
+		texturefile = "gfx/interface/goals/goal_sev_yak_war.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ruler_of_the_north"
+		texturefile = "gfx/interface/goals/goal_ruler_of_the_north.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_democratic_tsar"
+		texturefile = "gfx/interface/goals/goal_democratic_tsar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_eqs_puppet_sev"
+		texturefile = "gfx/interface/goals/goal_eqs_puppet_sev.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ideology_social_conservative_sev"
+		texturefile = "gfx/interface/goals/goal_ideology_social_conservative_sev.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ideology_social_liberal_eqs"
+		texturefile = "gfx/interface/goals/goal_ideology_social_liberal_eqs.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_manifesto_of_unshakable_autocracy"
+		texturefile = "gfx/interface/goals/goal_manifesto_of_unshakable_autocracy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_pony_soldier"
+		texturefile = "gfx/interface/goals/goal_pony_soldier.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_sev_duma"
+		texturefile = "gfx/interface/goals/goal_sev_duma.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_tsarist_officers"
+		texturefile = "gfx/interface/goals/goal_tsarist_officers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_lotsa_money"
+		texturefile = "gfx/interface/goals/goal_lotsa_money.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_for_tsar_and_country"
+		texturefile = "gfx/interface/goals/goal_for_tsar_and_country.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_black_baron_coup"
+		texturefile = "gfx/interface/goals/goal_black_baron_coup.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_baron_secure_sev"
+		texturefile = "gfx/interface/goals/goal_baron_secure_sev.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_baron_military_reforms"
+		texturefile = "gfx/interface/goals/goal_baron_military_reforms.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_encourage_patriotism"
+		texturefile = "gfx/interface/goals/goal_encourage_patriotism.dds"
+	}
+}

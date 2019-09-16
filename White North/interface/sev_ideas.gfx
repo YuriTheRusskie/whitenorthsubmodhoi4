@@ -14,4 +14,23 @@ spriteTypes = {
 		name = "GFX_idea_severyan_flag"
 		texturefile = "gfx/interface/ideas/idea_severyan_flag.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_white_guard_officers"
+		texturefile = "gfx/interface/ideas/idea_white_guard_officers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_disjointed_duma"
+		texturefile = "gfx/interface/ideas/idea_disjointed_duma.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_reps_vs_dems"
+		texturefile = "gfx/interface/ideas/idea_reps_vs_dems.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_russian_police_cap"
+		texturefile = "gfx/interface/ideas/idea_russian_police_cap.dds"
+	}
 }
