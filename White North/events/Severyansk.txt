@@ -116,12 +116,6 @@ country_event = { #SEV force annex STG if it's a puppet
 	}
 }
 
-		
-
-		
-		
-
-
 country_event = { #Civil war is over, Severyansk won
 	id = sever.3
 	title = sever.3.t 
@@ -156,7 +150,7 @@ country_event = { #Civil war is over, Severyansk won
 			retire_country_leader = yes
 			create_country_leader = {
 				name = "Severyan Duma"
-				picture = "soa.tga"
+				picture = "duma.tga"
 				expire = "1965.1.1"
 				ideology = despotism
 				traits = { 
@@ -166,7 +160,7 @@ country_event = { #Civil war is over, Severyansk won
 			delete_unit_template_and_units = {
 				division_template = "Equestrian Volunteers"
 			}
-			SEV = {load_focus_tree = SEV_POST_CW_TREE}
+			SEV = {load_focus_tree = SEV_after_civil_war_focus}
 
 		}
 	}
@@ -231,6 +225,7 @@ country_event = { #democratic coalition wins
 		}
 		hidden_effect = {
 			set_country_flag = SEV_dem_col
+			set_country_flag = sev_govt1
 		}
 		
 	}
@@ -255,8 +250,8 @@ country_event = { #fascists take control
 		}
 		set_party_name = {
                 ideology = fascism
-                long_name = SEV_Baron_party_long
-                name = SEV_Baron_party
+                long_name = SEV_BRN_party_long
+                name = SEV_BRN_party
         }
 		remove_ideas = SEV_ebanuy_rot_etogo_parlamenta
 		if = {
@@ -275,7 +270,7 @@ country_event = { #fascists take control
 		}		
 		hidden_effect = {
 			set_country_flag = SEV_fashisty
-			set_cosmetic_tag = SEV_barony
+			set_cosmetic_tag = SEV_BRN
 		}
 		
 	}
@@ -291,6 +286,7 @@ country_event = { #equestrian democrats and cons win 1st elections
 	option = { 
 		name = sever.8.a
 		set_country_flag = secondelections
+		set_country_flag = sev_govt1
 		set_politics = {
             ruling_party = democratic
             elections_allowed = no
@@ -314,9 +310,17 @@ country_event = { #Tsarist restoration
 		name = sever.9.a
 		create_country_leader = {
 			name = "Tsar Peter IV"
-			picture = "gfx/leaders/PeterIV.tga"
+			picture = "PeterIV.tga"
 			expire = "1965.1.1"
 			ideology = despotism
+			traits = {
+			}
+		}
+		create_country_leader = {
+			name = "Tsar Peter IV"
+			picture = "gfx/leaders/PeterIV.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
 			traits = {
 			}
 		}
@@ -356,7 +360,6 @@ country_event = { #democratic coalition dies
 		}
 	}
 }
-
 country_event = { #2nd elections
 	id = sever.11
 	title = sever.11.t 
@@ -378,11 +381,11 @@ country_event = { #2nd elections
                 name = SEV_EQS_democrats
         }
         create_country_leader = {
-                name = "Equestrian Democrat"
+                name = "Darkwing"
                 desc = ""
-                picture = "equestrian_democrat_placeholder.tga"
+                picture = "Darkwing.tga"
                 expire = "1965.1.1"
-                ideology = liberalism
+                ideology = socialism
                 traits = {}
         }
 	}
@@ -410,7 +413,6 @@ country_event = { #2nd elections
         }
 	}
 }
-
 country_event = { #SEV annexation by EQS
 	id = sever.12
 	title = sever.12.t 
@@ -444,7 +446,6 @@ country_event = { #SEV annexation by EQS
 		}
 	}
 }
-
 country_event = { # Democratic Tsar
 	id = sever.15
 	title = sever.15.t 
@@ -474,7 +475,6 @@ country_event = { # Democratic Tsar
 		}
 	}
 }
-
 country_event = { #Absolutist
 	id = sever.16
 	title = sever.16.t 
@@ -484,6 +484,21 @@ country_event = { #Absolutist
 
 	option = { 
 		name = sever.16.a
+		add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+        }
+	}
+}
+country_event = { #PeterIV is dead
+	id = sever.17
+	title = sever.17.t 
+	desc = sever.17.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sever.17.a
 		add_popularity = {
                 ideology = fascism
                 popularity = 0.05
