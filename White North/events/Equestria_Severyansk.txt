@@ -75,18 +75,18 @@ country_event = {  #Celestia listens to Luna
 			}
 			STG = {
 				country_event = {
-				id = equestriasev.800
-				days = 10
+					id = equestriasev.800
+					days = 10
 				}
 				country_event = {
-				id = stalliongrad.999
-				days = 30
+					id = stalliongrad.999
+					days = 30
 				}
 			}
 			WIT = { 
 				country_event = { 
-				id = wittenland.999 
-				days = 3 
+					id = wittenland.999 
+					days = 3 
 				}	 
 			}
 		}
@@ -298,5 +298,136 @@ option = { #General, guns and divs
 
 		add_stability = -0.06 #because fuck you, you fucking staged it and now you refuse to help? gay.
 		set_country_flag = EQS_wont_help
+	}
+}
+country_event = { #offer eqs to gurantee each other
+	id = equestriasev.1
+	title = equestriasev.1.t 
+	desc = equestriasev.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = equestriasev.1.a
+		EQS = { 
+			country_event = {
+				id = equestriasev.2
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #offer gurantee event itself
+	id = equestriasev.2
+	title = equestriasev.2.t 
+	desc = equestriasev.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #yes
+		name = equestriasev.2.a
+		EQS = { give_guarantee = SEV }
+		SEV = { 
+			country_event = { 
+				id = equestriasev.3
+				days = 2
+			}
+		}
+	}
+	
+	option = { #no
+		name = equestriasev.2.b
+		SEV = { 
+			country_event = { 
+				id = equestriasev.4
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #EQS said yes
+	id = equestriasev.3
+	title = equestriasev.3.t 
+	desc = equestriasev.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = equestriasev.3.a
+		SEV = { give_guarantee = EQS }
+	}
+}
+country_event = { #EQS said no
+	id = equestriasev.4
+	title = equestriasev.4.t 
+	desc = equestriasev.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = equestriasev.4.a
+	}
+}
+country_event = { #flavour event to sev talking about whether or not to get into the factiom with eqs
+	id = equestriasev.5
+	title = equestriasev.5.t 
+	desc = equestriasev.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = equestriasev.5.a
+		country_event = {
+			id = equestriasev.6
+			days = 2 
+		}
+	}
+	
+	option = { 
+		name = equestriasev.5.b
+	}
+}
+country_event = { #Sev wants into United Pony Alliance
+	id = equestriasev.6
+	title = equestriasev.6.t 
+	desc = equestriasev.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = equestriasev.6.a
+		EQS = { add_to_faction = SEV }
+		SEV = {
+			country_event = {
+				id = equestriasev.6
+				days = 2
+			}
+		}
+	}
+	
+	option = { 
+		name = equestriasev.6.b
+	}
+}
+country_event = { #EQS gets you into their faction
+	id = equestriasev.7
+	title = equestriasev.7.t 
+	desc = equestriasev.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = equestriasev.7.a
+	}
+}
+country_event = { #EQS says they don't want you in their faction
+	id = equestriasev.8
+	title = equestriasev.8.t 
+	desc = equestriasev.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = equestriasev.8.a
 	}
 }
