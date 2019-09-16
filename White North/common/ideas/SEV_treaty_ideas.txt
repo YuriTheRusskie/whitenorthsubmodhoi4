@@ -1,0 +1,101 @@
+ideas = {
+	
+	treaty_ideas = {
+		SEV_nothern_cooperation_treaty1m = { #idea for sev leading the treaty
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		SEV_nothern_cooperation_treaty_member = { #member idea, will only be given to those who signed the thing
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				democratic_acceptance = 85
+				political_power_factor = -0.03
+			}
+			
+			targeted_modifier = {
+				tag = CHN
+				attack_bonus_against = 0.03
+				defense_bonus_against = 0.03
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		SEV_nothern_cooperation_treaty_member_mil_coop = { #member idea with military cooperation
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				democratic_acceptance = 85
+				political_power_factor = -0.03
+				training_time_army_factor = -0.05
+			}
+			
+			targeted_modifier = {
+				tag = CHN
+				attack_bonus_against = 0.03
+				defense_bonus_against = 0.03
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		SEV_nothern_cooperation_SEV_economic_help = { #economic help from SEV
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.03
+				production_factory_max_efficiency_factor = 0.05
+			}
+			
+			removal_cost = -1
+			
+			picture = 
+		}
+		SEV_nothern_cooperation_SEV_economic_help_debuff = { #small debuff for SEV for helping
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+			
+			removal_cost = -1
+			
+			picture = 
+		}
+	}
+}
