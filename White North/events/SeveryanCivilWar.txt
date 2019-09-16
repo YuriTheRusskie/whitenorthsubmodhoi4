@@ -80,10 +80,14 @@ country_event = { # EQS Ponies, Guns and a general
 					logistics_skill = 2
 					id = 206
 				}
+				country_event = { 
+					id = sevf.1
+					days = 10
+				}
 		}
 		
 		EQS = {
-			set_country_flag = EQS_BIG_SEV_HELP #Maybe have an opinion modifier instead?  #lol why not, code it in please
+			set_country_flag = EQS_bat_help #Maybe have an opinion modifier instead?  #lol why not, code it in please
 		}
 	}
 		

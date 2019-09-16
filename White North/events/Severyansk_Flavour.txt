@@ -1,0 +1,122 @@
+add_namespace = sevf
+
+############################
+## Severyansk Flavour Events
+############################
+
+#If you're not a dev and you're looking at this message, you're probably datamining this submod for secret paths. I hope you're happy with your findings.
+#если ты не разраб и смотришь на это сообщение, то ты полюбас пошёл искать секретики в файлах. надеюсь, будешь рад своей находке.
+#проходи, не задерживайся
+
+country_event = { #Equestrian General wants to meet White Guard generals
+	id = sevf.1
+	title = sevf.1.t
+	desc = sevf.1.d 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Do not allow him
+		name = sevf.1.a
+		set_country_flag = gens_dk_eachother
+		add_political_power = 30
+	}
+	
+	option = { #Allow him
+		name = sevf.1.b
+		set_country_flag = gens_k_eachother
+		add_political_power = -70
+	}
+	
+}
+
+country_event = { #Generals want to celebrate victory in the civil war, allow Equestrian general to join them?
+	id = sevf.2
+	title = sevf.2.t
+	desc = sevf.2.d 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = SEV
+		is_ai = no
+		153 = { #Stalliongrad Capital
+			is_controlled_by = SEV
+		}
+		NOT = {
+			has_war_with = STG
+		}
+		has_country_flag = gens_k_eachother
+	}
+	
+	option = { #yes
+		name = sevf.2.a
+		set_country_flag = eqsgen_been_at_celebration
+		add_political_power = -70
+	}
+	
+	option = { #i hate foreign ponies
+		name = sevf.2.b
+		set_country_flag = eqsgen_didnt_celebrate
+		add_political_power = 50
+	}
+	
+}
+
+country_event = { #Imperial Feast
+	id = sevf.3
+	title = sevf.3.t 
+	desc = sevf.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Tsar lives, and should always live, because he didn't get poisoned
+		name = sevf.3.a
+			country_event = { 
+				id = sevf.4
+				days = 2
+			}
+	}
+	
+	option = { #Tsar dies by posioning, should only be available if player has flags listed below
+		trigger = {
+			NOT = {
+			has_country_flag = sev_govt1
+			}
+			AND = {
+				has_country_flag = eqsgen_been_at_celebration
+				has_country_flag = gens_k_eachother
+			}
+		}
+		name = sevf.3.b
+			country_event = {
+				id = sevf.5
+				days = 2
+			}	
+	}
+	
+}
+
+country_event = { #flavour event about tsar liking offered wine to him
+	id = sevf.4
+	title = sevf.4.t 
+	desc = sevf.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = sevf.4.a
+		set_country_flag = tsar_alive
+	}
+}
+
+country_event = { #Tsar was poisoned, no heir, gotta elect new royal family
+	id = sevf.5
+	title = sevf.5.t 
+	desc = sevf.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = sevf.5.a
+	}
+}
