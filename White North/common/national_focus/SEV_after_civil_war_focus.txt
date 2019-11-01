@@ -4,7 +4,7 @@ focus_tree = {
 	country = {
 		factor = 0
 	}
-	continuous_focus_position = { x = 2 y = 5000 }
+	continuous_focus_position = { x = 0 y = 3000 }
 	
     shared_focus = SEV_secure_the_state #political
 	shared_focus = SEV_rebuild_the_nation #economy

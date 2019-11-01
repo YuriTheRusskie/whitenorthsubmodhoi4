@@ -3515,7 +3515,7 @@ shared_focus = {
 }
 shared_focus = { #diplomatic policy
 	id = SEV_diplomat
-	icon GFX_goal_unknown
+	icon = GFX_goal_unknown
 	
 	x = 9
 	y = 11
@@ -3535,7 +3535,7 @@ shared_focus = { #diplomatic policy
 }
 shared_focus = { #diplomatic policy
 	id = SEV_diplomat
-	icon GFX_goal_unknown
+	icon = GFX_goal_unknown
 	
 	x = 9
 	y = 11
@@ -3555,7 +3555,7 @@ shared_focus = { #diplomatic policy
 }
 shared_focus = { 
 	id = SEV_northern_allies
-	icon GFX_goal_unknown
+	icon = GFX_goal_unknown
 	
 	x = 8
 	y = 12
@@ -3572,7 +3572,7 @@ shared_focus = {
 }
 shared_focus = { 
 	id = SEV_create_cooperation_treaty
-	icon GFX_goal_unknown
+	icon = GFX_goal_unknown
 	
 	x = 8
 	y = 13
@@ -3591,7 +3591,7 @@ shared_focus = {
 }
 shared_focus = { 
 	id = SEV_military_cooperation
-	icon GFX_goal_unknown
+	icon = GFX_goal_unknown
 	
 	x = 8
 	y = 14
@@ -3624,7 +3624,7 @@ shared_focus = {
 }
 shared_focus = { 
 	id = SEV_helping_allies
-	icon GFX_goal_unknown
+	icon = GFX_goal_unknown
 	
 	x = 8
 	y = 15
@@ -3657,7 +3657,7 @@ shared_focus = {
 }
 shared_focus = { 
 	id = SEV_majorbois
-	icon GFX_goal_unknown
+	icon = GFX_goal_unknown
 	
 	x = 1
 	y = 12
@@ -3677,7 +3677,7 @@ shared_focus = {
 }
 shared_focus = { 
 	id = SEV_EQS_better_trade
-	icon GFX_goal_unknown
+	icon= GFX_goal_unknown
 	
 	x = 0
 	y = 13
@@ -3697,7 +3697,7 @@ shared_focus = {
 }
 shared_focus = { 
 	id = SEV_mutual_assistance
-	icon GFX_goal_unknown
+	icon = GFX_goal_unknown
 	
 	x = 2
 	y = 13
@@ -3717,10 +3717,10 @@ shared_focus = {
 }
 shared_focus = { 
 	id = SEV_research_agreement
-	icon GFX_goal_unknown
+	icon = GFX_goal_unknown
 	
-	x = 2
-	y = 13
+	x = 1
+	y = 14
 	
 	cost = 8
 	
@@ -3734,10 +3734,10 @@ shared_focus = {
 }
 shared_focus = { 
 	id = SEV_join_UPA
-	icon GFX_goal_unknown
+	icon = GFX_goal_unknown
 	
-	x = 2
-	y = 13
+	x = 1
+	y = 15
 	
 	cost = 8
 	
