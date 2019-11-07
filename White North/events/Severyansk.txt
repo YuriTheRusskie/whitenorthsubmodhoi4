@@ -58,9 +58,17 @@ country_event = { #Severyanan Declaration of independence, fluff piece
 	    name = sever.1.a
 		add_stability = 0.01
 		add_political_power = 10
+		add_ideas = SEV_fuck_commies
+		hidden_effect = {
+			STG = {
+				add_timed_idea = {
+					idea = SEV_STG_debuff
+					days = 180
+				}
+			}
 		}
 	}
-
+}
 country_event = { #SEV force annex STG to make things easier for an AI
 	id = sever.2
 	title = sever.2.t 
@@ -135,11 +143,17 @@ country_event = { #Civil war is over, Severyansk won
 	option = { 
 		name = sever.3.a
 		add_political_power = 70
-		add_ideas = SEV_ebanuy_rot_etogo_parlamenta	
 		swap_ideas = {
 			remove_idea = SEV_fuck_commies
 			add_idea = SEV_motherland_is_free
-		} 
+		}
+		add_ideas = { 
+			SEV_ebanuy_rot_etogo_parlamenta
+			SEV_communist_army_legacy
+			SEV_commununist_economy_legacy
+			SEV_communist_political_legacy
+			civilian_economy
+		}
 		hidden_effect = {
 		set_cosmetic_tag = SEV_POST_CW
 		set_party_name = { 
@@ -255,8 +269,8 @@ country_event = { #fascists take control
         }
 		remove_ideas = SEV_ebanuy_rot_etogo_parlamenta
 		if = {
-			limit = { has_unit_leader = 27081878 }
-			remove_unit_leader = 27081878
+			limit = { has_unit_leader = 1878 }
+			remove_unit_leader = 1878
 		}
 		add_ideas = {
 			baron_radical_changes1
@@ -357,7 +371,6 @@ country_event = { #democratic coalition dies
 				id = sever.11 
 				days = 7
 			}
-		}
 	}
 }
 country_event = { #2nd elections
@@ -405,7 +418,7 @@ country_event = { #2nd elections
         }
         create_country_leader = {
                 name = "Severyan Republican"
-                desc = ""
+                desc = "yes"
                 picture = "severyan_republican_placeholder.tga"
                 expire = "1965.1.1"
                 ideology = conservatism
