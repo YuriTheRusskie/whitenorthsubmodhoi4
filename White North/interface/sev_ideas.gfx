@@ -33,4 +33,21 @@ spriteTypes = {
 		name = "GFX_idea_russian_police_cap"
 		texturefile = "gfx/interface/ideas/idea_russian_police_cap.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_stg_debuff_pic"
+		texturefile = "gfx/interface/ideas/idea_stg_debuff_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_commie_legacy"
+		texturefile = "gfx/interface/ideas/idea_army_commie_legacy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_economy_commie_legacy"
+		texturefile = "gfx/interface/ideas/idea_economy_commie_legacy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_political_commie_legacy"
+		texturefile = "gfx/interface/ideas/idea_political_commie_legacy.tga"
+	}
 }
