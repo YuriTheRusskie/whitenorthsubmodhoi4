@@ -167,13 +167,30 @@ severyan_infighting:0 "In 10 days, a democratic coalition will form."
 severyan_infighting2:0 "In 10 days, a coup shall restore order."
 treaty_decisions_tt:0 "Northern Cooperation Treaty decisions would be unlocked."
 treaty_created_tt:0 "Northern Cooperation Treaty would be created."
+SEV_CW_fortify_tooltip:0 "§HQuick fortifications would be made across the border with§! §RStalliongrad§!."
+SEV_SOA:0 "§HVolunteer divisions will be formed in St.Petershoof§!."
 
 #### IDEAS ####
 SEV_fuck_commies:0 "Liberation of Motherland"
 SEV_fuck_commies_desc:0 "We must cleanse the Red Plague!"
 
+SEV_STG_debuff:0 "Counterrevolution"
+SEV_STG_debuff_desc:0 "Our socialist state lost its Secretary General, because of that administation and army discipline are in decline. It will take us some time to reorganize everything."
+
+SEV_motherland_is_free:0 "Severyansk Prevails"
+SEV_motherland_is_free_desc:0 "We've liberated Severyana and her people from the tyrannical rule of the Red Maniacs! Never again shall they torment our compatriots!"
+
 SEV_ebanuy_rot_etogo_parlamenta:0 "Divided Government"
 SEV_ebanuy_rot_etogo_parlamenta_desc:0 "Despite the recent victory against the Red Plague, our government began politicial infighting."
+
+SEV_communist_army_legacy:0 "Military Communist Legacy"
+SEV_communist_army_legacy_desc:0 ""
+
+SEV_commununist_economy_legacy:0 "Economic Communist Legacy"
+SEV_commununist_economy_legacy_desc:0 ""
+
+SEV_communist_political_legacy:0 "Political Communist Legacy"
+SEV_communist_political_legacy_desc:0 "" 
 
 SEV_coalition_tension:0 "Democratic competition"
 SEV_coalition_tension_desc:0 "Our government isn't as divided as it was. Now it's only pro-Equesrian Harmonists versus Conservatives."
@@ -184,21 +201,21 @@ SEV_coalition_tension_desc:0 "Our government isn't as divided as it was. Now it'
 #Civil war focus tree
 
 SEV_CW_start:0 "For Severyana!"
-SEV_CW_start_desc:0 ""
+SEV_CW_start_desc:0 "It's on now. The coup has failed, but that doesn't mean we will give up! For the Severyana and her people! Za Rodinu!"
+
+SEV_CW_forts:0 "Fortification project"
+SEV_CW_forts_desc:0 "Our intel reports that as of now our enemy is disorganized. We should use this opportunity to fortify our border with Reds to slacken possible offense."
 
 SEV_CW_raid1:0 "Raiding Strategy"
-SEV_CW_raid1_desc:0 ""
+SEV_CW_raid1_desc:0 "During the preparations of the supposed coup (which has failed), we've established a spy network in Stalliongrad. We can use it to capture some weapons from enemy supply stock. §RStalliongrad will guard its supplies more tightly next time§!"
 
-SEV_CW_raid2:0 "Steal their tanks"
-SEV_CW_raid2_desc:0 "" 
-
-SEV_CW_we:0 "The Home Front"
-SEV_CW_we_desc:0 ""
+SEV_CW_raid2:0 "Steal Their Tanks"
+SEV_CW_raid2_desc:0 "Our military staff suggests another raid operation under code name: \"Tank Pirates\". Our agents will try to capture enemy tanks from Stalliongradian army. §R This raid is extremely risky, expect high casualties.§!" 
 
 SEV_CW_attract_peasants:0 "Rally Underground Loyalists"
 SEV_CW_attract_peasants_desc:0 "For too long, Severyanans have been under the yoke of the communards. We must rally those against the current Red Regime under our banner!"
 
-SEV_CW_attract_workers:0 "Attract workers"
+SEV_CW_attract_workers:0 "Attract the Workers"
 SEV_CW_attract_workers_desc:0 "We have seen the folly of remaining Agarian, and recognize that industry will far outproduce anything artisan. It is time we make ammends to our working class." 
 
 SEV_CW_strike:0 "Activate Cells"
@@ -212,16 +229,189 @@ SEV_CW_victory_desc:0 "Against the Red Tide, we shall stand, against the Red Pla
 
 #Post Civil War tree
 
+### Political Tree ###
+
 SEV_secure_the_state:0 "Secure Severyansk"
 SEV_secure_the_state_desc:0 "With the Stalliongrad Experiment over, the Red Plague must be purged from our lands. Never again, shall we fall to these poisonous ideals!"
 
 SEV_political_infighting:0 "The Duma"
 SEV_political_infighting_desc:0 "The Duma was previously an institution in Severyana, before the revolution destroyed most of what was established. In this new order however, things are not exactly as pleasant as they can be..."
 
+SEV_elections:0 "Elections"
+SEV_elections_desc:0 ""
+
+SEV_democracy_wins:0 "Severyan Republic"
+SEV_democracy_wins_desc:0 ""
+
+SEV_another_elections:0 "Second Elections"
+SEV_another_elections_desc:0 ""
+
+SEV_equestrian_rats:0 "Equestrian Democrats"
+SEV_equestrian_rats_desc:0 ""
+
+SEV_integration:0 "Union State with Equestria"
+SEV_integration_desc:0 ""
+
+SEV_conservatives:0 "Conservative Liberalism"
+SEV_conservatives_desc:0 ""
+
+SEV_PFS:0 "Welfare Fund of Severyansk"
+SEV_PFS_desc:0 ""
+
+SEV_gurantee_of_liberty:0 "Freedom Above All"
+SEV_gurantee_of_liberty_desc:0 ""
+
+SEV_traditions_are_important:0 "Traditional Approach"
+SEV_traditions_are_important_desc:0 ""
+
+SEV_zhandameria:0 "Gendarmerie"
+SEV_zhandameria_desc:0 ""
+
+SEV_gurantee_of_safety:0 "Unwavering Stability"
+SEV_gurantee_of_safety_desc:0 ""
+
+SEV_za_tsarya:0 "For Tsar!"
+SEV_za_tsarya_desc:0 ""
+
+SEV_tsarsky_pir:0 "Grand Feast"
+SEV_tsarsky_pir_desc:0 ""
+
+SEV_democratic_tsar:0 "May He Defend Our Laws"
+SEV_democratic_tsar_desc:0 ""
+
+SEV_absolutist:0 "Long May He Reign"
+SEV_absolutist_desc:0 ""
+
+SEV_unshakable_autocracy:0 "Manifesto of Unshakable Autocracy"
+SEV_unshakable_autocracy_desc:0 ""
+
+SEV_tsarist_officers:0 "New Officers"
+SEV_tsarist_officers_desc:0 "Tsar decided to replace those officers who threaten his people and his country with more loyal officers."
+
+SEV_korporatsia_felixa:0 "Korporatsia Felixa"
+SEV_korporatsia_felixa_desc:0 "Felix Kotovsky, old friend of our Tsar, decided to settle down in Severyansk and move his corporation here. Our Majesty surely could use his services. Felix will make sure Severyan Tsardom will thrive and prosper."
+
+SEV_encourage_patriotism:0 "Patriotic Fever"
+SEV_encourage_patriotism_desc:0 ""
+
+SEV_for_tsar_and_country:0 "For Tsar, Faith and country!"
+SEV_for_tsar_and_country_desc:0 ""
+
+SEV_black_baron:0 "Templars Have Taken over"
+SEV_black_baron_desc:0 ""
+
+SEV_secure_nation_again:0 "Secure the State"
+SEV_secure_nation_again_desc:0 ""
+
+SEV_martial_law:0 "Declare Martial Law"
+SEV_martial_law_desc:0 ""
+
+SEV_seize_factories:0 "Nationalise the industry"
+SEV_seize_factories_desc:0 ""
+
+SEV_anticelibate_laws:0 "Institute Anticelibate Law"
+SEV_anticelibate_laws_desc:0 ""
+
+SEV_standardise_production:0 "Stabilize Production"
+SEV_standardise_production_desc:0 ""
+
+SEV_le_gestapo:0 "Druzhina Military Police"
+SEV_le_gestapo_desc:0 ""
+
+SEV_stabilize_govt:0 "Subdue the Cabinet"
+SEV_stabilize_govt_desc:0 ""
+
+SEV_public_speeches:0 "Ryetch Vozhdya"
+SEV_public_speeches_desc:0 "note to whoever will be writing loc for this, Ryetch Vozhdya means The Speech of the Vozhd/Leader/Führer/Duce/etc"
+
+SEV_remove_oppostion:0 "Persecute Political Enemies"
+SEV_remove_oppostion_desc:0 ""
+
+SEV_root_out_corruption:0 "Make Embezzlers Regret"
+SEV_root_out_corruption_desc:0 ""
+
+SEV_baron_mil_reforms:0 "Reform the Military"
+SEV_baron_mil_reforms_desc:0 ""
+
+SEV_recruit_propaganda:0 "Recruitment Propaganda"
+SEV_recruit_propaganda_desc:0 ""
+
+SEV_control_military:0 "Make Military Loyal"
+SEV_control_military_desc:0 ""
+
+SEV_forced_conscription:0 "Mandatory Military Service"
+SEV_forced_conscription_desc:0 ""
+
+baron_war_propaganda:0 "War Propaganda"
+baron_war_propaganda_desc:0 ""
+
+SEV_total_control:0 "Grossflächige Kontrollen"
+SEV_total_control_desc:0 ""
 
 ### Industrial Tree ###
 
-### Political Tree ###
+SEV_rebuild_the_nation:0 "Rebuild the Severyansk"
+SEV_rebuild_the_nation_desc:0 ""
+
+SEV_heavy_industry:0 "Severyan Industrial Complex"
+SEV_heavy_industry_desc:0 ""
+
+SEV_light_industry:0 "Bet on Consumer Goods Industry"
+SEV_light_industry_desc:0 ""
+
+SEV_first_phase_done:0 "Industrialization: First Phased Finished"
+SEV_first_phase_done_desc:0 ""
+
+SEV_economy_focus:0 "Economic Miracle"
+SEV_economy_focus_desc:0 ""
+
+SEV_fund_research:0 "Research Grants"
+SEV_fund_research_desc:0 ""
+
+SEV_final_steps:0 "Industrialization: Final Touch"
+SEV_final_steps_desc:0 ""
+
+SEV_severyan_university:0 "St.Petershoof State University"
+SEV_severyan_university_desc:0 ""
+
+SEV_develop_economy:0 "Growing Budget"
+SEV_develop_economy_desc:0 ""
+
+SEV_better_industry:0 "Industrial Boom"
+SEV_better_industry_desc:0 ""
+
+SEV_upgrade_sev_uni:0 "Expand Funding for St.Petershoof University"
+SEV_upgrade_sev_uni_desc:0 ""
+
+SEV_prioritize_military:0 "Prioritize the Armed Forces"
+SEV_prioritize_military_desc:0 ""
+
+SEV_officer_academy:0 "Koltuzov Military College"
+SEV_officer_academy_desc:0 ""
+
+SEV_military_research_uni:0 "Nauchgorodok"
+SEV_military_research_uni_desc:0 "note for whoever will be writing loc for this, Nauchgorodok means Science Town. Those were the Reaseach Cities aka military research facilities in Soviet Union."
+
+SEV_radar:0 "Radiolokator"
+SEV_radar_desc:0 ""
+
+SEV_nuclear_triad:0 "Koldunskoe Oruzhie"
+SEV_nuclear_triad:0 "Koldunskoe Oruzhie means wonder weapon"
+
+SEV_rockets:0 "Rocket Research"
+SEV_rockets_desc:0 ""
+
+### Military Tree, land ###
+
+SEV_lessons_of_civil_war:0 "Lessons of Civil War"
+SEV_lessons_of_civil_war_desc:0 ""
+
+SEV_modernization_of_army:0 "Modernize the Military"
+SEV_modernization_of_army_desc:0 ""
+
+SEV_doktorina_mech:0 "Marcolt's Plan"
+SEV_doktorina_mech_desc:0 ""
+
 
 ### Foreign Tree ###
 
@@ -235,8 +425,3 @@ sev_prepares_for_eqs_war:0 "Anti-Equestrian propaganda"
 
 sev_eqs_embargo:0 "Seized our companies"
 
-### TESTING ###
-
-SEV_remove_oppostion:0 "Destroy opposition"
-
-SEV_remove_oppostion_desc:0 "allan please add details"
