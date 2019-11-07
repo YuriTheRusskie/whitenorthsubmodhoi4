@@ -37,7 +37,9 @@ opinion_modifiers = {
 		trade = yes
 		value = 50
 	}
-	
+	sev_renamed_capital_to_princessyn = {
+		value = 30
+	}
 }	
 		
 	
