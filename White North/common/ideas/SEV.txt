@@ -23,6 +23,31 @@ ideas = {
 			
 			
 		}
+		SEV_STG_debuff = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = stg_debuff_pic
+			
+			targeted_modifier = {
+				tag = SEV
+				attack_bonus_against = -0.15
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.05
+				army_org_factor = -0.1
+			}
+		}
 		SEV_motherland_is_free = {
 			
 			allowed = {
@@ -43,8 +68,64 @@ ideas = {
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 			}
+		}
+		SEV_communist_army_legacy = {
 			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
 			
+			removal_cost = -1
+			
+			picture = army_commie_legacy
+			
+			modifier = {
+				army_morale_factor = -0.05
+				army_org_factor = -0.05
+				supply_consumption_factor = 0.1
+			}
+		}
+		SEV_commununist_economy_legacy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = economy_commie_legacy
+			
+			modifier = {
+				line_change_production_efficiency_factor = -0.1
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		SEV_communist_political_legacy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = political_commie_legacy
+			
+			modifier = {
+				political_power_factor = -0.25
+			}
 		}
 		SEV_ebanuy_rot_etogo_parlamenta = {
 			
@@ -154,15 +235,15 @@ ideas = {
 		SEV_bbetter_industry = {
 			allowed = {
 				always = no
-			}
+			}	
 			allowed_civil_war = {
 				 always = no
 			}
 
 			removal_cost = -1
 
-			picture = 
-
+			picture = ger_rebuild_the_nation
+			
 			modifier = {
 				production_speed_buildings_factor = 0.1
 			}
@@ -847,12 +928,10 @@ ideas = {
 				always = no
 			}
 			
-			modifier = {
-				targeted_modifier = {
-					tag = EQS
-					attack_bonus_against = 0.1
-					defense_bonus_against = 0.1
-				}
+			targeted_modifier = {
+				tag = EQS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 
 			removal_cost = -1
