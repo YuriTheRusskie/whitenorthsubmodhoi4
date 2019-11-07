@@ -122,7 +122,7 @@ create_corps_commander = {
 	name = "Katherine Fertz"
 	picture = "RKatherine.tga"
 	traits = { trait_guard_general }
-	id = 121200
+	id = 1212
 	skill = 1
 	attack_skill = 2
 	defense_skill = 2
@@ -131,11 +131,11 @@ create_corps_commander = {
 	female = yes
 }
 
-create_corps_commander = {
+create_field_marshal = {
 	name = "Black Baron"
 	picture = "blackbaron.tga"
 	traits = { }
-	id = 27081878
+	id = 1878
 	skill = 2
 	attack_skill = 2
 	defense_skill = 1
