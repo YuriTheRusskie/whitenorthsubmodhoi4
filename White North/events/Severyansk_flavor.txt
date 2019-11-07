@@ -1,0 +1,36 @@
+add_namespace = severf
+
+############################
+## Severyansk Flavour Events
+############################
+
+country_event = { #Renaming capital decision event
+    id = severf.0
+	title = severf.0.t
+	desc = severf.0.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = severf.0.a
+		153 = { set_state_name = "Moscolt Oblast" }
+		set_province_name = { id = 488 name = "Moscolt" }
+		add_political_power = 85
+	}
+	option = {
+		name = severf.0.b
+		153 = { set_state_name = "Princessyn Region" }
+		set_province_name = { id = 488 name = "Princessyn" }
+		add_opinion_modifier = {
+			target = EQS
+			modifier = sev_renamed_capital_to_princessyn
+		}
+		EQS = {
+			add_opinion_modifier = {
+				target = SEV
+				modifier = sev_renamed_capital_to_princessyn
+			}
+		}
+		add_political_power = -50
+	}
+}
