@@ -1,0 +1,387 @@
+﻿add_namespace = sevtreaty
+
+country_event = { #creating northern treaty
+	id = sevtreaty.1
+	title = sevtreaty.1.t
+	desc = sevtreaty.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sevtreaty.1.a
+		add_political_power = 30
+		add_ideas = SEV_nothern_cooperation_treaty1m
+		set_country_flag = treaty_created
+	}
+}
+country_event = { #inviting nova griffonia
+	id = sevtreaty.2
+	title = sevtreaty.2.t
+	desc = sevtreaty.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sevtreaty.2.a
+		GRF = {
+			country_event = {
+				id = sevtreaty.3
+				days = 3
+			}
+		}
+	}
+}
+country_event = { #nova griffonia should get this event
+	id = sevtreaty.3
+	title = sevtreaty.3.t
+	desc = sevtreaty.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sevtreaty.3.a
+		add_ideas = SEV_nothern_cooperation_treaty_member
+		add_political_power = -30
+		set_country_flag = GRF_joins_treaty
+		SEV  = {
+			country_event = {
+				id = sevtreaty.14
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = sevtreaty.3.b
+		add_political_power = 30
+	}
+}
+country_event = { #inviting pingus
+	id = sevtreaty.4
+	title = sevtreaty.4.t
+	desc = sevtreaty.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sevtreaty.4.a
+		PNG = {
+			country_event = {
+				id = sevtreaty.5
+				days = 3
+			}
+		}
+	}
+}
+country_event = { #pingus should get this event
+	id = sevtreaty.5
+	title = sevtreaty.5.t
+	desc = sevtreaty.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sevtreaty.5.a
+		add_ideas = SEV_nothern_cooperation_treaty_member
+		add_political_power = -30
+		set_country_flag = PNG_joins_treaty
+		SEV  = {
+			country_event = {
+				id = sevtreaty.15
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = sevtreaty.5.b
+		add_political_power = 30
+	}
+}
+country_event = { #inviting bears
+	id = sevtreaty.6
+	title = sevtreaty.6.t
+	desc = sevtreaty.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sevtreaty.6.a
+		PLB = {
+			country_event = {
+				id = sevtreaty.7
+				days = 3
+			}
+		}
+	}
+}
+country_event = { #bears should get this event
+	id = sevtreaty.7
+	title = sevtreaty.7.t
+	desc = sevtreaty.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sevtreaty.7.a
+		add_ideas = SEV_nothern_cooperation_treaty_member
+		add_political_power = -30
+		set_country_flag = PLB_joins_treaty
+		SEV  = {
+			country_event = {
+				id = sevtreaty.16
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = sevtreaty.7.b
+		add_political_power = 30
+	}
+}
+country_event = { #inviting yaks
+	id = sevtreaty.8
+	title = sevtreaty.8.t
+	desc = sevtreaty.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sevtreaty.8.a
+		YAK = {
+			country_event = {
+				id = sevtreaty.9
+				days = 3
+			}
+		}
+	}
+}
+country_event = { #yaks should get this event
+	id = sevtreaty.9
+	title = sevtreaty.9.t
+	desc = sevtreaty.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sevtreaty.9.a
+		add_ideas = SEV_nothern_cooperation_treaty_member
+		add_political_power = -30
+		set_country_flag = YAK_joins_treaty
+		SEV  = {
+			country_event = {
+				id = sevtreaty.17
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = sevtreaty.9.b
+		add_political_power = 30
+	}
+}
+country_event = { #military cooperation with countries
+	id = sevtreaty.10
+	title = sevtreaty.10.t
+	desc = sevtreaty.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sevtreaty.10.a
+		add_political_power = -30
+		hidden_effect = {
+			if = {
+				limit = {
+					GRF = { has_country_flag = GRF_joins_treaty }
+				}
+				GRF = { 
+					country_event = {
+						id = sevtreaty.11
+						days = 2
+					}
+				}
+			}
+			if = {
+				limit = {
+					PNG = { has_country_flag = PNG_joins_treaty }
+				}
+				PNG = { 
+					country_event = {
+						id = sevtreaty.11
+						days = 2
+					}
+				}
+			}
+			if = {
+				limit = {
+					PLB = { has_country_flag = PLB_joins_treaty }
+				}
+				PLB = { 
+					country_event = {
+						id = sevtreaty.11
+						days = 2
+					}
+				}
+			}
+			if = {
+				limit = {
+					YAK = { has_country_flag = YAK_joins_treaty }
+				}
+				YAK = { 
+					country_event = {
+						id = sevtreaty.11
+						days = 2
+					}
+				}
+			}
+		}	
+	}
+}	
+country_event = { #sev offers mil cooperation to new allies
+	id = sevtreaty.11
+	title = sevtreaty.11.t
+	desc = sevtreaty.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #yes
+		name = sevtreaty.11.a
+		ROOT = { give_guarantee = SEV }
+		SEV = { give_guarantee = ROOT }
+		add_ideas = SEV_nothern_cooperation_treaty_member_mil_coop
+		add_political_power = -100
+	}	
+	option = { #no
+		name = sevtreaty.11.b
+		add_political_power = 100
+	}
+}
+country_event = { #helping allied countries with economy
+	id = sevtreaty.12
+	title = sevtreaty.12.t
+	desc = sevtreaty.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sevtreaty.12.a
+		if = {
+			limit = {
+				GRF = { has_country_flag = GRF_joins_treaty }
+			}
+			GRF = { 
+				country_event = {
+					id = sevtreaty.13
+					days = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				PNG = { has_country_flag = PNG_joins_treaty }
+			}
+			PNG = { 
+				country_event = {
+					id = sevtreaty.13
+					days = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				PLB = { has_country_flag = PLB_joins_treaty }
+			}
+			PLB = { 
+				country_event = {
+					id = sevtreaty.13
+					days = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				YAK = { has_country_flag = YAK_joins_treaty }
+			}
+			YAK = { 
+				country_event = {
+					id = sevtreaty.13
+					days = 2
+				}
+			}
+		}
+		add_political_power = 30
+	}
+}
+country_event = { #economic offer event itself
+	id = sevtreaty.13
+	title = sevtreaty.13.t
+	desc = sevtreaty.13.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #yes
+		name = sevtreaty.13.a
+		hidden_effect = { 
+			if = {
+				limit = {
+					NOT = { SEV = { has_idea = SEV_nothern_cooperation_SEV_economic_help_debuff } }
+				}
+			}
+			add_ideas = SEV_nothern_cooperation_SEV_economic_help_debuff
+		}
+		add_ideas = SEV_nothern_cooperation_SEV_economic_help
+		add_political_power = -30
+		set_country_flag = agreed_to_economic_help
+	}	
+	option = { #no
+		name = sevtreaty.13.b
+		add_political_power = 30
+	}
+}
+country_event = { #Nova Griffonia joins treaty
+	id = sevtreaty.14
+	title = sevtreaty.14.t
+	desc = sevtreaty.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = sevtreaty.14.a
+		add_political_power = 10
+	}
+}
+country_event = { #Pingus join treaty
+	id = sevtreaty.15
+	title = sevtreaty.15.t
+	desc = sevtreaty.15.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = sevtreaty.15.a
+		add_political_power = 10
+	}
+}
+country_event = { #Bears join treaty
+	id = sevtreaty.16
+	title = sevtreaty.16.t
+	desc = sevtreaty.16.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = sevtreaty.17.a
+		add_political_power = 10
+	}
+}
+country_event = { #Yaks join treaty
+	id = sevtreaty.17
+	title = sevtreaty.17.t
+	desc = sevtreaty.17.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = sevtreaty.17.a
+		add_political_power = 10
+	}
+}

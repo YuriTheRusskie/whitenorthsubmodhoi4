@@ -1,0 +1,3841 @@
+shared_focus = { #civil war foci begin
+	id = SEV_CW_start
+	icon = GFX_goal_pony_soldier
+	
+	x = 2
+	y = 0
+	
+	cost = 3
+	
+	cancel = {
+		STG = { has_capitulated = yes }
+	}
+	
+	completion_reward = {
+		add_political_power = 70
+		add_war_support = 0.1
+		add_stability = 0.1
+		hidden_effect = { 
+			load_oob = SEV_CW_FOC
+		}
+		custom_effect_tooltip = SEV_SOA
+	}
+}
+shared_focus = { #forts
+	id = SEV_CW_forts
+	icon = GFX_goal_generic_fortify_city
+	
+	x = 1
+	y = 1
+	
+	cost = 3
+	
+	prerequisite = {
+			focus = SEV_CW_start
+	}
+	
+	cancel = {
+		STG = { has_capitulated = yes }
+	}
+	
+	completion_reward = {
+		custom_effect_tooltip = SEV_CW_fortify_tooltip
+		hidden_effect = {
+			168 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3342
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 4861
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6489
+				}
+			}
+			233 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 7394
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 11237
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6300
+				}
+			}
+			332 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9310
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6133
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = SEV_CW_raid1
+	icon = GFX_goal_generic_small_arms
+	
+	x = 1
+	y = 2
+	
+	cost = 3
+	
+	prerequisite = {
+			focus = SEV_CW_forts
+	}
+	
+	cancel = {
+		STG = { has_capitulated = yes }
+	}
+	
+	completion_reward = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = STG
+		}
+	}
+}
+shared_focus = {
+    id = SEV_CW_raid2
+    icon = GFX_goal_generic_army_tanks
+    
+    x = 1
+    y = 3
+    
+    cost = 3
+	
+	prerequisite = {
+			focus = SEV_CW_raid1
+	}
+	
+	cancel = {
+		STG = { has_capitulated = yes }
+	}
+	
+	completion_reward = {
+		add_manpower = -2000
+		add_equipment_to_stockpile = {
+			type = gw_tank_equipment
+			amount = 550
+			producer = STG
+		}
+	}
+}
+shared_focus = {
+    id = SEV_CW_attract_peasants
+    icon = GFX_goal_generic_national_unity
+    
+    x = 3
+    y = 1
+    
+    cost = 3
+	
+	prerequisite = {
+			focus = SEV_CW_start
+	}
+    
+	cancel = {
+		STG = { has_capitulated = yes }
+	}
+	
+	completion_reward = {
+		add_political_power = 70
+		add_manpower = 35000
+		hidden_effect = {
+			load_oob = SEV_CW_FOC2
+		}
+	}
+}
+shared_focus = {
+    id = SEV_CW_attract_workers
+    icon = GFX_goal_generic_air_production
+    
+    x = 3
+    y = 2
+    
+    cost = 3
+    
+	prerequisite = {
+			focus = SEV_CW_attract_peasants
+	}
+	
+	cancel = {
+		STG = { has_capitulated = yes }
+	}
+	
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+    id = SEV_CW_strike
+    icon = GFX_goal_generic_demand_territory
+    
+    x = 3
+    y = 3
+    
+    cost = 3
+	
+	prerequisite = {
+			focus = SEV_CW_attract_workers
+	}
+	
+	cancel = {
+		STG = { has_capitulated = yes }
+	}
+	
+	completion_reward = {
+		add_stability = 0.2
+		every_owned_state = {
+			add_manpower = 10000
+		}
+	}
+}
+#POST CIVIL WAR FOCI
+shared_focus = { #political foci begin 
+    id = SEV_secure_the_state
+    icon = GFX_goal_crush_stalliongrad
+    
+    x = 10
+    y = 0
+    
+    cost = 8
+
+	available = {
+		NOT = {
+			country_exists = STG
+		}
+	}
+	
+	completion_reward = {
+		add_political_power = 35
+		add_stability = 0.1
+		add_ideas = communism_banned
+			country_event = {
+				id = sever.4
+				days = 1
+			}
+	}
+}
+shared_focus = {
+    id = SEV_political_infighting
+    icon = GFX_goal_sev_duma
+    
+    x = 10
+    y = 1
+    
+    cost = 8
+	
+	prerequisite = {
+			focus = SEV_secure_the_state
+	}
+	
+	completion_reward = {
+		country_event = {
+			id = sever.5
+			days = 5
+		}
+	}
+}
+shared_focus = {
+    id = SEV_elections
+    icon = GFX_goal_tripartite_pact_pony
+    
+    x = 5
+    y = 2
+    
+    cost = 0
+	
+	prerequisite = {
+			focus = SEV_political_infighting
+	}
+	
+	mutually_exclusive = {
+			focus = SEV_black_baron
+	}
+	
+	bypass = {
+		has_country_flag = SEV_dem_col
+	}
+	
+	available = {
+		has_country_flag = SEV_dem_col
+	}
+}
+shared_focus = { #democratic path
+    id = SEV_democracy_wins
+    icon = GFX_goal_generic_harmony
+    
+    x = 2
+    y = 3
+    
+    cost = 8
+	
+	prerequisite = {
+		focus = SEV_elections
+	}
+	
+	mutually_exclusive = {
+			focus = SEV_za_tsarya
+	}
+	
+	completion_reward = {
+		country_event = {
+			id = sever.8
+			days = 1
+		}
+	}
+}
+shared_focus = {
+    id = SEV_another_elections
+    icon = GFX_goal_improve_relations_pony_pony
+    
+    x = 2
+    y = 5
+    
+    cost = 8
+	
+	prerequisite = {
+		focus = SEV_democracy_wins
+	}
+	
+	available = {
+		has_idea = coalition_tension
+		has_country_flag = secondelections
+	}
+	
+	completion_reward = {
+		country_event = {
+			id = sever.10
+			days = 5
+		}
+	}
+}
+shared_focus = { #equestrian democrats subpath
+    id = SEV_equestrian_rats
+    icon = GFX_goal_ideology_social_liberal_eqs
+    
+    x = 1
+    y = 6
+    
+    cost = 0
+	
+	prerequisite = {
+		focus = SEV_another_elections
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_conservatives
+	}
+	
+	bypass = {
+		has_country_flag = democratswonsecondelec
+	}
+	
+	available = {
+		has_country_flag = democratswonsecondelec
+	}
+}
+shared_focus = {
+    id = SEV_integration
+    icon = GFX_goal_eqs_puppet_sev
+    
+    x = 1
+    y = 9
+    
+    cost = 15
+	
+	prerequisite = {
+		focus = SEV_equestrian_rats
+	}
+	
+	completion_reward = {
+		EQS = {
+			country_event = {
+				id = sever.12
+			}
+		}
+		custom_effect_tooltip = tt_gameover
+	}
+}
+shared_focus = { #republicans/democratic tsar subpaths
+    id = SEV_conservatives
+    icon = GFX_goal_ideology_social_conservative_sev
+    
+    x = 6
+    y = 6
+    
+    cost = 0
+	
+	prerequisite = {
+		focus = SEV_democratic_tsar
+		focus = SEV_another_elections
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_equestrian_rats
+	}
+	
+	bypass = {
+		OR = {
+			has_country_flag = republicanswonsecondelec
+			has_country_flag = democratictsar
+		}
+	}
+	
+	available = {
+		OR = {
+			has_country_flag = republicanswonsecondelec
+			has_country_flag = democratictsar
+		}
+	}
+}
+shared_focus = {
+    id = SEV_soft_conservatism
+    icon = GFX_goal_support_democracy
+    
+    x = 4
+    y = 7
+    
+    cost = 8
+	
+	prerequisite = {
+		focus = SEV_conservatives
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_traditions_are_important
+	}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_stability = -0.1
+		set_rule = {
+			can_only_justify_war_on_threat_country = yes
+		}
+	}
+}
+shared_focus = {
+    id = SEV_PFS
+    icon = GFX_goal_generic_intelligence_exchange
+    
+    x = 4
+    y = 8
+    
+    cost = 8
+	
+	prerequisite = {
+		focus = SEV_soft_conservatism
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_PFS_idea
+		add_war_support = -0.03
+	}
+}
+shared_focus = {
+    id = SEV_gurantee_of_liberty
+    icon = GFX_goal_generic_major_alliance
+    
+    x = 4
+    y = 9
+    
+    cost = 8
+
+    prerequisite = { 
+		focus = SEV_PFS
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_gurantee_liberty
+		add_war_support = -0.05
+		add_stability = 0.03
+	}
+}
+shared_focus = {
+    id = SEV_traditions_are_important
+    icon = GFX_goal_generic_political_pressure
+    
+    x = 8
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_conservatives
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_soft_conservatism
+	}
+	
+	completion_reward = {
+		add_political_power = -70
+		add_stability = 0.03
+			set_rule = {
+				can_only_justify_war_on_threat_country = no
+				can_declare_war_on_same_ideology = yes
+				can_guarantee_other_ideologies = yes
+			}
+	}
+}
+shared_focus = {
+    id = SEV_zhandameria
+    icon = GFX_goal_generic_military_sphere
+    
+    x = 8
+    y = 8
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_traditions_are_important
+	}
+
+	completion_reward = {
+		add_ideas = SEV_zhandameria
+	}
+}
+shared_focus = {
+    id = SEV_gurantee_of_safety
+    icon = GFX_goal_demand_sudetenland
+    
+    x = 8
+    y = 9
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_zhandameria
+	}
+	
+	completion_reward = {
+		add_political_power = 200
+		set_stability = 0.7
+	}
+}
+shared_focus = { #Tsarist path
+    id = SEV_za_tsarya
+    icon = GFX_focus_generic_home_defense
+    
+    x = 9
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_elections
+	}
+		
+	mutually_exclusive = {
+		focus = SEV_democracy_wins
+	}
+	
+	available = {
+		has_country_flag = SEV_dem_col
+	}
+	
+	completion_reward = {
+		country_event = {
+			id = sever.9
+			days = 1
+		}
+	}
+}
+shared_focus = {
+    id = SEV_tsarsky_pir
+    icon = GFX_goal_generic_national_unity
+    
+    x = 9
+    y = 4
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_za_tsarya
+	}
+	
+	completion_reward = {
+		country_event = {
+			id = sevf.3
+			days = 1
+		}
+	}
+}
+shared_focus = { #democratic tsar subpath, leads to republican democratic subpath
+    id = SEV_democratic_tsar
+    icon = GFX_goal_democratic_tsar
+    
+    x = 6
+    y = 5
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_tsarsky_pir
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_absolutist
+	}
+	
+	completion_reward = {
+		country_event = {
+			id = sever.15
+			days = 1
+		}
+	}
+}
+shared_focus = { #absolutist tsar path, maybe will add a slight buff for completing this focus
+    id = SEV_absolutist
+    icon = GFX_goal_pony_soldier
+    
+    x = 12
+    y = 5
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_tsarsky_pir
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_democratic_tsar
+	}
+	
+	completion_reward = {
+		country_event = {
+			id = sever.16
+			days = 1
+		}
+	}
+}
+shared_focus = {
+    id = SEV_unshakable_autocracy
+    icon = GFX_goal_manifesto_of_unshakable_autocracy
+    
+    x = 12
+    y = 6 
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_absolutist
+	}
+
+	completion_reward = {
+		set_stability = 0.65
+		add_political_power = -50
+	}
+}
+shared_focus = {
+    id = SEV_tsarist_officers
+    icon = GFX_goal_tsarist_officers
+    
+    x = 11
+    y = 7
+    
+    cost = 8
+	
+	prerequisite = {
+		focus = SEV_unshakable_autocracy
+		has_country_flag = nobles_have_rights
+		NOT = { has_idea = SEV_communist_army_legacy }
+	}
+
+    completion_reward = {
+		add_command_power = 50
+		swap_ideas = {
+			remove_idea = SEV_white_guard_staff1
+			add_idea = SEV_white_guard_staff_tsar
+		}
+	}
+}
+shared_focus = {
+    id = SEV_korporatsia_felixa
+    icon = GFX_goal_lotsa_money
+    
+    x = 13
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_unshakable_autocracy
+		NOT = { has_idea = SEV_commununist_economy_legacy }
+	}
+	
+	completion_reward = {
+		add_ideas = felix_corp
+	}
+}
+shared_focus = {
+    id = SEV_encourage_patriotism
+    icon = GFX_goal_encourage_patriotism
+    
+    x = 12
+    y = 8
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_tsarist_officers
+	}
+	prerequisite = {
+		focus = SEV_korporatsia_felixa
+	}
+    
+	completion_reward = {
+		add_war_support = 0.15
+	}
+}
+shared_focus = {
+    id = SEV_for_tsar_and_country
+    icon = GFX_goal_for_tsar_and_country
+    
+    x = 12
+    y = 9
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_encourage_patriotism
+	}
+	
+	completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.1
+		add_ideas = for_tsar_faith_and_country
+	}
+}
+shared_focus = { #fascist path
+    id = SEV_black_baron
+    icon = GFX_goal_black_baron_coup
+    
+    x = 19
+    y = 2
+    
+    cost = 0
+    
+    prerequisite = {
+            focus = SEV_political_infighting
+    }
+    
+    mutually_exclusive = {
+            focus = SEV_elections
+    }
+    
+    bypass = {
+		has_government = fascism
+	}
+	
+	available = {
+		has_government = fascism
+	}
+}
+shared_focus = { #note to Yuri, Give it an event or buff so people wouldn't ree about empty focus
+    id = SEV_secure_nation_again
+    icon = GFX_goal_baron_secure_sev
+    
+    x = 15
+    y = 3
+    
+    cost = 3
+
+    prerequisite = {
+			focus = SEV_black_baron
+	}
+}
+shared_focus = {
+    id = SEV_martial_law
+    icon = GFX_goal_generic_political_pressure
+    
+    x = 14
+    y = 4
+    
+    cost = 7
+
+    prerequisite = {
+		focus = SEV_secure_nation_again
+	}
+	
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+shared_focus = {
+    id = SEV_seize_factories
+    icon = GFX_goal_generic_construct_civ_factory
+    
+    x = 16
+    y = 4
+    
+    cost = 7
+
+    prerequisite = {
+		focus = SEV_secure_nation_again
+	}
+	
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = baron_workers_of_the_world
+			add_idea = baron_worked_into_submission
+		}
+	}
+}
+shared_focus = {
+    id = SEV_anticelibate_laws
+    icon = GFX_goal_generic_forceful_treaty
+    
+    x = 14
+    y = 5
+    
+    cost = 7
+
+    prerequisite = {
+		focus = SEV_martial_law
+	}
+	
+	completion_reward = {
+		add_ideas = baron_anticelibate_laws
+	}
+}
+shared_focus = {
+    id = SEV_standardise_production
+    icon = GFX_goal_generic_construct_mil_factory
+    
+    x = 16
+    y = 5
+    
+    cost = 10
+
+    prerequisite = {
+		focus = SEV_seize_factories
+	}
+	
+	completion_reward = {
+		remove_ideas = { 
+			baron_fractured_industry
+			baron_industry_chaos
+		}
+	}
+}
+shared_focus = {
+    id = SEV_le_gestapo
+    icon = GFX_goal_generic_secret_weapon
+    
+    x = 15
+    y = 6
+    
+    cost = 7
+
+    prerequisite = {
+		focus = SEV_standardise_production
+	}
+	
+	prerequisite = {
+		focus = SEV_anticelibate_laws
+	}
+	
+	completion_reward = {
+		add_ideas = baron_secret_police
+	}
+}
+shared_focus = { #note to Yuri, Give it an event or buff so people wouldn't ree about empty focus
+    id = SEV_stabilize_govt
+    icon = GFX_goal_improve_relations_pony_pony
+    
+    x = 19
+    y = 3
+    
+    cost = 3
+
+    prerequisite = {
+		focus = SEV_black_baron
+	}
+}
+shared_focus = {
+    id = SEV_public_speeches
+    icon = GFX_goal_unknown
+    
+    x = 19
+    y = 4
+    
+    cost = 7
+
+    prerequisite = {
+		focus = SEV_stabilize_govt
+	}
+	
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = baron_radical_changes1
+			add_idea = baron_radical_changes2
+		}
+	}
+}
+shared_focus = {
+    id = SEV_remove_oppostion
+    icon = GFX_goal_baron_crush_opposition
+    
+    x = 19
+    y = 5
+    
+    cost = 10
+
+    prerequisite = {
+		focus = SEV_public_speeches
+	}
+	
+	completion_reward = {
+		remove_ideas = baron_radical_changes2
+			custom_effect_tooltip = baron_oppostion_removal
+				hidden_effect = {
+					add_popularity = {
+						ideology = democratic
+						popularity = -0.25
+					}
+					add_popularity = {
+						ideology = communism
+						popularity = -0.25
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = -0.25
+					}
+				}
+	}
+}
+shared_focus = {
+    id = SEV_root_out_corruption
+    icon = GFX_goal_unknown
+    
+    x = 19
+    y = 6
+    
+    cost = 7
+
+    prerequisite = {
+		focus = SEV_remove_oppostion
+	}
+	
+	completion_reward = {
+		remove_ideas = baron_corruption
+	}
+}
+shared_focus = { #note to Yuri, Give it an event or buff so people wouldn't ree about empty focus
+    id = SEV_baron_mil_reforms
+    icon = GFX_goal_baron_military_reforms
+    
+    x = 23
+    y = 3
+    
+    cost = 3
+
+    prerequisite = {
+		focus = SEV_black_baron
+	}
+}
+shared_focus = {
+    id = SEV_recruit_propaganda
+    icon = GFX_goal_generic_axis_build_infantry
+    
+    x = 22
+    y = 4
+    
+    cost = 7
+	
+	prerequisite = {
+		focus = SEV_baron_mil_reforms
+	}
+
+    completion_reward = {
+		swap_ideas = {
+			remove_idea = baron_serving_no_go1
+			add_idea = baron_serving_no_go2
+		}
+	}
+}
+shared_focus = {
+    id = SEV_control_military
+    icon = GFX_goal_demand_sudetenland
+    
+    x = 24
+    y = 4
+    
+    cost = 7
+
+    prerequisite = {
+		focus = SEV_baron_mil_reforms
+	}
+    
+    completion_reward = {
+		add_ideas = baron_military_under_control
+	}
+}
+shared_focus = {
+    id = SEV_forced_conscription
+    icon = GFX_goal_generic_forceful_treaty
+    
+    x = 22
+    y = 5
+    
+    cost = 7
+
+    prerequisite = {
+		focus = SEV_recruit_propaganda
+	}
+	
+	completion_reward = {
+		remove_ideas = baron_serving_no_go2
+		add_ideas = extensive_conscription
+	}
+}
+shared_focus = {
+    id = baron_war_propaganda
+    icon = GFX_goal_generic_propaganda
+    
+    x = 24
+    y = 5
+    
+    cost = 7
+
+    prerequisite = {
+		focus = SEV_control_military
+	}
+	
+	completion_reward = {
+				add_war_support = 0.2
+	}
+}
+shared_focus = {
+    id = SEV_deal_with_staff
+    icon = GFX_goal_generic_dangerous_deal
+    
+    x = 23
+    y = 6
+    
+    cost = 10
+
+    prerequisite = {
+		focus = SEV_forced_conscription
+	}
+	
+	prerequisite = {
+		focus = baron_war_propaganda
+	}
+	
+	completion_reward = {
+		remove_ideas = baron_dumb_staff
+	}
+}
+shared_focus = {
+    id = SEV_total_control
+    icon = GFX_goal_unknown
+    
+    x = 19
+    y = 9
+    
+    cost = 7
+
+    prerequisite = {
+		focus = SEV_le_gestapo
+	}
+	
+	prerequisite = {
+		focus = SEV_root_out_corruption
+	}
+	
+	prerequisite = {
+		focus = SEV_deal_with_staff
+	}
+    
+	completion_reward = {
+		remove_ideas = { 
+			baron_scorched_earth
+			baron_science_ded
+		}
+	}
+}
+shared_focus = { #Economy foci
+    id = SEV_rebuild_the_nation
+    icon = GFX_goal_generic_construction
+    
+    x = 28
+    y = 0
+    
+    cost = 8
+
+    completion_reward = {
+		add_timed_idea = {
+			idea = SEV_rebuild_nation
+			days = 365
+		}
+	}
+}
+shared_focus = {
+    id = SEV_heavy_industry
+    icon = GFX_goal_generic_construct_civ_factory
+    
+    x = 27
+    y = 1
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_rebuild_the_nation
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_light_industry
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_heavy_industry
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+    id = SEV_light_industry
+    icon = GFX_goal_generic_construct_civ_factory
+    
+    x = 29
+    y = 1
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_rebuild_the_nation
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_heavy_industry
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_light_industry
+		add_stability = 0.05
+	}
+}
+shared_focus = {
+    id = SEV_first_phase_done
+    icon = GFX_goal_generic_construction2
+    
+    x = 28
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_light_industry
+		focus = SEV_heavy_industry
+	}
+	
+	completion_reward = {
+		remove_ideas = incomplete_industrialization
+		add_stability = 0.05
+	}
+}
+shared_focus = {
+    id = SEV_economy_focus
+    icon = GFX_goal_generic_construct_civilian
+    
+    x = 26
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_first_phase_done
+	}
+		
+	mutually_exclusive = {
+		focus = SEV_fund_research
+	}
+	
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+						size > 1
+						include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+    id = SEV_fund_research
+    icon = GFX_goal_generic_scientific_exchange
+    
+    x = 30
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_first_phase_done
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_economy_focus
+	}
+	
+	completion_reward = {
+		add_ideas = funded_science
+	}
+}
+shared_focus = {
+    id = SEV_final_steps
+    icon = GFX_goal_generic_production
+    
+    x = 28
+    y = 4
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_fund_research
+		focus = SEV_economy_focus
+	}
+	
+	completion_reward = {
+		add_political_power = 100
+		add_stability = 0.03
+	}
+}
+shared_focus = {
+    id = SEV_severyan_university
+    icon = GFX_focus_research
+    
+    x = 28
+    y = 5
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_final_steps
+	}
+	
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+shared_focus = {
+    id = SEV_develop_economy
+    icon = GFX_goal_generic_consumer_goods
+    
+    x = 26
+    y = 6
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_severyan_university
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_prioritize_military
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
+	}
+}
+shared_focus = {
+    id = SEV_better_industry
+    icon = GFX_goal_generic_production2
+    
+    x = 25
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_develop_economy
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_upgrade_sev_uni
+	}
+    
+	completion_reward = {
+		add_ideas = SEV_bbetter_industry
+	}
+}
+shared_focus = {
+    id = SEV_upgrade_sev_uni
+    icon = GFX_focus_research
+    
+    x = 27
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_develop_economy
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_better_industry
+	}
+	
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+shared_focus = {
+    id = SEV_prioritize_military
+    icon = GFX_goal_rhineland
+    
+    x = 30
+    y = 6
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_severyan_university
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_develop_economy
+	}
+	
+	completion_reward = {
+		army_experience = 30
+		navy_experience = 30
+		air_experience = 30
+	}
+}
+shared_focus = {
+    id = SEV_officer_academy
+    icon = GFX_goal_generic_allies_build_infantry
+    
+    x = 29
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_prioritize_military
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_military_research_uni
+	}
+	
+	completion_reward = { 
+		add_ideas = SEV_iofficer_academy
+	}
+}
+shared_focus = {
+    id = SEV_military_research_uni
+    icon = GFX_goal_generic_territory_or_war
+    
+    x = 31
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_prioritize_military
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_officer_academy
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = infantry_eq_bonus
+			bonus = 1.0
+			ahead_reduction = 2
+			category = infantry
+		}
+	}
+}
+shared_focus = {
+    id = SEV_radar
+    icon = GFX_goal_generic_radar
+    
+    x = 28
+    y = 8
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_officer_academy
+		focus = SEV_military_research_uni
+		focus = SEV_upgrade_sev_uni
+		focus = SEV_better_industry
+	} 
+    
+	completion_reward = {
+		add_tech_bonus = {
+			name = radar_bonus
+			bonus = 0.2
+			uses = 2
+			category = radar_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_nuclear_triad
+    icon = GFX_focus_wonderweapons
+    
+    x = 26
+    y = 9
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_radar
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = nuclear_bonus
+			bonus = 0.2
+			uses = 2
+			category = nuclear
+		}
+	}
+}
+shared_focus = {
+    id = SEV_rockets
+    icon = GFX_focus_rocketry
+    
+    x = 30
+    y = 9
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_radar
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = nuclear_bonus
+			bonus = 0.2
+			uses = 1
+			category = rocketry
+		}
+	}
+}
+shared_focus = { #Military, land
+    id = SEV_lessons_of_civil_war
+    icon = GFX_goal_generic_army_doctrines
+    
+    x = 43
+    y = 0
+    
+    cost = 8
+
+    completion_reward = {
+		army_experience = 50
+	}
+}
+shared_focus = {
+    id = SEV_modernization_of_army
+    icon = GFX_goal_generic_army_doctrines
+    
+    x = 43
+    y = 1
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_lessons_of_civil_war
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = infantry_bonus1
+			bonus = 0.2
+			uses = 2
+			category = infantry_weapons
+		}
+	}
+}
+shared_focus = { #Mobile Warfare
+    id = SEV_doktorina_mech
+    icon = GFX_goal_generic_army_tanks
+    
+    x = 40
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_modernization_of_army
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_arty_is_best
+		focus = SEV_URAAA
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = MW_bonus1
+			bonus = 0.25
+			uses = 1
+			category = cat_mobile_warfare
+		}
+	}
+}
+shared_focus = { #wait but sev already has trucks researched lol
+    id = SEV_motorised_research
+    icon = GFX_goal_generic_cavalry
+    
+    x = 37
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_doktorina_mech
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = motinf_bonus1
+			bonus = 0.2
+			uses = 1
+			category = motorized_equipment
+		}
+	}
+}
+shared_focus = {
+    id = SEV_mechanized
+    icon = GFX_goal_generic_army_motorized
+    
+    x = 35
+    y = 4
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_motorised_research
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = motinf_bonus2
+			bonus = 0.15
+			uses = 1
+			category = cat_mechanized_equipment
+		}
+	}
+}
+shared_focus = {
+    id = SEV_i_tanki_nashi_bystry
+    icon = GFX_goal_generic_army_tanks
+    
+    x = 39
+    y = 4
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_motorised_research
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = tank_bonus1
+			bonus = 0.25
+			uses = 1
+			category = armor
+		}
+	}
+}
+shared_focus = {
+    id = SEV_obnovim_doktorinu
+    icon = GFX_goal_generic_small_arms
+    
+    x = 37
+    y = 5
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_motorised_research
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = MW_bonus2
+			bonus = 0.25
+			uses = 1
+			category = cat_mobile_warfare
+		}
+	}
+}
+shared_focus = {
+    id = SEV_mech_motor_bonus
+    icon = GFX_goal_generic_production2
+    
+    x = 35
+    y = 6
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_mechanized
+	}
+	
+	completion_reward = {
+		add_ideas = mot_mech_bonus
+	}
+}
+shared_focus = {
+    id = SEV_tri_tankista
+    icon = GFX_goal_generic_army_artillery
+    
+    x = 39
+    y = 6
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_i_tanki_nashi_bystry
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = tank_bonus1
+			bonus = 0.2
+			uses = 2
+			category = armor
+		}
+	}
+}
+shared_focus = {
+    id = SEV_tankovaya_schkola
+    icon = GFX_goal_generic_army_tanks
+    
+    x = 37
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_mech_motor_bonus
+	}
+		
+	prerequisite = {
+		focus = SEV_tri_tankista
+	}
+	
+	completion_reward = {
+		add_ideas = severyan_armour_school
+	}
+}
+shared_focus = { #Superior Firepower
+    id = SEV_arty_is_best
+    icon = GFX_goal_generic_army_artillery2
+    
+    x = 43
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_modernization_of_army
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_URAAA
+		focus = SEV_doktorina_mech
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = SP_bonus1
+			bonus = 0.2
+			uses = 1
+			category = cat_superior_firepower
+		}
+	}
+}
+shared_focus = {
+    id = SEV_artilleristy
+    icon = GFX_goal_generic_army_artillery
+    
+    x = 43
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_arty_is_best
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = arty_bonus1
+			bonus = 0.25
+			uses = 1
+			category = artillery
+		}
+	}
+}
+shared_focus = {
+    id = SEV_arty_research_1
+    icon = GFX_goal_generic_build_tank
+    
+    x = 43
+    y = 4
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_artilleristy
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = arty_at_aa_bonus1
+			bonus = 0.2
+			uses = 2
+			category = cat_anti_tank
+		}
+	}
+}
+shared_focus = {
+    id = SEV_arty_research_2
+    icon = GFX_goal_generic_army_artillery2
+    
+    x = 41
+    y = 5
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_arty_research_1
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = arty_bonus2
+			bonus = 0.25
+			uses = 2
+			category = artillery
+		}
+	}
+}
+shared_focus = {
+    id = SEV_arty_doctorine_bonus
+    icon = GFX_goal_generic_position_armies
+    
+    x = 45
+    y = 5
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_arty_research_1
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = SP_bonus2
+			bonus = 0.2
+			uses = 1
+			category = cat_superior_firepower
+		}
+	}
+}
+shared_focus = {
+    id = SEV_rocket_arty
+    icon = GFX_goal_generic_occupy_start_war
+    
+    x = 41
+    y = 6
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_arty_research_2
+	}
+    
+	completion_reward = {
+		add_tech_bonus = {
+			name = r_arty_bonus1
+			bonus = 0.25
+			uses = 2
+			technology = rocket_artillery
+			technology = rocket_artillery2
+		}
+	}
+}
+shared_focus = {
+    id = SEV_artillery_guided_by_god
+    icon = GFX_goal_generic_air_doctrine
+    
+    x = 45
+    y = 6
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_arty_doctorine_bonus
+	}
+	
+	completion_reward = {
+		add_ideas = arty_guided_by_god
+	}
+}
+shared_focus = {
+    id = SEV_shock_and_awe
+    icon = GFX_goal_generic_major_war
+    
+    x = 43 
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_artillery_guided_by_god
+	}
+	
+	prerequisite = {
+		focus = SEV_rocket_arty
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_shock_and_awwe
+	}
+}
+shared_focus = { #Mass Assault
+    id = SEV_URAAA
+    icon = GFX_goal_generic_cavalry
+    
+    x = 46
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_modernization_of_army
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_arty_is_best
+		focus = SEV_doktorina_mech
+	}
+    
+	completion_reward = {
+		add_tech_bonus = {
+			name = MA_bonus1
+			bonus = 0.2
+			uses = 1
+			category = cat_mass_assault
+		}
+	}
+}
+shared_focus = {
+    id = SEV_overrun_the_enemy
+    icon = GFX_goal_generic_military_sphere
+    
+    x = 49
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_URAAA
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = MA_inf_bonus1
+			bonus = 0.2
+			uses = 2
+			category = infantry_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_ura_2_electric_boogaloo
+    icon = GFX_goal_generic_allies_build_infantry
+    
+    x = 48
+    y = 4
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_overrun_the_enemy
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+				name = MA_bonus2
+				bonus = 0.2
+				uses = 1
+				category = cat_mass_assault
+		}
+	}
+}
+shared_focus = {
+    id = SEV_gun_research
+    icon = GFX_goal_generic_small_arms
+    
+    x = 50
+    y = 4
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_overrun_the_enemy
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = MA_inf_bonus2
+			bonus = 0.2
+			uses = 1
+			category = infantry_weapons
+		}
+	}
+}
+shared_focus = {
+    id = SEV_more_guns
+    icon = GFX_goal_generic_amphibious_assault
+    
+    x = 49
+    y = 5
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_ura_2_electric_boogaloo
+	}
+	
+	prerequisite = {
+		focus = SEV_gun_research
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_improved_inf_weapons_capabilities
+	}
+}
+shared_focus = {
+    id = SEV_more_recruits
+    icon = GFX_goal_generic_allies_build_infantry
+    
+    x = 49
+    y = 6
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_more_guns
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_rec_focus
+	}
+}
+shared_focus = {
+    id = SEV_commissars
+    icon = GFX_goal_rhineland
+    
+    x = 49
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_more_recruits
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_frontline_commissars
+	}
+}
+shared_focus = { #Airforce
+    id = SEV_create_air_force
+    icon = GFX_goal_generic_build_airforce
+    
+    x = 59
+    y = 0
+    
+    cost = 8
+
+    completion_reward = {
+		air_experience = 5
+		add_tech_bonus = {
+			name = air_doc_bonus
+			bonus = 0.35
+			uses = 1
+			category = air_doctrine
+		}
+	}
+}     
+shared_focus = {
+    id = SEV_train_pilots
+    icon = GFX_goal_generic_allies_build_infantry
+    
+    x = 61
+    y = 1
+  
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_create_air_force
+	}
+	
+	completion_reward = {
+		add_ace = {
+			name = "Yuri"
+			surname = "Gilscher"
+			callsign = "Furious"
+			type = fighter_genius
+			is_female = no
+		}
+		air_experience = 30
+	}
+}
+shared_focus = {
+    id = SEV_airfields
+    icon = GFX_goal_unknown
+    
+    x = 57
+    y = 1
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_create_air_force
+	}
+	
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+    id = SEV_yet_another_pilot_training
+    icon = GFX_goal_generic_air_doctrine
+    
+    x = 63
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_train_pilots
+	}
+	
+	completion_reward = {
+		add_ace = {
+			name = "Boris"
+			surname = "Sergeivesky"
+			callsign = "Formidable"
+			type = fighter_genius
+			is_female = no
+		}
+		air_experience = 50
+	}
+}
+shared_focus = {
+    id = SEV_more_airfields
+    icon = GFX_goal_unknown
+    
+    x = 55
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_airfields
+	}
+	
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+    id = SEV_air_doctorine_research
+    icon = GFX_goal_generic_air_fighter2
+    
+    x = 59
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_train_pilots
+	}
+	
+	prerequisite = {
+		focus = SEV_airfields
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_doc_bonus
+			bonus = 0.2
+			uses = 1
+			category = air_doctrine
+		}
+	}
+}
+shared_focus = {
+    id = SEV_develop_fighters
+    icon = GFX_goal_generic_air_fighter
+    
+    x = 57
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_air_doctorine_research
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_develop_bombers
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_fighter_bonus
+			bonus = 0.2
+			uses = 1
+			category = light_fighter
+		}
+	}
+}
+shared_focus = {
+    id = SEV_develop_bombers
+    icon = GFX_goal_generic_air_bomber
+    
+    x = 61
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_air_doctorine_research
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_develop_fighters
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_bomber_bonus
+			bonus = 0.2
+			uses = 2
+			category = tactical_bomber
+			category = cat_strategic_bomber
+		}
+	}
+}
+shared_focus = {
+    id = SEV_CAS
+    icon = GFX_goal_generic_occupy_start_war
+    
+    x = 57
+    y = 4
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_develop_fighters
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_CAS_bonus
+			bonus = 0.2
+			uses = 1
+			category = cas_bomber
+		}
+	}
+}
+shared_focus = {
+    id = SEV_naval_bombers
+    icon = GFX_goal_generic_air_naval_bomber
+    
+    x = 61
+    y = 4
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_develop_bombers
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_NVB_bonus
+			bonus = 0.2
+			uses = 1
+			category = naval_bomber
+		}
+	}
+}
+shared_focus = {
+    id = SEV_ace_pilots
+    icon = GFX_goal_generic_CAS
+    
+    x = 57
+    y = 5
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_CAS
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_group_flights
+	}
+	
+	completion_reward = {
+		add_ideas = severyan_air_aces
+	}
+}
+shared_focus = {
+    id = SEV_group_flights
+    icon = GFX_goal_generic_position_armies
+    
+    x = 61
+    y = 5
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_naval_bombers
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_ace_pilots
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_igroup_flights
+	}
+}
+shared_focus = {
+    id = SEV_air_doctorine_two
+    icon = GFX_goal_generic_build_airforce
+    
+    x = 59
+    y = 6
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_ace_pilots
+		focus = SEV_group_flights
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_doc_bonus
+			bonus = 0.2
+			uses = 1
+			category = air_doctrine
+		}
+	}
+}
+shared_focus = {
+    id = SEV_jet_eng
+    icon = GFX_focus_rocketry
+    
+    x = 56
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_air_doctorine_two
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = jet_eng_bonus
+			bonus = 0.25
+			uses = 1
+			category = jet_technology
+		}
+    }
+}
+shared_focus = {
+    id = SEV_jets
+    icon = GFX_goal_generic_air_fighter
+    
+    x = 54
+    y = 8
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_jet_eng
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_jet_bonus
+			bonus = 0.3
+			uses = 1
+			category = jet_technology
+		}
+	}
+}
+shared_focus = {
+    id = SEV_plane_research_buff
+    icon = GFX_goal_generic_air_fighter
+    
+    x = 62
+    y = 7
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_air_doctorine_two
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_general_bonus
+			bonus = 0.3
+			uses = 2
+			category = air_equipment
+		}
+	}
+}
+shared_focus = {
+    id = SEV_air_doctorine_three
+    icon = GFX_goal_generic_air_fighter2
+    
+    x = 64
+    y = 8
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_plane_research_buff
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_doc_bonus
+			bonus = 0.2
+			uses = 1
+			category = air_doctrine
+		}
+	}
+}
+shared_focus = { #Navy tree
+    id = SEV_naval_armament
+    icon = GFX_goal_generic_occupy_states_coastal
+    
+    x = 73
+    y = 0
+    
+    cost = 8
+
+    completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				is_coastal = yes
+				free_building_slots = {
+					building = dockyard
+					size > 0
+					include_locked = yes
+				}
+			is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_coastal = yes
+				free_building_slots = {
+					building = dockyard
+					size > 0
+					include_locked = yes
+				}
+			is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_coastal = yes
+				free_building_slots = {
+					building = dockyard
+					size > 0
+					include_locked = yes
+				}
+			is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+	}
+}
+shared_focus = {
+    id = SEV_marine_program
+    icon = GFX_goal_generic_amphibious_assault
+    
+    x = 68
+    y = 1
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_naval_armament
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = marine_bonus1
+			bonus = 0.15
+			uses = 1
+			category = marine_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_expand_marines
+    icon = GFX_goal_generic_special_forces
+    
+    x = 67
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_marine_program
+	}
+    
+	completion_reward = {
+		add_tech_bonus = {
+			name = marine_bonus2
+			bonus = 0.2
+			uses = 1
+			category = marine_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_amphibious_armour
+    icon = GFX_goal_generic_army_tanks
+    
+    x = 69
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_marine_program
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = amphibious_bonus1
+			bonus = 0.15
+			uses = 1
+			category = tp_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_amphibious_stuff
+    icon = GFX_goal_generic_army_tanks
+    
+    x = 68
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_amphibious_armour
+	}
+	
+	prerequisite = {
+		focus = SEV_expand_marines
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = amphibious_bonus2
+			bonus = 0.2
+			uses = 1
+			category = tp_tech
+		}
+
+	}
+}
+shared_focus = {
+    id = SEV_korpus_morpekhov
+    icon = GFX_goal_generic_wolf_pack
+    
+    x = 68
+    y = 4
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_amphibious_stuff
+	}
+	
+	completion_reward = {
+		add_ideas = severyan_marine_corps
+	}
+}
+shared_focus = {
+    id = SEV_expand_dockyards_further
+    icon = GFX_goal_generic_construct_naval_dockyard
+    
+    x = 72
+    y = 1
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_naval_armament
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_naval_drill
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = SEV_nav_arm2
+		random_owned_controlled_state = {
+			limit = {
+				is_coastal = yes
+				free_building_slots = {
+					building = dockyard
+					size > 0
+					include_locked = yes
+				}
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_coastal = yes
+				free_building_slots = {
+					building = dockyard
+					size > 0
+					include_locked = yes
+				}
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_coastal = yes
+				free_building_slots = {
+					building = dockyard
+					size > 0
+					include_locked = yes
+				}
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+    id = SEV_naval_drill
+    icon = GFX_goal_generic_build_navy
+    
+    x = 74
+    y = 1
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_naval_armament
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_expand_dockyards_further
+	}
+	
+	completion_reward = {
+		navy_experience = 50
+	}
+}
+shared_focus = {
+    id = SEV_naval_doc1
+    icon = GFX_goal_generic_navy_doctrines_tactics
+    
+    x = 73
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_expand_dockyards_further
+		focus = SEV_naval_drill
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = naval_doc1
+			bonus = 0.2
+			uses = 2
+			category = naval_doctrine
+		}
+	}
+}
+shared_focus = {
+    id = SEV_upgrade_ship_production
+    icon = GFX_goal_generic_air_production
+    
+    x = 72
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_naval_doc1
+	}
+	
+	completion_reward = {
+		add_ideas = better_ship_production
+	}
+}
+shared_focus = {
+    id = SEV_naval_doc2
+    icon = GFX_goal_generic_navy_cruiser
+    
+    x = 74
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_naval_doc1
+	}
+    
+	completion_reward = {
+		add_tech_bonus = {
+			name = naval_doc2
+			bonus = 0.2
+			uses = 2
+			category = naval_doctrine
+		}
+	}
+}
+shared_focus = {
+    id = SEV_VMF
+    icon = GFX_goal_generic_navy_doctrines_tactics
+    
+    x = 81
+    y = 1
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_naval_armament
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = ship_bonus1
+			bonus = 0.15
+			uses = 2
+			category = naval_equipment
+		}
+	}
+}
+shared_focus = {
+    id = SEV_submarines
+    icon = GFX_goal_generic_navy_submarine
+    
+    x = 77
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_VMF
+	}
+    
+	completion_reward = {
+		add_tech_bonus = {
+			name = sub_bonus1
+			bonus = 0.15
+			uses = 1
+			category = ss_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_sub_quality
+    icon = GFX_goal_generic_navy_cruiser
+    
+    x = 76
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_submarines
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_sub_quantity
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = sub_bonus_quality
+			bonus = 0.35
+			uses = 1
+			category = ss_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_sub_quantity
+    icon = GFX_goal_generic_navy_anti_submarine
+    
+    x = 78
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_submarines
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_sub_quality
+	}
+
+	completion_reward = {
+		add_ideas = subs_quantity
+	}
+}
+shared_focus = {
+    id = SEV_destroyers
+    icon = GFX_goal_generic_navy_cruiser
+    
+    x = 80
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_VMF
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = ship_bonus1
+			bonus = 0.2
+			uses = 1
+			category = dd_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_light_cruisers
+    icon = GFX_goal_generic_occupy_states_coastal
+    
+    x = 82
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_VMF
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = ship_bonus1
+			bonus = 0.2
+			uses = 1
+			category = cl_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_capital_ships
+    icon = GFX_goal_generic_navy_battleship
+    
+    x = 85
+    y = 2
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_VMF
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = ship_bonus1
+			bonus = 0.2
+			uses = 1
+			category = bb_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_battleships
+    icon = GFX_goal_generic_navy_battleship
+    
+    x = 84
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_capital_ships
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_carriers
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = ship_bonus1
+			bonus = 0.2
+			uses = 1
+			category = bc_tech
+		}
+	}
+}
+shared_focus = {
+    id = SEV_carriers
+    icon = GFX_goal_generic_navy_carrier
+    
+    x = 86
+    y = 3
+    
+    cost = 8
+
+    prerequisite = {
+		focus = SEV_capital_ships
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_battleships
+	}
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = ship_bonus1
+			bonus = 0.2
+			uses = 1
+			category = cv_tech
+		}
+	}
+}
+shared_focus = { #external policy
+    id = SEV_external_policy
+    icon = GFX_goal_generic_position_armies
+    
+    x = 11
+    y = 10
+    
+    cost = 8
+
+    prerequisite = {
+        focus = SEV_for_tsar_and_country
+		focus = SEV_gurantee_of_safety
+		focus = SEV_gurantee_of_liberty
+		focus = SEV_total_control
+	}
+	
+	completion_reward = {
+		add_political_power = 100
+	}
+}
+shared_focus = { #expansionist tree
+    id = SEV_expansion
+    icon = GFX_goal_generic_occypy_states_ongoing_war
+    
+    x = 13
+    y = 11
+    
+    cost = 8
+
+    prerequisite = {
+        focus = SEV_external_policy
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_diplomat
+	}
+		
+	completion_reward = {
+		add_ideas = expansionist_policy
+	}
+}
+shared_focus = {
+    id = SEV_northern_interest
+    icon = GFX_goal_generic_more_territorial_claims
+    
+    x = 15
+    y = 12
+    
+    cost = 8
+
+    prerequisite = {
+        focus = SEV_expansion
+	}
+	
+	completion_reward = {
+		add_war_support = 0.1
+	}
+}
+shared_focus = {
+	id = SEV_attack_nova_griff
+	icon = GFX_goal_sev_grf_war
+	
+	x = 15
+	y = 13
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_northern_interest
+	}
+	
+	bypass = {
+		NOT = {
+			country_exists = GRF
+		}
+	}
+	
+	completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = GRF	
+		}
+	}
+}
+shared_focus = {
+	id = SEV_attack_pingus
+	icon = GFX_goal_sev_png_war
+	
+	x = 13
+	y = 14
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_attack_nova_griff
+	}
+	
+	bypass = {
+		NOT = {
+			country_exists = PNG
+		}
+	}
+	
+	completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PNG
+		}
+	}
+}
+shared_focus = {
+	id = SEV_attack_bears
+	icon = GFX_goal_sev_plb_war
+	
+	x = 15
+	y = 14
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_attack_nova_griff
+	}
+	
+	bypass = {
+		NOT = {
+			country_exists = PLB
+		}
+	}
+	
+	completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PLB
+		}
+	}
+}
+shared_focus = {
+	id = SEV_attack_yaks
+	icon = GFX_goal_sev_yak_war
+	
+	x = 17
+	y = 14
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_attack_nova_griff
+	}
+	
+	bypass = {
+		NOT = {
+			country_exists = YAK
+		}
+	}
+	
+	completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = YAK
+		}
+	}
+}
+shared_focus = {
+	id = SEV_ruler_of_the_north
+	icon = GFX_goal_ruler_of_the_north
+	
+	x = 15
+	y = 15
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_attack_pingus
+	}
+	
+	prerequisite = {
+        focus = SEV_attack_bears
+	}
+	
+	prerequisite = {
+        focus = SEV_attack_yaks
+	}
+	
+	#available = { #set conditions if country manages to take the entire north somehow, without one piece this focus shouldn't be available
+	
+	
+	completion_reward = { #change it to a rewarding buff
+		add_political_power = 200
+	}
+}
+shared_focus = {
+	id = SEV_bigbois
+	icon = GFX_goal_unknown
+	
+	x = 23
+	y = 12
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_expansion
+	}
+		
+	completion_reward = { #change the reward later
+		add_political_power = 1
+	}
+}
+shared_focus = {
+	id = SEV_attack_CHN
+	icon = GFX_goal_unknown
+	
+	x = 20
+	y = 13
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_bigbois
+	}
+	
+	bypass = {
+		NOT = { 
+			country_exists = CHN
+		}
+	}
+	
+	completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CHN
+		}
+	}
+}
+shared_focus = {
+	id = SEV_attack_olenia
+	icon = GFX_goal_unknown
+	
+	x = 20
+	y = 15
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_attack_CHN
+	}
+	
+	bypass = {
+		NOT = { 
+			country_exists = OLE
+		}
+	}
+	
+	completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = OLE
+		}
+	}
+}
+shared_focus = {
+	id = SEV_anti_eqs_propaganda
+	icon = GFX_goal_unknown
+	
+	x = 26
+	y = 13
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_bigbois
+	}
+		
+	completion_reward = {
+		add_war_support = 0.05
+	}
+}
+shared_focus = {
+	id = SEV_embargo_EQS
+	icon = GFX_goal_unknown
+	
+	x = 26
+	y = 14
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_anti_eqs_propaganda
+	}
+		
+	completion_reward = {
+		add_ideas = SEV_seized_EQS_companies
+		add_opinion_modifier = {
+			target = EQS
+			modifier = sev_prepares_for_eqs_war
+		}
+		
+		add_opinion_modifier = {
+			target = EQS
+			modifier = sev_eqs_embargo
+		}
+	}
+}
+shared_focus = { 
+	id = SEV_fortify_borders
+	icon = GFX_goal_unknown
+	
+	x = 24
+	y = 15
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_embargo_EQS
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = SEV_fortifications_tooltip
+		hidden_effect = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 6458
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 3403
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 409
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 6451
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 3396
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 7377
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 3359
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 337
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 3379
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 3329
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 11293
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 303
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 3342
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 6268
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 9297
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 6270
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 6221
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 7239
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 3274
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 6363
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 8009
+	
+			}
+		}
+	}
+}
+shared_focus = { 
+	id = SEV_expand_fortification
+	icon = GFX_goal_unknown
+	
+	x = 23
+	y = 16
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_fortify_borders
+	}
+		
+	completion_reward = {
+		custom_effect_tooltip = SEV_expand_fortifications_tooltip
+		hidden_effect = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 6532
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 3468
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 582
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 6459
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 559
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 9515
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 9374
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 13212
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 13016
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 13014
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 6386
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 9384
+			}
+		}
+	}
+}
+shared_focus = {
+	id = SEV_anti_eqs_buff
+	icon = GFX_goal_unknown
+	
+	x = 28
+	y = 15
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_embargo_EQS
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_against_EQS_buff
+	}
+}
+shared_focus = {
+	id = SEV_prepare_for_eqs_war
+	icon = GFX_goal_unknown
+	
+	x = 26
+	y = 16
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_fortify_borders
+	}
+	
+	prerequisite = {
+        focus = SEV_anti_eqs_buff
+	}
+		
+	completion_reward = {
+		add_timed_idea = {
+			idea = SEV_prepare_EQS_war
+			days = 210
+		}
+	}	
+}
+shared_focus = {
+	id = SEV_attack_EQS
+	icon = GFX_goal_unknown
+	
+	x = 26
+	y = 17
+	
+	cost = 8
+	
+	prerequisite = {
+        focus = SEV_prepare_for_eqs_war
+	}
+		
+	completion_reward = {
+		declare_war_on = {
+			target = EQS
+			type = annex_everything
+		}
+	}
+}
+shared_focus = { #diplomatic policy
+	id = SEV_diplomat
+	icon = GFX_goal_unknown
+	
+	x = 9
+	y = 11
+	
+	cost = 8
+	
+	prerequisite = {
+		focus = SEV_external_policy
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_expansion
+	}
+	
+	completion_reward = {
+	}
+}
+shared_focus = { 
+	id = SEV_northern_allies
+	icon = GFX_goal_unknown
+	
+	x = 8
+	y = 12
+	
+	cost = 8
+	
+	prerequisite = {
+		focus = SEV_diplomat
+	}
+	
+	completion_reward = {
+		add_political_power = 70
+	}
+}
+shared_focus = { 
+	id = SEV_create_cooperation_treaty
+	icon = GFX_goal_unknown
+	
+	x = 8
+	y = 13
+	
+	cost = 8
+	
+	prerequisite = {
+		focus = SEV_northern_allies
+	}
+	
+	completion_reward = {
+		unlock_decision_category_tooltip = SEV_diplo_treaty
+		add_political_power = 70
+		set_country_flag = treaty_flag
+	}
+}
+shared_focus = { 
+	id = SEV_military_cooperation
+	icon = GFX_goal_unknown
+	
+	x = 8
+	y = 14
+	
+	cost = 8
+	
+	prerequisite = {
+		focus = SEV_create_cooperation_treaty
+	}
+	
+	available = {
+		if = {
+			limit = {
+				OR = {
+					GRF = { has_country_flag = GRF_joins_treaty }
+					PNG = { has_country_flag = PNG_joins_treaty }
+					PLB = { has_country_flag = PLB_joins_treaty }
+					YAK = { has_country_flag = YAK_joins_treaty }
+				}
+			}
+		}
+	}	
+	
+	completion_reward = {
+		country_event = {
+			id = sevtreaty.10
+			days = 2
+		}
+	}
+}
+shared_focus = { 
+	id = SEV_helping_allies
+	icon = GFX_goal_unknown
+	
+	x = 8
+	y = 15
+	
+	cost = 8
+	
+	prerequisite = {
+		focus = SEV_military_cooperation
+	}
+	
+	available = {
+		if = {
+			limit = {
+				OR = {
+					GRF = { has_country_flag = GRF_joins_treaty }
+					PNG = { has_country_flag = PNG_joins_treaty }
+					PLB = { has_country_flag = PLB_joins_treaty }
+					YAK = { has_country_flag = YAK_joins_treaty }
+				}
+			}
+		}
+	}	
+	
+	completion_reward = {
+		country_event = {
+			id = sevtreaty.12
+			days = 2
+		}
+	}
+}
+shared_focus = { 
+	id = SEV_majorbois
+	icon = GFX_goal_unknown
+	
+	x = 1
+	y = 12
+	
+	cost = 8
+	
+	prerequisite = {
+		focus = SEV_diplomat
+	}	
+	
+	completion_reward = {
+		ROOT = {
+			add_opinion_modifier = {
+				target = EQS
+				modifier = sev_eqs_appoarch
+			}
+		}
+	}
+}
+shared_focus = { 
+	id = SEV_EQS_better_trade
+	icon= GFX_goal_unknown
+	
+	x = 0
+	y = 13
+	
+	cost = 8
+	
+	prerequisite = {
+		focus = SEV_majorbois
+	}	
+	
+	completion_reward = {
+		add_opinion_modifier = {
+			target = EQS
+			modifier = sev_eqs_goodtrade
+		}
+	}
+}
+shared_focus = { 
+	id = SEV_mutual_assistance
+	icon = GFX_goal_unknown
+	
+	x = 2
+	y = 13
+	
+	cost = 8
+	
+	prerequisite = {
+		focus = SEV_majorbois
+	}	
+	
+	completion_reward = {
+		country_event = {
+			id = equestriasev.1
+			days = 2 
+		}
+	}
+}
+shared_focus = { 
+	id = SEV_research_agreement
+	icon = GFX_goal_unknown
+	
+	x = 1
+	y = 14
+	
+	cost = 8
+	
+	prerequisite = {
+		focus = SEV_EQS_better_trade
+		focus = SEV_mutual_assistance
+	}
+	
+	completion_reward = {
+	}
+}
+shared_focus = { 
+	id = SEV_join_UPA
+	icon = GFX_goal_unknown
+	
+	x = 1
+	y = 15
+	
+	cost = 8
+	
+	prerequisite = {
+		focus = SEV_research_agreement
+	}
+	
+	available = {
+		EQS = { is_in_faction = yes }
+		EQS = { is_faction_leader = yes }
+	}
+	
+	completion_reward = {
+		country_event = {
+			id = equestriasev.5
+			days = 2
+		}
+	}
+}
+
+
+	
+	
+	
+	
+	
+    
+    			
+    
+    
+    
+    
+    
+    
+    
+	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	
+	
+				
+	
+	
+	
+ 
+ 
+     
+    
+    

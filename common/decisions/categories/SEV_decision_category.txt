@@ -1,0 +1,31 @@
+SEV_decommunization = {
+
+    icon = decommunization
+    available = {
+		tag = SEV
+        NOT = { country_exists = STG } 
+    }
+	allowed = { 
+        tag = SEV 
+    }
+    visible = {
+		tag = SEV
+        NOT = { country_exists = STG }
+    }
+}
+SEV_absolute_monarchy = {
+
+    icon = tsarist_policies_cat
+    
+	available = {
+		tag = SEV
+        has_country_flag = absolutetsar
+    }
+	allowed = { 
+        tag = SEV 
+    }
+    visible = {
+		tag = SEV
+        has_country_flag = absolutetsar
+    }
+}
