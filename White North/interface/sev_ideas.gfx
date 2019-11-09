@@ -14,9 +14,15 @@ spriteTypes = {
 		name = "GFX_idea_severyan_flag"
 		texturefile = "gfx/interface/ideas/idea_severyan_flag.dds"
 	}
+	
 	spriteType = {
 		name = "GFX_idea_white_guard_officers"
 		texturefile = "gfx/interface/ideas/idea_white_guard_officers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_tsarist_officers"
+		texturefile = "gfx/interface/ideas/idea_tsarist_officers.dds"
 	}
 	
 	spriteType = {
@@ -49,5 +55,41 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_political_commie_legacy"
 		texturefile = "gfx/interface/ideas/idea_political_commie_legacy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_culture_commie_legacy"
+		texturefile = "gfx/interface/ideas/idea_culture_commie_legacy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_severyan_flagwave"
+		texturefile = "gfx/interface/ideas/idea_severyan_flagwave.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_sev_federative_monarchy"
+		texturefile = "gfx/interface/ideas/idea_sev_federative_monarchy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_sev_unitary_monarchy"
+		texturefile = "gfx/interface/ideas/idea_sev_unitary_monarchy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_sev_free_market"
+		texturefile = "gfx/interface/ideas/idea_sev_free_market.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_protectionist_economy"
+		texturefile = "gfx/interface/ideas/idea_protectionist_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_royal_military_contracts"
+		texturefile = "gfx/interface/ideas/idea_royal_military_contracts.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_sev_aristocrat_army"
+		texturefile = "gfx/interface/ideas/idea_sev_aristocrat_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SRA"
+		texturefile = "gfx/interface/ideas/idea_SRA.tga"
 	}
 }
