@@ -155,20 +155,50 @@ severcw.4.d:0 "Equestria gave us some guns."
 severcw.4.a:0 "A little less than we expected."
 
 #Decisions
-SEV_decommunization:0 "Decommunization Project"
+SEV_decommunization:0 "Project \"Dekommunizatsia\""
 
-SEV_rename:0 "Decommunization of the national names"
-SEV_rename_desc:0 "We will decommunize names in our country, as suggested by the Liberation Forces Council during the civil war."
+SEV_rename_capital:0 "Renaming the Capital"
+
+SEV_rename_rest_of_country:0 "Renaming the Country Regions"
+
+SEV_demolish_the_remnants_of_the_revolution_a:0 "Deconstruction of the Revolutionary Culture: Preparation"
+
+SEV_demolish_the_remnants_of_the_revolution_b:0 "Deconstruction of the Revolutionary Culture: Execution"
+
+SEV_demolish_the_remnants_of_the_revolution_c:0 "Restore the National Identity"
+
+SEV_remove_army_legacy:0 "Decommunize the Military"
+
+SEV_remove_economic_legacy:0 "Privatization of the Economy"
+
+SEV_remove_political_legacy:0 "Get Rid of Political Communist Legacy"
+
+SEV_absolute_monarchy:0 "Tsarist Policies"
+
+SEV_reenfranchise_noble_families:0 "Reinstate Noble Families in Their Rights."
+
+SEV_tsar_administation:0 "Administration Matter"
+
+SEV_tsar_military:0 "Military Reform"
+
+SEV_tsar_economy:0 "Choose Your Economic Policy"
+
+
 
 #Tooltips
 
 SEV_dem_col:0 "A democratic coalition has formed."
 severyan_infighting:0 "In 10 days, a democratic coalition will form."
 severyan_infighting2:0 "In 10 days, a coup shall restore order."
+SOA_won_civil_war:0 "§HWe've liberated the motherland!§!"
 treaty_decisions_tt:0 "Northern Cooperation Treaty decisions would be unlocked."
 treaty_created_tt:0 "Northern Cooperation Treaty would be created."
-SEV_CW_fortify_tooltip:0 "§HQuick fortifications would be made across the border with§! §RStalliongrad§!."
-SEV_SOA:0 "§HVolunteer divisions will be formed in St.Petershoof§!."
+SEV_CW_fortify_tooltip:0 "§HQuick fortifications would be made across the border with§! §RStalliongrad§!§H.§!"
+SEV_SOA:0 "§HVolunteer divisions will be formed in St.Petershoof.§!"
+demolishing_statues_tt:0 "§RCommunist§! §Harcitecture and memorials to the§! §Rrevolution§! §Hwill be demolished§!."
+nobles_have_rights_tt:0 "Per royal decree, noble families will be reinstated in their rights. §HNew Advisors will be available.§!"
+protectionist_tsar_tt:0 "§HYou would be able to change your economic policy in a year.§!"
+free_market_tsar_tt:0 "§RThe freer the market, the freer the people.§! §HYou would be able to change your economic policy in a year.§!"
 
 #### IDEAS ####
 SEV_fuck_commies:0 "Liberation of Motherland"
@@ -190,11 +220,54 @@ SEV_commununist_economy_legacy:0 "Economic Communist Legacy"
 SEV_commununist_economy_legacy_desc:0 ""
 
 SEV_communist_political_legacy:0 "Political Communist Legacy"
-SEV_communist_political_legacy_desc:0 "" 
+SEV_communist_political_legacy_desc:0 ""
+
+SEV_cultural_communist_legacy:0 "Cultural Communist Legacy"
+SEV_cultural_communist_legacy_desc:0 ""
+
+SEV_cultural_communist_legacy_b:0 "Cultural Communist Legacy"
+SEV_cultural_communist_legacy_b_desc:0 ""
+
+SEV_cultural_communist_legacy_c:0 "Severyan Culture"
+SEV_cultural_communist_legacy_c_desc:0 "" 
 
 SEV_coalition_tension:0 "Democratic competition"
 SEV_coalition_tension_desc:0 "Our government isn't as divided as it was. Now it's only pro-Equesrian Harmonists versus Conservatives."
 
+SEV_federal_monarchy:0 "Federative Tsardom"
+SEV_federal_monarchy_desc:0 ""
+
+SEV_unitary_monarchy:0 "Strong and Sovereign"
+SEV_unitary_monarchy_desc:0 ""
+
+SEV_protectionist_tsar:0 "Protectionist Economy"
+SEV_protectionist_tsar_desc:0 ""
+
+SEV_free_market_tsar:0 "Free Market"
+SEV_free_market_tsar_desc:0 ""
+
+SEV_white_guard_staff1:0 "White Guard Officers"
+SEV_white_guard_staff1_desc:0 ""
+
+SEV_white_guard_staff_tsar:0 "Tsarist Offciers"
+SEV_white_guard_staff_tsar_desc:0 ""
+
+SEV_white_guard_staff_tsar_contract:0 "Royal Military Contracts"
+SEV_white_guard_staff_tsar_contract_desc:0 ""
+
+SEV_white_guard_staff_tsar_nobles:0 "Aristocratic Military"
+SEV_white_guard_staff_tsar_nobles_desc:0 ""
+
+sev_republican_army:0 "Severyan Republican Army"
+sev_republican_army_desc:0 "russians do car bombings?"
+
+
+
+#Flags
+
+absolutetsar:0 "Sovereign Tsar"
+
+nobles_have_rights:0 "Nobles were reinstated in their rights"
 
 #### FOCUSES ####
 
@@ -252,8 +325,12 @@ SEV_equestrian_rats_desc:0 ""
 SEV_integration:0 "Union State with Equestria"
 SEV_integration_desc:0 ""
 
-SEV_conservatives:0 "Conservative Liberalism"
+SEV_conservatives:0 "Conservative Outlook"
 SEV_conservatives_desc:0 ""
+
+SEV_soft_conservatism:0 "Classical Liberalism"
+SEV_soft_conservatism_desc:0 ""
+
 
 SEV_PFS:0 "Welfare Fund of Severyansk"
 SEV_PFS_desc:0 ""
@@ -270,7 +347,7 @@ SEV_zhandameria_desc:0 ""
 SEV_gurantee_of_safety:0 "Unwavering Stability"
 SEV_gurantee_of_safety_desc:0 ""
 
-SEV_za_tsarya:0 "For Tsar!"
+SEV_za_tsarya:0 "For the Tsar!"
 SEV_za_tsarya_desc:0 ""
 
 SEV_tsarsky_pir:0 "Grand Feast"
@@ -418,6 +495,8 @@ SEV_doktorina_mech_desc:0 ""
 #LEADER Desc
 
 #GENERAL Desc
+
+PENPUSHER_DESC:0 "I am pegasus! Not a darn bat!"
 
 #Opinion modifiers
 
