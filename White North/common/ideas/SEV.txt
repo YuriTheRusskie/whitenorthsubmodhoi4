@@ -127,6 +127,60 @@ ideas = {
 				political_power_factor = -0.25
 			}
 		}
+		SEV_cultural_communist_legacy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = culture_commie_legacy
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		SEV_cultural_communist_legacy_b = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = culture_commie_legacy
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		SEV_cultural_communist_legacy_c = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = severyan_flagwave
+			
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
 		SEV_ebanuy_rot_etogo_parlamenta = {
 			
 			allowed = {
@@ -362,8 +416,8 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				max_planning = 0.15
-				army_org_factor = 0.03
+				army_infantry_attack_factor = 0.01
+				army_infantry_defence_factor = 0.01
 			}
 			
 			removal_cost = -1
@@ -381,13 +435,51 @@ ideas = {
 			modifier = {
 				army_infantry_attack_factor = 0.03
 				army_infantry_defence_factor = 0.03
-				max_planning = 0.15
+				max_planning = 0.05
+				army_org_factor = 0.01
+			}
+			
+			removal_cost = -1
+			
+			picture = tsarist_officers
+			
+	    }
+		SEV_white_guard_staff_tsar_nobles = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				max_planning = 0.1
+				army_org_factor = 0.1
+			}
+			
+			removal_cost = -1
+			
+			picture = sev_aristocrat_army
+			
+	    }
+		SEV_white_guard_staff_tsar_contract = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				conscription_factor = 0.1
 				army_org_factor = 0.03
 			}
 			
 			removal_cost = -1
 			
-			picture = white_guard_officers
+			picture = royal_military_contracts
 			
 	    }
 		SEV_zhandameria = {
@@ -399,8 +491,8 @@ ideas = {
 			}
 
 			modifier = {
-				enemy_partisan_effect = -0.1
-				stability_factor = 0.010
+				enemy_partisan_effect = -0.15
+				stability_factor = 0.02
 			}
 
 			removal_cost = -1
@@ -432,7 +524,7 @@ ideas = {
 			}
 			modifier = {
 				army_morale_factor = 0.05
-				out_of_supply_factor = -0.5
+				out_of_supply_factor = -0.1
 			}
 
 			removal_cost = -1
@@ -954,7 +1046,95 @@ ideas = {
 			removal_cost = -1
 			
 			picture = 
-		}		
-	}
-	
+		}
+		SEV_federal_monarchy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+				local_building_slots_factor = 0.15
+				stability_factor = -0.03
+			}
+
+			removal_cost = -1
+			
+			picture = sev_federative_monarchy
+		}
+		SEV_unitary_monarchy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.03
+				political_power_factor = -0.05
+			}
+
+			removal_cost = -1
+			
+			picture = sev_unitary_monarchy
+		}
+		SEV_protectionist_tsar = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+			}
+
+			removal_cost = -1
+			
+			picture = protectionist_economy
+		}
+		SEV_free_market_tsar = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.07
+				industrial_capacity_factory = -0.1
+
+			}
+
+			removal_cost = -1
+			
+			picture = sev_free_market
+		}
+		sev_republican_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				stability_weekly = -0.03
+				political_power_factor = -0.1
+			}
+
+			removal_cost = -1
+			
+			picture = SRA
+		}
+	}	
 }
