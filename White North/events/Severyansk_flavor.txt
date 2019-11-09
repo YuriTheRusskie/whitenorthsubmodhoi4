@@ -16,6 +16,7 @@ country_event = { #Renaming capital decision event
 		153 = { set_state_name = "Moscolt Oblast" }
 		set_province_name = { id = 488 name = "Moscolt" }
 		add_political_power = 85
+		set_country_flag = SEV_capital_renamed
 	}
 	option = {
 		name = severf.0.b
@@ -32,5 +33,69 @@ country_event = { #Renaming capital decision event
 			}
 		}
 		add_political_power = -50
+		set_country_flag = SEV_capital_renamed
+	}
+}
+country_event = { #Project Decommunization Conference
+    id = severf.1
+	title = severf.1.t
+	desc = severf.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = severf.1.a
+		add_political_power = 80
+		add_stability = -0.05
+		set_country_flag = first_part_conf_done
+		swap_ideas = { 
+			remove_idea = SEV_cultural_communist_legacy
+			add_idea = SEV_cultural_communist_legacy_b
+		}
+	}
+	option = {
+		name = severf.1.b
+		add_political_power = 30
+		add_stability = 0.03
+		set_country_flag = first_part_conf_done
+		swap_ideas = { 
+			remove_idea = SEV_cultural_communist_legacy
+			add_idea = SEV_cultural_communist_legacy_b
+		}
+	}
+}
+country_event = { #Severyan Ponies are unhappy with integration into EQS, formation of Severyan Repulican Army aka SRA, yes this is an IRA reference
+    id = severf.2
+	title = severf.2.t
+	desc = severf.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = severf.2.a
+		EQS = {
+			country_event = {
+				id = severf.3
+				days = 180
+			}
+		}
+	}
+}
+country_event = { #Car bombings in Manehattan, SRA is the main suspect
+	id = severf.3
+	title = severf.3.t
+	desc = severf.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # uh oh stinky
+		name = severf.3.a
+		add_ideas = sev_republican_army
+		EQS = {
+			country_event = {
+				id = severf.4
+				days = 180
+			}
+		}
 	}
 }

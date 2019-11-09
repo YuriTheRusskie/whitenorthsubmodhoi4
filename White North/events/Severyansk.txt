@@ -143,15 +143,20 @@ country_event = { #Civil war is over, Severyansk won
 	option = { 
 		name = sever.3.a
 		add_political_power = 70
-		swap_ideas = {
-			remove_idea = SEV_fuck_commies
-			add_idea = SEV_motherland_is_free
+		custom_effect_tooltip = SOA_won_civil_war
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = SEV_fuck_commies
+				add_idea = SEV_motherland_is_free
+			}
 		}
-		add_ideas = { 
+		add_ideas = {
+			SEV_white_guard_staff1
 			SEV_ebanuy_rot_etogo_parlamenta
 			SEV_communist_army_legacy
 			SEV_commununist_economy_legacy
 			SEV_communist_political_legacy
+			SEV_cultural_communist_legacy
 			civilian_economy
 		}
 		hidden_effect = {
@@ -406,6 +411,19 @@ country_event = { #2nd elections
 	option = {
 		name = sever.11.b
 		set_country_flag = republicanswonsecondelec
+		set_politics = {
+			ruling_party = democratic
+		}
+		hidden_effect = {
+			set_variable = { var = senators_support value = 48 }
+			set_variable = { var = senators_total value = 96 }
+			set_variable = { var = representatives_support value = 218 }
+			set_variable = { var = representatives_total value = 435 }
+			set_variable = { var = quorum_low value = 39 }
+			set_variable = { var = quorum_medium value = 49 }
+			set_variable = { var = quorum_high value = 58 }
+			SEV_recalc_congress_icon_frames = yes
+		}
 		remove_ideas = coalition_tension
         add_popularity = {
                 ideology = democratic
@@ -497,25 +515,103 @@ country_event = { #Absolutist
 
 	option = { 
 		name = sever.16.a
+		set_country_flag = absolutetsar
 		add_popularity = {
                 ideology = fascism
                 popularity = 0.05
         }
+		add_popularity = {
+                ideology = neutrality
+                popularity = 0.1
+        }
 	}
 }
-country_event = { #PeterIV is dead
+country_event = { #Tsarist administration choice
 	id = sever.17
 	title = sever.17.t 
 	desc = sever.17.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { 
+	option = { #Federal Monarchy
 		name = sever.17.a
-		add_popularity = {
-                ideology = fascism
-                popularity = 0.05
-        }
+		add_ideas = SEV_federal_monarchy
+	}
+	
+	option = { #Unitary State
+		name = sever.17.b
+		add_ideas = SEV_unitary_monarchy
+	}
+}
+country_event = { #Tsarist Military Reform
+	id = sever.18
+	title = sever.18.t 
+	desc = sever.18.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Contract Military
+		name = sever.18.a
+		swap_ideas = {
+			remove_idea = SEV_white_guard_staff_tsar
+			add_idea = SEV_white_guard_staff_tsar_contract
+		}
+	}
+	
+	option = { #Aristocrat Military
+		name = sever.18.b
+		swap_ideas = {
+			remove_idea = SEV_white_guard_staff_tsar
+			add_idea = SEV_white_guard_staff_tsar_nobles
+		}
+	}
+}
+country_event = { #Tsarist Economy
+	id = sever.19
+	title = sever.19.t 
+	desc = sever.19.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Protectionist
+		name = sever.19.a
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = SEV_protectionist_tsar
+						has_idea = SEV_free_market_tsar
+					}
+				}   
+				remove_ideas = {
+					SEV_protectionist_tsar
+					SEV_free_market_tsar
+				}	
+			}
+		}
+		add_ideas = SEV_protectionist_tsar
+		custom_effect_tooltip = protectionist_tsar_tt
+	}
+	
+	option = { #Free Market
+		name = sever.19.b
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = SEV_protectionist_tsar
+						has_idea = SEV_free_market_tsar
+					}
+				}   
+				remove_ideas = {
+					SEV_protectionist_tsar
+					SEV_free_market_tsar
+				}	
+			}
+		}
+		add_ideas = SEV_free_market_tsar
+		set_country_flag = TRD_forced_market
+		custom_effect_tooltip = free_market_tsar_tt
 	}
 }
 
