@@ -284,7 +284,7 @@ shared_focus = {
     cost = 8
 	
 	prerequisite = {
-			focus = SEV_secure_the_state
+		focus = SEV_secure_the_state
 	}
 	
 	completion_reward = {
@@ -696,9 +696,12 @@ shared_focus = {
 	
 	prerequisite = {
 		focus = SEV_unshakable_autocracy
-		has_country_flag = nobles_have_rights
-		NOT = { has_idea = SEV_communist_army_legacy }
 	}
+	
+	available = {
+        has_country_flag = nobles_have_rights
+		NOT = { has_idea = SEV_communist_army_legacy }
+    }
 
     completion_reward = {
 		add_command_power = 50
@@ -721,6 +724,10 @@ shared_focus = {
 		focus = SEV_unshakable_autocracy
 		NOT = { has_idea = SEV_commununist_economy_legacy }
 	}
+	
+	available = {
+			NOT = { has_idea = SEV_commununist_economy_legacy }
+    }
 	
 	completion_reward = {
 		add_ideas = felix_corp
@@ -1433,7 +1440,7 @@ shared_focus = {
 			name = infantry_eq_bonus
 			bonus = 1.0
 			ahead_reduction = 2
-			category = infantry
+			category = infantry_weapons
 		}
 	}
 }

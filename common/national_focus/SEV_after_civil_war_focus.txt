@@ -6,7 +6,7 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 0 y = 4500 }
 	
-    #shared_focus = SEV_secure_the_state #political
+    shared_focus = SEV_secure_the_state #political
 	shared_focus = SEV_rebuild_the_nation #economy
 	shared_focus = SEV_lessons_of_civil_war #military, land
 	shared_focus = SEV_create_air_force #military, air
