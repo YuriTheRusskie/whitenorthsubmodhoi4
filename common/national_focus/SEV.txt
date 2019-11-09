@@ -1,0 +1,37 @@
+focus_tree = {
+	id = SEV_civil_war_focus
+
+	country = {
+		factor = 0
+		modifier = {
+            add = 10
+            
+            tag = SEV
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 4500 } #Because there's a bug with continuous foci positions not updating :solution:
+	
+    shared_focus = SEV_CW_start #civil war tree
+}
+
+focus_tree = {
+	id = SEV_after_civil_war_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 55
+			tag = SEV
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 4500 }
+	
+    shared_focus = SEV_secure_the_state #political
+	shared_focus = SEV_rebuild_the_nation #economy
+	shared_focus = SEV_lessons_of_civil_war #military, land
+	shared_focus = SEV_create_air_force #military, air
+	shared_focus = SEV_naval_armament #military, navy
+	shared_focus = SEV_external_policy #external policy
+}

@@ -1,0 +1,1140 @@
+ideas = {
+
+	country = {
+		SEV_fuck_commies = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = soa_flag
+			
+			targeted_modifier = {
+				tag = STG
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			
+			
+		}
+		SEV_STG_debuff = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = stg_debuff_pic
+			
+			targeted_modifier = {
+				tag = SEV
+				attack_bonus_against = -0.15
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.05
+				army_org_factor = -0.1
+			}
+		}
+		SEV_motherland_is_free = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = severyan_flag
+			
+			modifier = {
+				drift_defence_factor = 0.3
+				communism_acceptance = -100
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		SEV_communist_army_legacy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = army_commie_legacy
+			
+			modifier = {
+				army_morale_factor = -0.05
+				army_org_factor = -0.05
+				supply_consumption_factor = 0.1
+			}
+		}
+		SEV_commununist_economy_legacy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = economy_commie_legacy
+			
+			modifier = {
+				line_change_production_efficiency_factor = -0.1
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		SEV_communist_political_legacy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = political_commie_legacy
+			
+			modifier = {
+				political_power_factor = -0.25
+			}
+		}
+		SEV_cultural_communist_legacy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = culture_commie_legacy
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		SEV_cultural_communist_legacy_b = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = culture_commie_legacy
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		SEV_cultural_communist_legacy_c = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = severyan_flagwave
+			
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		SEV_ebanuy_rot_etogo_parlamenta = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = disjointed_duma
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.1
+				fascism_drift = 0.05
+				democratic_drift = 0.05
+				neutrality_drift = 0.01
+			}
+			
+			
+		}
+		coalition_tension = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = reps_vs_dems
+			
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+			
+			
+		}
+		SEV_rebuild_nation = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				industry_repair_factor = 0.05
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		SEV_heavy_industry = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = idea_man_five_year_plan_industry
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		SEV_light_industry = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+
+			picture = ger_rebuild_the_nation
+
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		SEV_bbetter_industry = {
+			allowed = {
+				always = no
+			}	
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+
+			picture = ger_rebuild_the_nation
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		funded_science = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = idea_jap_supremacy_of_technology
+			
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+		SEV_PFS_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_industrial_complex_factor = 0.03
+			}
+		}
+		SEV_gurantee_liberty {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				fascism_drift = -0.03
+				fascism_acceptance = -50
+				political_power_gain = 0.1
+			}
+		}
+		SEV_gurantee_safety = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				foreign_subversive_activites = -0.25
+				enemy_partisan_effect = -0.1
+			}
+		}
+		unorganized_army = { #Might use this for later, probably gonna remove
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				army_org_factor = -0.1
+				training_time_factor = 0.1
+				conscription_factor = -0.05
+			}
+		}
+		unorganized_navy = { #Might use this for later, probably gonna remove
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_navy_bonus
+			
+			research_bonus = {
+				naval_doctrine = -0.75
+			}
+		}
+		SEV_white_guard_staff1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.01
+				army_infantry_defence_factor = 0.01
+			}
+			
+			removal_cost = -1
+			
+			picture = white_guard_officers
+			
+	    }
+		SEV_white_guard_staff_tsar = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.03
+				army_infantry_defence_factor = 0.03
+				max_planning = 0.05
+				army_org_factor = 0.01
+			}
+			
+			removal_cost = -1
+			
+			picture = tsarist_officers
+			
+	    }
+		SEV_white_guard_staff_tsar_nobles = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				max_planning = 0.1
+				army_org_factor = 0.1
+			}
+			
+			removal_cost = -1
+			
+			picture = sev_aristocrat_army
+			
+	    }
+		SEV_white_guard_staff_tsar_contract = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				conscription_factor = 0.1
+				army_org_factor = 0.03
+			}
+			
+			removal_cost = -1
+			
+			picture = royal_military_contracts
+			
+	    }
+		SEV_zhandameria = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				enemy_partisan_effect = -0.15
+				stability_factor = 0.02
+			}
+
+			removal_cost = -1
+			
+			picture = generic_spy_coup
+		}
+		felix_corp = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		for_tsar_faith_and_country = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_morale_factor = 0.05
+				out_of_supply_factor = -0.1
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}		
+		mot_mech_bonus = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				mechanized_attack_factor = 0.05
+				motorized_attack_factor = 0.05
+			}
+
+			removal_cost = -1
+			
+			picture = FRA_motorized_focus
+		}
+		severyan_armour_school = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_armor_attack_factor = 0.05
+				army_armor_speed_factor = 0.05
+			}
+
+			removal_cost = -1
+			
+			picture = idea_generic_armor
+		}
+		severyan_air_aces = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+					air_ace_generation_chance_factor = 0.1
+			}
+			
+			removal_cost = -1
+			
+			picture = air_support_focus
+		}
+		SEV_igroup_flights = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				enemy_army_bonus_air_superiority_factor = -0.1
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_generic_air_payment
+		}
+		arty_guided_by_god = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+					army_org_factor = 0.1
+					army_morale_factor = 0.1
+					army_org = 5
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_generic_artillery_regiments
+		}
+		SEV_shock_and_awwe = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_artillery_attack_factor = 0.05
+				army_artillery_defence_factor = 0.05
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_generic_artillery_regiments
+		}
+		SEV_improved_inf_weapons_capabilities = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+
+			removal_cost = -1
+			
+			picture = idea_hun_secret_rearmament
+		}
+		SEV_rec_focus = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+					conscription_factor = 0.7
+			}
+
+			removal_cost = -1
+			
+			picture = generic_manpower_bonus
+		}
+		SEV_frontline_commissars = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+					army_org_factor = 0.05
+					army_org = 5
+			}
+			
+			removal_cost = -1
+			
+			picture = soviet_german_friendship
+		}
+		baron_radical_changes1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+					stability_factor = -0.75
+					war_support_factor = -0.75
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_republicans_focus
+		}
+		baron_radical_changes2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+					stability_factor = -0.5
+					war_support_factor = -0.5
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_republicans_focus
+		}
+		baron_corruption = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+					political_power_factor = -0.5
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_generic_deal_with_the_devil
+		}
+		baron_workers_of_the_world = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+					consumer_goods_factor = 0.5
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_sev_workers_of_the_world
+			
+		}
+		baron_worked_into_submission = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+					consumer_goods_factor = -0.05
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_sev_worked_into_submission
+			
+		}
+		baron_anticelibate_laws = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+					MONTHLY_POPULATION = 0.1
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_generic_constitutional_guarantee
+			
+		}
+		baron_fractured_industry = { 
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.5
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_generic_constitutional_guarantee
+		}
+		baron_scorched_earth = { 
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				MONTHLY_POPULATION = -0.9
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_chi_war_of_resistance3
+		}
+		baron_science_ded = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = -0.5
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_saf_history_of_segregation_2
+		
+		}
+		baron_industry_chaos = { 
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+			}
+			
+			removal_cost = -1
+			
+			picture = FRA_factory_strikes
+		}
+		baron_dumb_staff = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_attack_factor = -0.9
+				army_defence_factor = -0.9
+				army_org = -10
+				army_morale_factor = -0.1
+				max_planning = -0.5
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_generic_army_problems
+		}
+		baron_serving_no_go1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = -0.95
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_chi_army_corruption
+		}
+		baron_serving_no_go2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = -0.45
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_chi_army_corruption3
+		}
+		baron_secret_police = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				decryption_factor = 0.05
+				encryption_factor = 0.05
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_generic_secret_police
+		}
+		baron_military_under_control = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_org = 10
+				army_morale_factor = 0.1
+				max_planning = 0.1
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_generic_fascism_drift_2
+		}
+		severyan_marine_corps = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				amphibious_invasion = 0.1
+				invasion_preparation = -0.15
+			}
+			
+			removal_cost = -1
+			
+			picture = idea_maizuru_naval_arsenal
+		}
+		better_ship_production = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+			}
+			
+			removal_cost = -1
+			
+			picture = 
+		}
+		subs_quantity = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			equipment_bonus = {
+				ss_tech = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		expansionist_policy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		SEV_iofficer_academy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		SEV_seized_EQS_companies = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.01
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		SEV_against_EQS_buff = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			targeted_modifier = {
+				tag = EQS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		SEV_prepare_EQS_war = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				conscription = 0.03
+				conscription_factor = 0.05
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		SEV_federal_monarchy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+				local_building_slots_factor = 0.15
+				stability_factor = -0.03
+			}
+
+			removal_cost = -1
+			
+			picture = sev_federative_monarchy
+		}
+		SEV_unitary_monarchy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.03
+				political_power_factor = -0.05
+			}
+
+			removal_cost = -1
+			
+			picture = sev_unitary_monarchy
+		}
+		SEV_protectionist_tsar = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+			}
+
+			removal_cost = -1
+			
+			picture = protectionist_economy
+		}
+		SEV_free_market_tsar = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.07
+				industrial_capacity_factory = -0.1
+
+			}
+
+			removal_cost = -1
+			
+			picture = sev_free_market
+		}
+		sev_republican_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				stability_weekly = -0.03
+				political_power_factor = -0.1
+			}
+
+			removal_cost = -1
+			
+			picture = SRA
+		}
+	}	
+}

@@ -1,0 +1,624 @@
+﻿add_namespace = sever
+
+############################
+## Severyansk Events
+############################
+
+country_event = { #Units and STG leader death
+    id = sever.0
+	title = sever.0.t
+	desc = sever.0.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		SEV = {
+			declare_war_on = { 
+				target = STG 
+				type = annex_everything
+			}
+			inherit_technology = STG
+			hidden_effect = { 
+				add_named_threat = {
+					threat = 2
+					name = SEV_revolt
+				}
+			}				
+		}
+	}
+	
+	option = {
+		name = sever.0.a
+		load_oob = "SEV_CW"
+		load_oob = "SEV_CW_fleet"
+		set_country_flag = stg_cw
+		STG = { 
+			country_event = { 
+				id = stalliongrad.999 
+				days = 0 
+			} 
+		}
+		SEV = {
+			country_event = {
+				id = sever.1
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { #Severyanan Declaration of independence, fluff piece
+    id = sever.1
+	title = sever.1.t
+	desc = sever.1.d
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {
+	    name = sever.1.a
+		add_stability = 0.01
+		add_political_power = 10
+		add_ideas = SEV_fuck_commies
+		hidden_effect = {
+			STG = {
+				add_timed_idea = {
+					idea = SEV_STG_debuff
+					days = 180
+				}
+			}
+		}
+	}
+}
+country_event = { #SEV force annex STG to make things easier for an AI
+	id = sever.2
+	title = sever.2.t 
+	desc = sever.2.d
+	fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+		original_tag = SEV
+		is_ai = yes
+		153 = { #Stalliongrad Capital
+			is_controlled_by = SEV
+		}
+	}
+		
+	mean_time_to_happen = { days = 1 }	
+		
+	option = {
+		name = sever.2.a
+        SEV = {
+			annex_country = {
+				target = STG
+				transfer_troops = no
+			}
+		}		
+	}
+}
+
+country_event = { #SEV force annex STG if it's a puppet
+	id = sever.999
+	title = sever.999.t 
+	desc = sever.999.d
+	fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+			tag = SEV
+			STG = {
+				is_puppet_of = SEV
+			}
+		}
+	
+	mean_time_to_happen = { days = 1 }
+		
+	option = {
+		name = sever.999.a
+        SEV = {
+			annex_country = {
+				target = STG
+				transfer_troops = yes
+			}
+		}
+	}
+}
+
+country_event = { #Civil war is over, Severyansk won
+	id = sever.3
+	title = sever.3.t 
+	desc = sever.3.d
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		original_tag = SEV
+		SEV = {
+			NOT = {
+				has_war_with = STG
+			}
+		}
+	}
+	
+	option = { 
+		name = sever.3.a
+		add_political_power = 70
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = SEV_fuck_commies
+				add_idea = SEV_motherland_is_free
+			}
+		}
+		add_ideas = {
+			SEV_white_guard_staff1
+			SEV_ebanuy_rot_etogo_parlamenta
+			SEV_communist_army_legacy
+			SEV_commununist_economy_legacy
+			SEV_communist_political_legacy
+			SEV_cultural_communist_legacy
+			civilian_economy
+		}
+		custom_effect_tooltip = SOA_won_civil_war	
+		set_country_flag = SEV_civil_war_victory
+		#load_focus_tree = SEV_after_civil_war_focus
+		hidden_effect = {
+		set_cosmetic_tag = SEV_POST_CW
+		set_party_name = { 
+			ideology = neutrality
+			long_name = SEV_POST_CIVIL_WAR_long
+			name = SEV_POST_CIVIL_WAR
+			}
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Severyan Duma"
+				picture = "duma.tga"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = { 
+					provisional
+				}
+			}
+			delete_unit_template_and_units = {
+				division_template = "Equestrian Volunteers"
+			}
+
+
+		}
+	}
+	
+}
+
+country_event = { #Banning Communism
+	id = sever.4
+	title = sever.4.t 
+	desc = sever.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = sever.4.a
+	}
+}
+
+country_event = { #Decision between coup or elections
+	id = sever.5
+	title = sever.5.t 
+	desc = sever.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = sever.5.a
+		custom_effect_tooltip = severyan_infighting
+		hidden_effect = { 
+			country_event = {
+				id = sever.6
+				days = 10
+			}
+		}
+	}
+	
+	option = {
+		name = sever.5.b
+		custom_effect_tooltip = severyan_infighting2
+		hidden_effect = { 
+			country_event = {
+				id = sever.7
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { #democratic coalition wins
+	id = sever.6
+	title = sever.6.t 
+	desc = sever.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = sever.6.a
+		remove_ideas = SEV_ebanuy_rot_etogo_parlamenta
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
+		}
+		hidden_effect = {
+			set_country_flag = SEV_dem_col
+			set_country_flag = sev_govt1
+		}
+		
+	}
+}
+
+country_event = { #fascists take control
+	id = sever.7
+	title = sever.7.t 
+	desc = sever.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = sever.7.a
+		set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.2
+		}
+		set_party_name = {
+                ideology = fascism
+                long_name = SEV_BRN_party_long
+                name = SEV_BRN_party
+        }
+		remove_ideas = SEV_ebanuy_rot_etogo_parlamenta
+		if = {
+			limit = { has_unit_leader = 1878 }
+			remove_unit_leader = 1878
+		}
+		add_ideas = {
+			baron_radical_changes1
+			baron_corruption
+			baron_workers_of_the_world
+			baron_fractured_industry
+			baron_scorched_earth
+			baron_industry_chaos
+			baron_dumb_staff
+			baron_serving_no_go1
+		}		
+		hidden_effect = {
+			set_country_flag = SEV_fashisty
+			set_cosmetic_tag = SEV_BRN
+		}
+		
+	}
+}
+
+country_event = { #equestrian democrats and cons win 1st elections
+	id = sever.8
+	title = sever.8.t 
+	desc = sever.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sever.8.a
+		set_country_flag = secondelections
+		set_country_flag = sev_govt1
+		set_politics = {
+            ruling_party = democratic
+            elections_allowed = no
+        }
+		add_popularity = {
+                ideology = democratic
+                popularity = 0.1
+        }
+		add_ideas = coalition_tension
+	}
+}
+
+country_event = { #Tsarist restoration
+	id = sever.9
+	title = sever.9.t 
+	desc = sever.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sever.9.a
+		create_country_leader = {
+			name = "Tsar Peter IV"
+			picture = "PeterIV.tga"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+			}
+		}
+		create_country_leader = {
+			name = "Tsar Peter IV"
+			picture = "gfx/leaders/PeterIV.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+		add_popularity = {
+                ideology = neutrality
+                popularity = 0.05
+        }
+        set_party_name = {
+                ideology = neutrality
+                long_name = SEV_monarchist_party_long
+                name = SEV_monarchist_party
+        }
+		hidden_effect = {
+			retire_country_leader = yes
+			set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+            }
+			set_cosmetic_tag = SEV_TSARIST
+		}
+	}
+}
+
+country_event = { #democratic coalition dies
+	id = sever.10
+	title = sever.10.t 
+	desc = sever.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sever.10.a
+			country_event = { 
+				id = sever.11 
+				days = 7
+			}
+	}
+}
+country_event = { #2nd elections
+	id = sever.11
+	title = sever.11.t 
+	desc = sever.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = sever.11.a
+		set_country_flag = democratswonsecondelec
+		remove_ideas = coalition_tension
+        add_popularity = {
+                ideology = democratic
+                popularity = 0.1
+        }
+        set_party_name = {
+                ideology = democratic
+                long_name = SEV_EQS_democrats_long
+                name = SEV_EQS_democrats
+        }
+        create_country_leader = {
+                name = "Darkwing"
+                desc = ""
+                picture = "Darkwing.tga"
+                expire = "1965.1.1"
+                ideology = socialism
+                traits = {}
+        }
+	}
+
+	option = {
+		name = sever.11.b
+		set_country_flag = republicanswonsecondelec
+		set_politics = {
+			ruling_party = democratic
+		}
+		hidden_effect = {
+			set_variable = { var = senators_support value = 48 }
+			set_variable = { var = senators_total value = 96 }
+			set_variable = { var = representatives_support value = 218 }
+			set_variable = { var = representatives_total value = 435 }
+			set_variable = { var = quorum_low value = 39 }
+			set_variable = { var = quorum_medium value = 49 }
+			set_variable = { var = quorum_high value = 58 }
+			SEV_recalc_congress_icon_frames = yes
+		}
+		remove_ideas = coalition_tension
+        add_popularity = {
+                ideology = democratic
+                popularity = 0.1
+        }
+        set_party_name = {
+                ideology = democratic
+                long_name = SEV_republicans_long
+                name = SEV_republicans
+        }
+        create_country_leader = {
+                name = "Severyan Republican"
+                desc = "yes"
+                picture = "severyan_republican_placeholder.tga"
+                expire = "1965.1.1"
+                ideology = conservatism
+                traits = {}
+        }
+	}
+}
+country_event = { #SEV annexation by EQS
+	id = sever.12
+	title = sever.12.t 
+	desc = sever.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sever.12.a
+		ai_chance = {
+			factor = 50
+		}
+		EQS = {
+			annex_country = {
+				target = SEV
+				transfer_troops = yes
+			}
+		}
+	}
+	option = {
+		name = sever.12.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				SEV = {is_ai = no}
+			}
+		}
+		EQS = {
+			puppet = SEV
+		}
+	}
+}
+country_event = { # Democratic Tsar
+	id = sever.15
+	title = sever.15.t 
+	desc = sever.15.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sever.15.a
+		set_country_leader_ideology = conservatism	
+		add_popularity = {
+                ideology = democratic
+                popularity = 0.1
+        }
+        set_party_name = {
+                ideology = neutrality
+                long_name = SEV_monarchist_party_long
+                name = SEV_monarchist_party
+        }
+		hidden_effect = {
+			retire_country_leader = yes
+			set_politics = {
+                ruling_party = democratic
+                elections_allowed = no
+            }
+			set_country_flag = democratictsar
+		}
+	}
+}
+country_event = { #Absolutist
+	id = sever.16
+	title = sever.16.t 
+	desc = sever.16.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sever.16.a
+		set_country_flag = absolutetsar
+		add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+        }
+		add_popularity = {
+                ideology = neutrality
+                popularity = 0.1
+        }
+	}
+}
+country_event = { #Tsarist administration choice
+	id = sever.17
+	title = sever.17.t 
+	desc = sever.17.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Federal Monarchy
+		name = sever.17.a
+		add_ideas = SEV_federal_monarchy
+	}
+	
+	option = { #Unitary State
+		name = sever.17.b
+		add_ideas = SEV_unitary_monarchy
+	}
+}
+country_event = { #Tsarist Military Reform
+	id = sever.18
+	title = sever.18.t 
+	desc = sever.18.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Contract Military
+		name = sever.18.a
+		swap_ideas = {
+			remove_idea = SEV_white_guard_staff_tsar
+			add_idea = SEV_white_guard_staff_tsar_contract
+		}
+	}
+	
+	option = { #Aristocrat Military
+		name = sever.18.b
+		swap_ideas = {
+			remove_idea = SEV_white_guard_staff_tsar
+			add_idea = SEV_white_guard_staff_tsar_nobles
+		}
+	}
+}
+country_event = { #Tsarist Economy
+	id = sever.19
+	title = sever.19.t 
+	desc = sever.19.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Protectionist
+		name = sever.19.a
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = SEV_protectionist_tsar
+						has_idea = SEV_free_market_tsar
+					}
+				}   
+				remove_ideas = {
+					SEV_protectionist_tsar
+					SEV_free_market_tsar
+				}	
+			}
+		}
+		add_ideas = SEV_protectionist_tsar
+		custom_effect_tooltip = protectionist_tsar_tt
+	}
+	
+	option = { #Free Market
+		name = sever.19.b
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = SEV_protectionist_tsar
+						has_idea = SEV_free_market_tsar
+					}
+				}   
+				remove_ideas = {
+					SEV_protectionist_tsar
+					SEV_free_market_tsar
+				}	
+			}
+		}
+		add_ideas = SEV_free_market_tsar
+		set_country_flag = TRD_forced_market
+		custom_effect_tooltip = free_market_tsar_tt
+	}
+}
+
+
+
+		
+		
+		

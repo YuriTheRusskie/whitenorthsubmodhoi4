@@ -1,0 +1,15 @@
+SEV_diplo_treaty = {
+
+    icon = paper_icon1
+    available = {
+		tag = SEV
+        has_country_flag = treaty_flag
+    }
+	allowed = { 
+        tag = SEV 
+    }
+    visible = {
+		tag = SEV
+        has_country_flag = treaty_flag
+    }
+}

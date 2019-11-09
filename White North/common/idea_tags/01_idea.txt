@@ -1,9 +1,0 @@
-idea_categories = {
-
-	treaty_ideas = {
-		national_spirit = yes
-		
-		cost = 0
-		removal_cost = -1
-	}
-}
