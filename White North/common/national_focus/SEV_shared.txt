@@ -696,6 +696,8 @@ shared_focus = {
 	
 	prerequisite = {
 		focus = SEV_unshakable_autocracy
+		has_country_flag = nobles_have_rights
+		NOT = { has_idea = SEV_communist_army_legacy }
 	}
 
     completion_reward = {
@@ -717,6 +719,7 @@ shared_focus = {
 
     prerequisite = {
 		focus = SEV_unshakable_autocracy
+		NOT = { has_idea = SEV_commununist_economy_legacy }
 	}
 	
 	completion_reward = {
