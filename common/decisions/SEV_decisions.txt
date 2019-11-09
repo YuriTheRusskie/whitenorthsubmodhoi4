@@ -298,7 +298,7 @@ SEV_absolute_monarchy = {
 
         available = {
 			NOT = { has_idea = SEV_communist_political_legacy }
-			has_idea = SEV_demolish_the_remnants_of_the_revolution_c
+			has_idea = SEV_cultural_communist_legacy_c
         }
         
         visible = {
