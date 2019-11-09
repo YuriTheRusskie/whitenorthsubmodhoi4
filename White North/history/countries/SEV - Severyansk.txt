@@ -165,6 +165,18 @@ create_corps_commander = {
 	logistics_skill = 2
 }
 
+create_corps_commander = {
+	name = "Penpusher"
+	desc = "PENPUSHER_DESC"
+	picture = "Penpusher.tga"
+	traits = { }
+	skill = 1
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
 add_tech_bonus = {
 	name = armor_bonus
 	bonus = 0.15
