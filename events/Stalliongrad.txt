@@ -2304,7 +2304,7 @@ country_event = { ## Civil War
 	}
 	mean_time_to_happen = { days = 100 }
 	fire_only_once = yes
-	option = {
+	option = { #Glory to Stalliongrad!
 		name = stalliongrad.93.a
 		start_civil_war = {
 			ruling_party = communism
@@ -2315,20 +2315,62 @@ country_event = { ## Civil War
 		random_other_country = {
 			limit = { original_tag = STG }
 			set_cosmetic_tag = STG_DEM
+			save_global_event_target_as = severyansk_revolt			
 		}
+		SEV = {
+			annex_country = {
+				target = event_target:severyansk_revolt
+				transfer_troops = yes
+			}	
+		}	
+		STG = {
+			declare_war_on = {
+			target = SEV
+			type = annex_everything
+			}
+		}
+		hidden_effect = {
+			SEV = {
+				country_event = {
+					id = sever.1
+				}
+			}
+		}		
+		custom_effect_tooltip = remain_in_STG_tt
 	}
-	option = {
+	option = { #Glory to Severyana!
 		name = stalliongrad.93.b
-		load_focus_tree = generic_focus
-		#set_cosmetic_tag = STG_DEM
 		start_civil_war = {
-			ruling_party = democratic
-			ideology = ROOT
-			size = 0.4
+			ruling_party = communism
+			ideology = democratic
+			size = 0.6
+			capital = 166
 		}
 		random_other_country = {
 			limit = { original_tag = STG }
-			set_cosmetic_tag = STG_SIN
+			set_cosmetic_tag = STG_DEM
+			save_global_event_target_as = severyansk_revolt
+		}
+		SEV = {
+			annex_country = {
+				target = event_target:severyansk_revolt
+				transfer_troops = yes
+			}
+			change_tag_from = STG			
+		}	
+		STG = {
+			declare_war_on = {
+			target = SEV
+			type = annex_everything
+			}
+		}
+		custom_effect_tooltip = switch_to_SEV_tt
+		hidden_effect = {
+			SEV = {
+				country_event = {
+					id = sever.1
+				}
+			}
 		}
 	}
 }
