@@ -422,6 +422,9 @@ SEV_forced_conscription_desc:0 ""
 baron_war_propaganda:0 "War Propaganda"
 baron_war_propaganda_desc:0 ""
 
+SEV_deal_with_staff:0 "Convince the Staff"
+SEV_deal_with_staff_desc:0 ""
+
 SEV_total_control:0 "Grossflächige Kontrollen"
 SEV_total_control_desc:0 ""
 
@@ -467,7 +470,7 @@ SEV_officer_academy:0 "Koltuzov Military College"
 SEV_officer_academy_desc:0 ""
 
 SEV_military_research_uni:0 "Nauchgorodok"
-SEV_military_research_uni_desc:0 "note for whoever will be writing loc for this, Nauchgorodok means Science Town. Those were the Reaseach Cities aka military research facilities in Soviet Union."
+SEV_military_research_uni_desc:0 "note for whoever will be writing loc for this, Nauchgorodok means Science Town. Those were the Research Cities aka military research facilities in Soviet Union."
 
 SEV_radar:0 "Radiolokator"
 SEV_radar_desc:0 ""
@@ -488,6 +491,79 @@ SEV_modernization_of_army_desc:0 ""
 
 SEV_doktorina_mech:0 "Marcolt's Plan"
 SEV_doktorina_mech_desc:0 ""
+
+SEV_motorised_research:0 "BTR"
+SEV_motorised_research_desc:0 "for horseworder boyes, BTR means armoured transport vehicle in Russian"
+
+SEV_mechanized:0 "New BTR models"
+SEV_mechanized_desc:0 ""
+
+SEV_i_tanki_nashi_bystry:0 "Continue Stalliongradian Tank Research"
+SEV_i_tanki_nashi_bystry_desc:0 ""
+
+SEV_obnovim_doktorinu:0 "Lightning War Doctorine"
+SEV_obnovim_doktorinu_desc:0 ""
+
+SEV_mech_motor_bonus:0 "Severny Avtoprom Factory"
+SEV_mech_motor_bonus_desc:0 ""
+
+SEV_tri_tankista:0 "New Tank Projects"
+SEV_tri_tankista_desc:0 ""
+
+SEV_tankovaya_schkola:0 "Severyan Tankery College"
+SEV_tankovaya_schkola_desc:0 ""
+
+SEV_arty_is_best:0 "Fertz's Plan"
+SEV_arty_is_best_desc:0 ""
+
+SEV_artilleristy:0 "New Artillery Weapons"
+SEV_artilleristy_desc:0 ""
+
+SEV_arty_research_1:0 "MZP-76"
+SEV_arty_research_1_desc:0 "for context to horseworders, MZP-76 is a reference to ZiS-76. MZP means Petershoof Ironworks"
+
+SEV_arty_research_2:0 "New Field Artillery"
+SEV_arty_research_2_desc:0 ""
+
+SEV_rocket_arty:0 "Rocket Rain"
+SEV_rocket_arty_desc:0 ""
+
+SEV_arty_doctorine_bonus:0 "A Force to Reckon With"
+SEV_arty_doctorine_bonus_desc:0 ""
+
+SEV_artillery_guided_by_god:0 "Artillery Guided By Stars"
+SEV_artillery_guided_by_god_desc:0 ""
+
+SEV_shock_and_awe:0 "Shock and Awe"
+SEV_shock_and_awe_desc:0 ""
+
+SEV_URAAA:0 "Sokolov's Plan"
+SEV_URAAA_desc:0 ""
+
+SEV_overrun_the_enemy:0 "Numerical Advantage"
+SEV_overrun_the_enemy_desc:0 ""
+
+SEV_ura_2_electric_boogaloo:0 "Develop New Strategy"
+SEV_ura_2_electric_boogaloo_desc:0 ""
+
+SEV_gun_research:0 "Weapons Research"
+SEV_gun_research_desc:0 ""
+
+SEV_more_guns:0 "A Gun For Every Soldier"
+SEV_more_guns_desc:0 ""
+
+SEV_more_recruits:0 "Recruitment Centres"
+SEV_more_recruits_desc:0 ""
+
+SEV_commissars:0 "Frontline Commissars"
+SEV_commissars_desc:0 ""
+
+### Military, Air ###
+
+SEV_create_air_force:0 "Form Severyan Air Force"
+SEV_create_air_force_desc:0 ""
+
+SEV_train_pilots:0 "
 
 
 ### Foreign Tree ###
