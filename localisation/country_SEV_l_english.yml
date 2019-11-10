@@ -175,7 +175,7 @@ SEV_remove_political_legacy:0 "Get Rid of Political Communist Legacy"
 
 SEV_absolute_monarchy:0 "Tsarist Policies"
 
-SEV_reenfranchise_noble_families:0 "Reinstate Noble Families in Their Rights."
+SEV_reenfranchise_noble_families:0 "Reinstate Noble Families in Their Rights"
 
 SEV_tsar_administation:0 "Administration Matter"
 
@@ -190,7 +190,7 @@ SEV_tsar_economy:0 "Choose Your Economic Policy"
 SEV_dem_col:0 "A democratic coalition has formed."
 severyan_infighting:0 "In 10 days, a democratic coalition will form."
 severyan_infighting2:0 "In 10 days, a coup shall restore order."
-SOA_won_civil_war:0 "§HWe've liberated the motherland!§!"
+SOA_won_civil_war:0 "§GWe've liberated the motherland!§! "
 treaty_decisions_tt:0 "Northern Cooperation Treaty decisions would be unlocked."
 treaty_created_tt:0 "Northern Cooperation Treaty would be created."
 SEV_CW_fortify_tooltip:0 "§HQuick fortifications would be made across the border with§! §RStalliongrad§!§H.§!"
@@ -259,7 +259,7 @@ SEV_white_guard_staff_tsar_nobles:0 "Aristocratic Military"
 SEV_white_guard_staff_tsar_nobles_desc:0 ""
 
 sev_republican_army:0 "Severyan Republican Army"
-sev_republican_army_desc:0 "russians do car bombings?"
+sev_republican_army_desc:0 ""
 
 
 
@@ -563,7 +563,7 @@ SEV_commissars_desc:0 ""
 SEV_create_air_force:0 "Form Severyan Air Force"
 SEV_create_air_force_desc:0 ""
 
-SEV_train_pilots:0 "
+SEV_train_pilots:0 ""
 
 
 ### Foreign Tree ###
