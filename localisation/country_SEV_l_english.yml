@@ -108,6 +108,36 @@ sever.13.t:0 ""
 sever.13.d:0 ""
 sever.13.a:0 ""
 
+#Flavor Events 
+
+severf.0.t:0 "Renaming the Capital"
+severf.0.d:0 ""
+severf.0.a:0 ""
+severf.0.b:0 ""
+
+severf.1.t:0 "Decommunization Conference"
+severf.1.d:0 "do we tear down every red statue or let some good ponies stay because they're good military ponies, poets, artists and etc?"
+severf.1.a:0 "Let some reds stay"
+severf.1.b:0 "Demolish everything"
+
+severf.2.t:0 "Severyan Ponies are against Equestrian Intergration!"
+severf.2.d:0 "hmmm"
+severf.2.a:0 "who the fuck cares about them am i rite lol"
+
+severf.3.t:0 "Car Bombings in Manehattan!"
+severf.3.d:0 "Severyan Republicans are the main suspect"
+severf.3.a:0 "Investigate then"
+
+severf.4.t:0 "SRA is nowhere to be found"
+severf.4.d:0 "Could've escape or smth"
+severf.4.a:0 "let's hope they will not bomb us again"
+
+severf.5.t:0 "National Anthem Debate"
+severf.5.d:0 "so we have liek 3 anthems go and choose you bugger"
+severf.5.a:0 "Arise to arms, Severyan Folk!"
+severf.5.b:0 "National Anthem of Severyan Republic"
+severf.5.c:0 "Be Glorious, Severyana!" 
+
 #Equestrian Severyana events
 
 equestriasev.990.t:0 "Send guns, volunteers or both to SEV?"
@@ -182,6 +212,8 @@ SEV_tsar_administation:0 "Administration Matter"
 SEV_tsar_military:0 "Military Reform"
 
 SEV_tsar_economy:0 "Choose Your Economic Policy"
+
+SEV_national_anthem:0 "National Anthem Debate"
 
 
 
@@ -268,6 +300,8 @@ sev_republican_army_desc:0 ""
 absolutetsar:0 "Sovereign Tsar"
 
 nobles_have_rights:0 "Nobles were reinstated in their rights"
+
+commie_culture_is_no_more:0 "Communist Culture is no more"
 
 #### FOCUSES ####
 

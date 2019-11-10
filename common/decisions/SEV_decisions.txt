@@ -189,6 +189,36 @@ SEV_decommunization = {
 			set_country_flag = cultural_identity_restored
         }
 	}
+	SEV_national_anthem = {
+    
+        icon = severyan_statue
+
+        available = {
+			has_country_flag = commie_culture_is_no_more
+        }
+        
+        allowed = {
+            tag = SEV
+        }
+
+        cost = 10
+		
+        fire_only_once = yes
+
+        ai_will_do = {
+            factor = 200
+        }
+		
+        complete_effect = {
+			SEV = {
+				country_event = {
+					id = severf.5
+					days = 7
+				}
+			}
+			add_political_power = 15
+		}
+	}
 	SEV_remove_army_legacy = {
     
         icon = commie_army_legacy

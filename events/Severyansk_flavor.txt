@@ -65,7 +65,7 @@ country_event = { #Project Decommunization Conference
 	option = {
 		name = severf.1.a
 		add_political_power = 80
-		add_stability = -0.05
+		add_stability = -0.03
 		set_country_flag = first_part_conf_done
 		swap_ideas = { 
 			remove_idea = SEV_cultural_communist_legacy
@@ -75,7 +75,7 @@ country_event = { #Project Decommunization Conference
 	option = {
 		name = severf.1.b
 		add_political_power = 30
-		add_stability = 0.03
+		add_stability = 0.01
 		set_country_flag = first_part_conf_done
 		swap_ideas = { 
 			remove_idea = SEV_cultural_communist_legacy
@@ -128,5 +128,78 @@ country_event = { #Four month investigation is done, seems like SRA fled the cou
 	option = { #that would probably come back and bite our asses at some point
 		name = severf.4.a
 		remove_ideas = sev_republican_army
+	}
+}
+country_event = { #Choose your national anthem
+	id = severf.5
+	title = severf.5.t
+	desc = severf.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Arise to arms, Severyan Folk!
+		name = severf.5.a
+		SEV = {
+			country_event = {
+				id = severf.6
+				days = 10
+			}
+		}
+	}
+	
+	option = { #National Anthem of Severyan Republic
+		name = severf.5.b
+		SEV = {
+			country_event = {
+				id = severf.7
+				days = 10
+			}
+		}
+	}
+	
+	option = { #Slavsya, Severyana moya
+		name = severf.5.c
+		SEV = {
+			country_event = {
+				id = severf.8
+				days = 10
+			}
+		}
+	}
+}
+country_event = { #Flavor event, Arise to arms, Severyan Folk plays during some ceremony to signify that anthem was changed
+	id = severf.6
+	title = severf.6.t
+	desc = severf.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = severf.6.a
+		add_political_power = 30
+	}
+}
+country_event = { #Flavor event, National Anthem of Severyan Republic plays during some ceremony to signify that anthem was changed
+	id = severf.7
+	title = severf.7.t
+	desc = severf.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = severf.7.a
+		add_political_power = 30
+	}
+}
+country_event = { #Flavor event, Slavsya, Severyana moya plays during some ceremony to signify that anthem was changed
+	id = severf.8
+	title = severf.8.t
+	desc = severf.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = severf.8.a
+		add_political_power = 30
 	}
 }
