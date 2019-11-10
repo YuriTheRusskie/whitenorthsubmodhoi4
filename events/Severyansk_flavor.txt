@@ -94,8 +94,20 @@ country_event = { #Car bombings in Manehattan, SRA is the main suspect
 		EQS = {
 			country_event = {
 				id = severf.4
-				days = 180
+				days = 240
 			}
 		}
+	}
+}
+country_event = { #Four month investigation is done, seems like SRA fled the country the last moment
+	id = severf.4
+	title = severf.4.t
+	desc = severf.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #that would probably come back and bite our asses at some point
+		name = severf.4.a
+		remove_ideas = sev_republican_army
 	}
 }
