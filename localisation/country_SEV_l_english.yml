@@ -365,7 +365,6 @@ SEV_conservatives_desc:0 ""
 SEV_soft_conservatism:0 "Classical Liberalism"
 SEV_soft_conservatism_desc:0 ""
 
-
 SEV_PFS:0 "Welfare Fund of Severyansk"
 SEV_PFS_desc:0 ""
 
@@ -510,7 +509,7 @@ SEV_radar:0 "Radiolokator"
 SEV_radar_desc:0 ""
 
 SEV_nuclear_triad:0 "Koldunskoe Oruzhie"
-SEV_nuclear_triad:0 "Koldunskoe Oruzhie means wonder weapon"
+SEV_nuclear_triad_desc:0 "Koldunskoe Oruzhie means wonder weapon"
 
 SEV_rockets:0 "Rocket Research"
 SEV_rockets_desc:0 ""

@@ -248,7 +248,9 @@ shared_focus = {
 		}
 	}
 }
+
 #POST CIVIL WAR FOCI
+
 shared_focus = { #political foci begin 
     id = SEV_secure_the_state
     icon = GFX_goal_crush_stalliongrad
@@ -645,7 +647,7 @@ shared_focus = { #democratic tsar subpath, leads to republican democratic subpat
 }
 shared_focus = { #absolutist tsar path, maybe will add a slight buff for completing this focus
     id = SEV_absolutist
-    icon = GFX_goal_pony_soldier
+    icon = GFX_goal_unicorn_soldier
     
     x = 12
     y = 5
@@ -722,11 +724,10 @@ shared_focus = {
 
     prerequisite = {
 		focus = SEV_unshakable_autocracy
-		NOT = { has_idea = SEV_commununist_economy_legacy }
 	}
 	
 	available = {
-			NOT = { has_idea = SEV_commununist_economy_legacy }
+		NOT = { has_idea = SEV_commununist_economy_legacy }
     }
 	
 	completion_reward = {
@@ -755,7 +756,7 @@ shared_focus = {
 }
 shared_focus = {
     id = SEV_for_tsar_and_country
-    icon = GFX_goal_for_tsar_and_country
+    icon = GFX_goal_unicorn_soldier
     
     x = 12
     y = 9
@@ -3297,136 +3298,7 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		custom_effect_tooltip = SEV_fortifications_tooltip
-		hidden_effect = {
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 6458
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 3403
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 409
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 6451
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 3396
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 7377
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 3359
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 337
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 3379
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 3329
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 11293
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 303
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 3342
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 6268
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 9297
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 6270
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 6221
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 7239
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 3274
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 6363
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 8009
-	
-			}
-		}
+		add_political_power = 1
 	}
 }
 shared_focus = { 
@@ -3443,81 +3315,7 @@ shared_focus = {
 	}
 		
 	completion_reward = {
-		custom_effect_tooltip = SEV_expand_fortifications_tooltip
-		hidden_effect = {
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 6532
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 3468
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 582
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 6459
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 559
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 9515
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 9374
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 13212
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 13016
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 13014
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 6386
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = 9384
-			}
-		}
+		add_political_power = 1
 	}
 }
 shared_focus = {

@@ -313,7 +313,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = idea_jap_supremacy_of_technology
+			picture = generic_research_bonus
 			
 			modifier = {
 				research_speed_factor = 0.10
@@ -372,40 +372,6 @@ ideas = {
 			modifier = {
 				foreign_subversive_activites = -0.25
 				enemy_partisan_effect = -0.1
-			}
-		}
-		unorganized_army = { #Might use this for later, probably gonna remove
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			picture = generic_manpower_bonus
-			
-			modifier = {
-				army_org_factor = -0.1
-				training_time_factor = 0.1
-				conscription_factor = -0.05
-			}
-		}
-		unorganized_navy = { #Might use this for later, probably gonna remove
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			picture = generic_navy_bonus
-			
-			research_bonus = {
-				naval_doctrine = -0.75
 			}
 		}
 		SEV_white_guard_staff1 = {
@@ -513,7 +479,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = 
+			picture = felix_corparation
 		}
 		for_tsar_faith_and_country = {
 			allowed = {

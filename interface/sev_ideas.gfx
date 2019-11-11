@@ -90,6 +90,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_SRA"
-		texturefile = "gfx/interface/ideas/idea_SRA.tga"
+		texturefile = "gfx/interface/ideas/idea_SRA.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_felix_corparation"
+		texturefile = "gfx/interface/ideas/idea_felix_corparation.tga"
 	}
 }
