@@ -13,6 +13,18 @@ SEV_decommunization = {
         NOT = { country_exists = STG }
     }
 }
+SEV_decembrist_uprising = {
+
+	icon = tsarist_policies_cat
+	
+	allowed = { 
+		original_tag = SEV
+	} 
+	
+	visible = { 
+		has_country_flag = SEV_dekabristy_uprising
+	}
+}
 SEV_absolute_monarchy = {
 
     icon = tsarist_policies_cat

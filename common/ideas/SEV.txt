@@ -69,7 +69,53 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 		}
-		SEV_communist_army_legacy = {
+		SEV_communist_legacy_a = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = army_commie_legacy
+			
+			modifier = {
+				army_morale_factor = -0.15
+				army_org_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
+				political_power_factor = -0.3
+				stability_factor = -0.15
+			}
+		}
+		SEV_communist_legacy_b = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			picture = army_commie_legacy
+			
+			modifier = {
+				army_morale_factor = -0.1
+				army_org_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				political_power_factor = -0.2
+				stability_factor = -0.1
+			}
+		}
+		SEV_communist_legacy_c = {
 			
 			allowed = {
 				always = no
@@ -86,84 +132,13 @@ ideas = {
 			modifier = {
 				army_morale_factor = -0.05
 				army_org_factor = -0.05
-				supply_consumption_factor = 0.1
-			}
-		}
-		SEV_commununist_economy_legacy = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			picture = economy_commie_legacy
-			
-			modifier = {
-				line_change_production_efficiency_factor = -0.1
 				production_factory_max_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.05
-			}
-		}
-		SEV_communist_political_legacy = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			picture = political_commie_legacy
-			
-			modifier = {
-				political_power_factor = -0.25
-			}
-		}
-		SEV_cultural_communist_legacy = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			picture = culture_commie_legacy
-			
-			modifier = {
-				stability_factor = -0.1
-			}
-		}
-		SEV_cultural_communist_legacy_b = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			picture = culture_commie_legacy
-			
-			modifier = {
+				political_power_factor = -0.1
 				stability_factor = -0.05
 			}
 		}
-		SEV_cultural_communist_legacy_c = {
+		SEV_communist_legacy_d = {
 			
 			allowed = {
 				always = no
@@ -175,10 +150,15 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = severyan_flagwave
+			picture = army_commie_legacy
 			
 			modifier = {
-				stability_factor = 0.05
+				army_morale_factor = -0.01
+				army_org_factor = -0.01
+				production_factory_max_efficiency_factor = -0.01
+				production_factory_efficiency_gain_factor = -0.01
+				political_power_factor = -0.05
+				stability_factor = -0.01
 			}
 		}
 		SEV_ebanuy_rot_etogo_parlamenta = {

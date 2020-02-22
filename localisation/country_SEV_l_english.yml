@@ -67,9 +67,11 @@ sever.3.t:0 "The end of the Severyan Civil War" #End of Civil War
 sever.3.d:0 "Tonight, the Kremlin of Moscolt, the capital of the Severyan Tsardom, formally lowered the red flag of the Stalliongrad revolution. The guards brought in a new - no, old, flag. They carried the Black-White-Blue standard of old to the flagpole, and lowered the flag of the revolution one more time. \n \nThe end of the Revolution came much sooner than expected, at the hands of counter-revolutionaries. Once more, the Severyan banner flies high! "
 sever.3.a:0 "Ura!"
 
-sever.4.t:0 "Banning Communism"
-sever.4.d:0 "The past revolution has shown that those preaching communism will ultimately resort to revolution to achieve their goals.If we are to begin stabilizing our Severyansk and its government, we must purge this poisonous ideology."
-sever.4.a:0 "Never again shall we starve!"
+sever.4.t:0 "load foci"
+sever.4.d:0 "and your foci is"
+sever.4.a:0 "dem foci"
+sever.4.b:0 "fasc foci"
+sever.4.c:0 "autocratic monarchy foci"
 
 sever.5.t:0 "Political Bickering"
 sever.5.d:0 "After the common threat of communism passed, the Duma reformed. Once, it was populated with nobles from across Severyansk, but many died fighting or were slaughtered in the bloodbath and aftermath of the revolution. Now, the duma is filled to the brim with not just the remaining nobles, but army officers that liberated Severyana from the Reds, from peasants that fought in the liberation war, to even opportunistic factory workers that switched sides and backstabbed the revolution for Severyana’s freedom. There are whispers amongst some of the army to back a coup, plotted by none other than the Black Baron himself. There are those who are more moderate, and wish to preserve the Duma as an institution of the new Severyan state, bringing back the age-old Tsardom alongside the Duma. There those calling to abolish the Tsardom, and simply proclaim a republic, and there are those that even call for annexation into Equestria! \n \n The meeting of classes, once separated in the olden days, and briefly abolished in name in the Stalliongradian experiment now bicker in the Duma, getting nothing done! \n \n In this bitter factionalism, something must arise... "
@@ -107,6 +109,10 @@ sever.12.a:0 ""
 sever.13.t:0 ""
 sever.13.d:0 ""
 sever.13.a:0 ""
+
+sever.15.t:0 "Dekabristy and Old Guard"
+sever.15.d:0 "blah-blah, liberals vs cons, also Tsar"
+sever.15.a:0 "Aw blin, here we go again.."
 
 #Flavor Events 
 
@@ -219,6 +225,7 @@ SEV_national_anthem:0 "National Anthem Debate"
 
 #Tooltips
 
+
 SEV_dem_col:0 "A democratic coalition has formed."
 severyan_infighting:0 "In 10 days, a democratic coalition will form."
 severyan_infighting2:0 "In 10 days, a coup shall restore order."
@@ -227,10 +234,14 @@ treaty_decisions_tt:0 "Northern Cooperation Treaty decisions would be unlocked."
 treaty_created_tt:0 "Northern Cooperation Treaty would be created."
 SEV_CW_fortify_tooltip:0 "§HQuick fortifications would be made across the border with§! §RStalliongrad§!§H.§!"
 SEV_SOA:0 "§HVolunteer divisions will be formed in St.Petershoof.§!"
+tt_sev_political_path_choice:0 "Political paths will be unlocked in an event of victory in the civil war."
+tt_reduce_commie_influence_a:0 "Will reduce the §RCommunist§! influence. "
+tt_reduce_commie_influence_b:0 "Will greatly reduce the §RCommunist§! influence. It would take a year to fully liquidate the §RCommunist§! influence entirely. "
 demolishing_statues_tt:0 "§RCommunist§! §Harcitecture and memorials to the§! §Rrevolution§! §Hwill be demolished§!."
 nobles_have_rights_tt:0 "Per royal decree, noble families will be reinstated in their rights. §HNew Advisors will be available.§!"
 protectionist_tsar_tt:0 "§HYou would be able to change your economic policy in a year.§!"
 free_market_tsar_tt:0 "§RThe freer the market, the freer the people.§! §HYou would be able to change your economic policy in a year.§!"
+new_tsar_paths_tt:0 "§HNew political tree will be loaded.§!"
 
 #### IDEAS ####
 SEV_fuck_commies:0 "Liberation of Motherland"
@@ -328,11 +339,38 @@ SEV_CW_attract_workers_desc:0 "We have seen the folly of remaining Agarian, and 
 SEV_CW_strike:0 "Activate Cells"
 SEV_CW_strike_desc:0 "Anti-communist cells, long hidden, are ready to rise up against their Red opressors. We shall give the Reds a taste of their own medicine..." 
 
-SEV_CW_as_one:0 "To Victory!"
-SEV_CW_as_one_desc:0 "Against the Red Tide, we shall stand, against the Red Plague, we shall remain!"
+SEV_CW_forging_our_future:0 "Forging Our Future"
+SEV_CW_forging_our_future_d:0 "The battle is ours! Severyansk shall be free of the Red Oppression."
 
-SEV_CW_victory:0 "To Victory!"
-SEV_CW_victory_desc:0 "Against the Red Tide, we shall stand, against the Red Plague, we shall remain!" 
+SEV_CW_democratic_promises:0 "Freedom!"
+SEV_CW_democratic_promises_d:0 ""
+
+SEV_CW_calm_the_populace:0 "Peace!"
+SEV_CW_calm_the_populace_d:0 ""
+
+SEV_CW_appease_the_public:0 "Prosperity!"
+SEV_CW_appease_the_public_d:0 ""
+
+SEV_CW_military_steps_in:0 "Order"
+SEV_CW_military_steps_in_d:0 ""
+
+SEV_CW_persecute_the_commies:0 "Law"
+SEV_CW_persecute_the_commies_d:0 ""
+
+SEV_CW_military_dictatorship:0 "Dignity"
+SEV_CW_military_dictatorship_d:0 ""
+
+SEV_CW_police_crackdown:0 "Reign"
+SEV_CW_police_crackdown_d:0 ""
+
+SEV_CW_stabilse_the_country:0 "Unity"
+SEV_CW_stabilse_the_country_d:0 ""
+
+SEV_CW_tsarist_restoration:0 "Faith"
+SEV_CW_tsarist_restoration_d:0 ""
+
+SEV_CW_future_of_severyansk:0 "Severyan Future"
+SEV_CW_future_of_severyansk_d:0 ""
 
 #Post Civil War tree
 
@@ -383,29 +421,8 @@ SEV_gurantee_of_safety_desc:0 ""
 SEV_za_tsarya:0 "For the Tsar!"
 SEV_za_tsarya_desc:0 ""
 
-SEV_tsarsky_pir:0 "Grand Feast"
-SEV_tsarsky_pir_desc:0 ""
-
-SEV_democratic_tsar:0 "May He Defend Our Laws"
-SEV_democratic_tsar_desc:0 ""
-
-SEV_absolutist:0 "Long May He Reign"
-SEV_absolutist_desc:0 ""
-
-SEV_unshakable_autocracy:0 "Manifesto of Unshakable Autocracy"
-SEV_unshakable_autocracy_desc:0 ""
-
-SEV_tsarist_officers:0 "New Officers"
-SEV_tsarist_officers_desc:0 "Tsar decided to replace those officers who threaten his people and his country with more loyal officers."
-
-SEV_korporatsia_felixa:0 "Korporatsia Felixa"
-SEV_korporatsia_felixa_desc:0 "Felix Kotovsky, old friend of our Tsar, decided to settle down in Severyansk and move his corporation here. Our Majesty surely could use his services. Felix will make sure Severyan Tsardom will thrive and prosper."
-
-SEV_encourage_patriotism:0 "Patriotic Fever"
-SEV_encourage_patriotism_desc:0 ""
-
-SEV_for_tsar_and_country:0 "For Tsar, Faith and country!"
-SEV_for_tsar_and_country_desc:0 ""
+SEV_dec_vs_old:0 "Dekabristy Trouble"
+SEV_dec_vs_old_desc:0 ""
 
 SEV_black_baron:0 "Templars Have Taken over"
 SEV_black_baron_desc:0 ""

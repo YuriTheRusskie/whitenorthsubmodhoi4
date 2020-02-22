@@ -140,6 +140,12 @@ country_event = { #Civil war is over, Severyansk won
 		}
 	}
 	
+	immediate = {
+		hidden_effect = {
+			complete_national_focus = SEV_CW_forging_our_future
+		}
+	}
+	
 	option = { 
 		name = sever.3.a
 		add_political_power = 70
@@ -153,10 +159,7 @@ country_event = { #Civil war is over, Severyansk won
 		add_ideas = {
 			SEV_white_guard_staff1
 			SEV_ebanuy_rot_etogo_parlamenta
-			SEV_communist_army_legacy
-			SEV_commununist_economy_legacy
-			SEV_communist_political_legacy
-			SEV_cultural_communist_legacy
+			SEV_communist_legacy_a
 			civilian_economy
 		}
 		hidden_effect = {
@@ -179,14 +182,13 @@ country_event = { #Civil war is over, Severyansk won
 			delete_unit_template_and_units = {
 				division_template = "Equestrian Volunteers"
 			}
-			SEV = {load_focus_tree = SEV_after_civil_war_focus}
-
+			SEV = { load_focus_tree = SEV_civil_war_focus_b }
 		}
 	}
 	
 }
 
-country_event = { #Banning Communism
+country_event = { #An event that will load a political tree, options will be visible to player based on the party popularity
 	id = sever.4
 	title = sever.4.t 
 	desc = sever.4.d
@@ -195,6 +197,31 @@ country_event = { #Banning Communism
 	
 	option = {
 		name = sever.4.a
+		trigger = {
+			democratic > 0.48
+		}
+		#SEV = { load_focus_tree = }
+	}
+	
+	option = {
+		name = sever.4.b
+		trigger = {
+			OR = {
+				fascism > 0.5
+				fascism = 0.55
+			}
+		}
+		#SEV = { load_focus_tree = }
+	}
+	option = {
+		name = sever.4.c
+		trigger = {
+			OR = {
+				neutrality > 0.5
+				neutrality = 0.55
+			}
+		}
+		#SEV = { load_focus_tree = }
 	}
 }
 
@@ -327,6 +354,9 @@ country_event = { #Tsarist restoration
 
 	option = { 
 		name = sever.9.a
+		hidden_effect = {
+			retire_country_leader = yes
+		}
 		create_country_leader = {
 			name = "Tsar Peter IV"
 			picture = "PeterIV.tga"
@@ -353,7 +383,6 @@ country_event = { #Tsarist restoration
                 name = SEV_monarchist_party
         }
 		hidden_effect = {
-			retire_country_leader = yes
 			set_politics = {
                 ruling_party = neutrality
                 elections_allowed = no
@@ -467,7 +496,7 @@ country_event = { #SEV annexation by EQS
 		}
 	}
 }
-country_event = { # Democratic Tsar
+country_event = { # Dekabristy vs Old Guard
 	id = sever.15
 	title = sever.15.t 
 	desc = sever.15.d
@@ -476,136 +505,365 @@ country_event = { # Democratic Tsar
 
 	option = { 
 		name = sever.15.a
-		set_country_leader_ideology = conservatism	
-		add_popularity = {
-                ideology = democratic
-                popularity = 0.1
-        }
-        set_party_name = {
-                ideology = neutrality
-                long_name = SEV_monarchist_party_long
-                name = SEV_monarchist_party
-        }
-		hidden_effect = {
-			retire_country_leader = yes
-			set_politics = {
-                ruling_party = democratic
-                elections_allowed = no
-            }
-			set_country_flag = democratictsar
-		}
+		SEV = { load_focus_tree = { tree = SEV_tsarist_tree keep_completed = yes } }
 	}
 }
-country_event = { #Absolutist
+country_event = { # Peaceful resolution or an open conflict
 	id = sever.16
 	title = sever.16.t 
 	desc = sever.16.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { 
+	option = { #Dekabristy, stand down!
 		name = sever.16.a
-		set_country_flag = absolutetsar
-		add_popularity = {
-                ideology = fascism
-                popularity = 0.05
+		set_country_flag = SEV_decembrists_peaceful
+	}
+	
+	option = { #All power to Dekabristy!
+		name = sever.16.b
+		add_political_power = -50
+		add_stability = -0.15
+		create_country_leader = {
+                name = "Clover"
+                desc = "yes"
+                picture = "severyan_republican_placeholder.tga"
+                expire = "1965.1.1"
+                ideology = conservatism
+                traits = {}
         }
-		add_popularity = {
-                ideology = neutrality
-                popularity = 0.1
-        }
+		hidden_effect = {
+			country_event = { 
+				days = 15 
+				id = sever.17
+			}
+		}
 	}
 }
-country_event = { #Tsarist administration choice
+country_event = { # Dekabristy rise up in Western St.Petershoof
 	id = sever.17
 	title = sever.17.t 
 	desc = sever.17.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { #Federal Monarchy
+	option = {
 		name = sever.17.a
-		add_ideas = SEV_federal_monarchy
-	}
-	
-	option = { #Unitary State
-		name = sever.17.b
-		add_ideas = SEV_unitary_monarchy
-	}
-}
-country_event = { #Tsarist Military Reform
-	id = sever.18
-	title = sever.18.t 
-	desc = sever.18.d
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { #Contract Military
-		name = sever.18.a
-		swap_ideas = {
-			remove_idea = SEV_white_guard_staff_tsar
-			add_idea = SEV_white_guard_staff_tsar_contract
-		}
-	}
-	
-	option = { #Aristocrat Military
-		name = sever.18.b
-		swap_ideas = {
-			remove_idea = SEV_white_guard_staff_tsar
-			add_idea = SEV_white_guard_staff_tsar_nobles
+		custom_effect_tooltip = SEV_dekabristy_uprising_tt
+		hidden_effect = {
+			set_country_flag = SEV_dekabristy_uprising
+			166 = {
+				set_demilitarized_zone = yes
+			}
 		}
 	}
 }
-country_event = { #Tsarist Economy
+country_event = { #Battle of Western St.Peters, 
 	id = sever.19
 	title = sever.19.t 
 	desc = sever.19.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { #Protectionist
-		name = sever.19.a
-		hidden_effect = {
-			if = {
-				limit = {
-					OR = {
-						has_idea = SEV_protectionist_tsar
-						has_idea = SEV_free_market_tsar
-					}
-				}   
-				remove_ideas = {
-					SEV_protectionist_tsar
-					SEV_free_market_tsar
-				}	
+	option = {
+		name = sever.18.a
+		custom_effect_tooltip = SEV_dekabristy_taken_west_Peters
+		save_current_manpower = yes
+		166 = {
+			add_manpower = -7000
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.6
 			}
 		}
-		add_ideas = SEV_protectionist_tsar
-		custom_effect_tooltip = protectionist_tsar_tt
+		restore_previous_manpower = yes
+		add_to_variable = {
+			var = SEV_decembrist_var
+			value = 1
+		}
+		set_country_flag = SEV_battle_of_west_peters
 	}
 	
-	option = { #Free Market
+	option = {
 		name = sever.19.b
-		hidden_effect = {
-			if = {
-				limit = {
-					OR = {
-						has_idea = SEV_protectionist_tsar
-						has_idea = SEV_free_market_tsar
-					}
-				}   
-				remove_ideas = {
-					SEV_protectionist_tsar
-					SEV_free_market_tsar
-				}	
+		custom_effect_tooltip = SEV_old_guard_taken_west_Peters
+		save_current_manpower = yes
+		166 = {
+			add_manpower = -7000
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.6
 			}
 		}
-		add_ideas = SEV_free_market_tsar
-		set_country_flag = TRD_forced_market
-		custom_effect_tooltip = free_market_tsar_tt
+		restore_previous_manpower = yes
+		add_to_variable = {
+			var = SEV_old_guard_var
+			value = 1
+		}
+		set_country_flag = SEV_battle_of_west_peters
 	}
 }
+country_event = { #Battle of Eastern St.Peters, 
+	id = sever.19
+	title = sever.19.t 
+	desc = sever.19.d
+	fire_only_once = yes
+	is_triggered_only = yes
 
+	option = {
+		name = sever.19.a
+		custom_effect_tooltip = SEV_dekabristy_taken_east_Peters
+		save_current_manpower = yes
+		166 = {
+			add_manpower = -4500
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+		}
+		restore_previous_manpower = yes
+		add_to_variable = {
+			var = SEV_decembrist_var
+			value = 1
+		}
+		set_country_flag = SEV_battle_of_west_peters
+	}
+	
+	option = {
+		name = sever.19.b
+		custom_effect_tooltip = SEV_old_guard_taken_east_Peters
+		save_current_manpower = yes
+		166 = {
+			add_manpower = -4500
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+		}
+		restore_previous_manpower = yes
+		add_to_variable = {
+			var = SEV_old_guard_var
+			value = 1
+		}
+		set_country_flag = SEV_battle_of_east_peters
+	}
+}
+country_event = { #Battle of Neighva crossing 
+	id = sever.20
+	title = sever.20.t 
+	desc = sever.20.d
+	fire_only_once = yes
+	is_triggered_only = yes
 
+	option = {
+		name = sever.20.a
+		custom_effect_tooltip = SEV_dekabristy_taken_neighva
+		save_current_manpower = yes
+		166 = {
+			add_manpower = -10000
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+		}
+		restore_previous_manpower = yes
+		add_to_variable = {
+			var = SEV_decembrist_var
+			value = 1
+		}
+		set_country_flag = SEV_battle_of_neighva
+	}
+	
+	option = {
+		name = sever.20.b
+		custom_effect_tooltip = SEV_old_guard_taken_neighva
+		save_current_manpower = yes
+		166 = {
+			add_manpower = -3700
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+		}
+		restore_previous_manpower = yes
+		add_to_variable = {
+			var = SEV_old_guard_var
+			value = 1
+		}
+		set_country_flag = SEV_battle_of_neighva
+	}
+}
+country_event = { #Battle for downtown area of Petershoof 
+	id = sever.21
+	title = sever.21.t 
+	desc = sever.21.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sever.21.a
+		custom_effect_tooltip = SEV_dekabristy_taken_down
+		save_current_manpower = yes
+		166 = {
+			add_manpower = -10000
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+		}
+		restore_previous_manpower = yes
+		add_to_variable = {
+			var = SEV_decembrist_var
+			value = 1
+		}
+		set_country_flag = SEV_battle_for_downtown
+	}
+	
+	option = {
+		name = sever.21.b
+		custom_effect_tooltip = SEV_old_guard_taken_downtown
+		save_current_manpower = yes
+		166 = {
+			add_manpower = -10000
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+		}
+		restore_previous_manpower = yes
+		add_to_variable = {
+			var = SEV_old_guard_var
+			value = 1
+		}
+		set_country_flag = SEV_battle_for_downtown
+	}
+}
+country_event = { #Battle for Duma
+	id = sever.22
+	title = sever.22.t 
+	desc = sever.22.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sever.22.a
+		custom_effect_tooltip = SEV_dekabristy_taken_duma
+		save_current_manpower = yes
+		166 = {
+			add_manpower = -15000
+		}
+		restore_previous_manpower = yes
+		add_to_variable = {
+			var = SEV_decembrist_var
+			value = 1
+		}
+		set_country_flag = SEV_battle_for_downtown
+	}
+	
+	option = {
+		name = sever.22.b
+		custom_effect_tooltip = SEV_old_guard_taken_duma
+		save_current_manpower = yes
+		166 = {
+			add_manpower = -15000
+		}
+		restore_previous_manpower = yes
+		add_to_variable = {
+			var = SEV_old_guard_var
+			value = 1
+		}
+		set_country_flag = SEV_battle_for_duma
+	}
+}
+country_event = { #Dekabristy win
+	id = sever.23
+	title = sever.23.t 
+	desc = sever.23.d
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = SEV
+		has_country_flag = SEV_dekabristy_uprising
+		OR = {
+			check_variable = {
+				SEV_decembrist_var > 2
+			}
+			check_variable = {
+				SEV_decembrist_var = 3
+			}
+		}
+	}
+	mean_time_to_happen = { days = 10 }
+
+	option = {
+		name = sever.23.a
+		add_stability = 0.15
+		add_war_support = -0.05
+		add_political_power = 50
+		add_popularity = { 
+			ideology = democratic 
+			popularity = 0.15 
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_country_flag = SEV_decembrist_republic
+			clr_country_flag = SEV_dekabristy_uprising
+			166 = {
+				set_demilitarized_zone = no
+			}
+			load_focus_tree = SEV_decembrist_republicans
+		}
+	}	
+}
+country_event = { #Old guard wins
+	id = sever.24
+	title = sever.24.t 
+	desc = sever.24.d
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = SEV
+		has_country_flag = SEV_dekabristy_uprising
+		OR = {
+			check_variable = {
+				SEV_old_guard_var > 2
+			}
+			check_variable = {
+				SEV_old_guard_var = 3
+			}
+		}
+	}
+	mean_time_to_happen = { days = 10 }
+
+	option = {
+		name = sever.24.a
+		add_stability = -0.05
+		add_war_support = 0.1
+		add_political_power = 50
+		add_popularity = { 
+			ideology = neutrality
+			popularity = 0.15 
+		}
+		hidden_effect = {
+			set_country_flag = SEV_decembrist_republic
+			clr_country_flag = SEV_dekabristy_uprising
+			166 = {
+				set_demilitarized_zone = no
+			}
+		}
+	}	
+}
 
 		
 		

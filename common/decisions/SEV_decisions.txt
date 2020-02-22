@@ -366,7 +366,6 @@ SEV_absolute_monarchy = {
 
         available = {
 			NOT = { has_idea = SEV_communist_army_legacy }
-			has_completed_focus = SEV_tsarist_officers
         }
         
         visible = {
@@ -400,7 +399,6 @@ SEV_absolute_monarchy = {
 
         available = {
 			NOT = { has_idea = SEV_commununist_economy_legacy }
-			has_completed_focus = SEV_korporatsia_felixa
         }
         
         visible = {
@@ -468,3 +466,205 @@ political_actions = {
 		}
 	}
 }
+SEV_decembrist_uprising = {
+	
+	SEV_fight_for_Petershoof_1 = { #West Peters
+	
+		icon = severyan_statue
+	
+		visible = {
+			owns_state = 166
+		}
+		
+		available = {
+			has_war = no
+			NOT = { has_country_flag = SEV_battle_in_progress }
+		}
+		
+		highlight_states = { state = 166 }
+		
+		days_remove = 15
+	
+		fire_only_once = yes
+	
+		modifier = {
+			political_power_gain = -0.30
+			stability_factor = -0.10
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SEV_battle_in_progress
+			}
+		}
+		remove_effect = {
+			country_event = { 
+				id = sever.18
+				days = 1 
+			}
+			hidden_effect = {
+				clr_country_flag = SEV_battle_in_progress
+			}
+		}
+	}
+	
+	SEV_fight_for_Petershoof_2 = { #Eastern Peters
+	
+		icon = severyan_statue
+	
+		visible = {
+			owns_state = 166
+		}
+		
+		available = {
+			has_war = no
+			NOT = { has_country_flag = SEV_battle_in_progress }
+		}
+		
+		highlight_states = { state = 166 }
+		
+		days_remove = 15
+	
+		fire_only_once = yes
+	
+		modifier = {
+			political_power_gain = -0.30
+			stability_factor = -0.10
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SEV_battle_in_progress
+			}
+		}
+		remove_effect = {
+			country_event = { 
+				id = sever.19
+				days = 1 
+			}
+			hidden_effect = {
+				clr_country_flag = SEV_battle_in_progress
+			}
+		}
+	}
+	
+	SEV_fight_for_Petershoof_3 = { #Neighva Crossing
+	
+		icon = severyan_statue
+	
+		visible = {
+			owns_state = 166
+		}
+		
+		available = {
+			has_war = no
+			has_country_flag = SEV_battle_of_west_peters
+			has_country_flag = SEV_battle_of_east_peters
+			NOT = { has_country_flag = SEV_battle_in_progress }
+		}
+		
+		highlight_states = { state = 166 }
+		
+		days_remove = 25
+	
+		fire_only_once = yes
+	
+		modifier = {
+			political_power_gain = -0.30
+			stability_factor = -0.10
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SEV_battle_in_progress
+			}
+		}
+		remove_effect = {
+			country_event = { 
+				id = sever.20
+				days = 1 
+			}
+			hidden_effect = {
+				clr_country_flag = SEV_battle_in_progress
+			}
+		}
+	}
+	
+	SEV_fight_for_Petershoof_4 = { #Downtown fighting
+	
+		icon = severyan_statue
+	
+		visible = {
+			owns_state = 166
+		}
+		
+		available = {
+			has_war = no
+			has_country_flag = SEV_battle_of_neighva
+			NOT = { has_country_flag = SEV_battle_in_progress }
+		}
+		
+		highlight_states = { state = 166 }
+		
+		days_remove = 25
+	
+		fire_only_once = yes
+	
+		modifier = {
+			political_power_gain = -0.30
+			stability_factor = -0.10
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SEV_battle_in_progress
+			}
+		}
+		remove_effect = {
+			country_event = { 
+				id = sever.21
+				days = 1 
+			}
+			hidden_effect = {
+				clr_country_flag = SEV_battle_in_progress
+			}
+		}
+	}
+	SEV_fight_for_Petershoof_5 = { #Duma battle
+	
+		icon = severyan_statue
+	
+		visible = {
+			owns_state = 166
+		}
+		
+		available = {
+			has_war = no
+			has_country_flag = SEV_battle_of_west_peters
+			has_country_flag = SEV_battle_of_east_peters
+			has_country_flag = SEV_battle_of_neighva
+			has_country_flag = SEV_battle_for_downtown
+			NOT = { has_country_flag = SEV_battle_in_progress }
+		}
+		
+		highlight_states = { state = 166 }
+		
+		days_remove = 25
+	
+		fire_only_once = yes
+	
+		modifier = {
+			political_power_gain = -0.30
+			stability_factor = -0.10
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = SEV_battle_in_progress
+			}
+		}
+		remove_effect = {
+			country_event = { 
+				id = sever.21
+				days = 1 
+			}
+			hidden_effect = {
+				clr_country_flag = SEV_battle_in_progress
+			}
+		}
+	}
