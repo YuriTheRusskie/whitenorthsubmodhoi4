@@ -99,4 +99,19 @@ spriteTypes = {
 		name = "GFX_goal_encourage_patriotism"
 		texturefile = "gfx/interface/goals/goal_encourage_patriotism.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_goal_severyan_statue_kremlin"
+		texturefile = "gfx/interface/goals/goal_severyan_statue_kremlin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_severyan_faith"
+		texturefile = "gfx/interface/goals/goal_severyan_faith.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_forging_our_future"
+		texturefile = "gfx/interface/goals/goal_forging_our_future.dds"
+	}
 }

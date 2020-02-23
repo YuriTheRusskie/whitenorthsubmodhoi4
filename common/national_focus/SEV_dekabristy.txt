@@ -1,0 +1,15 @@
+focus_tree = {
+	id = SEV_decembrist_republicans
+
+	country = {
+		factor = 0
+	}
+	continuous_focus_position = { x = 0 y = 4500 }
+	
+	shared_focus = SEV_tsar_tree_start1 #political
+	shared_focus = SEV_rebuild_the_nation #economy
+	shared_focus = SEV_lessons_of_civil_war #military, land
+	shared_focus = SEV_create_air_force #military, air
+	shared_focus = SEV_naval_armament #military, navy
+	
+}

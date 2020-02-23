@@ -236,7 +236,7 @@ SEV_CW_fortify_tooltip:0 "§HQuick fortifications would be made across the borde
 SEV_SOA:0 "§HVolunteer divisions will be formed in St.Petershoof.§!"
 tt_sev_political_path_choice:0 "Political paths will be unlocked in an event of victory in the civil war."
 tt_reduce_commie_influence_a:0 "Will reduce the §RCommunist§! influence. "
-tt_reduce_commie_influence_b:0 "Will greatly reduce the §RCommunist§! influence. It would take a year to fully liquidate the §RCommunist§! influence entirely. "
+tt_reduce_commie_influence_b:0 "Will greatly reduce the §RCommunist§! influence. It would take a year to liquidate the §RCommunist§! influence in its entirety. "
 demolishing_statues_tt:0 "§RCommunist§! §Harcitecture and memorials to the§! §Rrevolution§! §Hwill be demolished§!."
 nobles_have_rights_tt:0 "Per royal decree, noble families will be reinstated in their rights. §HNew Advisors will be available.§!"
 protectionist_tsar_tt:0 "§HYou would be able to change your economic policy in a year.§!"
@@ -360,13 +360,13 @@ SEV_CW_persecute_the_commies_d:0 ""
 SEV_CW_military_dictatorship:0 "Dignity"
 SEV_CW_military_dictatorship_d:0 ""
 
-SEV_CW_police_crackdown:0 "Reign"
+SEV_CW_police_crackdown:0 "Autocracy"
 SEV_CW_police_crackdown_d:0 ""
 
 SEV_CW_stabilse_the_country:0 "Unity"
 SEV_CW_stabilse_the_country_d:0 ""
 
-SEV_CW_tsarist_restoration:0 "Faith"
+SEV_CW_tsarist_restoration:0 "Divinity"
 SEV_CW_tsarist_restoration_d:0 ""
 
 SEV_CW_future_of_severyansk:0 "Severyan Future"

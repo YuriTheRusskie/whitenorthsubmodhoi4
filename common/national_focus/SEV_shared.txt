@@ -1,6 +1,6 @@
 shared_focus = { #civil war foci begin
 	id = SEV_CW_start
-	icon = GFX_goal_pony_soldier
+	icon = GFX_goal_unicorn_soldier
 	
 	x = 5
 	y = 0
@@ -278,7 +278,7 @@ shared_focus = {
 }
 shared_focus = {
     id = SEV_CW_forging_our_future
-    icon = GFX_goal_unknown
+    icon = GFX_goal_forging_our_future
     
     x = 5
     y = 4
@@ -302,7 +302,7 @@ shared_focus = {
 }
 shared_focus = { 
     id = SEV_CW_democratic_promises
-    icon = GFX_goal_unknown
+    icon = GFX_goal_liberty
 
     x = 2
     y = 5
@@ -334,7 +334,7 @@ shared_focus = {
 }
 shared_focus = {
     id = SEV_CW_calm_the_populace
-    icon = GFX_goal_unknown
+    icon = GFX_focus_generic_eagle
     
     x = 2
     y = 6
@@ -361,7 +361,7 @@ shared_focus = {
 }
 shared_focus = { #Will lead to democratic foci
     id = SEV_CW_appease_the_public
-    icon = GFX_goal_unknown
+    icon = GFX_goal_collaborate_local_elites_pony
     
     x = 2
     y = 7
@@ -389,7 +389,7 @@ shared_focus = { #Will lead to democratic foci
 }
 shared_focus = { 
     id = SEV_CW_military_steps_in
-    icon = GFX_goal_unknown
+    icon = GFX_goal_authoritarian
 
     x = 5
     y = 5
@@ -421,7 +421,7 @@ shared_focus = {
 }
 shared_focus = {
     id = SEV_CW_persecute_the_commies
-    icon = GFX_goal_unknown
+    icon = GFX_goal_secret_agents
     
     x = 5
     y = 6
@@ -448,7 +448,7 @@ shared_focus = {
 }
 shared_focus = { #Will lead to fascist foci
     id = SEV_CW_military_dictatorship
-    icon = GFX_goal_unknown
+    icon = GFX_goal_RUS_white_legacy
     
     x = 5
     y = 7
@@ -476,7 +476,7 @@ shared_focus = { #Will lead to fascist foci
 }
 shared_focus = { 
     id = SEV_CW_police_crackdown
-    icon = GFX_goal_unknown
+    icon = GFX_goal_monarchism
 
     x = 8
     y = 5
@@ -508,7 +508,7 @@ shared_focus = {
 }
 shared_focus = {
     id = SEV_CW_stabilse_the_country
-    icon = GFX_goal_unknown
+    icon = GFX_goal_generic_national_unity_horseshoe
     
     x = 8
     y = 6
@@ -535,7 +535,7 @@ shared_focus = {
 }
 shared_focus = { #Will lead to monarchist foci
     id = SEV_CW_tsarist_restoration
-    icon = GFX_goal_unknown
+    icon = GFX_goal_severyan_faith
     
     x = 8
     y = 7
@@ -563,7 +563,7 @@ shared_focus = { #Will lead to monarchist foci
 }
 shared_focus = { #This focus loads an actual political tree
     id = SEV_CW_future_of_severyansk
-    icon = GFX_goal_unknown
+    icon = GFX_goal_severyan_statue_kremlin
     
     x = 5
     y = 8
