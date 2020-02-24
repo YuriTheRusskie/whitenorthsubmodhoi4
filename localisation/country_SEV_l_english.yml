@@ -38,12 +38,6 @@ SEV_monarchist_party_long:0 "House Romaneov"
 SEV_BRN_party:0 "Baron's Party"
 SEV_BRN_party_long:0 "BP"
 
-SEV_EQS_democrats_long:0 "Democrats"
-SEV_EQS_democrats:0 "Democrats"
-
-SEV_republicans_long:0 "Conservative-Republican Party of Severyansk"
-SEV_republicans:0 "CSRS"
-
 #PARTY Names
 SEV_neutrality_party:0 "LFC"
 SEV_neutrality_party_long:0 "Liberation Forces Council"
@@ -53,6 +47,8 @@ SEV_democratic_party:0 "EDSR"
 SEV_democratic_party_long:0 "Equestrian Democrats and Severyan Republicans"
 SEV_fascism_party:0 "TM"
 SEV_fascism_party_long:0 "Templar Movement"
+SEV_democratic_SSDWP_party:0 "SSDWP"
+SEV_democratic_SSDWP_party:0 "Severyan Social Democratic Workers\'\ Party"
 
 #### EVENTS ####
 sever.1.t:0 "Rise Up!"
@@ -73,12 +69,11 @@ sever.4.a:0 "dem foci"
 sever.4.b:0 "fasc foci"
 sever.4.c:0 "autocratic monarchy foci"
 
-sever.5.t:0 "Political Bickering"
-sever.5.d:0 "After the common threat of communism passed, the Duma reformed. Once, it was populated with nobles from across Severyansk, but many died fighting or were slaughtered in the bloodbath and aftermath of the revolution. Now, the duma is filled to the brim with not just the remaining nobles, but army officers that liberated Severyana from the Reds, from peasants that fought in the liberation war, to even opportunistic factory workers that switched sides and backstabbed the revolution for Severyana’s freedom. There are whispers amongst some of the army to back a coup, plotted by none other than the Black Baron himself. There are those who are more moderate, and wish to preserve the Duma as an institution of the new Severyan state, bringing back the age-old Tsardom alongside the Duma. There those calling to abolish the Tsardom, and simply proclaim a republic, and there are those that even call for annexation into Equestria! \n \n The meeting of classes, once separated in the olden days, and briefly abolished in name in the Stalliongradian experiment now bicker in the Duma, getting nothing done! \n \n In this bitter factionalism, something must arise... "
-sever.5.a:0 "Have faith in the Duma."
-sever.5.b:0 "Let the army deal with these bickering fools."
+sever.5.t:0 "Duma and its parties"
+sever.5.d:0 "we should call for elections"
+sever.5.a:0 "that's right"
 
-sever.6.t:0 "Formation of a Democratic Coalition"
+sever.6.t:0 "Elections!"
 sever.6.d:0 ""
 sever.6.a:0 ""
 
@@ -242,6 +237,7 @@ nobles_have_rights_tt:0 "Per royal decree, noble families will be reinstated in 
 protectionist_tsar_tt:0 "§HYou would be able to change your economic policy in a year.§!"
 free_market_tsar_tt:0 "§RThe freer the market, the freer the people.§! §HYou would be able to change your economic policy in a year.§!"
 new_tsar_paths_tt:0 "§HNew political tree will be loaded.§!"
+tt_marlibs_force_free_trade:0 "If current economic law is not §YExport Focus§!, it will be changed to that. "
 
 #### IDEAS ####
 SEV_fuck_commies:0 "Liberation of Motherland"
@@ -304,7 +300,35 @@ SEV_white_guard_staff_tsar_nobles_desc:0 ""
 sev_republican_army:0 "Severyan Republican Army"
 sev_republican_army_desc:0 ""
 
+menshevik_peoples_market:0 "Peoples' Market"
+menshevik_peoples_market_d:0 ""
 
+menshevik_peoples_market_b:0 "Peoples' Market"
+menshevik_peoples_market_b_d:0 ""
+
+orient_by_popular_demand:0 "Orient by Popular Demand"
+orient_by_popular_demand_d:0 ""
+
+orient_by_popular_demand_b:0 "Orient by Popular Demand"
+orient_by_popular_demand_b_d:0 ""
+
+poverty_tackled:0 "Emerging Middle Class"
+poverty_tackled_d:0 ""
+
+sevr_elected_officers:0 "White Guard Officers"
+sevr_elected_officers_d:0 ""
+
+SEV_new_class_solidarity:0 "New Class Solidarity"
+SEV_new_class_solidarity_d:0 ""
+
+marlibs_you_fucks:0 "The Market"
+marlibs_you_fucks_d:0 ""
+
+marlibs_you_fucks_b:0 "The Market"
+marlibs_you_fucks_b_d:0 ""
+
+marlibs_you_fucks_c:0 "The Market"
+marlibs_you_fucks_c_d:0 ""
 
 #Flags
 
@@ -313,6 +337,12 @@ absolutetsar:0 "Sovereign Tsar"
 nobles_have_rights:0 "Nobles were reinstated in their rights"
 
 commie_culture_is_no_more:0 "Communist Culture is no more"
+
+SEV_socdem:0 "SSDWP won the elections"
+
+SEV_marlib:0 "DP won the elections"
+
+SEV_cons:0 "NPP won the elections"
 
 #### FOCUSES ####
 
@@ -376,53 +406,50 @@ SEV_CW_future_of_severyansk_d:0 ""
 
 ### Political Tree ###
 
-SEV_secure_the_state:0 "Secure Severyansk"
-SEV_secure_the_state_desc:0 "With the Stalliongrad Experiment over, the Red Plague must be purged from our lands. Never again, shall we fall to these poisonous ideals!"
+SEV_democratic_competition:0 "Duma Rumble"
+SEV_democratic_competition_d:0 ""
 
-SEV_political_infighting:0 "The Duma"
-SEV_political_infighting_desc:0 "The Duma was previously an institution in Severyana, before the revolution destroyed most of what was established. In this new order however, things are not exactly as pleasant as they can be..."
+SEV_general_elections:0 "General Elections"
+SEV_general_elections_d:0 ""
 
-SEV_elections:0 "Elections"
-SEV_elections_desc:0 ""
+SEV_menshiviks:0 "The Social Democratic Workers\'\ Party"
+SEV_menshiviks_d:0 ""
 
-SEV_democracy_wins:0 "Severyan Republic"
-SEV_democracy_wins_desc:0 ""
+SEV_peoples_market:0 " \"Narodny Rynok\"\ "
+SEV_peoples_market_d:0 ""
 
-SEV_another_elections:0 "Second Elections"
-SEV_another_elections_desc:0 ""
+SEV_guided_by_the_people:0 "Guided by Peoples' Demand"
+SEV_guided_by_the_people_d:0 ""
 
-SEV_equestrian_rats:0 "Equestrian Democrats"
-SEV_equestrian_rats_desc:0 ""
+SEV_elimate_poverty:0 "Tackle Poverty!"
+SEV_elimate_poverty_d:0 ""
 
-SEV_integration:0 "Union State with Equestria"
-SEV_integration_desc:0 ""
+SEV_be_prosperous:0 "Wealthy Severyana"
+SEV_be_prosperous_d:0 ""
 
-SEV_conservatives:0 "Conservative Outlook"
-SEV_conservatives_desc:0 ""
+SEV_defend_the_motherland:0 "Industrious Severyana"
+SEV_defend_the_motherland_d:0 ""
 
-SEV_soft_conservatism:0 "Classical Liberalism"
-SEV_soft_conservatism_desc:0 ""
+SEV_elected_officers:0 "Elected Officers"
+SEV_elected_officers_d:0 ""
 
-SEV_PFS:0 "Welfare Fund of Severyansk"
-SEV_PFS_desc:0 ""
+SEV_solidarity:0 "New Class Solidarity"
+SEV_solidarity_d:0 ""
 
-SEV_gurantee_of_liberty:0 "Freedom Above All"
-SEV_gurantee_of_liberty_desc:0 ""
+SEV_market_liberals:0 "The Democratic Party"
+SEV_market_liberals_d:0 ""
 
-SEV_traditions_are_important:0 "Traditional Approach"
-SEV_traditions_are_important_desc:0 ""
+SEV_marlib_economy:0 "Implement New Economic Reforms"
+SEV_marlib_economy_d:0 ""
 
-SEV_zhandameria:0 "Gendarmerie"
-SEV_zhandameria_desc:0 ""
+SEV_found_military_industry_company:0 "Found "\Voentorg Inc.\""
+SEV_found_military_industry_company_d:0 ""
 
-SEV_gurantee_of_safety:0 "Unwavering Stability"
-SEV_gurantee_of_safety_desc:0 ""
+SEV_found_civil_industry_company:0 "Found "\Magnetstroi.\""
+SEV_found_civil_industry_company_d:0 ""
 
-SEV_za_tsarya:0 "For the Tsar!"
-SEV_za_tsarya_desc:0 ""
-
-SEV_dec_vs_old:0 "Dekabristy Trouble"
-SEV_dec_vs_old_desc:0 ""
+SEV_conservative_republicans:0 "The National-Patriotic Party"
+SEV_conservative_republicans_d:0 ""
 
 SEV_black_baron:0 "Templars Have Taken over"
 SEV_black_baron_desc:0 ""
@@ -475,7 +502,7 @@ baron_war_propaganda_desc:0 ""
 SEV_deal_with_staff:0 "Convince the Staff"
 SEV_deal_with_staff_desc:0 ""
 
-SEV_total_control:0 "Grossflächige Kontrollen"
+SEV_total_control:0 "Total Control"
 SEV_total_control_desc:0 ""
 
 ### Industrial Tree ###
