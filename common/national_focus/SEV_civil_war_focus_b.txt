@@ -3,16 +3,14 @@ focus_tree = {
 
 	country = {
 		factor = 0
-		modifier = {
-            add = 20
-            
-            tag = SEV
-		}
 	}
 	continuous_focus_position = { x = 0 y = 4500 }
 	
-    shared_focus = SEV_CW_start #civil war tree itself
 	shared_focus = SEV_CW_democratic_promises #democrats
 	shared_focus = SEV_CW_military_steps_in #fascists
 	shared_focus = SEV_CW_police_crackdown #tsarist
+	shared_focus = SEV_rebuild_the_nation #economy
+	shared_focus = SEV_lessons_of_civil_war #military, land
+	shared_focus = SEV_create_air_force #military, air
+	shared_focus = SEV_naval_armament #military, navy
 }

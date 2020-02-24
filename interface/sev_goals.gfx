@@ -114,4 +114,14 @@ spriteTypes = {
 		name = "GFX_goal_forging_our_future"
 		texturefile = "gfx/interface/goals/goal_forging_our_future.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_goal_voentorg"
+		texturefile = "gfx/interface/goals/goal_voentorg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_magnet_logo"
+		texturefile = "gfx/interface/goals/goal_magnet_logo.dds"
+	}
 }

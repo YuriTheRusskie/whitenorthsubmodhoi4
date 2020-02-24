@@ -179,11 +179,9 @@ ideas = {
 				political_power_factor = -0.1
 				stability_factor = -0.1
 				war_support_factor = -0.1
-			}
-			
-			
+			}	
 		}
-		coalition_tension = {
+		menshevik_peoples_market = {
 			
 			allowed = {
 				always = no
@@ -195,16 +193,177 @@ ideas = {
 			
 			removal_cost = -1
 			
-			picture = reps_vs_dems
-			
 			modifier = {
-				political_power_factor = -0.05
-				stability_factor = -0.05
-				war_support_factor = -0.05
+				stability_factor = 0.07
 				consumer_goods_factor = 0.05
+			}	
+		}
+		menshevik_peoples_market_b = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
 			}
 			
+			removal_cost = -1
 			
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+			}	
+		}
+		orient_by_popular_demand = {
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_speed_industrial_complex_factor = 0.1
+			}	
+		}
+		orient_by_popular_demand_b = {
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+			}	
+		}
+		poverty_tackled = {
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.003
+				MONTHLY_POPULATION = 0.1
+				opinion_gain_monthly_same_ideology_factor = 0.1
+			}	
+		}
+		sevr_elected_officers = {
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				army_org_factor = -0.07	
+				army_morale_factor = 0.1
+			}	
+		}
+		SEV_new_class_solidarity = {
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.03
+				democratic_acceptance = 85
+				communism_acceptance = -50
+			}	
+		}
+		marlibs_you_fucks = {
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				trade_laws_cost_factor = -0.15
+				trade_opinion_factor = 0.1
+				min_export = 0.03
+			}	
+		}
+		marlibs_you_fucks_b = {
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				trade_laws_cost_factor = -0.15
+				trade_opinion_factor = 0.1
+				min_export = 0.05
+				consumer_goods_factor = 0.03
+				production_speed_arms_factory_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.05
+			}	
+		}
+		marlibs_you_fucks_c = {
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				trade_laws_cost_factor = -0.15
+				trade_opinion_factor = 0.1
+				min_export = 0.07
+				consumer_goods_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}	
 		}
 		SEV_rebuild_nation = {
 			allowed = {
@@ -365,8 +524,7 @@ ideas = {
 			removal_cost = -1
 			
 			picture = white_guard_officers
-			
-	    }
+		}
 		SEV_white_guard_staff_tsar = {
 			allowed = {
 				always = no

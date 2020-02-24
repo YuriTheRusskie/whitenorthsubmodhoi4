@@ -158,7 +158,6 @@ country_event = { #Civil war is over, Severyansk won
 		}
 		add_ideas = {
 			SEV_white_guard_staff1
-			SEV_ebanuy_rot_etogo_parlamenta
 			SEV_communist_legacy_a
 			civilian_economy
 		}
@@ -182,7 +181,6 @@ country_event = { #Civil war is over, Severyansk won
 			delete_unit_template_and_units = {
 				division_template = "Equestrian Volunteers"
 			}
-			SEV = { load_focus_tree = SEV_civil_war_focus_b }
 		}
 	}
 	
@@ -198,9 +196,17 @@ country_event = { #An event that will load a political tree, options will be vis
 	option = {
 		name = sever.4.a
 		trigger = {
-			democratic > 0.48
+			OR = {
+				democratic > 0.5
+				democratic = 0.55
+			}
 		}
-		#SEV = { load_focus_tree = }
+		SEV = { 
+			load_focus_tree = {
+				tree = SEV_democrat_foci
+				keep_completed = yes
+			}
+		}
 	}
 	
 	option = {
@@ -225,7 +231,7 @@ country_event = { #An event that will load a political tree, options will be vis
 	}
 }
 
-country_event = { #Decision between coup or elections
+country_event = { #Flavor piece that explains all the democratic parties that popped up after choosing republican route
 	id = sever.5
 	title = sever.5.t 
 	desc = sever.5.d
@@ -234,28 +240,10 @@ country_event = { #Decision between coup or elections
 	
 	option = {
 		name = sever.5.a
-		custom_effect_tooltip = severyan_infighting
-		hidden_effect = { 
-			country_event = {
-				id = sever.6
-				days = 10
-			}
-		}
-	}
-	
-	option = {
-		name = sever.5.b
-		custom_effect_tooltip = severyan_infighting2
-		hidden_effect = { 
-			country_event = {
-				id = sever.7
-				days = 10
-			}
-		}
 	}
 }
 
-country_event = { #democratic coalition wins
+country_event = { #general elections event
 	id = sever.6
 	title = sever.6.t 
 	desc = sever.6.d
@@ -264,16 +252,23 @@ country_event = { #democratic coalition wins
 	
 	option = { 
 		name = sever.6.a
-		remove_ideas = SEV_ebanuy_rot_etogo_parlamenta
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.15
+		set_party_name = { 
+			ideology = democratic 
+			long_name = SEV_SSDWP_democratic_party_long 
+			name = SEV_SSDWP_democratic_party
+		}
+		create_country_leader = {
+			name = "Socdem Leader"
+			picture = "generic_placeholder.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
 		}
 		hidden_effect = {
-			set_country_flag = SEV_dem_col
-			set_country_flag = sev_govt1
+			retire_country_leader = yes
+			complete_national_focus = SEV_menshiviks
 		}
-		
+
 	}
 }
 
