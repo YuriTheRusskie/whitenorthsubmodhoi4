@@ -915,6 +915,39 @@ shared_focus = {
     id = SEV_found_military_industry_company
     icon = GFX_goal_voentorg
     
+    x = -2
+    y = 1
+	
+	relative_position_id = SEV_marlib_economy
+    
+    cost = 8
+	
+	prerequisite = {
+		focus = SEV_marlib_economy
+	}
+	
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = marlibs_you_fucks_c 
+			}
+			swap_ideas = {
+				remove_idea = marlibs_you_fucks_c
+				add_idea = marlibs_you_fucks_b_c
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = marlibs_you_fucks
+					add_idea = marlibs_you_fucks_b
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+    id = SEV_private_armies
+    icon = GFX_goal_conscription_pony
+    
     x = 0
     y = 1
 	
@@ -928,8 +961,8 @@ shared_focus = {
 	
 	completion_reward = {
 		swap_ideas = {
-			remove_idea = marlibs_you_fucks
-			add_idea = marlibs_you_fucks_b
+			remove_idea = SEV_white_guard_staff1
+			add_idea = sevr_private_armies
 		}
 	}
 }
@@ -937,7 +970,40 @@ shared_focus = {
     id = SEV_found_civil_industry_company
     icon = GFX_goal_magnet_logo
     
-    x = 0
+    x = 2
+    y = 1
+	
+	relative_position_id = SEV_marlib_economy
+    
+    cost = 8
+	
+	prerequisite = {
+		focus = SEV_marlib_economy
+	}
+	
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = marlibs_you_fucks_b 
+			}
+			swap_ideas = {
+				remove_idea = marlibs_you_fucks_b
+				add_idea = marlibs_you_fucks_b_c
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = marlibs_you_fucks
+					add_idea = marlibs_you_fucks_c
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+    id = SEV_found_infrastructure_company
+    icon = GFX_goal_foalgomost
+    
+    x = 2
     y = 1
 	
 	relative_position_id = SEV_found_military_industry_company
@@ -948,16 +1014,97 @@ shared_focus = {
 		focus = SEV_found_military_industry_company
 	}
 	
+	prerequisite = {
+		focus = SEV_found_civil_industry_company
+	}
+	
 	completion_reward = {
 		swap_ideas = {
-			remove_idea = marlibs_you_fucks_b
-			add_idea = marlibs_you_fucks_c
+			remove_idea = marlibs_you_fucks_b_c
+			add_idea = marlibs_you_fucks_e
 		}
+	}
+}
+shared_focus = {
+    id = SEV_marlib_weaken_the_debuff
+    icon = GFX_goal_state_economy
+    
+    x = -1
+    y = 1
+	
+	relative_position_id = SEV_found_infrastructure_company
+    
+    cost = 8
+	
+	prerequisite = {
+		focus = SEV_found_infrastructure_company
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_small_price_for_salvation
+	}
+	
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = marlibs_you_fucks_e
+			add_idea = marlibs_you_fucks_r
+		}
+	}
+}
+shared_focus = {
+    id = SEV_small_price_for_salvation
+    icon = GFX_focus_indy_champagne_bribes
+    
+    x = 1
+    y = 1
+	
+	relative_position_id = SEV_found_infrastructure_company
+    
+    cost = 8
+	
+	prerequisite = {
+		focus = SEV_found_infrastructure_company
+	}
+	
+	mutually_exclusive = {
+		focus = SEV_marlib_weaken_the_debuff
+	}
+	
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = marlibs_you_fucks_e
+			add_idea = marlibs_you_fucks_nr
+		}
+	}
+}
+shared_focus = {
+    id = SEV_survival_of_the_fittest
+    icon = GFX_goal_lotsa_money
+    
+    x = 1
+    y = 1
+	
+	relative_position_id = SEV_marlib_weaken_the_debuff
+    
+    cost = 8
+	
+	prerequisite = {
+		focus = SEV_marlib_weaken_the_debuff
+		focus = SEV_small_price_for_salvation
+	}
+	
+	completion_reward = {
+		add_political_power = 50
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_ideas = SEV_gone_ancap
 	}
 }
 shared_focus = { 
     id = SEV_conservative_republicans
-    icon = GFX_unknown
+    icon = GFX_goal_ideology_social_conservative
     
     x = 4
     y = 1
@@ -983,9 +1130,161 @@ shared_focus = {
 	completion_reward = {
 	}
 }
+shared_focus = { 
+    id = SEV_address_the_nation
+    icon = GFX_goal_unknown
+    
+    x = -1
+    y = 1
+	
+	relative_position_id = SEV_conservative_republicans
+    
+    cost = 8
 
+	prerequisite = {
+		focus = SEV_conservative_republicans
+	}
+	
+	completion_reward = {
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+	}
+}
+shared_focus = { 
+    id = SEV_prepare_for_intervention
+    icon = GFX_goal_unicorn_soldier
+    
+    x = 1
+    y = 1
+	
+	relative_position_id = SEV_conservative_republicans
+    
+    cost = 8
 
+	prerequisite = {
+		focus = SEV_conservative_republicans
+	}
+	
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = SEV_white_guard_staff1
+			add_idea = SEV_white_guard_staff_cons
+		}
+	}
+}
+shared_focus = { 
+    id = SEV_arsenal_of_harmonic_democracy
+    icon = GFX_goal_severyan_arsenal
+    
+    x = 1
+    y = 1
+	
+	relative_position_id = SEV_address_the_nation
+    
+    cost = 8
 
+	prerequisite = {
+		focus = SEV_address_the_nation
+	}
+	
+	prerequisite = {
+		focus = SEV_prepare_for_intervention
+	}
+	
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = dockyard
+				level = 4
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = tt_industry_slight_slowdown
+		hidden_effect = {
+			add_ideas = SEV_cons_industry_slowdown
+		}
+	}
+}
+shared_focus = { 
+    id = SEV_convince_the_populace
+    icon = GFX_goal_big_news
+    
+    x = -1
+    y = 1
+	
+	relative_position_id = SEV_arsenal_of_harmonic_democracy
+    
+    cost = 8
+
+	prerequisite = {
+		focus = SEV_arsenal_of_harmonic_democracy
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_democratic_propaganda
+	}
+}
+shared_focus = { 
+    id = SEV_harmonic_volunteers_corps
+    icon = GFX_unknown
+    
+    x = 1
+    y = 1
+	
+	relative_position_id = SEV_arsenal_of_harmonic_democracy
+    
+    cost = 8
+
+	prerequisite = {
+		focus = SEV_arsenal_of_harmonic_democracy
+	}
+	
+	completion_reward = {
+		add_ideas = SEV_democratic_volunteers
+	}
+}
 #DELETE_LATER_1
 
 shared_focus = { #political foci begin 

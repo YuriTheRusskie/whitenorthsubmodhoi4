@@ -48,7 +48,9 @@ SEV_democratic_party_long:0 "Equestrian Democrats and Severyan Republicans"
 SEV_fascism_party:0 "TM"
 SEV_fascism_party_long:0 "Templar Movement"
 SEV_democratic_SSDWP_party:0 "SSDWP"
-SEV_democratic_SSDWP_party:0 "Severyan Social Democratic Workers\'\ Party"
+SEV_democratic_SSDWP_party_long:0 "Severyan Social Democratic Workers\'\ Party"
+SEV_democratic_DP_party:0 "DPS"
+SEV_democratic_DP_party_long:0 "Democratic Party of Severyansk"
 
 #### EVENTS ####
 sever.1.t:0 "Rise Up!"
@@ -237,7 +239,8 @@ nobles_have_rights_tt:0 "Per royal decree, noble families will be reinstated in 
 protectionist_tsar_tt:0 "§HYou would be able to change your economic policy in a year.§!"
 free_market_tsar_tt:0 "§RThe freer the market, the freer the people.§! §HYou would be able to change your economic policy in a year.§!"
 new_tsar_paths_tt:0 "§HNew political tree will be loaded.§!"
-tt_marlibs_force_free_trade:0 "If current economic law is not §YExport Focus§!, it will be changed to that. "
+tt_marlibs_force_free_trade:0 "If current economic law is not §YExport Focus§! or §YFree Trade§!, it will be changed to that. "
+tt_industry_slight_slowdown:0 "After a build up this rapid, our §Yindustry§! will §Rslow down§! for some time."
 
 #### IDEAS ####
 SEV_fuck_commies:0 "Liberation of Motherland"
@@ -327,8 +330,38 @@ marlibs_you_fucks_d:0 ""
 marlibs_you_fucks_b:0 "The Market"
 marlibs_you_fucks_b_d:0 ""
 
+marlibs_you_fucks_b_c:0 "The Market"
+marlibs_you_fucks_b_c_d:0 ""
+
 marlibs_you_fucks_c:0 "The Market"
 marlibs_you_fucks_c_d:0 ""
+
+marlibs_you_fucks_e:0 "The Market"
+marlibs_you_fucks_e_d:0 ""
+
+marlibs_you_fucks_r:0 "The Market"
+marlibs_you_fucks_r_d:0 ""
+
+marlibs_you_fucks_nr:0 "The Market"
+marlibs_you_fucks_nr_d:0 ""
+
+sevr_private_armies:0 "White Guard Officers"
+sevr_private_armies_d:0 ""
+
+SEV_gone_ancap:0 "Rich Severyana"
+SEV_gone_ancap_d:0 ""
+
+SEV_white_guard_staff_cons:0 "White Guard Officers"
+SEV_white_guard_staff_cons_d:0 ""
+
+SEV_cons_industry_slowdown:0 "Slight Industry Slowdown"
+SEV_cons_industry_slowdown_d:0 ""
+
+SEV_democratic_propaganda:0 "Harmony or Death"
+SEV_democratic_propaganda_d:0 ""
+
+SEV_democratic_volunteers:0 "Harmonic Volunteers Corps"
+SEV_democratic_volunteers_d:0 ""
 
 #Flags
 
@@ -445,11 +478,40 @@ SEV_marlib_economy_d:0 ""
 SEV_found_military_industry_company:0 "Found "\Voentorg Inc.\""
 SEV_found_military_industry_company_d:0 ""
 
-SEV_found_civil_industry_company:0 "Found "\Magnetstroi.\""
+SEV_found_civil_industry_company:0 "Found "\Magnetstroi\""
 SEV_found_civil_industry_company_d:0 ""
+
+SEV_private_armies:0 "Contract Military"
+SEV_private_armies_d:0 ""
+
+SEV_found_infrastructure_company:0 "Found "\Foalgomost\""
+SEV_found_infrastructure_company_d:0 ""
+
+SEV_marlib_weaken_the_debuff:0 "Implement Some Regulations"
+SEV_marlib_weaken_the_debuff_d:0 ""
+
+SEV_small_price_for_salvation:0 "Let The Companies Decide"
+SEV_small_price_for_salvation_d:0 ""
+
+SEV_survival_of_the_fittest:0 "A Rich Severyana"
+SEV_survival_of_the_fittest_d:0 ""
 
 SEV_conservative_republicans:0 "The National-Patriotic Party"
 SEV_conservative_republicans_d:0 ""
+
+SEV_address_the_nation:0 "Address The Nation"
+SEV_address_the_nation_d:0 ""
+
+SEV_prepare_for_intervention:0 "Prepare to Intervene"
+SEV_prepare_for_intervention_d:0 ""
+
+SEV_arsenal_of_harmonic_democracy: "Arsenal of Democracy"
+SEV_arsenal_of_harmonic_democracy_d:0 ""
+
+SEV_convince_the_populace:0 "Roll Out The Papers"
+SEV_convince_the_populace_d:0 ""
+
+SEV_harmonic_volunteers_corps:0 "\"Garmonisty\" Volunteer Corps"
 
 SEV_black_baron:0 "Templars Have Taken over"
 SEV_black_baron_desc:0 ""
