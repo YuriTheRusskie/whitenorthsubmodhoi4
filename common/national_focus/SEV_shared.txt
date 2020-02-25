@@ -388,7 +388,7 @@ shared_focus = { #Will lead to democratic foci
 			popularity = 0.15
 		}
 		hidden_effect = {
-			remove_idea = SEV_communist_legacy_c
+			remove_ideas = SEV_communist_legacy_c
 			add_timed_idea = {
 				idea = SEV_communist_legacy_d
 				days = 365
@@ -481,7 +481,7 @@ shared_focus = { #Will lead to fascist foci
 			popularity = 0.15
 		}
 		hidden_effect = {
-			remove_idea = SEV_communist_legacy_c
+			remove_ideas = SEV_communist_legacy_c
 			add_timed_idea = {
 				idea = SEV_communist_legacy_d
 				days = 365
@@ -576,7 +576,7 @@ shared_focus = { #Will lead to monarchist foci
 			popularity = 0.15
 		}
 		hidden_effect = {
-			remove_idea = SEV_communist_legacy_c
+			remove_ideas = SEV_communist_legacy_c
 			add_timed_idea = {
 				idea = SEV_communist_legacy_d
 				days = 365
@@ -610,10 +610,7 @@ shared_focus = { #This focus loads an actual political tree
 		}
 	}
 }
-
-
 #political foci
-
 shared_focus = { #democratic foci begin
     id = SEV_democratic_competition
     icon = GFX_goal_sev_duma
@@ -1287,24 +1284,6 @@ shared_focus = {
 		add_ideas = SEV_democratic_volunteers 
 	} 
 }
-
-shared_focus = { #Economy foci
-    id = SEV_rebuild_the_nation
-    icon = GFX_goal_generic_construction
-    
-    x = 17
-    y = 0
-    
-    cost = 8
-
-    completion_reward = {
-		add_timed_idea = {
-			idea = SEV_rebuild_nation
-			days = 365
-		}
-	}
-}
-
 shared_focus = { #Economy foci
     id = SEV_rebuild_the_nation
     icon = GFX_goal_generic_construction
