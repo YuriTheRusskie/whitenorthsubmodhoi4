@@ -1,4 +1,4 @@
-shared_focus = { #civil war foci begin
+﻿shared_focus = { #civil war foci begin
 	id = SEV_CW_start
 	icon = GFX_goal_unicorn_soldier
 	

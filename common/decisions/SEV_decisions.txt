@@ -1,4 +1,4 @@
-SEV_decommunization = {
+﻿SEV_decommunization = {
 
     SEV_rename_capital = {
     
