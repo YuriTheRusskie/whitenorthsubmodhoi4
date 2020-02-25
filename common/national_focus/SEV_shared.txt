@@ -1286,1325 +1286,7 @@ shared_focus = {
 	completion_reward = { 
 		add_ideas = SEV_democratic_volunteers 
 	} 
-} 
-
-
-#DELETE_LATER_1
-
-shared_focus = { #political foci begin 
-    id = SEV_secure_the_state
-    icon = GFX_goal_crush_stalliongrad
-    
-    x = 10
-    y = 0
-    
-    cost = 8
-
-	available = {
-		NOT = {
-			country_exists = STG
-		}
-	}
-	
-	completion_reward = {
-		add_political_power = 35
-		add_stability = 0.1
-		add_ideas = communism_banned
-			country_event = {
-				id = sever.4
-				days = 1
-			}
-	}
 }
-shared_focus = {
-    id = SEV_political_infighting
-    icon = GFX_goal_sev_duma
-    
-    x = 10
-    y = 1
-    
-    cost = 8
-	
-	prerequisite = {
-		focus = SEV_secure_the_state
-	}
-	
-	completion_reward = {
-		country_event = {
-			id = sever.5
-			days = 5
->>>>>>> master
-		}
-	}
-}
-shared_focus = {
-<<<<<<< HEAD
-    id = SEV_marlib_weaken_the_debuff
-    icon = GFX_goal_state_economy
-    
-    x = -1
-    y = 1
-	
-	relative_position_id = SEV_found_infrastructure_company
-=======
-    id = SEV_elections
-    icon = GFX_goal_tripartite_pact_pony
-    
-    x = 8
-    y = 2
->>>>>>> master
-    
-    cost = 0
-	
-	prerequisite = {
-<<<<<<< HEAD
-		focus = SEV_found_infrastructure_company
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_small_price_for_salvation
-	}
-	
-	completion_reward = {
-		swap_ideas = {
-			remove_idea = marlibs_you_fucks_e
-			add_idea = marlibs_you_fucks_r
-		}
-	}
-}
-shared_focus = {
-    id = SEV_small_price_for_salvation
-    icon = GFX_focus_indy_champagne_bribes
-    
-    x = 1
-    y = 1
-	
-	relative_position_id = SEV_found_infrastructure_company
-=======
-			focus = SEV_political_infighting
-	}
-	
-	mutually_exclusive = {
-			focus = SEV_black_baron
-	}
-	
-	bypass = {
-		has_country_flag = SEV_dem_col
-	}
-	
-	available = {
-		has_country_flag = SEV_dem_col
-	}
-}
-shared_focus = { #democratic path
-    id = SEV_democracy_wins
-    icon = GFX_goal_generic_harmony
-    
-    x = 5
-    y = 3
->>>>>>> master
-    
-    cost = 8
-	
-	prerequisite = {
-<<<<<<< HEAD
-		focus = SEV_found_infrastructure_company
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_marlib_weaken_the_debuff
-	}
-	
-	completion_reward = {
-		swap_ideas = {
-			remove_idea = marlibs_you_fucks_e
-			add_idea = marlibs_you_fucks_nr
-		}
-	}
-}
-shared_focus = {
-    id = SEV_survival_of_the_fittest
-    icon = GFX_goal_lotsa_money
-    
-    x = 1
-    y = 1
-	
-	relative_position_id = SEV_marlib_weaken_the_debuff
-    
-    cost = 8
-	
-	prerequisite = {
-		focus = SEV_marlib_weaken_the_debuff
-		focus = SEV_small_price_for_salvation
-	}
-	
-	completion_reward = {
-		add_political_power = 50
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.05
-=======
-		focus = SEV_elections
-	}
-	
-	mutually_exclusive = {
-			focus = SEV_za_tsarya
-	}
-	
-	completion_reward = {
-		country_event = {
-			id = sever.8
-			days = 1
->>>>>>> master
-		}
-		add_ideas = SEV_gone_ancap
-	}
-}
-<<<<<<< HEAD
-shared_focus = { 
-    id = SEV_conservative_republicans
-    icon = GFX_goal_ideology_social_conservative
-    
-    x = 4
-    y = 1
-	
-	relative_position_id = SEV_general_elections
-=======
-shared_focus = {
-    id = SEV_another_elections
-    icon = GFX_goal_improve_relations_pony_pony
-    
-    x = 5
-    y = 5
->>>>>>> master
-    
-    cost = 0
-	
-<<<<<<< HEAD
-	available = {
-		always = no
-		has_country_flag = SEV_cons
-	}
-	
-	prerequisite = {
-		focus = SEV_general_elections
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_menshiviks
-		focus = SEV_market_liberals
-=======
-	prerequisite = {
-		focus = SEV_democracy_wins
-	}
-	
-	available = {
-		has_idea = coalition_tension
-		has_country_flag = secondelections
->>>>>>> master
-	}
-	
-	completion_reward = {
-		country_event = {
-			id = sever.10
-			days = 5
-		}
-	}
-}
-<<<<<<< HEAD
-shared_focus = { 
-    id = SEV_address_the_nation
-    icon = GFX_goal_unknown
-    
-    x = -1
-    y = 1
-	
-	relative_position_id = SEV_conservative_republicans
-    
-    cost = 8
-
-	prerequisite = {
-		focus = SEV_conservative_republicans
-	}
-	
-	completion_reward = {
-		add_stability = 0.1
-		add_war_support = 0.1
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.1
-		}
-=======
-shared_focus = { #equestrian democrats subpath
-    id = SEV_equestrian_rats
-    icon = GFX_goal_ideology_social_liberal_eqs
-    
-    x = 3
-    y = 6
-    
-    cost = 0
-	
-	prerequisite = {
-		focus = SEV_another_elections
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_conservatives
-	}
-	
-	bypass = {
-		has_country_flag = democratswonsecondelec
->>>>>>> master
-	}
-}
-shared_focus = { 
-    id = SEV_prepare_for_intervention
-    icon = GFX_goal_unicorn_soldier
-    
-    x = 1
-    y = 1
-	
-<<<<<<< HEAD
-	relative_position_id = SEV_conservative_republicans
-    
-    cost = 8
-
-	prerequisite = {
-		focus = SEV_conservative_republicans
-	}
-	
-	completion_reward = {
-		swap_ideas = {
-			remove_idea = SEV_white_guard_staff1
-			add_idea = SEV_white_guard_staff_cons
-		}
-	}
-}
-shared_focus = { 
-    id = SEV_arsenal_of_harmonic_democracy
-    icon = GFX_goal_severyan_arsenal
-    
-    x = 1
-    y = 1
-	
-	relative_position_id = SEV_address_the_nation
-    
-    cost = 8
-
-	prerequisite = {
-		focus = SEV_address_the_nation
-	}
-	
-	prerequisite = {
-		focus = SEV_prepare_for_intervention
-	}
-	
-	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 4
-			add_building_construction = {
-				type = industrial_complex
-				level = 4
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 4
-			add_building_construction = {
-				type = arms_factory
-				level = 4
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 4
-			add_building_construction = {
-				type = dockyard
-				level = 4
-				instant_build = yes
-			}
-		}
-		custom_effect_tooltip = tt_industry_slight_slowdown
-		hidden_effect = {
-			add_ideas = SEV_cons_industry_slowdown
-		}
-	}
-}
-shared_focus = { 
-    id = SEV_convince_the_populace
-    icon = GFX_goal_big_news
-    
-    x = -1
-    y = 1
-	
-	relative_position_id = SEV_arsenal_of_harmonic_democracy
-    
-    cost = 8
-
-	prerequisite = {
-		focus = SEV_arsenal_of_harmonic_democracy
-	}
-	
-	completion_reward = {
-		add_ideas = SEV_democratic_propaganda
-	}
-}
-shared_focus = { 
-    id = SEV_harmonic_volunteers_corps
-    icon = GFX_unknown
-    
-    x = 1
-    y = 1
-	
-	relative_position_id = SEV_arsenal_of_harmonic_democracy
-    
-    cost = 8
-
-	prerequisite = {
-		focus = SEV_arsenal_of_harmonic_democracy
-	}
-	
-	completion_reward = {
-		add_ideas = SEV_democratic_volunteers
-	}
-}
-#DELETE_LATER_1
-
-shared_focus = { #political foci begin 
-    id = SEV_secure_the_state
-    icon = GFX_goal_crush_stalliongrad
-    
-    x = 10
-    y = 0
-    
-    cost = 8
-
-	available = {
-		NOT = {
-			country_exists = STG
-		}
-	}
-	
-	completion_reward = {
-		add_political_power = 35
-		add_stability = 0.1
-		add_ideas = communism_banned
-			country_event = {
-				id = sever.4
-				days = 1
-			}
-	}
-}
-shared_focus = {
-    id = SEV_political_infighting
-    icon = GFX_goal_sev_duma
-    
-    x = 10
-    y = 1
-    
-    cost = 8
-	
-	prerequisite = {
-		focus = SEV_secure_the_state
-	}
-	
-	completion_reward = {
-		country_event = {
-			id = sever.5
-			days = 5
-		}
-	}
-}
-shared_focus = {
-    id = SEV_elections
-    icon = GFX_goal_tripartite_pact_pony
-    
-    x = 8
-    y = 2
-    
-    cost = 0
-	
-	prerequisite = {
-			focus = SEV_political_infighting
-	}
-	
-	mutually_exclusive = {
-			focus = SEV_black_baron
-	}
-	
-	bypass = {
-		has_country_flag = SEV_dem_col
-	}
-	
-	available = {
-		has_country_flag = SEV_dem_col
-	}
-}
-shared_focus = { #democratic path
-    id = SEV_democracy_wins
-    icon = GFX_goal_generic_harmony
-    
-    x = 5
-    y = 3
-    
-    cost = 8
-	
-	prerequisite = {
-		focus = SEV_elections
-	}
-	
-	mutually_exclusive = {
-			focus = SEV_za_tsarya
-	}
-	
-	completion_reward = {
-		country_event = {
-			id = sever.8
-			days = 1
-		}
-	}
-}
-shared_focus = {
-    id = SEV_another_elections
-    icon = GFX_goal_improve_relations_pony_pony
-    
-    x = 5
-    y = 5
-    
-    cost = 8
-	
-	prerequisite = {
-=======
-	available = {
-		has_country_flag = democratswonsecondelec
-	}
-}
-shared_focus = {
-    id = SEV_integration
-    icon = GFX_goal_eqs_puppet_sev
-    
-    x = 3
-    y = 9
-    
-    cost = 15
-	
-	prerequisite = {
-		focus = SEV_equestrian_rats
-	}
-	
-	completion_reward = {
-		EQS = {
-			country_event = {
-				id = sever.12
-			}
-		}
-		custom_effect_tooltip = tt_gameover
-	}
-}
-shared_focus = {
-    id = SEV_soft_conservatism
-    icon = GFX_goal_support_democracy
-    
-    x = 5
-    y = 7
-    
-    cost = 8
-	
-	prerequisite = {
-		focus = SEV_conservatives
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_traditions_are_important
-	}
-	
-	completion_reward = {
-		add_political_power = 100
-		add_stability = -0.1
-		set_rule = {
-			can_only_justify_war_on_threat_country = yes
-		}
-	}
-}
-shared_focus = {
-    id = SEV_PFS
-    icon = GFX_goal_generic_intelligence_exchange
-    
-    x = 5
-    y = 8
-    
-    cost = 8
-	
-	prerequisite = {
-		focus = SEV_soft_conservatism
-	}
-	
-	completion_reward = {
-		add_ideas = SEV_PFS_idea
-		add_war_support = -0.03
-	}
-}
-shared_focus = {
-    id = SEV_gurantee_of_liberty
-    icon = GFX_goal_generic_major_alliance
-    
-    x = 5
-    y = 9
-    
-    cost = 8
-
-    prerequisite = { 
-		focus = SEV_PFS
-	}
-	
-	completion_reward = {
-		add_ideas = SEV_gurantee_liberty
-		add_war_support = -0.05
-		add_stability = 0.03
-	}
-}
-shared_focus = {
-    id = SEV_traditions_are_important
-    icon = GFX_goal_generic_political_pressure
-    
-    x = 9
-    y = 7
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_conservatives
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_soft_conservatism
-	}
-	
-	completion_reward = {
-		add_political_power = -70
-		add_stability = 0.03
-			set_rule = {
-				can_only_justify_war_on_threat_country = no
-				can_declare_war_on_same_ideology = yes
-				can_guarantee_other_ideologies = yes
-			}
-	}
-}
-shared_focus = {
-    id = SEV_zhandameria
-    icon = GFX_goal_generic_military_sphere
-    
-    x = 9
-    y = 8
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_traditions_are_important
-	}
-
-	completion_reward = {
-		add_ideas = SEV_zhandameria
-	}
-}
-shared_focus = {
-    id = SEV_gurantee_of_safety
-    icon = GFX_goal_demand_sudetenland
-    
-    x = 9
-    y = 9
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_zhandameria
-	}
-	
-	completion_reward = {
-		add_political_power = 200
-		set_stability = 0.7
-	}
-}
-shared_focus = { #Tsarist path
-    id = SEV_za_tsarya
-    icon = GFX_focus_generic_home_defense
-    
-    x = 10
-    y = 3
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_elections
-	}
-		
-	mutually_exclusive = {
->>>>>>> master
-		focus = SEV_democracy_wins
-	}
-	
-	available = {
-<<<<<<< HEAD
-		has_idea = coalition_tension
-		has_country_flag = secondelections
-=======
-		has_country_flag = SEV_dem_col
->>>>>>> master
-	}
-	
-	completion_reward = {
-		country_event = {
-<<<<<<< HEAD
-			id = sever.10
-			days = 5
-		}
-	}
-}
-shared_focus = { #equestrian democrats subpath
-    id = SEV_equestrian_rats
-    icon = GFX_goal_ideology_social_liberal_eqs
-    
-    x = 3
-    y = 6
-    
-    cost = 0
-	
-	prerequisite = {
-		focus = SEV_another_elections
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_conservatives
-	}
-	
-	bypass = {
-		has_country_flag = democratswonsecondelec
-	}
-	
-	available = {
-		has_country_flag = democratswonsecondelec
-	}
-}
-shared_focus = {
-    id = SEV_integration
-    icon = GFX_goal_eqs_puppet_sev
-    
-    x = 3
-    y = 9
-    
-    cost = 15
-	
-	prerequisite = {
-		focus = SEV_equestrian_rats
-	}
-	
-	completion_reward = {
-		EQS = {
-			country_event = {
-				id = sever.12
-			}
-=======
-			id = sever.9
-			days = 1
-		}
-	}
-}
-shared_focus = { #Prepare for Trouble, and make it double!
-    id = SEV_dec_vs_old
-    icon = GFX_focus_generic_home_defense
-    
-    x = 10
-    y = 4
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_za_tsarya
-	}
-	
-	completion_reward = {
-		country_event = {
-			id = sever.15
-			days = 1
-		}
-		custom_effect_tooltip = new_tsar_paths_tt
-	}
-}
-shared_focus = { #Tsar and Dekabristy Tree, Peaceful resolution or an open conflict
-    id = SEV_tsar_tree_start
-    icon = GFX_focus_generic_home_defense
-    
-    x = 10
-    y = 0
-    
-    cost = 5
-
-	completion_reward = {
-		country_event = { 
-			id = sever.16
-			days = 0
-		}
-	}
-}
-shared_focus = { #Dekabristy install constitutional monarchy and control the Duma
-    id = SEV_dekabristy_control_duma
-    icon = GFX_focus_generic_home_defense
-    
-    x = 5
-    y = 1
-    
-    cost = 8
-	
-	prerequisite = { 
-		focus = SEV_tsar_tree_start
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_dekabristy_and_tsar
-		focus = SEV_strong_and_sovereign
-	}
-	
-	available = {
-		has_country_flag = SEV_decembrists_peaceful
-	}
-
-	completion_reward = {
-	}
-}
-shared_focus = { #Dekabristy install constitutional monarchy and control the Duma, moved to the centre, custom id
-    id = SEV_dekabristy_revolution
-    icon = GFX_focus_generic_home_defense
-    
-    x = 10
-    y = 1
-    
-    cost = 8
-	
-	prerequisite = { 
-		focus = SEV_tsar_tree_start
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_dekabristy_and_tsar
-		focus = SEV_strong_and_sovereign
-	}
-	
-	available = {
-		has_country_flag = SEV_decembrist_republic
-	}
-
-	completion_reward = {
-	}
-}
-shared_focus = { #Tsar and Dekabristy Tree, Peaceful resolution or an open conflict
-    id = SEV_tsar_tree_start1
-    icon = GFX_focus_generic_home_defense
-    
-    x = 10
-    y = 0
-    
-    cost = 5
-
-	completion_reward = {
-		country_event = { 
-			id = sever.16
-			days = 0
->>>>>>> master
-		}
-		custom_effect_tooltip = tt_gameover
-	}
-}
-shared_focus = { #Dekabristy come to a compromise with Tsar, which gives latter some power, semi-constitutional monarchy
-    id = SEV_dekabristy_and_tsar
-    icon = GFX_focus_generic_home_defense
-    
-    x = 10
-    y = 1
-    
-    cost = 8
-	
-	prerequisite = { 
-		focus = SEV_tsar_tree_start1
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_dekabristy_control_duma
-		focus = SEV_strong_and_sovereign
-	}
-	
-	available = {
-		has_country_flag = SEV_decembrists_peaceful
-	}
-
-	completion_reward = {
-	}
-}
-shared_focus = { #Old guard takes over, Tsar is an autocrat
-    id = SEV_strong_and_sovereign
-    icon = GFX_focus_generic_home_defense
-    
-    x = 15
-    y = 1
-    
-    cost = 8
-	
-	prerequisite = { 
-		focus = SEV_tsar_tree_start
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_dekabristy_control_duma
-		focus = SEV_dekabristy_and_tsar
-	}
-	
-	available = {
-		has_country_flag = SEV_decembrists_peaceful
-	}
-
-	completion_reward = {
-	}
-}
-shared_focus = { #fascist path
-    id = SEV_black_baron
-    icon = GFX_goal_black_baron_coup
-    
-    x = 19
-    y = 2
-    
-    cost = 0
-    
-    prerequisite = {
-            focus = SEV_political_infighting
-    }
-    
-    mutually_exclusive = {
-            focus = SEV_elections
-    }
-    
-    bypass = {
-		has_government = fascism
-	}
-	
-	available = {
-		has_government = fascism
-	}
-}
-shared_focus = { #note to Yuri, Give it an event or buff so people wouldn't ree about empty focus
-    id = SEV_secure_nation_again
-    icon = GFX_goal_baron_secure_sev
-    
-    x = 15
-    y = 3
-    
-    cost = 3
-
-    prerequisite = {
-			focus = SEV_black_baron
-	}
-}
-shared_focus = {
-<<<<<<< HEAD
-    id = SEV_soft_conservatism
-    icon = GFX_goal_support_democracy
-    
-    x = 5
-    y = 7
-    
-    cost = 8
-	
-	prerequisite = {
-		focus = SEV_conservatives
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_traditions_are_important
-	}
-	
-	completion_reward = {
-		add_political_power = 100
-		add_stability = -0.1
-		set_rule = {
-			can_only_justify_war_on_threat_country = yes
-		}
-	}
-}
-shared_focus = {
-    id = SEV_PFS
-    icon = GFX_goal_generic_intelligence_exchange
-    
-    x = 5
-    y = 8
-    
-    cost = 8
-	
-	prerequisite = {
-		focus = SEV_soft_conservatism
-	}
-	
-	completion_reward = {
-		add_ideas = SEV_PFS_idea
-		add_war_support = -0.03
-	}
-}
-shared_focus = {
-    id = SEV_gurantee_of_liberty
-    icon = GFX_goal_generic_major_alliance
-    
-    x = 5
-    y = 9
-=======
-    id = SEV_martial_law
-    icon = GFX_goal_generic_political_pressure
-    
-    x = 14
-    y = 4
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_secure_nation_again
-	}
-	
-	completion_reward = {
-		add_stability = 0.1
-	}
-}
-shared_focus = {
-    id = SEV_seize_factories
-    icon = GFX_goal_generic_construct_civ_factory
-    
-    x = 16
-    y = 4
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_secure_nation_again
-	}
-	
-	completion_reward = {
-		swap_ideas = {
-			remove_idea = baron_workers_of_the_world
-			add_idea = baron_worked_into_submission
-		}
-	}
-}
-shared_focus = {
-    id = SEV_anticelibate_laws
-    icon = GFX_goal_generic_forceful_treaty
-    
-    x = 14
-    y = 5
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_martial_law
-	}
-	
-	completion_reward = {
-		add_ideas = baron_anticelibate_laws
-	}
-}
-shared_focus = {
-    id = SEV_standardise_production
-    icon = GFX_goal_generic_construct_mil_factory
-    
-    x = 16
-    y = 5
-    
-    cost = 10
-
-    prerequisite = {
-		focus = SEV_seize_factories
-	}
-	
-	completion_reward = {
-		remove_ideas = { 
-			baron_fractured_industry
-			baron_industry_chaos
-		}
-	}
-}
-shared_focus = {
-    id = SEV_le_gestapo
-    icon = GFX_goal_generic_secret_weapon
-    
-    x = 15
-    y = 6
->>>>>>> master
-    
-    cost = 8
-
-<<<<<<< HEAD
-    prerequisite = { 
-		focus = SEV_PFS
-	}
-	
-	completion_reward = {
-		add_ideas = SEV_gurantee_liberty
-		add_war_support = -0.05
-		add_stability = 0.03
-=======
-    prerequisite = {
-		focus = SEV_standardise_production
-	}
-	
-	prerequisite = {
-		focus = SEV_anticelibate_laws
-	}
-	
-	completion_reward = {
-		add_ideas = baron_secret_police
-	}
-}
-shared_focus = {
-    id = SEV_stabilize_govt
-    icon = GFX_goal_improve_relations_pony_pony
-    
-    x = 19
-    y = 3
-    
-    cost = 3
-
-    prerequisite = {
-		focus = SEV_black_baron
-	}
-	
-	completion_reward = {
-		add_stability = 0.03
-	}
-}
-shared_focus = {
-    id = SEV_public_speeches
-    icon = GFX_goal_unknown
-    
-    x = 19
-    y = 4
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_stabilize_govt
-	}
-	
-	completion_reward = {
-		swap_ideas = {
-			remove_idea = baron_radical_changes1
-			add_idea = baron_radical_changes2
-		}
-	}
-}
-shared_focus = {
-    id = SEV_remove_oppostion
-    icon = GFX_goal_baron_crush_opposition
-    
-    x = 19
-    y = 5
-    
-    cost = 10
-
-    prerequisite = {
-		focus = SEV_public_speeches
-	}
-	
-	completion_reward = {
-		remove_ideas = baron_radical_changes2
-			custom_effect_tooltip = baron_oppostion_removal
-				hidden_effect = {
-					add_popularity = {
-						ideology = democratic
-						popularity = -0.25
-					}
-					add_popularity = {
-						ideology = communism
-						popularity = -0.25
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = -0.25
-					}
-				}
-	}
-}
-shared_focus = {
-    id = SEV_root_out_corruption
-    icon = GFX_goal_unknown
-    
-    x = 19
-    y = 6
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_remove_oppostion
-	}
-	
-	completion_reward = {
-		remove_ideas = baron_corruption
-	}
-}
-shared_focus = {
-    id = SEV_baron_mil_reforms
-    icon = GFX_goal_baron_military_reforms
-    
-    x = 23
-    y = 3
-    
-    cost = 3
-
-    prerequisite = {
-		focus = SEV_black_baron
-	}
-	
-	completion_reward = {
-		add_war_support = 0.03
-	}
-}
-shared_focus = {
-    id = SEV_recruit_propaganda
-    icon = GFX_goal_generic_axis_build_infantry
-    
-    x = 22
-    y = 4
-    
-    cost = 7
-	
-	prerequisite = {
-		focus = SEV_baron_mil_reforms
-	}
-
-    completion_reward = {
-		swap_ideas = {
-			remove_idea = baron_serving_no_go1
-			add_idea = baron_serving_no_go2
-		}
-	}
-}
-shared_focus = {
-    id = SEV_control_military
-    icon = GFX_goal_demand_sudetenland
-    
-    x = 24
-    y = 4
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_baron_mil_reforms
-	}
-    
-    completion_reward = {
-		add_ideas = baron_military_under_control
-	}
-}
-shared_focus = {
-    id = SEV_forced_conscription
-    icon = GFX_goal_generic_forceful_treaty
-    
-    x = 22
-    y = 5
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_recruit_propaganda
-	}
-	
-	completion_reward = {
-		remove_ideas = baron_serving_no_go2
-		add_ideas = extensive_conscription
-	}
-}
-shared_focus = {
-    id = baron_war_propaganda
-    icon = GFX_goal_generic_propaganda
-    
-    x = 24
-    y = 5
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_control_military
-	}
-	
-	completion_reward = {
-				add_war_support = 0.2
-	}
-}
-shared_focus = {
-    id = SEV_deal_with_staff
-    icon = GFX_goal_generic_dangerous_deal
-    
-    x = 23
-    y = 6
-    
-    cost = 10
-
-    prerequisite = {
-		focus = SEV_forced_conscription
-	}
-	
-	prerequisite = {
-		focus = baron_war_propaganda
-	}
-	
-	completion_reward = {
-		remove_ideas = baron_dumb_staff
-	}
-}
-shared_focus = {
-    id = SEV_total_control
-    icon = GFX_goal_unknown
-    
-    x = 19
-    y = 9
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_le_gestapo
-	}
-	
-	prerequisite = {
-		focus = SEV_root_out_corruption
-	}
-	
-	prerequisite = {
-		focus = SEV_deal_with_staff
-	}
-    
-	completion_reward = {
-		remove_ideas = { 
-			baron_scorched_earth
-			baron_science_ded
-		}
-	}
-}
-
-#DELETE_LATER_2
 
 shared_focus = { #Economy foci
     id = SEV_rebuild_the_nation
@@ -2620,847 +1302,16 @@ shared_focus = { #Economy foci
 			idea = SEV_rebuild_nation
 			days = 365
 		}
->>>>>>> master
 	}
 }
-shared_focus = {
-    id = SEV_traditions_are_important
-    icon = GFX_goal_generic_political_pressure
-    
-<<<<<<< HEAD
-    x = 9
-    y = 7
-=======
-    x = 16
-    y = 1
->>>>>>> master
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_conservatives
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_soft_conservatism
-	}
-	
-	completion_reward = {
-<<<<<<< HEAD
-		add_political_power = -70
-		add_stability = 0.03
-			set_rule = {
-				can_only_justify_war_on_threat_country = no
-				can_declare_war_on_same_ideology = yes
-				can_guarantee_other_ideologies = yes
-=======
-		add_ideas = SEV_heavy_industry
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = industrial_complex
-				level = 3
-				instant_build = yes
->>>>>>> master
-			}
-	}
-}
-shared_focus = {
-    id = SEV_zhandameria
-    icon = GFX_goal_generic_military_sphere
-    
-<<<<<<< HEAD
-    x = 9
-    y = 8
-=======
-    x = 18
-    y = 1
->>>>>>> master
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_traditions_are_important
-	}
-
-	completion_reward = {
-		add_ideas = SEV_zhandameria
-	}
-}
-shared_focus = {
-    id = SEV_gurantee_of_safety
-    icon = GFX_goal_demand_sudetenland
-    
-<<<<<<< HEAD
-    x = 9
-    y = 9
-=======
-    x = 17
-    y = 2
->>>>>>> master
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_zhandameria
-	}
-	
-	completion_reward = {
-		add_political_power = 200
-		set_stability = 0.7
-	}
-}
-shared_focus = { #Tsarist path
-    id = SEV_za_tsarya
-    icon = GFX_focus_generic_home_defense
-    
-<<<<<<< HEAD
-    x = 10
-=======
-    x = 15
->>>>>>> master
-    y = 3
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_elections
-	}
-		
-	mutually_exclusive = {
-		focus = SEV_democracy_wins
-	}
-	
-	available = {
-		has_country_flag = SEV_dem_col
-	}
-	
-	completion_reward = {
-<<<<<<< HEAD
-		country_event = {
-			id = sever.9
-			days = 1
-=======
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-						size > 1
-						include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = industrial_complex
-				level = 3
-				instant_build = yes
-			}
->>>>>>> master
-		}
-	}
-}
-shared_focus = { #Prepare for Trouble, and make it double!
-    id = SEV_dec_vs_old
-    icon = GFX_focus_generic_home_defense
-    
-<<<<<<< HEAD
-    x = 10
-    y = 4
-=======
-    x = 19
-    y = 3
->>>>>>> master
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_za_tsarya
-	}
-	
-	completion_reward = {
-		country_event = {
-			id = sever.15
-			days = 1
-		}
-		custom_effect_tooltip = new_tsar_paths_tt
-	}
-}
-shared_focus = { #Tsar and Dekabristy Tree, Peaceful resolution or an open conflict
-    id = SEV_tsar_tree_start
-    icon = GFX_focus_generic_home_defense
-    
-<<<<<<< HEAD
-    x = 10
-    y = 0
-=======
-    x = 17
-    y = 4
->>>>>>> master
-    
-    cost = 5
-
-	completion_reward = {
-		country_event = { 
-			id = sever.16
-			days = 0
-		}
-	}
-}
-shared_focus = { #Dekabristy install constitutional monarchy and control the Duma
-    id = SEV_dekabristy_control_duma
-    icon = GFX_focus_generic_home_defense
-    
-<<<<<<< HEAD
-    x = 5
-    y = 1
-=======
-    x = 17
-    y = 5
->>>>>>> master
-    
-    cost = 8
-	
-	prerequisite = { 
-		focus = SEV_tsar_tree_start
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_dekabristy_and_tsar
-		focus = SEV_strong_and_sovereign
-	}
-	
-	available = {
-		has_country_flag = SEV_decembrists_peaceful
-	}
-
-	completion_reward = {
-	}
-}
-shared_focus = { #Dekabristy install constitutional monarchy and control the Duma, moved to the centre, custom id
-    id = SEV_dekabristy_revolution
-    icon = GFX_focus_generic_home_defense
-    
-<<<<<<< HEAD
-    x = 10
-    y = 1
-=======
-    x = 14
-    y = 6
->>>>>>> master
-    
-    cost = 8
-	
-	prerequisite = { 
-		focus = SEV_tsar_tree_start
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_dekabristy_and_tsar
-		focus = SEV_strong_and_sovereign
-	}
-	
-	available = {
-		has_country_flag = SEV_decembrist_republic
-	}
-
-	completion_reward = {
-	}
-}
-shared_focus = { #Tsar and Dekabristy Tree, Peaceful resolution or an open conflict
-    id = SEV_tsar_tree_start1
-    icon = GFX_focus_generic_home_defense
-    
-<<<<<<< HEAD
-    x = 10
-    y = 0
-=======
-    x = 13
-    y = 7
->>>>>>> master
-    
-    cost = 5
-
-	completion_reward = {
-		country_event = { 
-			id = sever.16
-			days = 0
-		}
-	}
-}
-shared_focus = { #Dekabristy come to a compromise with Tsar, which gives latter some power, semi-constitutional monarchy
-    id = SEV_dekabristy_and_tsar
-    icon = GFX_focus_generic_home_defense
-    
-<<<<<<< HEAD
-    x = 10
-    y = 1
-=======
-    x = 15
-    y = 7
->>>>>>> master
-    
-    cost = 8
-	
-	prerequisite = { 
-		focus = SEV_tsar_tree_start1
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_dekabristy_control_duma
-		focus = SEV_strong_and_sovereign
-	}
-	
-	available = {
-		has_country_flag = SEV_decembrists_peaceful
-	}
-
-	completion_reward = {
-	}
-}
-shared_focus = { #Old guard takes over, Tsar is an autocrat
-    id = SEV_strong_and_sovereign
-    icon = GFX_focus_generic_home_defense
-    
-<<<<<<< HEAD
-    x = 15
-    y = 1
-=======
-    x = 20
-    y = 6
->>>>>>> master
-    
-    cost = 8
-	
-	prerequisite = { 
-		focus = SEV_tsar_tree_start
-	}
-	
-	mutually_exclusive = {
-		focus = SEV_dekabristy_control_duma
-		focus = SEV_dekabristy_and_tsar
-	}
-	
-	available = {
-		has_country_flag = SEV_decembrists_peaceful
-	}
-
-	completion_reward = {
-	}
-}
-shared_focus = { #fascist path
-    id = SEV_black_baron
-    icon = GFX_goal_black_baron_coup
-    
-    x = 19
-<<<<<<< HEAD
-    y = 2
-    
-    cost = 0
-=======
-    y = 7
->>>>>>> master
-    
-    prerequisite = {
-            focus = SEV_political_infighting
-    }
-    
-    mutually_exclusive = {
-            focus = SEV_elections
-    }
-    
-    bypass = {
-		has_government = fascism
-	}
-	
-	available = {
-		has_government = fascism
-	}
-}
-shared_focus = { #note to Yuri, Give it an event or buff so people wouldn't ree about empty focus
-    id = SEV_secure_nation_again
-    icon = GFX_goal_baron_secure_sev
-    
-    x = 15
-    y = 3
-    
-    cost = 3
-
-    prerequisite = {
-			focus = SEV_black_baron
-	}
-}
-shared_focus = {
-    id = SEV_martial_law
-    icon = GFX_goal_generic_political_pressure
-    
-<<<<<<< HEAD
-    x = 14
-    y = 4
-=======
-    x = 21
-    y = 7
->>>>>>> master
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_secure_nation_again
-	}
-	
-	completion_reward = {
-<<<<<<< HEAD
-		add_stability = 0.1
-=======
-		add_tech_bonus = {
-			name = infantry_eq_bonus
-			bonus = 1.0
-			ahead_reduction = 2
-			category = infantry_weapons
-		}
-	}
-}
-shared_focus = {
-    id = SEV_radar
-    icon = GFX_goal_generic_radar
-    
-    x = 17
-    y = 8
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_officer_academy
-		focus = SEV_military_research_uni
-		focus = SEV_upgrade_sev_uni
-		focus = SEV_better_industry
-	} 
-    
-	completion_reward = {
-		add_tech_bonus = {
-			name = radar_bonus
-			bonus = 0.2
-			uses = 2
-			category = radar_tech
-		}
->>>>>>> master
-	}
-}
-shared_focus = {
-    id = SEV_seize_factories
-    icon = GFX_goal_generic_construct_civ_factory
-    
-<<<<<<< HEAD
-    x = 16
-    y = 4
-=======
-    x = 15
-    y = 9
->>>>>>> master
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_secure_nation_again
-	}
-	
-	completion_reward = {
-		swap_ideas = {
-			remove_idea = baron_workers_of_the_world
-			add_idea = baron_worked_into_submission
-		}
-	}
-}
-shared_focus = {
-    id = SEV_anticelibate_laws
-    icon = GFX_goal_generic_forceful_treaty
-    
-<<<<<<< HEAD
-    x = 14
-    y = 5
-=======
-    x = 19
-    y = 9
->>>>>>> master
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_martial_law
-	}
-	
-	completion_reward = {
-<<<<<<< HEAD
-		add_ideas = baron_anticelibate_laws
-=======
-		add_tech_bonus = {
-			name = nuclear_bonus
-			bonus = 0.2
-			uses = 1
-			category = rocketry
-		}
-	}
-}
-shared_focus = { #Military, land
-    id = SEV_lessons_of_civil_war
-    icon = GFX_goal_generic_army_doctrines
-    
-    x = 28
-    y = 0
-    
-    cost = 8
-
-    completion_reward = {
-		army_experience = 50
->>>>>>> master
-	}
-}
-shared_focus = {
-    id = SEV_standardise_production
-    icon = GFX_goal_generic_construct_mil_factory
-    
-<<<<<<< HEAD
-    x = 16
-    y = 5
-=======
-    x = 28
-    y = 1
->>>>>>> master
-    
-    cost = 10
-
-    prerequisite = {
-		focus = SEV_seize_factories
-	}
-	
-	completion_reward = {
-		remove_ideas = { 
-			baron_fractured_industry
-			baron_industry_chaos
-		}
-	}
-}
-shared_focus = {
-    id = SEV_le_gestapo
-    icon = GFX_goal_generic_secret_weapon
-    
-<<<<<<< HEAD
-    x = 15
-    y = 6
-=======
-    x = 24
-    y = 2
->>>>>>> master
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_standardise_production
-	}
-	
-	prerequisite = {
-		focus = SEV_anticelibate_laws
-	}
-	
-	completion_reward = {
-		add_ideas = baron_secret_police
-	}
-}
-shared_focus = {
-    id = SEV_stabilize_govt
-    icon = GFX_goal_improve_relations_pony_pony
-    
-<<<<<<< HEAD
-    x = 19
-=======
-    x = 24
->>>>>>> master
-    y = 3
-    
-    cost = 3
-
-    prerequisite = {
-		focus = SEV_black_baron
-	}
-	
-	completion_reward = {
-		add_stability = 0.03
-	}
-}
-shared_focus = {
-    id = SEV_public_speeches
-    icon = GFX_goal_unknown
-    
-<<<<<<< HEAD
-    x = 19
-=======
-    x = 23
->>>>>>> master
-    y = 4
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_stabilize_govt
-	}
-	
-	completion_reward = {
-		swap_ideas = {
-			remove_idea = baron_radical_changes1
-			add_idea = baron_radical_changes2
-		}
-	}
-}
-shared_focus = {
-    id = SEV_remove_oppostion
-    icon = GFX_goal_baron_crush_opposition
-    
-<<<<<<< HEAD
-    x = 19
-    y = 5
-=======
-    x = 25
-    y = 4
->>>>>>> master
-    
-    cost = 10
-
-    prerequisite = {
-		focus = SEV_public_speeches
-	}
-	
-	completion_reward = {
-		remove_ideas = baron_radical_changes2
-			custom_effect_tooltip = baron_oppostion_removal
-				hidden_effect = {
-					add_popularity = {
-						ideology = democratic
-						popularity = -0.25
-					}
-					add_popularity = {
-						ideology = communism
-						popularity = -0.25
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = -0.25
-					}
-				}
-	}
-}
-shared_focus = {
-    id = SEV_root_out_corruption
-    icon = GFX_goal_unknown
-    
-<<<<<<< HEAD
-    x = 19
-    y = 6
-=======
-    x = 24
-    y = 5
->>>>>>> master
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_remove_oppostion
-	}
-	
-	completion_reward = {
-		remove_ideas = baron_corruption
-	}
-}
-shared_focus = {
-    id = SEV_baron_mil_reforms
-    icon = GFX_goal_baron_military_reforms
-    
-    x = 23
-<<<<<<< HEAD
-    y = 3
-=======
-    y = 6
->>>>>>> master
-    
-    cost = 3
-
-    prerequisite = {
-		focus = SEV_black_baron
-	}
-	
-	completion_reward = {
-		add_war_support = 0.03
-	}
-}
-shared_focus = {
-    id = SEV_recruit_propaganda
-    icon = GFX_goal_generic_axis_build_infantry
-    
-<<<<<<< HEAD
-    x = 22
-    y = 4
-=======
-    x = 25
-    y = 6
->>>>>>> master
-    
-    cost = 7
-	
-	prerequisite = {
-		focus = SEV_baron_mil_reforms
-	}
-
-    completion_reward = {
-		swap_ideas = {
-			remove_idea = baron_serving_no_go1
-			add_idea = baron_serving_no_go2
-		}
-	}
-}
-shared_focus = {
-    id = SEV_control_military
-    icon = GFX_goal_demand_sudetenland
-    
-    x = 24
-<<<<<<< HEAD
-    y = 4
-=======
-    y = 7
->>>>>>> master
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_baron_mil_reforms
-	}
-    
-    completion_reward = {
-		add_ideas = baron_military_under_control
-	}
-}
-shared_focus = {
-    id = SEV_forced_conscription
-    icon = GFX_goal_generic_forceful_treaty
-    
-<<<<<<< HEAD
-    x = 22
-    y = 5
-=======
-    x = 28
-    y = 2
->>>>>>> master
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_recruit_propaganda
-	}
-	
-	completion_reward = {
-		remove_ideas = baron_serving_no_go2
-		add_ideas = extensive_conscription
-	}
-}
-shared_focus = {
-    id = baron_war_propaganda
-    icon = GFX_goal_generic_propaganda
-    
-<<<<<<< HEAD
-    x = 24
-    y = 5
-=======
-    x = 28
-    y = 3
->>>>>>> master
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_control_military
-	}
-	
-	completion_reward = {
-				add_war_support = 0.2
-	}
-}
-shared_focus = {
-    id = SEV_deal_with_staff
-    icon = GFX_goal_generic_dangerous_deal
-    
-<<<<<<< HEAD
-    x = 23
-    y = 6
-=======
-    x = 28
-    y = 4
->>>>>>> master
-    
-    cost = 10
-
-    prerequisite = {
-		focus = SEV_forced_conscription
-	}
-	
-	prerequisite = {
-		focus = baron_war_propaganda
-	}
-	
-	completion_reward = {
-		remove_ideas = baron_dumb_staff
-	}
-}
-shared_focus = {
-    id = SEV_total_control
-    icon = GFX_goal_unknown
-    
-<<<<<<< HEAD
-    x = 19
-    y = 9
-=======
-    x = 27
-    y = 5
->>>>>>> master
-    
-    cost = 7
-
-    prerequisite = {
-		focus = SEV_le_gestapo
-	}
-	
-	prerequisite = {
-		focus = SEV_root_out_corruption
-	}
-	
-	prerequisite = {
-		focus = SEV_deal_with_staff
-	}
-    
-	completion_reward = {
-		remove_ideas = { 
-			baron_scorched_earth
-			baron_science_ded
-		}
-	}
-}
-
-#DELETE_LATER_2
 
 shared_focus = { #Economy foci
     id = SEV_rebuild_the_nation
     icon = GFX_goal_generic_construction
     
-<<<<<<< HEAD
+
     x = 17
     y = 0
-=======
-    x = 29
-    y = 5
->>>>>>> master
     
     cost = 8
 
@@ -3475,13 +1326,8 @@ shared_focus = {
     id = SEV_heavy_industry
     icon = GFX_goal_generic_construct_civ_factory
     
-<<<<<<< HEAD
     x = 16
     y = 1
-=======
-    x = 27
-    y = 6
->>>>>>> master
     
     cost = 8
 
@@ -3516,13 +1362,8 @@ shared_focus = {
     id = SEV_light_industry
     icon = GFX_goal_generic_construct_civ_factory
     
-<<<<<<< HEAD
     x = 18
     y = 1
-=======
-    x = 29
-    y = 6
->>>>>>> master
     
     cost = 8
 
@@ -3543,14 +1384,9 @@ shared_focus = {
     id = SEV_first_phase_done
     icon = GFX_goal_generic_construction2
     
-<<<<<<< HEAD
     x = 17
     y = 2
-=======
-    x = 28
-    y = 7
->>>>>>> master
-    
+	
     cost = 8
 
     prerequisite = {
@@ -3567,13 +1403,8 @@ shared_focus = {
     id = SEV_economy_focus
     icon = GFX_goal_generic_construct_civilian
     
-<<<<<<< HEAD
     x = 15
     y = 3
-=======
-    x = 32
-    y = 2
->>>>>>> master
     
     cost = 8
 
@@ -3607,11 +1438,7 @@ shared_focus = {
     id = SEV_fund_research
     icon = GFX_goal_generic_scientific_exchange
     
-<<<<<<< HEAD
     x = 19
-=======
-    x = 32
->>>>>>> master
     y = 3
     
     cost = 8
@@ -3632,11 +1459,7 @@ shared_focus = {
     id = SEV_final_steps
     icon = GFX_goal_generic_production
     
-<<<<<<< HEAD
     x = 17
-=======
-    x = 31
->>>>>>> master
     y = 4
     
     cost = 8
@@ -3654,14 +1477,9 @@ shared_focus = {
 shared_focus = {
     id = SEV_severyan_university
     icon = GFX_focus_research
-    
-<<<<<<< HEAD
+
     x = 17
     y = 5
-=======
-    x = 33
-    y = 4
->>>>>>> master
     
     cost = 8
 
@@ -3677,14 +1495,9 @@ shared_focus = {
     id = SEV_develop_economy
     icon = GFX_goal_generic_consumer_goods
     
-<<<<<<< HEAD
     x = 14
     y = 6
-=======
-    x = 32
-    y = 5
->>>>>>> master
-    
+  
     cost = 8
 
     prerequisite = {
@@ -3708,13 +1521,8 @@ shared_focus = {
     id = SEV_better_industry
     icon = GFX_goal_generic_production2
     
-<<<<<<< HEAD
     x = 13
     y = 7
-=======
-    x = 32
-    y = 6
->>>>>>> master
     
     cost = 8
 
@@ -3734,11 +1542,7 @@ shared_focus = {
     id = SEV_upgrade_sev_uni
     icon = GFX_focus_research
     
-<<<<<<< HEAD
     x = 15
-=======
-    x = 32
->>>>>>> master
     y = 7
     
     cost = 8
@@ -3754,29 +1558,7 @@ shared_focus = {
 	completion_reward = {
 		add_research_slot = 1
 	}
-}
-<<<<<<< HEAD
-=======
-shared_focus = { #Airforce
-    id = SEV_create_air_force
-    icon = GFX_goal_generic_build_airforce
-    
-    x = 40
-    y = 0
-    
-    cost = 8
-
-    completion_reward = {
-		air_experience = 5
-		add_tech_bonus = {
-			name = air_doc_bonus
-			bonus = 0.35
-			uses = 1
-			category = air_doctrine
-		}
-	}
 }     
->>>>>>> master
 shared_focus = {
     id = SEV_prioritize_military
     icon = GFX_goal_rhineland
@@ -3784,12 +1566,6 @@ shared_focus = {
     x = 20
     y = 6
     
-<<<<<<< HEAD
-=======
-    x = 42
-    y = 1
-  
->>>>>>> master
     cost = 8
 
     prerequisite = {
@@ -3810,13 +1586,8 @@ shared_focus = {
     id = SEV_officer_academy
     icon = GFX_goal_generic_allies_build_infantry
     
-<<<<<<< HEAD
     x = 19
     y = 7
-=======
-    x = 38
-    y = 1
->>>>>>> master
     
     cost = 8
 
@@ -3836,13 +1607,8 @@ shared_focus = {
     id = SEV_military_research_uni
     icon = GFX_goal_generic_territory_or_war
     
-<<<<<<< HEAD
     x = 21
     y = 7
-=======
-    x = 44
-    y = 2
->>>>>>> master
     
     cost = 8
 
@@ -3867,13 +1633,8 @@ shared_focus = {
     id = SEV_radar
     icon = GFX_goal_generic_radar
     
-<<<<<<< HEAD
     x = 17
     y = 8
-=======
-    x = 36
-    y = 2
->>>>>>> master
     
     cost = 8
 
@@ -3897,13 +1658,8 @@ shared_focus = {
     id = SEV_nuclear_triad
     icon = GFX_focus_wonderweapons
     
-<<<<<<< HEAD
     x = 15
     y = 9
-=======
-    x = 40
-    y = 2
->>>>>>> master
     
     cost = 8
 
@@ -3924,13 +1680,8 @@ shared_focus = {
     id = SEV_rockets
     icon = GFX_focus_rocketry
     
-<<<<<<< HEAD
     x = 19
     y = 9
-=======
-    x = 38
-    y = 3
->>>>>>> master
     
     cost = 8
 
@@ -3964,13 +1715,8 @@ shared_focus = {
     id = SEV_modernization_of_army
     icon = GFX_goal_generic_army_doctrines
     
-<<<<<<< HEAD
     x = 28
     y = 1
-=======
-    x = 42
-    y = 3
->>>>>>> master
     
     cost = 8
 
@@ -4018,13 +1764,8 @@ shared_focus = { #wait but sev already has trucks researched lol
     id = SEV_motorised_research
     icon = GFX_goal_generic_cavalry
     
-<<<<<<< HEAD
     x = 24
     y = 3
-=======
-    x = 38
-    y = 4
->>>>>>> master
     
     cost = 8
 
@@ -4045,11 +1786,7 @@ shared_focus = {
     id = SEV_mechanized
     icon = GFX_goal_generic_army_motorized
     
-<<<<<<< HEAD
     x = 23
-=======
-    x = 42
->>>>>>> master
     y = 4
     
     cost = 8
@@ -4071,13 +1808,8 @@ shared_focus = {
     id = SEV_i_tanki_nashi_bystry
     icon = GFX_goal_generic_army_tanks
     
-<<<<<<< HEAD
     x = 25
     y = 4
-=======
-    x = 38
-    y = 5
->>>>>>> master
     
     cost = 8
 
@@ -4098,11 +1830,7 @@ shared_focus = {
     id = SEV_obnovim_doktorinu
     icon = GFX_goal_generic_small_arms
     
-<<<<<<< HEAD
     x = 24
-=======
-    x = 42
->>>>>>> master
     y = 5
     
     cost = 8
@@ -4140,12 +1868,8 @@ shared_focus = {
 shared_focus = {
     id = SEV_tri_tankista
     icon = GFX_goal_generic_army_artillery
-    
-<<<<<<< HEAD
+
     x = 25
-=======
-    x = 40
->>>>>>> master
     y = 6
     
     cost = 8
@@ -4167,11 +1891,7 @@ shared_focus = {
     id = SEV_tankovaya_schkola
     icon = GFX_goal_generic_army_tanks
     
-<<<<<<< HEAD
     x = 24
-=======
-    x = 37
->>>>>>> master
     y = 7
     
     cost = 8
@@ -4219,13 +1939,8 @@ shared_focus = {
     id = SEV_artilleristy
     icon = GFX_goal_generic_army_artillery
     
-<<<<<<< HEAD
     x = 28
     y = 3
-=======
-    x = 36
-    y = 8
->>>>>>> master
     
     cost = 8
 
@@ -4246,13 +1961,8 @@ shared_focus = {
     id = SEV_arty_research_1
     icon = GFX_goal_generic_build_tank
     
-<<<<<<< HEAD
     x = 28
     y = 4
-=======
-    x = 43
-    y = 7
->>>>>>> master
     
     cost = 8
 
@@ -4273,13 +1983,8 @@ shared_focus = {
     id = SEV_arty_research_2
     icon = GFX_goal_generic_army_artillery2
     
-<<<<<<< HEAD
     x = 27
     y = 5
-=======
-    x = 44
-    y = 8
->>>>>>> master
     
     cost = 8
 
@@ -4300,12 +2005,8 @@ shared_focus = {
     id = SEV_arty_doctorine_bonus
     icon = GFX_goal_generic_position_armies
     
-<<<<<<< HEAD
     x = 29
     y = 5
-=======
-    x = 50
-    y = 0
     
     cost = 8
 
@@ -4365,39 +2066,12 @@ shared_focus = {
 	}
 }
 shared_focus = {
-    id = SEV_marine_program
-    icon = GFX_goal_generic_amphibious_assault
-    
-    x = 47
-    y = 1
->>>>>>> master
-    
-    cost = 8
-
-    prerequisite = {
-		focus = SEV_arty_research_1
-	}
-	
-	completion_reward = {
-		add_tech_bonus = {
-			name = SP_bonus2
-			bonus = 0.2
-			uses = 1
-			category = cat_superior_firepower
-		}
-	}
-}
-shared_focus = {
     id = SEV_rocket_arty
     icon = GFX_goal_generic_occupy_start_war
     
-<<<<<<< HEAD
     x = 27
     y = 6
-=======
-    x = 46
-    y = 2
->>>>>>> master
+
     
     cost = 8
 
@@ -4419,13 +2093,8 @@ shared_focus = {
     id = SEV_artillery_guided_by_god
     icon = GFX_goal_generic_air_doctrine
     
-<<<<<<< HEAD
     x = 29
     y = 6
-=======
-    x = 48
-    y = 2
->>>>>>> master
     
     cost = 8
 
@@ -4440,14 +2109,9 @@ shared_focus = {
 shared_focus = {
     id = SEV_shock_and_awe
     icon = GFX_goal_generic_major_war
-    
-<<<<<<< HEAD
+
     x = 28
     y = 7
-=======
-    x = 47
-    y = 3
->>>>>>> master
     
     cost = 8
 
@@ -4467,13 +2131,8 @@ shared_focus = { #Mass Assault
     id = SEV_URAAA
     icon = GFX_goal_generic_cavalry
     
-<<<<<<< HEAD
     x = 32
     y = 2
-=======
-    x = 47
-    y = 4
->>>>>>> master
     
     cost = 8
 
@@ -4499,13 +2158,8 @@ shared_focus = {
     id = SEV_overrun_the_enemy
     icon = GFX_goal_generic_military_sphere
     
-<<<<<<< HEAD
     x = 32
     y = 3
-=======
-    x = 49
-    y = 1
->>>>>>> master
     
     cost = 8
 
@@ -4526,13 +2180,8 @@ shared_focus = {
     id = SEV_ura_2_electric_boogaloo
     icon = GFX_goal_generic_allies_build_infantry
     
-<<<<<<< HEAD
     x = 31
     y = 4
-=======
-    x = 51
-    y = 1
->>>>>>> master
     
     cost = 8
 
@@ -4553,13 +2202,8 @@ shared_focus = {
     id = SEV_gun_research
     icon = GFX_goal_generic_small_arms
     
-<<<<<<< HEAD
     x = 33
     y = 4
-=======
-    x = 50
-    y = 2
->>>>>>> master
     
     cost = 8
 
@@ -4580,13 +2224,8 @@ shared_focus = {
     id = SEV_more_guns
     icon = GFX_goal_generic_amphibious_assault
     
-<<<<<<< HEAD
     x = 32
     y = 5
-=======
-    x = 49
-    y = 3
->>>>>>> master
     
     cost = 8
 
@@ -4605,14 +2244,9 @@ shared_focus = {
 shared_focus = {
     id = SEV_more_recruits
     icon = GFX_goal_generic_allies_build_infantry
-    
-<<<<<<< HEAD
+
     x = 32
     y = 6
-=======
-    x = 51
-    y = 3
->>>>>>> master
     
     cost = 8
 
@@ -4628,13 +2262,8 @@ shared_focus = {
     id = SEV_commissars
     icon = GFX_goal_rhineland
     
-<<<<<<< HEAD
     x = 32
     y = 7
-=======
-    x = 54
-    y = 1
->>>>>>> master
     
     cost = 8
 
@@ -4650,13 +2279,8 @@ shared_focus = { #Airforce
     id = SEV_create_air_force
     icon = GFX_goal_generic_build_airforce
     
-<<<<<<< HEAD
     x = 40
     y = 0
-=======
-    x = 54
-    y = 2
->>>>>>> master
     
     cost = 8
 
@@ -4671,16 +2295,8 @@ shared_focus = { #Airforce
 	}
 }     
 shared_focus = {
-<<<<<<< HEAD
     id = SEV_train_pilots
     icon = GFX_goal_generic_allies_build_infantry
-=======
-    id = SEV_sub_quality
-    icon = GFX_goal_generic_navy_cruiser
-    
-    x = 53
-    y = 3
->>>>>>> master
     
     x = 42
     y = 1
@@ -4706,13 +2322,8 @@ shared_focus = {
     id = SEV_airfields
     icon = GFX_goal_unknown
     
-<<<<<<< HEAD
     x = 38
     y = 1
-=======
-    x = 55
-    y = 3
->>>>>>> master
     
     cost = 8
 
@@ -4734,11 +2345,7 @@ shared_focus = {
     id = SEV_yet_another_pilot_training
     icon = GFX_goal_generic_air_doctrine
     
-<<<<<<< HEAD
     x = 44
-=======
-    x = 56
->>>>>>> master
     y = 2
     
     cost = 8
@@ -4762,11 +2369,7 @@ shared_focus = {
     id = SEV_more_airfields
     icon = GFX_goal_unknown
     
-<<<<<<< HEAD
     x = 36
-=======
-    x = 58
->>>>>>> master
     y = 2
     
     cost = 8
@@ -4796,11 +2399,7 @@ shared_focus = {
     id = SEV_air_doctorine_research
     icon = GFX_goal_generic_air_fighter2
     
-<<<<<<< HEAD
     x = 40
-=======
-    x = 60
->>>>>>> master
     y = 2
     
     cost = 8
@@ -4826,11 +2425,7 @@ shared_focus = {
     id = SEV_develop_fighters
     icon = GFX_goal_generic_air_fighter
     
-<<<<<<< HEAD
     x = 38
-=======
-    x = 59
->>>>>>> master
     y = 3
     
     cost = 8
@@ -4856,11 +2451,7 @@ shared_focus = {
     id = SEV_develop_bombers
     icon = GFX_goal_generic_air_bomber
     
-<<<<<<< HEAD
     x = 42
-=======
-    x = 61
->>>>>>> master
     y = 3
     
     cost = 8
@@ -4883,7 +2474,6 @@ shared_focus = {
 		}
 	}
 }
-<<<<<<< HEAD
 shared_focus = {
     id = SEV_CAS
     icon = GFX_goal_generic_occupy_start_war
@@ -5619,8 +3209,6 @@ shared_focus = {
 		}
 	}
 }
-=======
->>>>>>> master
 
 	
 	
