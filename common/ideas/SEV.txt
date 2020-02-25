@@ -189,7 +189,6 @@ ideas = {
 
 			allowed_civil_war = {
 				always = no
-<<<<<<< HEAD
 			}
 			
 			removal_cost = -1
@@ -277,14 +276,11 @@ ideas = {
 
 			allowed_civil_war = {
 				always = no
-=======
->>>>>>> master
 			}
 			
 			removal_cost = -1
 			
 			modifier = {
-<<<<<<< HEAD
 				army_infantry_attack_factor = 0.05
 				army_infantry_defence_factor = 0.05
 				army_org_factor = -0.07	
@@ -300,15 +296,6 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-=======
-				stability_factor = 0.07
-				consumer_goods_factor = 0.05
-			}	
-		}
-		menshevik_peoples_market_b = {
->>>>>>> master
-			
-			removal_cost = -1
 			
 			modifier = {
 				democratic_drift = 0.03
@@ -329,20 +316,12 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-<<<<<<< HEAD
 				trade_laws_cost_factor = -0.15
 				trade_opinion_factor = 0.1
 			}	
 		}
 		marlibs_you_fucks_b = {
-=======
-				consumer_goods_factor = -0.05
-				stability_factor = 0.1
-			}	
-		}
-		orient_by_popular_demand = {
->>>>>>> master
-	
+
 			allowed = {
 				always = no
 			}
@@ -354,7 +333,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-<<<<<<< HEAD
 				trade_laws_cost_factor = -0.15
 				trade_opinion_factor = 0.1
 				min_export = 0.03
@@ -450,13 +428,6 @@ ideas = {
 			}	
 		}
 		marlibs_you_fucks_r = {
-=======
-				industrial_capacity_factory = -0.05
-				production_speed_industrial_complex_factor = 0.1
-			}	
-		}
-		orient_by_popular_demand_b = {
->>>>>>> master
 	
 			allowed = {
 				always = no
@@ -469,7 +440,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-<<<<<<< HEAD
 				trade_laws_cost_factor = -0.15
 				trade_opinion_factor = 0.1
 				min_export = 0.03
@@ -481,14 +451,6 @@ ideas = {
 			}	
 		}
 		marlibs_you_fucks_nr = {
-=======
-				industrial_capacity_factory = 0.05
-				production_speed_infrastructure_factor = 0.05
-				production_speed_industrial_complex_factor = 0.1
-			}	
-		}
-		poverty_tackled = {
->>>>>>> master
 	
 			allowed = {
 				always = no
@@ -501,7 +463,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-<<<<<<< HEAD
 				trade_laws_cost_factor = -0.2
 				trade_opinion_factor = 0.2
 				min_export = 0.15
@@ -513,14 +474,6 @@ ideas = {
 			}	
 		}
 		SEV_gone_ancap = {
-=======
-				stability_weekly = 0.003
-				MONTHLY_POPULATION = 0.1
-				opinion_gain_monthly_same_ideology_factor = 0.1
-			}	
-		}
-		sevr_elected_officers = {
->>>>>>> master
 	
 			allowed = {
 				always = no
@@ -533,7 +486,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-<<<<<<< HEAD
 				democratic_drift = 0.03
 				fascism_acceptance = 85
 				communism_acceptance = -80
@@ -593,9 +545,13 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			
 			allowed_civil_war = {
 				always = no
 			}
+			
+			removal_cost = -1
+			
 			modifier = {
 				war_support_factor = 0.05
 				weekly_manpower = 300
@@ -603,94 +559,7 @@ ideas = {
 				send_volunteer_size = 3
 			}
 			
-			removal_cost = -1
-			
-			picture = 
-=======
-				army_infantry_attack_factor = 0.05
-				army_infantry_defence_factor = 0.05
-				army_org_factor = -0.07	
-				army_morale_factor = 0.1
-			}	
-		}
-		SEV_new_class_solidarity = {
-	
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				democratic_drift = 0.03
-				democratic_acceptance = 85
-				communism_acceptance = -50
-			}	
-		}
-		marlibs_you_fucks = {
-	
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				trade_laws_cost_factor = -0.15
-				trade_opinion_factor = 0.1
-				min_export = 0.03
-			}	
-		}
-		marlibs_you_fucks_b = {
-	
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				trade_laws_cost_factor = -0.15
-				trade_opinion_factor = 0.1
-				min_export = 0.05
-				consumer_goods_factor = 0.03
-				production_speed_arms_factory_factor = 0.05
-				conversion_cost_civ_to_mil_factor = -0.05
-			}	
-		}
-		marlibs_you_fucks_c = {
-	
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				trade_laws_cost_factor = -0.15
-				trade_opinion_factor = 0.1
-				min_export = 0.07
-				consumer_goods_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_industrial_complex_factor = 0.05
-			}	
->>>>>>> master
+			picture =
 		}
 		SEV_rebuild_nation = {
 			allowed = {

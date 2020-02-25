@@ -124,8 +124,6 @@ spriteTypes = {
 		name = "GFX_goal_magnet_logo"
 		texturefile = "gfx/interface/goals/goal_magnet_logo.dds"
 	}
-<<<<<<< HEAD
-	
 	spriteType = {
 		name = "GFX_goal_foalgomost"
 		texturefile = "gfx/interface/goals/goal_foalgomost.dds"
@@ -135,7 +133,4 @@ spriteTypes = {
 		name = "GFX_goal_severyan_arsenal"
 		texturefile = "gfx/interface/goals/goal_severyan_arsenal.dds"
 	}
-	
-=======
->>>>>>> master
 }
