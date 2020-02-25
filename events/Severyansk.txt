@@ -252,16 +252,23 @@ country_event = { #general elections event
 	
 	option = { #Social Democrats
 		name = sever.6.a
+<<<<<<< HEAD
 		set_politics = {
 			ruling_party = democratic
 		}
+=======
+>>>>>>> master
 		set_party_name = { 
 			ideology = democratic 
 			long_name = SEV_SSDWP_democratic_party_long 
 			name = SEV_SSDWP_democratic_party
 		}
 		create_country_leader = {
+<<<<<<< HEAD
 			name = "Jeremiáš Coltyn"
+=======
+			name = "Socdem Leader"
+>>>>>>> master
 			picture = "generic_placeholder.dds"
 			expire = "1965.1.1"
 			ideology = socialism
@@ -272,6 +279,7 @@ country_event = { #general elections event
 			complete_national_focus = SEV_menshiviks
 		}
 
+<<<<<<< HEAD
 	}
 	option = { #Market Liberals
 		name = sever.6.b
@@ -295,6 +303,8 @@ country_event = { #general elections event
 			complete_national_focus = SEV_market_liberals
 		}
 
+=======
+>>>>>>> master
 	}
 }
 
