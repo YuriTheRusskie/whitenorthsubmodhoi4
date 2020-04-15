@@ -1,5 +1,5 @@
-﻿focus_tree = {
-	id = SEV_after_civil_war_focus
+focus_tree = {
+	id = SEV_civil_war_focus
 
 	country = {
 		factor = 0

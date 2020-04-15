@@ -1,0 +1,260 @@
+SEV_duma = {
+	SEV_small_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			OR = {
+				check_variable = { senators_support < senators_total }
+				check_variable = { representatives_support < representatives_total }
+			}
+			not = {
+				has_decision = SEV_medium_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.3
+				has_political_power > 10
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				duma_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				duma_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				duma_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = {
+			political_power_gain = -0.3
+		}
+		days_remove = 30
+		days_re_enable = 30
+		remove_effect = {
+			SEV_whole_duma_small_support = yes
+		}
+	}
+	SEV_medium_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			OR = {
+				check_variable = { senators_support < senators_total }
+				check_variable = { representatives_support < representatives_total }
+			}
+			not = {
+				has_decision = SEV_small_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.75
+				has_political_power > 35
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				duma_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				duma_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				duma_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_remove = 45
+		days_re_enable = 60
+		modifier = {
+			political_power_gain = -0.75
+		}
+		remove_effect = {
+			SEV_whole_duma_medium_support = yes
+		}
+	}
+	SEV_corruption_level = {
+		icon = ger_mefo_bills
+		cost = 0
+		available = {
+			always = no
+		}
+	}
+	SEV_buy_votes = {
+		icon = recruit_operative
+		cost = 150
+		available = {
+			NOT = {
+				check_variable = {
+					var = SEV_corruption
+					value = 10
+					compare = equals
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				duma_medium_support_trigger = yes
+				factor = 1
+			}
+			modifier = {
+				duma_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				duma_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_re_enable = 120
+		complete_effect = {
+			SEV_whole_duma_large_support = yes
+			add_to_variable = {
+				var = SEV_corruption
+				value = 1
+			}
+			clamp_variable = {
+				var = SEV_corruption
+				min = SEV_corruption_min
+				max = SEV_corruption_max
+			}
+			hidden_effect = {
+				SEV = {
+					country_event = { 
+						id = sevduma.14
+						days = 0
+					}
+				}
+			}
+		}
+	}
+	SEV_combat_corruption = {
+		icon = generic_assasination
+		cost = 100
+		visible = { 
+			check_variable = {
+				var = SEV_corruption
+				value = 0
+				compare = greater_than
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				duma_medium_support_trigger = yes
+				factor = 0
+			}
+			modifier = {
+				duma_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				duma_high_support_trigger = yes
+				factor = 1
+			}
+		}
+		days_remove = 0
+		days_re_enable = 60
+		complete_effect = {
+			SEV_whole_duma_medium_opposition = yes
+			add_to_variable = {
+				var = SEV_corruption
+				value = -1
+			}
+			clamp_variable = {
+				var = SEV_corruption
+				min = SEV_corruption_min
+				max = SEV_corruption_max
+			}
+			hidden_effect = {
+				SEV = {
+					country_event = { 
+						id = sevduma.14
+						days = 0
+					}
+				}
+			}
+		}
+	}
+	SEV_discredit_opposition = {
+		icon = megaphone
+		cost = 75
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				duma_medium_support_trigger = yes
+				factor = 1
+			}
+			modifier = {
+				duma_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				duma_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_remove = 120
+		days_re_enable = 183
+		modifier = {
+			stability_factor = -0.05
+		}
+		complete_effect = {
+			SEV_whole_duma_medium_support = yes
+		}
+	}
+	SEV_duma_conscription = {
+		icon = rifles
+		available = {
+			has_war = no
+			duma_medium_support_trigger = yes
+		}
+		cost = 75
+		days_remove = 30
+		days_re_enable = 90
+		modifier = {
+			weekly_manpower = 4266
+			political_power_gain = -0.50
+		}
+	}
+	SEV_delegates_give_grants = {
+		icon = generic_construction
+		available = {
+			duma_medium_support_trigger = yes
+		}
+		cost = 75
+		days_remove = 90
+		days_re_enable = 120
+		modifier = {
+			production_factory_max_efficiency_factor = 0.05
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+			production_speed_buildings_factor = 0.05 
+		}
+		complete_effect = { 
+			SEV_whole_duma_small_opposition = yes
+			random_owned_controlled_state = { 
+				limit = { 
+					free_building_slots = { 
+						building = industrial_complex 
+						size > 1 
+						include_locked = yes 
+					} 
+				}	 
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = { 
+					type = industrial_complex 
+					level = 1 
+					instant_build = yes 
+				} 
+			}
+		}
+	}
+}

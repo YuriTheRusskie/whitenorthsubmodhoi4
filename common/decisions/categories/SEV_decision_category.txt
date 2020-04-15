@@ -41,3 +41,17 @@ SEV_absolute_monarchy = {
         has_country_flag = absolutetsar
     }
 }
+SEV_special_powers_cat = {
+
+	available = {
+		tag = SEV
+        has_country_flag = SEV_article_eighty_five
+    }
+	allowed = { 
+        tag = SEV 
+    }
+    visible = {
+		tag = SEV
+        has_country_flag = SEV_article_eighty_five
+    }
+}

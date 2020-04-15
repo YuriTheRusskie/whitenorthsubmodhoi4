@@ -4,6 +4,19 @@ oob = ""
 
 set_research_slots = 3
 
+set_variable = { var = senators_support value = 70 }
+set_variable = { var = senators_total value = 170 }
+set_variable = { var = representatives_support value = 250 }
+set_variable = { var = representatives_total value = 450 }
+set_variable = { var = quorum_low value = 50 }
+set_variable = { var = quorum_medium value = 100 }
+set_variable = { var = quorum_high value = 150 }
+set_variable = { var = quorum_full value = 170 }
+set_variable = { var = council_icon_one = value = 1 }
+set_variable = { var = council_icon_two = value = 2 }
+set_variable = { var = council_icon_three = value = 3 }
+SEV_recalc_congress_icon_frames = yes
+
 set_technology = {
 	pony_race = 1
 	pre_gw_artillery = 1
@@ -183,8 +196,8 @@ add_tech_bonus = {
 	uses = 1
 	technology = basic_light_tank
 }
-set_stability = 0.6
-set_war_support = 0.6
+set_stability = 0.45
+set_war_support = 0.45
 add_manpower = 5000
 
 add_equipment_to_stockpile = {

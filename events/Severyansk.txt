@@ -246,19 +246,19 @@ country_event = { #Flavor piece that explains all the democratic parties that po
 country_event = { #general elections event
 	id = sever.6
 	title = sever.6.t 
-	desc = sever.6.d
+	desc = sever.6.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = { #Social Democrats
 		name = sever.6.a
-		set_politics = {
-			ruling_party = democratic
-		}
 		set_party_name = { 
 			ideology = democratic 
-			long_name = SEV_SSDWP_democratic_party_long 
-			name = SEV_SSDWP_democratic_party
+			long_name = SEV_democratic_SSDWP_party_long 
+			name = SEV_democratic_SSDWP_party
+		}
+		set_politics = {
+			ruling_party = democratic
 		}
 		create_country_leader = {
 			name = "Jeremiáš Coltyn"
@@ -268,19 +268,34 @@ country_event = { #general elections event
 			traits = {}
 		}
 		hidden_effect = {
-			retire_country_leader = yes
 			complete_national_focus = SEV_menshiviks
+			set_country_flag = SEV_republic
+			country_event = { id = sevduma.1 days = 10 }
+			country_event = { id = sevduma.2 days = 7 }
+			country_event = { id = sevduma.11 days = 70 }
+			set_variable = {
+				var = SEV_corruption
+				value = 0
+			}
+			set_variable = {
+				var = SEV_corruption_min
+				value = 0
+			}
+			set_variable = {
+				var = SEV_corruption_max
+				value = 10
+			}
 		}
 	}
 	option = { #Market Liberals
 		name = sever.6.b
-		set_politics = {
-			ruling_party = fascism
-		}
 		set_party_name = { 
 			ideology = fascism 
-			long_name = SEV_democratic_DP_party_long 
-			name = SEV_democratic_DP_party
+			long_name = SEV_fascism_DP_party_long 
+			name = SEV_fascism_DP_party
+		}
+		set_politics = {
+			ruling_party = fascism
 		}
 		create_country_leader = {
 			name = "Felix Yushastov"
@@ -290,8 +305,83 @@ country_event = { #general elections event
 			traits = {}
 		}
 		hidden_effect = {
-			retire_country_leader = yes
 			complete_national_focus = SEV_market_liberals
+			set_country_flag = SEV_republic
+			set_cosmetic_tag = SEV_MARLIB
+			set_country_flag = SEV_almost_ancap
+			country_event = { id = sevduma.1 days = 10 }
+			country_event = { id = sevduma.2 days = 7 }
+			country_event = { id = sevduma.11 days = 70 }
+			set_variable = {
+				var = SEV_corruption
+				value = 0
+			}
+			set_variable = {
+				var = SEV_corruption_min
+				value = 0
+			}
+			set_variable = {
+				var = SEV_corruption_max
+				value = 10
+			}
+		}
+	}
+	option = { #Cons
+		name = sever.6.c
+		set_party_name = { 
+			ideology = democratic
+			long_name = SEV_democratic_cons_party_long
+			name = SEV_democratic_cons_party
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		create_country_leader = {
+			name = "Pyotr Mustang"
+			picture = "generic_placeholder.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {}
+		}
+		hidden_effect = {
+			complete_national_focus = SEV_conservative_republicans
+			set_country_flag = SEV_republic
+			country_event = { id = sevduma.1 days = 10 }
+			country_event = { id = sevduma.2 days = 7 }
+			country_event = { id = sevduma.11 days = 70 }
+			set_variable = {
+				var = SEV_corruption
+				value = 0
+			}
+			set_variable = {
+				var = SEV_corruption_min
+				value = 0
+			}
+			set_variable = {
+				var = SEV_corruption_max
+				value = 10
+			}
+		}
+	}
+	option = { #Darkwing aka get cucked
+		name = sever.6.d
+		set_party_name = { 
+			ideology = democratic
+			long_name = SEV_democratic_darkwing_party_long
+			name = SEV_democratic_darkwing_party
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		create_country_leader = {
+			name = "Darkwing"
+			picture = "Darkwing.tga"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
+		}
+		EQS = {
+			puppet = SEV
 		}
 	}
 }

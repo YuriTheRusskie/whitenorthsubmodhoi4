@@ -1,0 +1,553 @@
+add_namespace = sevduma
+
+country_event = { #dispatcher event - council
+	id = sevduma.1
+	hidden = yes
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			25 = { 
+				modifier = {
+					not = { duma_medium_support_trigger = yes }
+					factor = 1.25
+				}
+				modifier = {
+					not = { duma_low_support_trigger = yes }
+					factor = 2
+				}
+				country_event = { id = sevduma.3 days = 15 random_days = 6 } #small support
+			} 
+			25 = { 
+				modifier = {
+					check_variable = { var = senators_support value = quorum_high compare = greater_than_or_equals }
+					factor = 3
+				}
+				country_event = { id = sevduma.5 days = 20 random_days = 6 } #small opposition 
+			} 
+			25 = { 
+				modifier = {
+					not = { duma_medium_support_trigger = yes }
+					factor = 1.25
+				}
+				modifier = {
+					not = { duma_low_support_trigger = yes }
+					factor = 2
+				}
+				country_event = { id = sevduma.7 days = 20 random_days = 10 } #medium support
+			} 
+			25 = { 
+				modifier = {
+					check_variable = { var = senators_support value = quorum_high compare = greater_than_or_equals }
+					factor = 3
+				}
+				country_event = { id = sevduma.9 days = 20 random_days = 10 }  #medium opposition
+			}
+		}
+	}
+}
+country_event = { # dispatcher event - duma
+	id = sevduma.2
+	Hidden = yes
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+	is_triggered_only = yes
+
+
+	immediate = {
+		random_list = {
+			25 = { 
+				modifier = {
+					check_variable = { representatives_support < 220 }
+					factor = 1.5
+				}
+				modifier = {
+					check_variable = { representatives_support < 190 }
+					factor = 3
+				}
+				country_event = { id = sevduma.4 days = 15 random_days = 6 } #small support
+			} 
+			25 = {
+				modifier = {
+					check_variable = { representatives_support > 320 }
+					factor = 2
+				}
+				modifier = {
+					check_variable = { representatives_support < 220  }
+					factor = 0.5
+				}
+				country_event = { id = sevduma.6 days = 20 random_days = 6 } #small opposition
+			} 
+			25 = { 
+				modifier = {
+					check_variable = { representatives_support < 10 }
+					factor = 1.5
+				}
+				modifier = {
+					check_variable = { representatives_support < 120 }
+					factor = 10
+				}
+				country_event = { id = sevduma.8 days = 25 random_days = 10 } #medium support
+			} 
+			25 = { 
+				modifier = {
+					check_variable = { representatives_support < 270 }
+					factor = 2
+				}
+				modifier = {
+					check_variable = { representatives_support < 400 }
+					factor = 10
+				}
+				modifier = {
+					check_variable = { representatives_support < 200 }
+					factor = 0.5
+				}
+				country_event = { id = sevduma.10 days = 30 random_days = 15 } #medium opposition
+			} 
+		}
+	}
+}
+country_event = { #small support event - council
+	id = sevduma.3
+	title = sevduma.3.t
+	desc = sevduma.3.d
+	picture = 
+
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = sevduma.3.a
+		SEV_duma_senate_small_support = yes
+		hidden_effect = {
+			country_event = { id = sevduma.1 days = 70 random_days = 10 }
+		}
+	}
+}
+country_event = { # small support event - duma
+	id = sevduma.4
+	title = sevduma.4.t
+	desc = sevduma.4.d
+	picture =
+
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sevduma.4.a
+		SEV_duma_small_support = yes
+		hidden_effect = {
+			country_event = { id = sevduma.2 days = 70 random_days = 10 }
+		}
+	}
+
+}
+country_event = { #small opposition event - council
+	id = sevduma.5
+	title = sevduma.5.t
+	desc = sevduma.5.d
+	picture = GFX_report_event_journalists_speech
+	
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = sevduma.5.a
+		SEV_duma_senate_small_opposition = yes
+		hidden_effect = {
+			country_event = { id = sevduma.1 days = 70 random_days = 10 }
+		}
+	}
+
+}
+country_event = { # small opposition event - duma
+	id = sevduma.6
+	title = sevduma.6.t
+	desc = sevduma.6.d
+	picture = GFX_report_event_journalists_speech
+	
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sevduma.6.a
+		SEV_duma_small_opposition = yes
+		hidden_effect = {
+			country_event = { id = sevduma.2 days = 70 random_days = 10 }
+		}
+	}
+
+}
+
+country_event = { #medium support event - council
+	id = sevduma.7
+	title = sevduma.7.t
+	desc = sevduma.7.d
+	picture = GFX_report_event_FDR_speech
+	
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = sevduma.7.a
+		SEV_duma_senate_medium_support = yes
+		hidden_effect = {
+			country_event = { id = sevduma.1 days = 70 random_days = 20 }
+		}
+	}
+
+}
+country_event = { # medium support event - duma
+	id = sevduma.8
+	title = sevduma.8.t
+	desc = sevduma.8.desc
+	picture = GFX_report_event_FDR_speech
+	
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = sevduma.8.a
+		SEV_duma_medium_support = yes
+		hidden_effect = {
+			country_event = { id = sevduma.2 days = 70 random_days = 10 }
+		}
+	}
+
+}
+
+country_event = { #medium opposition event - council
+	id = sevduma.9
+	title = sevduma.9.t
+	desc = sevduma.9.d
+	picture = GFX_report_event_journalists_speech
+
+	is_triggered_only = yes
+	
+	hidden_trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+
+	option = {
+		name = sevduma.9.a
+		SEV_duma_senate_medium_opposition = yes
+		hidden_effect = {
+			country_event = { id = sevduma.1 days = 70 random_days = 20 }
+		}
+	}
+}
+country_event = { # medium opposition event - duma
+	id = sevduma.10
+	title = sevduma.10.t
+	desc = sevduma.10.d
+	picture = GFX_report_event_journalists_speech
+	
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = sevduma.10.a
+		SEV_duma_medium_opposition = yes
+		hidden_effect = {
+			country_event = { id = sevduma.2 days = 70 random_days = 10 }
+		}
+	}
+}
+country_event = { #Rally events dispatcher
+	id = sevduma.11
+	hidden = yes
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			35 = { #new job places demand
+				country_event = {
+					id = sevduma.12
+					days = 1
+				}
+			}
+			35 = { #infrastructure
+				country_event = {
+					id = sevduma.13
+					days = 1
+				}
+			}
+			30 = { #consumer goods shortage
+				country_event = {
+					id = sevduma.14
+					days = 1
+				}
+			}
+		}
+	}
+}
+country_event = { #new job places demand
+	id = sevduma.12
+	title = sevduma.12.t
+	desc = sevduma.12.d
+	picture = GFX_report_event_journalists_speech
+	
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+
+	is_triggered_only = yes
+
+	option = { #respond to the issue, right way
+		name = sevduma.12.a
+		SEV_duma_small_support = yes
+		SEV_duma_senate_small_support = yes
+		add_timed_idea = {
+			idea = sev_doing_what_rally_asked
+			days = 30
+		}
+		hidden_effect = {
+			country_event = { id = sevduma.11 days = 90 random_days = 10 }
+		}
+	}
+	
+	option = { #respond to the issue slowly
+		name = sevduma.12.b
+		add_political_power = -100
+		hidden_effect = {
+			country_event = { id = sevduma.11 days = 90 random_days = 10 }
+		}
+	}
+
+	option = { 
+		name = sevduma.12.c
+		add_political_power = 50
+		SEV_duma_small_opposition = yes
+		SEV_duma_senate_small_opposition = yes
+	}
+}
+country_event = { #infrastructure demand 
+	id = sevduma.13
+	title = sevduma.13.t
+	desc = sevduma.13.d
+	picture = GFX_report_event_journalists_speech
+	
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+
+	is_triggered_only = yes
+
+    option = { #respond to the issue slowly
+		name = sevduma.13.a
+		add_political_power = -100
+		hidden_effect = {
+			country_event = { id = sevduma.11 days = 90 random_days = 10 }
+		}
+	}
+
+	option = { #ignore it, get pp
+		name = sevduma.13.b
+		add_political_power = 50
+		SEV_duma_small_opposition = yes
+		SEV_duma_senate_small_opposition = yes
+	}
+	
+	option = { #respond to the issue, right way
+		name = sevduma.13.c
+		SEV_duma_small_support = yes
+		SEV_duma_senate_small_support = yes
+		add_timed_idea = {
+			idea = sev_doing_what_rally_asked_b
+			days = 30
+		}
+		hidden_effect = {
+			country_event = { id = sevduma.11 days = 90 random_days = 10 }
+		}
+	}
+}
+country_event = { #coonsoomer demand 
+	id = sevduma.13
+	title = sevduma.13.t
+	desc = sevduma.13.d
+	picture = GFX_report_event_journalists_speech
+	
+	trigger = {
+		tag = SEV
+		has_country_flag = SEV_republic
+	}
+
+	is_triggered_only = yes
+
+	option = { #ignore it, get pp
+		name = sevduma.13.a
+		add_political_power = 50
+		SEV_duma_small_opposition = yes
+		SEV_duma_senate_small_opposition = yes
+	}
+	
+	option = { #respond to the issue, right way
+		name = sevduma.13.b
+		SEV_duma_small_support = yes
+		SEV_duma_senate_small_support = yes
+		add_timed_idea = {
+			idea = sev_doing_what_rally_asked_c
+			days = 30
+		}
+		hidden_effect = {
+			country_event = { id = sevduma.11 days = 90 random_days = 10 }
+		}
+	}
+	
+	option = { #respond to the issue slowly
+		name = sevduma.13.c
+		add_political_power = -100
+		hidden_effect = {
+			country_event = { id = sevduma.11 days = 90 random_days = 10 }
+		}
+	}
+}
+country_event = {
+	id = sevduma.14
+	hidden = yes
+	is_triggered_only = yes
+	timeout_days = 1
+	
+	option = {
+		trigger = {
+			check_variable = {
+				SEV_corruption = 0
+			}
+		}
+		name = sevduma.14.a
+		if = {
+			limit = {
+				OR = {
+					has_idea = SEV_duma_corruption_idea_a
+					has_idea = SEV_duma_corruption_idea_b
+					has_idea = SEV_duma_corruption_idea_c
+				}
+			}			
+			remove_ideas = {
+				SEV_duma_corruption_idea_a
+				SEV_duma_corruption_idea_b
+				SEV_duma_corruption_idea_c
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			AND = {
+				check_variable = {
+					var = SEV_corruption
+					value = 1
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = SEV_corruption
+					value = 3
+					compare = less_than_or_equals
+				}
+			}
+		}
+		name = sevduma.14.b
+		if = {
+			limit = {
+				OR = {
+					has_idea = SEV_duma_corruption_idea_b
+					has_idea = SEV_duma_corruption_idea_c
+				}
+			}
+			remove_ideas = { 
+				SEV_duma_corruption_idea_b
+				SEV_duma_corruption_idea_c
+			}
+		}
+		add_ideas = SEV_duma_corruption_idea_a
+	}
+	
+	option = {
+		trigger = {
+			check_variable = {
+				var = SEV_corruption
+				value = 4
+				compare = greater_than_or_equals
+			}
+		}
+		name = sevduma.14.c
+		if = {
+			limit = {
+				OR = {
+					has_idea = SEV_duma_corruption_idea_a
+					has_idea = SEV_duma_corruption_idea_c
+				}
+			}
+			remove_ideas = { 
+				SEV_duma_corruption_idea_a
+				SEV_duma_corruption_idea_c
+			}
+		}
+		add_ideas = SEV_duma_corruption_idea_b
+	}
+	
+	option = {
+		trigger = {
+			check_variable = {
+				var = SEV_corruption
+				value = 7
+				compare = greater_than_or_equals
+			}
+		}
+		name = sevduma.14.d
+		if = {
+			limit = {
+				OR = {
+					has_idea = SEV_duma_corruption_idea_a
+					has_idea = SEV_duma_corruption_idea_b
+				}
+			}
+			remove_ideas = { 
+				SEV_duma_corruption_idea_a
+				SEV_duma_corruption_idea_b
+			}
+		}
+		add_ideas = SEV_duma_corruption_idea_c
+	}
+}

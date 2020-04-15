@@ -1,15 +1,17 @@
-SEV_decommunization = {
+﻿SEV_decommunization = {
 
     SEV_rename_capital = {
     
         icon = commie_capital_rename
 
         available = {
+            NOT = { country_exists = STG }
             153 = { is_owned_and_controlled_by = ROOT }
         }
         
         visible = {
             NOT = { country_exists = STG }
+            153 = { is_owned_and_controlled_by = ROOT }
         }
         
         allowed = {
@@ -40,11 +42,13 @@ SEV_decommunization = {
         icon = commie_rename_country
 
         available = {
+            NOT = { country_exists = STG }
             153 = { is_owned_and_controlled_by = ROOT }
         }
         
         visible = {
             NOT = { country_exists = STG }
+            153 = { is_owned_and_controlled_by = ROOT }
         }
         
         allowed = {
@@ -69,35 +73,6 @@ SEV_decommunization = {
 			334 = { set_state_name = "Twierdza" }
 			set_province_name = { id = 2082 name = "Poniwiec" }
 			add_political_power = 30
-			set_country_flag = SEV_provinces_renamed
-        }
-    }
-	SEV_commie_culture_death_timer = {
-    
-        icon = ruined_commie_statue
-
-        available = {
-			has_country_flag = commie_killer_focus
-        }
-        
-        visible = {
-            NOT = { country_exists = STG }
-        }
-        
-        allowed = {
-            tag = SEV
-        }
-
-        cost = 0
-		
-        fire_only_once = yes
-		
-		days_remove = 365
-
-        remove_effect = {
-			custom_effect_tooltip = commie_culture_no_more_tt
-			remove_ideas = SEV_communist_legacy_d
-			set_country_flag = commie_culture_is_no_more
         }
     }
 }
@@ -321,11 +296,13 @@ SEV_special_powers_cat = {
 		icon = severyan_statue
 
 		available = {
-			has_war = yes
+			threat > 0.3
+			has_war = no
 		}
 		
 		visible = {
 			has_country_flag = SEV_article_eighty_five
+			has_war = no
 		}
 			
 		allowed = {
@@ -345,7 +322,7 @@ SEV_special_powers_cat = {
 		days_re_enable = 90
 
 		remove_effect = {
-			add_manpower = 100000
+			add_manpower = 12000
         }
 	}
 	SEV_change_to_limited_exports = {
@@ -393,7 +370,7 @@ SEV_special_powers_cat = {
 	}
 	SEV_build_fortifications = {
 		
-		icon = bunker
+		icon = severyan_statue
 
 		available = {
 			threat > 0.45
@@ -415,7 +392,7 @@ SEV_special_powers_cat = {
 			factor = 50
 		}
 		
-		days_remove = 153
+		days_remove = 120
 		
 		modifier = {
 			production_speed_bunker_factor = 0.15
@@ -427,10 +404,7 @@ SEV_special_powers_cat = {
 		icon = severyan_statue
 
 		available = {
-			OR = {
-				threat > 0.55
-				has_war = yes
-			}
+			threat > 0.55
 		}
 		
 		visible = {

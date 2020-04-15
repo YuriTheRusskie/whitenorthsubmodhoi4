@@ -1,4 +1,4 @@
-﻿ideas = {
+ideas = {
 
 	country = {
 		SEV_fuck_commies = {
@@ -534,7 +534,10 @@
 			}
 			modifier = {
 				democratic_drift = 0.03
-				surrender_limit = 0.15
+				surrender_limit = 0.25
+				democratic_acceptance = 100
+				fascism_acceptance = -100
+				communism_acceptance = -100
 			}
 			
 			removal_cost = -1
@@ -553,13 +556,33 @@
 			removal_cost = -1
 			
 			modifier = {
-				war_support_factor = 0.05
-				weekly_manpower = 300
-				send_volunteers_tension = -0.20
-				send_volunteer_size = 3
+				war_support_factor = 0.1
+				weekly_manpower = 500
+				send_volunteers_tension = -0.25
+				send_volunteer_size = 5
 			}
 			
 			picture =
+		}
+		SEV_spying_improved = {
+			picture = generic_spy_intel
+			allowed = {
+				tag = SEV
+			}
+
+			allowed_civil_war = {
+				tag = SEV
+			}
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				civilian_intel_factor = 0.07
+				army_intel_factor = 0.07
+				navy_intel_factor = 0.07
+				airforce_intel_factor = 0.07
+				intelligence_agency_defense = 0.15
+			}
 		}
 		SEV_rebuild_nation = {
 			allowed = {
@@ -1432,5 +1455,105 @@
 			
 			picture = SRA
 		}
-	}	
+		sev_doing_what_rally_asked = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				line_change_production_efficiency_factor = -0.03
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		
+		sev_doing_what_rally_asked_b = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.01
+				production_speed_arms_factory_factor = -0.01
+				production_speed_infrastructure_factor = 0.01
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		sev_doing_what_rally_asked_c = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.03
+			}
+
+			removal_cost = -1
+			
+			picture = 
+		}
+		SEV_duma_corruption_idea_a = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+			}
+
+			removal_cost = -1
+			
+			picture =
+		}
+		SEV_duma_corruption_idea_b = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+
+			removal_cost = -1
+			
+			picture =
+		}
+		SEV_duma_corruption_idea_c = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+
+			removal_cost = -1
+			
+			picture =
+		}
+	}
+	
 }

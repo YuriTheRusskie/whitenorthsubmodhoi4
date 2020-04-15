@@ -203,3 +203,56 @@ country_event = { #Flavor event, Slavsya, Severyana moya plays during some cerem
 		add_political_power = 30
 	}
 }
+country_event = { #Marlib Sev offers Nova GriffoniaTM an alliance
+	id = severf.9
+	title = severf.9.t
+	desc = severf.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #yea sure
+		name = severf.9.a
+		SEV = { 
+			country_event = {
+				id = severf.10
+				days = 1
+			}
+		}
+	}
+	
+	option = { #no they're not even a part of our McEmpire
+		name = severf.9.b
+		SEV = {
+			country_event = {
+				id = severf.11
+				days = 1
+			}
+		}
+	}
+}
+country_event = { #Marlibs and Ancaps are allies now
+	id = severf.10
+	title = severf.10.t
+	desc = severf.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = severf.10.a
+		create_faction = SEV_GRF_faction
+		SEV = { 
+			add_to_faction = GRF 
+		}
+	}
+}
+country_event = { #NOO YOU CAN'T JUST DENY OUR OFFERINO
+	id = severf.11
+	title = severf.11.t
+	desc = severf.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = severf.11.a
+	}
+}

@@ -133,4 +133,14 @@ spriteTypes = {
 		name = "GFX_goal_severyan_arsenal"
 		texturefile = "gfx/interface/goals/goal_severyan_arsenal.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_goal_severyan_unicorn_soldier_saluting"
+		texturefile = "gfx/interface/goals/goal_severyan_unicorn_soldier_saluting.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_northern_interest"
+		texturefile = "gfx/interface/goals/goal_northern_interest.dds"
+	}
 }

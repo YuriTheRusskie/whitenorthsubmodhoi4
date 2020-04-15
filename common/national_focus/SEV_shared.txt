@@ -1,4 +1,4 @@
-﻿shared_focus = { #civil war foci begin
+shared_focus = { #civil war foci begin
 	id = SEV_CW_start
 	icon = GFX_goal_unicorn_soldier
 	
@@ -377,6 +377,11 @@ shared_focus = { #Will lead to democratic foci
 	
     cost = 3
 	
+	available = {
+		has_country_flag = SEV_provinces_renamed
+		has_country_flag = SEV_capital_renamed
+	}
+	
 	prerequisite = {
 			focus = SEV_CW_calm_the_populace
 	}
@@ -387,12 +392,10 @@ shared_focus = { #Will lead to democratic foci
 			ideology = democratic
 			popularity = 0.15
 		}
+		activate_decision = SEV_commie_culture_death_timer
 		hidden_effect = {
 			remove_ideas = SEV_communist_legacy_c
-			add_timed_idea = {
-				idea = SEV_communist_legacy_d
-				days = 365
-			}
+			add_ideas = SEV_communist_legacy_d
 		}
 	}
 }
@@ -470,6 +473,11 @@ shared_focus = { #Will lead to fascist foci
 	
     cost = 3
 	
+	available = {
+		has_country_flag = SEV_provinces_renamed
+		has_country_flag = SEV_capital_renamed
+	}
+	
 	prerequisite = {
 		focus = SEV_CW_persecute_the_commies
 	}
@@ -480,12 +488,10 @@ shared_focus = { #Will lead to fascist foci
 			ideology = fascism
 			popularity = 0.15
 		}
+		activate_decision = SEV_commie_culture_death_timer
 		hidden_effect = {
 			remove_ideas = SEV_communist_legacy_c
-			add_timed_idea = {
-				idea = SEV_communist_legacy_d
-				days = 365
-			}
+			add_ideas = SEV_communist_legacy_d
 		}
 	}
 }
@@ -565,6 +571,11 @@ shared_focus = { #Will lead to monarchist foci
 	
     cost = 3
 	
+	available = {
+		has_country_flag = SEV_provinces_renamed
+		has_country_flag = SEV_capital_renamed
+	}
+	
 	prerequisite = {
 			focus = SEV_CW_stabilse_the_country
 	}
@@ -575,12 +586,10 @@ shared_focus = { #Will lead to monarchist foci
 			ideology = neutrality
 			popularity = 0.15
 		}
+		activate_decision = SEV_commie_culture_death_timer
 		hidden_effect = {
 			remove_ideas = SEV_communist_legacy_c
-			add_timed_idea = {
-				idea = SEV_communist_legacy_d
-				days = 365
-			}
+			add_ideas = SEV_communist_legacy_d
 		}
 	}
 }
@@ -887,6 +896,10 @@ shared_focus = {
     
     cost = 8
 	
+	available = {
+		duma_high_support_trigger = yes
+	}
+	
 	prerequisite = {
 		focus = SEV_market_liberals
 	}
@@ -951,6 +964,10 @@ shared_focus = {
 	relative_position_id = SEV_marlib_economy
     
     cost = 8
+	
+	available = {
+		duma_medium_support_trigger = yes
+	}
 	
 	prerequisite = {
 		focus = SEV_marlib_economy
@@ -1033,7 +1050,11 @@ shared_focus = {
 	 
 	relative_position_id = SEV_found_infrastructure_company 
      
-    cost = 8 
+    cost = 8
+
+	available = {
+		duma_medium_support_trigger = yes
+	}
 	 
 	prerequisite = { 
 		focus = SEV_found_infrastructure_company 
@@ -1131,7 +1152,7 @@ shared_focus = {
 }
 shared_focus = {  
     id = SEV_address_the_nation 
-    icon = GFX_goal_unknown 
+    icon = GFX_goal_generic_propaganda 
      
     x = -1 
     y = 1 
@@ -1155,7 +1176,7 @@ shared_focus = {
 } 
 shared_focus = {  
     id = SEV_prepare_for_intervention 
-    icon = GFX_goal_unicorn_soldier 
+    icon = GFX_goal_northern_interest
      
     x = 1 
     y = 1 
@@ -1184,7 +1205,11 @@ shared_focus = {
 	 
 	relative_position_id = SEV_address_the_nation 
      
-    cost = 8 
+    cost = 8
+
+	available = {
+		duma_high_support_trigger = yes
+	}
  
 	prerequisite = { 
 		focus = SEV_address_the_nation 
@@ -1267,7 +1292,7 @@ shared_focus = {
 } 
 shared_focus = {  
     id = SEV_harmonic_volunteers_corps 
-    icon = GFX_unknown 
+    icon = GFX_goal_severyan_unicorn_soldier_saluting
      
     x = 1 
     y = 1 
@@ -1282,6 +1307,49 @@ shared_focus = {
 	 
 	completion_reward = { 
 		add_ideas = SEV_democratic_volunteers 
+	} 
+}
+shared_focus = {  
+    id = SEV_enact_special_powers
+    icon = GFX_goal_constitutional_guarantees
+     
+    x = 0
+    y = 2 
+	 
+	relative_position_id = SEV_convince_the_populace 
+     
+    cost = 8
+
+	available = {
+		duma_full_support_trigger = yes
+	}
+	
+	prerequisite = { 
+		focus = SEV_convince_the_populace 
+	} 
+	 
+	completion_reward = { 
+		custom_effect_tooltip = tt_sev_special_powers
+		set_country_flag = SEV_article_eighty_five
+	} 
+}
+shared_focus = {  
+    id = SEV_spy_agency
+    icon = GFX_unknown
+     
+    x = 0
+    y = 2 
+	 
+	relative_position_id = SEV_harmonic_volunteers_corps 
+     
+    cost = 8
+
+	prerequisite = { 
+		focus = SEV_harmonic_volunteers_corps 
+	} 
+	 
+	completion_reward = {
+		add_ideas = SEV_spying_improved
 	} 
 }
 shared_focus = { #Economy foci
@@ -3188,41 +3256,3 @@ shared_focus = {
 		}
 	}
 }
-
-	
-	
-	
-	
-	
-    
-    			
-    
-    
-    
-    
-    
-    
-    
-	
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	
-	
-				
-	
-	
-	
- 
- 
-     
-    
-    

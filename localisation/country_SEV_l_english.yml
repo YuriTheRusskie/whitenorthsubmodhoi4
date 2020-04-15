@@ -27,6 +27,10 @@ SEV_BRN_fascism:0 "Barony of Severyansk"
 SEV_BRN_fascism_DEF:0 "Barony of Severyansk"
 SEV_BRN_fascism_ADJ:0 "Severyan"
 
+SEV_MARLIB_fascism:0 "Republic of Severyansk"
+SEV_MARLIB_fascism_DEF:0 "Republic of Severyansk"
+SEV_MARLIB_fascism_ADJ:0 "Severyan"
+
 #Post Civil War party names
 
 SEV_POST_CIVIL_WAR:0 "PGoS"
@@ -38,23 +42,29 @@ SEV_monarchist_party_long:0 "House Romaneov"
 SEV_BRN_party:0 "Baron's Party"
 SEV_BRN_party_long:0 "BP"
 
-#PARTY Names
 SEV_neutrality_party:0 "LFC"
 SEV_neutrality_party_long:0 "Liberation Forces Council"
+
 SEV_communism_party:0 "SCP"
 SEV_communism_party_long:0 "Stalliongradian Communist Party"
+
 SEV_democratic_party:0 "EDSR"
 SEV_democratic_party_long:0 "Equestrian Democrats and Severyan Republicans"
+
 SEV_fascism_party:0 "TM"
 SEV_fascism_party_long:0 "Templar Movement"
+
 SEV_democratic_SSDWP_party:0 "SSDWP"
-<<<<<<< HEAD
-SEV_democratic_SSDWP_party_long:0 "Severyan Social Democratic Workers\'\ Party"
-SEV_democratic_DP_party:0 "DPS"
-SEV_democratic_DP_party_long:0 "Democratic Party of Severyansk"
-=======
-SEV_democratic_SSDWP_party:0 "Severyan Social Democratic Workers\'\ Party"
->>>>>>> master
+SEV_democratic_SSDWP_party_long:0 "Severyan Social Democratic Workers Party"
+
+SEV_fascism_DP_party:0 "DPS"
+SEV_fascism_DP_party_long:0 "Democratic Party of Severyansk"
+
+SEV_democratic_cons_party:0 "NPP"
+SEV_democratic_cons_party_long:0 "National Patriotic Party"
+
+SEV_democratic_darkwing_party:0 "HE"
+SEV_democratic_darkwing_party_long:0 "Harmonic Equestria"
 
 #### EVENTS ####
 sever.1.t:0 "Rise Up!"
@@ -194,9 +204,9 @@ severcw.4.a:0 "A little less than we expected."
 #Decisions
 SEV_decommunization:0 "Project \"Dekommunizatsia\""
 
-SEV_rename_capital:0 "Renaming the Capital"
+SEV_rename_capital:0 "Rename Stalliongrad"
 
-SEV_rename_rest_of_country:0 "Renaming the Country Regions"
+SEV_rename_rest_of_country:0 "Rename Provinces"
 
 SEV_demolish_the_remnants_of_the_revolution_a:0 "Deconstruction of the Revolutionary Culture: Preparation"
 
@@ -222,10 +232,48 @@ SEV_tsar_economy:0 "Choose Your Economic Policy"
 
 SEV_national_anthem:0 "National Anthem Debate"
 
+SEV_commie_culture_death_timer:0 "Complete The Decommunization Progress"
 
+#duma stuff
 
-#Tooltips
-
+SEV_duma:0 "The Republican Duma"
+SEV_duma_support_header:0 "§HDuma Support§!"
+SEV_duma_senate_support_header:0 "§HCouncil Support§!"
+SEV_duma_senate_support_amount:0 "§G[?SEV.senators_support]§! / §Y[?SEV.senators_total]§!"
+SEV_small_lobby_effort:0 "Small Lobbying Effort"
+SEV_medium_lobby_effort:0 "Medium Lobbying Effort"
+ SEV_duma_small_opposition_tt:1 "Up to §Y4 Conseillers§! and §Y20 State Deputies§! go into §ROpposition§!.\n"
+ SEV_duma_medium_opposition_tt:1 "Up to §Y8 Conseillers§! and §Y40 State Deputies§! go into §ROpposition§!.\n"
+ SEV_duma_large_opposition_tt:1 "Up to §Y25 Conseillers§! and §Y100 State Deputies§! go into §ROpposition§!.\n"
+ SEV_duma_small_support_tt:1 "Up to §Y5 Conseillers§! and §Y25 State Deputies§! will §GSupport§! the Government.\n"
+ SEV_duma_medium_support_tt:1 "Up to §Y10 Conseillers§! and §Y50 State Deputies§! will §GSupport§! the Government.\n"
+ SEV_duma_large_support_tt:1 "Up to §Y30 Conseillers§! and §Y125 State Deputies§! will §GSupport§! the Government.\n"
+ SEV_duma_senate_small_opposition_tt:0 "Up to §Y4 Conseillers§! will go into §ROpposition§!.\n"
+ SEV_duma_house_small_opposition_tt:0 "Up to §Y20 State Deputies§! will go into §ROpposition§!.\n"
+ SEV_duma_senate_small_support_tt:0 "Up to §Y5 Conseillers§! will §GSupport§! the Government.\n"
+ SEV_duma_house_small_support_tt:0 "Up to §Y25 State Deputies§! will §GSupport§! the Government.\n"
+ SEV_duma_senate_medium_opposition_tt:0 "Up to §Y8 Conseillers§! will go into §ROpposition§!.\n"
+ SEV_duma_house_medium_opposition_tt:0 "Up to §Y40 State Deputies§! will go into §ROpposition§!.\n"
+ SEV_duma_senate_medium_support_tt:0 "Up to §Y10 Conseillers§! will §GSupport§! the Government.\n"
+ SEV_duma_house_medium_support_tt:0 "Up to §Y50 State Deputies§! will §GSupport§! the Government.\n"
+ SEV_duma_senate_large_opposition_tt:0 "Up to §Y25 Conseillers§! will go into §ROpposition§!.\n"
+ SEV_duma_house_large_opposition_tt:0 "Up to §Y100 State Deputies§! will go into §ROpposition§!.\n"
+ SEV_duma_senate_large_support_tt:0 "Up to §Y30 Conseillers§! will §GSupport§! the Government.\n"
+ SEV_duma_house_large_support_tt:0 "Up to §Y125 State Deputies§! will §GSupport§! the Government.\n"
+SEV_duma_support_amount:0 "§G[?SEV.representatives_support]§! / §Y[?SEV.representatives_total]§!"
+ duma_low_support_trigger_tt:0 "Requires the support of at least §Y[?SEV.quorum_low] Conseillers§! (current: [?SEV.senators_support]) and §Y153 State Deputies§! (current: [?SEV.representatives_support])\n"
+ duma_medium_support_trigger_tt:0 "Requires the support of at least §Y[?SEV.quorum_medium] Conseillers§! (current: [?SEV.senators_support]) and §Y233 State Deputies§! (current: [?SEV.representatives_support])\n"
+ duma_high_support_trigger_tt:0 "Requires the support of at least §Y[?SEV.quorum_high] Conseillers§! (current: [?SEV.senators_support]) and §Y432 State Deputies§! (current: [?SEV.representatives_support])\n"
+ duma_full_support_trigger_tt:0 "Requires the support of at least §Y[?SEV.quorum_full] Conseillers§! (current: [?SEV.senators_support]) and §Y450 State Deputies§! (current: [?SEV.representatives_support])\n" 
+ SEV_buy_votes:0 "Bribe For Support"
+ SEV_buy_votes_desc:0 "§WThis decision be taken at§! §YCorruption§! §WLevel§! §R10§!"
+ SEV_corruption_level:0 "Current§! §YCorruption§! Level: §R[?SEV.SEV_corruption]§!"
+ SEV_combat_corruption:0 "Combat Corruption"
+ SEV_combat_corruption_desc:0 "§WCurrent§! §YCorruption§! §Wlevel will go down by§! §G1§! §Wpoint§!"
+ SEV_discredit_opposition:0 "Discredit The Opposition"
+ SEV_duma_conscription:0 "Peacetime Draft"
+ SEV_delegates_give_grants:0 "Industrial Grants"
+#Tooltips 'n flags
 
 SEV_dem_col:0 "A democratic coalition has formed."
 severyan_infighting:0 "In 10 days, a democratic coalition will form."
@@ -243,12 +291,23 @@ nobles_have_rights_tt:0 "Per royal decree, noble families will be reinstated in 
 protectionist_tsar_tt:0 "§HYou would be able to change your economic policy in a year.§!"
 free_market_tsar_tt:0 "§RThe freer the market, the freer the people.§! §HYou would be able to change your economic policy in a year.§!"
 new_tsar_paths_tt:0 "§HNew political tree will be loaded.§!"
-<<<<<<< HEAD
 tt_marlibs_force_free_trade:0 "If current economic law is not §YExport Focus§! or §YFree Trade§!, it will be changed to that. "
 tt_industry_slight_slowdown:0 "After a build up this rapid, our §Yindustry§! will §Rslow down§! for some time."
-=======
 tt_marlibs_force_free_trade:0 "If current economic law is not §YExport Focus§!, it will be changed to that. "
->>>>>>> master
+tt_sev_special_powers:0 "Allows you to enact §HSpeical Powers§! depending on the situation in the §HWorld§!."
+SEV_special_powers_cat:0 "Special Powers"
+SEV_GRF_faction:0 "Unholy Alliance of MacDonalds and Burger King"
+commie_killer_focus:0 "This §Ydecision§! cannot be taken manually. Complete a special §Yfocus§! that activates it."
+commie_culture_no_more_tt:0 "§RCommunist Culture§! will be eradictaed."
+absolutetsar:0 "Sovereign Tsar"
+nobles_have_rights:0 "Nobles were reinstated in their rights"
+commie_culture_is_no_more:0 "§RCommunist Culture§! is no more"
+SEV_socdem:0 "SSDWP won the elections"
+SEV_marlib:0 "DP won the elections"
+SEV_cons:0 "NPP won the elections"
+SEV_article_eighty_five:0 "§YArticle 85§! was enacted"
+SEV_provinces_renamed:0 "§YProvinces§! were renamed"
+SEV_capital_renamed:0 "A new name for §YStalliongrad City§! has been chosen"
 
 #### IDEAS ####
 SEV_fuck_commies:0 "Liberation of Motherland"
@@ -328,7 +387,6 @@ poverty_tackled_d:0 ""
 
 sevr_elected_officers:0 "White Guard Officers"
 sevr_elected_officers_d:0 ""
-<<<<<<< HEAD
 
 SEV_new_class_solidarity:0 "New Class Solidarity"
 SEV_new_class_solidarity_d:0 ""
@@ -372,19 +430,7 @@ SEV_democratic_propaganda_d:0 ""
 SEV_democratic_volunteers:0 "Harmonic Volunteers Corps"
 SEV_democratic_volunteers_d:0 ""
 
-#Flags
-
-absolutetsar:0 "Sovereign Tsar"
-
-nobles_have_rights:0 "Nobles were reinstated in their rights"
-
-commie_culture_is_no_more:0 "Communist Culture is no more"
-
-SEV_socdem:0 "SSDWP won the elections"
-
-SEV_marlib:0 "DP won the elections"
-
-SEV_cons:0 "NPP won the elections"
+SEV_spying_improved:0 "The FSB"
 
 #### FOCUSES ####
 
@@ -522,6 +568,12 @@ SEV_convince_the_populace_d:0 ""
 
 SEV_harmonic_volunteers_corps:0 "\"Garmonisty\" Volunteer Corps"
 SEV_harmonic_volunteers_corps_d:0 ""
+
+SEV_enact_special_powers:0 "Enact Article 85"
+SEV_enact_special_powers_d:0 ""
+
+SEV_spy_agency:0 "Federal Security Service"
+SEV_spy_agency_d: ""
 
 SEV_black_baron:0 "Templars Have Taken over"
 SEV_black_baron_desc:0 ""

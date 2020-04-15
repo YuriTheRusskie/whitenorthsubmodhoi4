@@ -1,0 +1,14 @@
+SEV_duma = {
+	icon = usa_congress
+	allowed = {
+		original_tag = SEV
+	}
+	
+	visible = {
+		has_country_flag = SEV_republic
+    }
+
+	scripted_gui = sev_duma_decision_ui
+
+	priority = 85
+}
